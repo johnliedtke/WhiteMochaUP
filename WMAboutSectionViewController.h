@@ -11,4 +11,5 @@
 @interface WMAboutSectionViewController : UITableViewController
 - (IBAction)logOut:(id)sender;
 
+
 @end
