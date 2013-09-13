@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>academic</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Accounting Association</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>ACT UP</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>American Chemical Society</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>me.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>American Society of Civil Engineers</string>
+			<key>abbr</key>
+			<string>ASCE</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Association for Computing Machinery</string>
+			<key>abbr</key>
+			<string>ACM</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Baja Clubc</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Bluffoons</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Christian Business Student Association</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Economics Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Engineering World Health</string>
+			<key>abbr</key>
+			<string>EWH</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Institute of Electrical &amp; Electronics Engineers</string>
+			<key>abbr</key>
+			<string>IEEE</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>UP Marketing Group</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Math Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>math.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mechanical Engineers Club</string>
+			<key>abbr</key>
+			<string>ME</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Neuroscience Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Operations Management Association</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Philosophy Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>phil.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Phi Beta Lambda</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Physical and Occupational Therapy Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Pre-Dental Student Association</string>
+			<key>abbr</key>
+			<string>PDSA</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Robotics Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Social Science Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Society of Women Engineers</string>
+			<key>abbr</key>
+			<string>SWE</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Speech and Debate Union</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Student Association of Social Workers</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Student Nurses Association</string>
+			<key>abbr</key>
+			<string>UPSNA</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Alpha Kappa Psi</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Beta Beta Beta</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Kappa Delta Pi</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+	</array>
+	<key>clubSports</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Men&apos;s Lacrosse</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Men&apos;s Soccer</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Men&apos;s Water Polo</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Men&apos;s Ultimate Frisbee</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Portland Track Club (P.T.C.)</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tennis Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>tennis.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Volleyball Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Women&apos;s Lacrosse</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Women&apos;s Soccer Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>classic.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Women&apos;s Ultimate Frisbee</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Women’s Water Polo</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+	</array>
+	<key>special</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Colleges against Cancer </string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>College Democrats</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>donkey.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>College Ecology Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>College Republicans</string>
+			<key>abbr</key>
+			<string>CR</string>
+			<key>image</key>
+			<string>gop.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Dance Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Engineers Without Borders</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>English Society</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>english.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Entrepreneurship Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Fair Trade Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Feminist Discussion Group</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Gay Straight Partnership</string>
+			<key>abbr</key>
+			<string>GSP</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Habitat for Humanity</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Investment Association</string>
+			<key>abbr</key>
+			<string>UPIA</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mock Trial</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Music Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Oregonians Against Trafficking Humans</string>
+			<key>abbr</key>
+			<string>OATH</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Pilot Snow Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Roosevelt Institution Undergraduate Student Think Tank</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Spielfriek Society</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Student Alumni Association</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Student Led Unity Garden</string>
+			<key>abbr</key>
+			<string>Tree Huggers</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tengoku no Anime Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+	</array>
+	<key>diversity</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Black Student Union</string>
+			<key>abbr</key>
+			<string>BSU</string>
+			<key>image</key>
+			<string>mlk.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>French Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Guam Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>guam.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>German Culture Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Hawai&apos;i Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>pineapple.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>International Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Latin Dance Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Movimiento Estudiantil de Chicanos de Aztlan</string>
+			<key>abbr</key>
+			<string>M.E.Ch.A.</string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Minnesota Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Native American Club</string>
+			<key>abbr</key>
+			<string></string>
+			<key>image</key>
+			<string>club.png</string>
+		</dict>
+	</array>
+</dict>
+</plist>

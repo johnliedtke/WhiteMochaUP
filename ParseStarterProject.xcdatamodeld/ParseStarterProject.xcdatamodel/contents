@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Course" representedClassName="Course" syncable="YES">
+        <attribute name="aMinusValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attendanceWeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="aValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bMinusValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bPlusValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cMinusValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cPlusValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dMinusValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dPlusValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="essayWeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="finalExamWeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="homeworkWeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="otherWeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="professorName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quizWeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testWeight" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Grade" representedClassName="Grade" syncable="YES">
+        <attribute name="assignmentName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseScore" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gradeType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maxPoints" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Course" positionX="-432" positionY="0" width="128" height="358"/>
+        <element name="Grade" positionX="-45" positionY="-9" width="128" height="118"/>
+    </elements>
+</model>

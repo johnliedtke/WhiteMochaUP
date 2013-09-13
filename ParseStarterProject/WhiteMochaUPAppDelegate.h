@@ -1,0 +1,22 @@
+@class ParseStarterProjectViewController;
+@class WMNewLoginViewController;
+
+@interface WhiteMochaUPAppDelegate : NSObject <UIApplicationDelegate>
+{
+    UITabBarController *tabBarController;
+}
+
+@property (nonatomic, strong) IBOutlet UIWindow *window;
+
+@property (nonatomic, strong) IBOutlet ParseStarterProjectViewController *viewController;
+
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+- (void)saveContext;
+- (NSURL *)applicationDocumentsDirectory;
+
+
+@end

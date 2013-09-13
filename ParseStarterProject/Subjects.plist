@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Biology</key>
+	<array>
+		<array>
+			<string>BIO 107</string>
+			<string>Plant as Food and Medicine</string>
+		</array>
+		<array>
+			<string>BIO 205</string>
+			<string>Foundations of Biology</string>
+		</array>
+		<array>
+			<string>BIO 206</string>
+			<string>Organismal and Population Biology</string>
+		</array>
+		<array>
+			<string>BIO 207</string>
+			<string>Introductory Cell Biology and Genetics</string>
+		</array>
+		<array>
+			<string>BIO 276</string>
+			<string>Organismal and Population Biology Lab</string>
+		</array>
+		<array>
+			<string>BIO 277</string>
+			<string>Introductory Cell Biology and Genetics Lab</string>
+		</array>
+		<array>
+			<string>BIO 307</string>
+			<string>Human Anatomy</string>
+		</array>
+		<array>
+			<string>BIO 308</string>
+			<string>Human Physiology</string>
+		</array>
+		<array>
+			<string>BIO 330</string>
+			<string>Human Genetics</string>
+		</array>
+		<array>
+			<string>BIO 333</string>
+			<string>Genetics Laboratory</string>
+		</array>
+		<array>
+			<string>BIO 341</string>
+			<string>The Nature of Plants</string>
+		</array>
+		<array>
+			<string>BIO 342</string>
+			<string>Neurobiology</string>
+		</array>
+		<array>
+			<string>BIO 347</string>
+			<string>Animal Behavior</string>
+		</array>
+		<array>
+			<string>BIO 359</string>
+			<string>Microbiology</string>
+		</array>
+		<array>
+			<string>BIO 363</string>
+			<string>Freshwater Ecology</string>
+		</array>
+		<array>
+			<string>BIO 371</string>
+			<string>Field Botany</string>
+		</array>
+		<array>
+			<string>BIO 373</string>
+			<string>Freshwater Ecology Laboratory</string>
+		</array>
+		<array>
+			<string>BIO 377</string>
+			<string>Anatomy Laboratory</string>
+		</array>
+		<array>
+			<string>BIO 378</string>
+			<string>Physiology Laboratory</string>
+		</array>
+		<array>
+			<string>BIO 379</string>
+			<string>Microbiology Laboratory</string>
+		</array>
+		<array>
+			<string>BIO 384</string>
+			<string>Remote Sensing and Geographic Information Systems</string>
+		</array>
+		<array>
+			<string>BIO 385</string>
+			<string>Environmental Microbiology</string>
+		</array>
+		<array>
+			<string>BIO 387</string>
+			<string>Service Learning In Biology</string>
+		</array>
+		<array>
+			<string>BIO 391</string>
+			<string>The Art and Science of Medicine</string>
+		</array>
+		<array>
+			<string>BIO 408</string>
+			<string>Endocrinology</string>
+		</array>
+		<array>
+			<string>BIO 418</string>
+			<string>Biology of Exercise</string>
+		</array>
+		<array>
+			<string>BIO 423</string>
+			<string>Computational Biology</string>
+		</array>
+		<array>
+			<string>BIO 442</string>
+			<string>Ecology</string>
+		</array>
+		<array>
+			<string>BIO 453</string>
+			<string>Evolution</string>
+		</array>
+		<array>
+			<string>BIO 460</string>
+			<string>Immunology</string>
+		</array>
+		<array>
+			<string>BIO 472</string>
+			<string>Ecology Laboratory</string>
+		</array>
+		<array>
+			<string>BIO 477</string>
+			<string>Human Anatomy Dissection</string>
+		</array>
+		<array>
+			<string>BIO 493</string>
+			<string>Physiology Research</string>
+		</array>
+		<array>
+			<string>BIO 497</string>
+			<string>OT/PT Internship</string>
+		</array>
+	</array>
+	<key>Business Administration</key>
+	<array>
+		<array>
+			<string>BUS 100</string>
+			<string>Introduction to Leadership</string>
+		</array>
+		<array>
+			<string>BUS 200</string>
+			<string>Principles of Marketing</string>
+		</array>
+		<array>
+			<string>BUS 202</string>
+			<string>Professional Development</string>
+		</array>
+		<array>
+			<string>BUS 209</string>
+			<string>Financial Accounting</string>
+		</array>
+		<array>
+			<string>BUS 210</string>
+			<string>Managerial Accounting</string>
+		</array>
+		<array>
+			<string>BUS 250</string>
+			<string>LEgal and Social Responsibility in Business</string>
+		</array>
+		<array>
+			<string>BUS 255</string>
+			<string>Introduction to Operations and Technology Management</string>
+		</array>
+		<array>
+			<string>BUS 302</string>
+			<string>Professional Development Internship</string>
+		</array>
+		<array>
+			<string>BUS 305</string>
+			<string>Business Finance</string>
+		</array>
+		<array>
+			<string>BUS 310</string>
+			<string>Intermediate Account I</string>
+		</array>
+		<array>
+			<string>BUS 354</string>
+			<string>Decision Modeling Laboratory</string>
+		</array>
+		<array>
+			<string>BUS 355</string>
+			<string>Decison Making</string>
+		</array>
+		<array>
+			<string>BUS 356</string>
+			<string>Database Management</string>
+		</array>
+		<array>
+			<string>BUS 360</string>
+			<string>Cross-Cultural Organizational Behavior</string>
+		</array>
+		<array>
+			<string>BUS 361</string>
+			<string>Foundations of Operations Management</string>
+		</array>
+		<array>
+			<string>BUS 362</string>
+			<string>Technology and Operations Management Lab</string>
+		</array>
+		<array>
+			<string>BUS 364</string>
+			<string>Innovation</string>
+		</array>
+		<array>
+			<string>BUS 365</string>
+			<string>Accounting Information Systems</string>
+		</array>
+		<array>
+			<string>BUS 370</string>
+			<string>Marketing Research</string>
+		</array>
+		<array>
+			<string>BUS 376</string>
+			<string>Sustainable Marketing</string>
+		</array>
+		<array>
+			<string>BUS 400</string>
+			<string>Mangement Decisions and Policy</string>
+		</array>
+		<array>
+			<string>BUS 402</string>
+			<string>Professional Development Workshop</string>
+		</array>
+		<array>
+			<string>BUS 411</string>
+			<string>Advanced Accounting I</string>
+		</array>
+		<array>
+			<string>BUS 430</string>
+			<string>Investments</string>
+		</array>
+		<array>
+			<string>BUS 431</string>
+			<string>Financial Markets and Institutions</string>
+		</array>
+		<array>
+			<string>BUS 432</string>
+			<string>Personal Financial Planning</string>
+		</array>
+		<array>
+			<string>BUS 434</string>
+			<string>Derivatives and Risk Management</string>
+		</array>
+		<array>
+			<string>BUS 443</string>
+			<string>International Marketing Mangement</string>
+		</array>
+		<array>
+			<string>BUS 450</string>
+			<string>Advanced Business Law</string>
+		</array>
+		<array>
+			<string>BUS 453</string>
+			<string>Supply Chain Management</string>
+		</array>
+		<array>
+			<string>BUS 454</string>
+			<string>Project Management Processes and Certification</string>
+		</array>
+		<array>
+			<string>BUS 467</string>
+			<string>Personal Taxation</string>
+		</array>
+		<array>
+			<string>BUS 472</string>
+			<string>Personal Selling</string>
+		</array>
+		<array>
+			<string>BUS 480</string>
+			<string>Creating a World-Class Venture</string>
+		</array>
+		<array>
+			<string>BUS 484 </string>
+			<string>New Venture Finance and Accounting</string>
+		</array>
+		<array>
+			<string>BUS 491</string>
+			<string>Applied Portfolio Management</string>
+		</array>
+		<array>
+			<string>BUS 500</string>
+			<string>Statistical and Quantitative Analysis</string>
+		</array>
+		<array>
+			<string>BUS 505</string>
+			<string>Introduction to Operations &amp; Technology Management</string>
+		</array>
+		<array>
+			<string>BUS 506</string>
+			<string>Principles of Accounting</string>
+		</array>
+		<array>
+			<string>BUS 512</string>
+			<string>Leadership and Higher Level Management</string>
+		</array>
+		<array>
+			<string>BUS 513</string>
+			<string>Social Responsibility in Organizations</string>
+		</array>
+		<array>
+			<string>BUS 514</string>
+			<string>Accounting and Financial Controls for the Nonprofit Organization</string>
+		</array>
+		<array>
+			<string>BUS 517</string>
+			<string>Marketing for the Nonprofit Organization</string>
+		</array>
+		<array>
+			<string>BUS 520</string>
+			<string>Applied Marketing Strategies</string>
+		</array>
+		<array>
+			<string>BUS 522</string>
+			<string>Marketing Research</string>
+		</array>
+		<array>
+			<string>BUS 525</string>
+			<string>Sales and the Global Market</string>
+		</array>
+		<array>
+			<string>BUS 530</string>
+			<string>Corporate Finance</string>
+		</array>
+		<array>
+			<string>BUS 534</string>
+			<string>Derivatives and Risk Management</string>
+		</array>
+		<array>
+			<string>BUS 535</string>
+			<string>International Economics and Trade</string>
+		</array>
+		<array>
+			<string>BUS 536</string>
+			<string>Peronsal Financial Planning</string>
+		</array>
+	</array>
+	<key>Chemistry</key>
+	<array>
+		<array>
+			<string>CHM 105</string>
+			<string>Chemistry in Art</string>
+		</array>
+		<array>
+			<string>CHM 207</string>
+			<string>General Chemistry I</string>
+		</array>
+		<array>
+			<string>CHM 208</string>
+			<string>General Chemistry II</string>
+		</array>
+		<array>
+			<string>CHM 273</string>
+			<string>Special Chemistry Laboratory</string>
+		</array>
+		<array>
+			<string>CHM 277</string>
+			<string>General Chemistry Laboratory</string>
+		</array>
+		<array>
+			<string>CHM 278</string>
+			<string>General Chemistry Laboratory II</string>
+		</array>
+		<array>
+			<string>CHM 303</string>
+			<string>Computational Methods in Physical Sciences</string>
+		</array>
+		<array>
+			<string>CHM 314</string>
+			<string>Analytical Chemistry</string>
+		</array>
+		<array>
+			<string>CHM 325</string>
+			<string>Organic Chemistry I</string>
+		</array>
+		<array>
+			<string>CHM 326</string>
+			<string>Organic Chemistry II</string>
+		</array>
+		<array>
+			<string>CHM 331</string>
+			<string>Physical Chemistry I</string>
+		</array>
+		<array>
+			<string>CHM 373</string>
+			<string>Physical Chemistry II Laboratory</string>
+		</array>
+		<array>
+			<string>CHM 375 </string>
+			<string>Organic Chemistry I Laboratory</string>
+		</array>
+		<array>
+			<string>CHM 379</string>
+			<string>Analytical Chemistry Laboratory</string>
+		</array>
+		<array>
+			<string>CHM 376</string>
+			<string>Organic Chemistry II Laboratory</string>
+		</array>
+		<array>
+			<string>CHM 387</string>
+			<string>Service Learning in Chemistry</string>
+		</array>
+		<array>
+			<string>CHM 393</string>
+			<string>Natural Products Research</string>
+		</array>
+		<array>
+			<string>CHM 444</string>
+			<string>Inorganic Chemistry</string>
+		</array>
+		<array>
+			<string>CHM 453</string>
+			<string>Biochemistry I</string>
+		</array>
+		<array>
+			<string>CHM 471</string>
+			<string>Biochemistry Laboratory</string>
+		</array>
+		<array>
+			<string>CHM 473</string>
+			<string>Inorganic Synthesis and Characterization</string>
+		</array>
+		<array>
+			<string>CHM 493</string>
+			<string>Organic Chem Research</string>
+		</array>
+	</array>
+	<key>Civil Engineering</key>
+	<array>
+		<array>
+			<string>CE 201</string>
+			<string>Civil Engineering Design Graphics</string>
+		</array>
+		<array>
+			<string>CE 223</string>
+			<string>Surveying</string>
+		</array>
+		<array>
+			<string>CE 224</string>
+			<string>Surveying Laboratory</string>
+		</array>
+		<array>
+			<string>CE 302</string>
+			<string>Construction Materials</string>
+		</array>
+		<array>
+			<string>CE 321</string>
+			<string>Geotechnical Engineering</string>
+		</array>
+		<array>
+			<string>CE 351</string>
+			<string>Structural Analysis I</string>
+		</array>
+		<array>
+			<string>CE 371</string>
+			<string>Geotechnical Laboratory</string>
+		</array>
+		<array>
+			<string>CE 401</string>
+			<string>Computational Methods in Civil Engineering</string>
+		</array>
+		<array>
+			<string>CE 416</string>
+			<string>Traffic Engineering</string>
+		</array>
+		<array>
+			<string>CE 442</string>
+			<string>Reinforced Concrete Design</string>
+		</array>
+		<array>
+			<string>CE 452</string>
+			<string>Earthquake Engineering</string>
+		</array>
+		<array>
+			<string>CE 466</string>
+			<string>Water and Wastewater Design</string>
+		</array>
+		<array>
+			<string>CE 481</string>
+			<string>Civil Engineering Senior Design Project I</string>
+		</array>
+	</array>
+	<key>Chinese</key>
+	<array>
+		<array>
+			<string>CHN 101</string>
+			<string>Beginning Chinese I</string>
+		</array>
+		<array>
+			<string>CHN 101</string>
+			<string>Beginning Chinese III</string>
+		</array>
+		<array>
+			<string>CHN 111</string>
+			<string>Chinese Language Lab I</string>
+		</array>
+		<array>
+			<string>CHN 113</string>
+			<string>Chinese Language Lab III</string>
+		</array>
+		<array>
+			<string>CHN 491</string>
+			<string>Second Language Strat/Theory</string>
+		</array>
+	</array>
+</dict>
+</plist>

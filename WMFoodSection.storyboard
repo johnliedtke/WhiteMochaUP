@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SVc-Lt-uIJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Food Section View Controller-->
+        <scene sceneID="gio-Pq-bfv">
+            <objects>
+                <tableViewController storyboardIdentifier="WMFoodSection" id="SVc-Lt-uIJ" customClass="WMFoodSectionViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5Dq-Ko-YOX">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Commons" id="XpK-ly-XL7">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="155" id="qU0-Ts-qle">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="155"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="154"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="commonsImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="V1s-S5-i9r">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="QRg-Mh-8CN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hours:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N70-mT-wgp">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="57" id="Bio-zK-vcs"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Monday - Thurs:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCh-pa-JhW">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="124" id="VZV-Nc-IDa"/>
+                                                        <constraint firstAttribute="height" constant="21" id="ZQI-Bq-17v"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Friday: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBM-e5-7pi">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="6dO-bl-B0O"/>
+                                                        <constraint firstAttribute="width" constant="57" id="pUj-Nx-8zj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saturday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6b-U3-60b">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="5y5-E0-Gx1"/>
+                                                        <constraint firstAttribute="width" constant="69" id="pxq-uL-tKL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sunday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5di-df-JDs">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="58" id="7ZP-wY-Ore"/>
+                                                        <constraint firstAttribute="height" constant="21" id="AhZ-GR-csW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7:30 am - Midnight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALM-ef-gyJ">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="OxD-kk-FMT"/>
+                                                        <constraint firstAttribute="width" constant="143" id="svd-XT-4ND"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7:30 am - 11:00 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vG-iQ-cYN">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="0VA-NW-l8z"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10:00 am - 11:00 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1l-0U-f08">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="cmx-iX-cX8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10:00 am - Midnight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfM-hb-jkq">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="uw7-Za-7OP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ALM-ef-gyJ" firstAttribute="leading" secondItem="9vG-iQ-cYN" secondAttribute="leading" type="default" id="3Xn-kf-Gz7"/>
+                                            <constraint firstAttribute="bottom" secondItem="5di-df-JDs" secondAttribute="bottom" constant="18" id="5kw-LH-dPn"/>
+                                            <constraint firstItem="P6b-U3-60b" firstAttribute="leading" secondItem="KBM-e5-7pi" secondAttribute="leading" type="default" id="8La-BR-687"/>
+                                            <constraint firstItem="bfM-hb-jkq" firstAttribute="centerX" secondItem="K1l-0U-f08" secondAttribute="centerX" type="default" id="A2k-f7-uzH"/>
+                                            <constraint firstItem="rCh-pa-JhW" firstAttribute="trailing" secondItem="9vG-iQ-cYN" secondAttribute="trailing" type="default" id="GFp-D1-p4Y"/>
+                                            <constraint firstItem="bfM-hb-jkq" firstAttribute="bottom" secondItem="qU0-Ts-qle" secondAttribute="bottom" type="default" id="ISS-pN-rAP"/>
+                                            <constraint firstItem="KBM-e5-7pi" firstAttribute="top" secondItem="qU0-Ts-qle" secondAttribute="top" constant="51" id="Ifm-Wc-ITY"/>
+                                            <constraint firstItem="bfM-hb-jkq" firstAttribute="top" secondItem="K1l-0U-f08" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ms0-NY-lqF"/>
+                                            <constraint firstItem="ALM-ef-gyJ" firstAttribute="leading" secondItem="qU0-Ts-qle" secondAttribute="leading" constant="198" id="N6k-XM-Dvi"/>
+                                            <constraint firstItem="5di-df-JDs" firstAttribute="top" secondItem="P6b-U3-60b" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="NZl-eD-d3F"/>
+                                            <constraint firstItem="P6b-U3-60b" firstAttribute="leading" secondItem="5di-df-JDs" secondAttribute="leading" type="default" id="aat-Uo-VGY"/>
+                                            <constraint firstItem="V1s-S5-i9r" firstAttribute="centerY" secondItem="qU0-Ts-qle" secondAttribute="centerY" type="default" id="bep-AI-wbH"/>
+                                            <constraint firstItem="N70-mT-wgp" firstAttribute="leading" secondItem="qU0-Ts-qle" secondAttribute="leading" constant="169" id="cHb-5a-hdj"/>
+                                            <constraint firstItem="9vG-iQ-cYN" firstAttribute="top" secondItem="qU0-Ts-qle" secondAttribute="top" constant="69" id="dAK-9C-l8T"/>
+                                            <constraint firstItem="V1s-S5-i9r" firstAttribute="leading" secondItem="qU0-Ts-qle" secondAttribute="leading" constant="9" id="gqm-S0-OEf"/>
+                                            <constraint firstItem="N70-mT-wgp" firstAttribute="top" secondItem="qU0-Ts-qle" secondAttribute="top" constant="-2" id="jvU-3F-zdo"/>
+                                            <constraint firstItem="ALM-ef-gyJ" firstAttribute="top" secondItem="qU0-Ts-qle" secondAttribute="top" constant="33" id="kGp-zw-RUp"/>
+                                            <constraint firstItem="rCh-pa-JhW" firstAttribute="top" secondItem="qU0-Ts-qle" secondAttribute="top" constant="14" id="pYU-4X-mPt"/>
+                                            <constraint firstItem="V1s-S5-i9r" firstAttribute="top" secondItem="qU0-Ts-qle" secondAttribute="top" constant="20" type="default" id="pwA-SZ-mEs"/>
+                                            <constraint firstItem="KBM-e5-7pi" firstAttribute="leading" secondItem="rCh-pa-JhW" secondAttribute="leading" type="default" id="pyW-Zj-Z42"/>
+                                            <constraint firstItem="bfM-hb-jkq" firstAttribute="leading" secondItem="9vG-iQ-cYN" secondAttribute="leading" type="default" id="qpy-BK-HCV"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Cove" id="O1w-4O-hWn">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="155" id="HGA-uA-XTY">
+                                        <rect key="frame" x="0.0" y="199" width="320" height="155"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="154"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="covePlaceHolder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jXa-kn-oQc">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="BoK-XU-rtu"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hours:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sL-8m-kCq">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saturday &amp; Sunday:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6o-UV-AVn">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="dCg-cz-MTT"/>
+                                                        <constraint firstAttribute="width" constant="134" id="svX-ub-5hx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14.699999809265137"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Monday - Thurs:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnD-Vm-zhM">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="189" id="64W-dP-xYE"/>
+                                                        <constraint firstAttribute="height" constant="21" id="6yR-Hi-aij"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7:00 am - 8:00 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IT-vL-95i">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Uei-J6-TJJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="11:00 am - 3:00 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vr-Dp-DfS">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="cid-mP-Oud"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="8vr-Dp-DfS" firstAttribute="top" secondItem="1IT-vL-95i" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3RA-pB-zCY"/>
+                                            <constraint firstItem="jXa-kn-oQc" firstAttribute="centerY" secondItem="HGA-uA-XTY" secondAttribute="centerY" type="default" id="8ZI-U2-MNi"/>
+                                            <constraint firstItem="jXa-kn-oQc" firstAttribute="top" secondItem="HGA-uA-XTY" secondAttribute="top" constant="20" type="default" id="95M-aJ-nE6"/>
+                                            <constraint firstItem="T6o-UV-AVn" firstAttribute="leading" secondItem="LnD-Vm-zhM" secondAttribute="leading" type="default" id="CMt-5L-s0p"/>
+                                            <constraint firstItem="jXa-kn-oQc" firstAttribute="leading" secondItem="HGA-uA-XTY" secondAttribute="leading" constant="8" id="CWh-Pa-0et"/>
+                                            <constraint firstItem="8vr-Dp-DfS" firstAttribute="leading" secondItem="1IT-vL-95i" secondAttribute="leading" type="default" id="Khi-py-A34"/>
+                                            <constraint firstItem="6sL-8m-kCq" firstAttribute="leading" secondItem="jXa-kn-oQc" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Ue4-6F-d6S"/>
+                                            <constraint firstItem="LnD-Vm-zhM" firstAttribute="leading" secondItem="HGA-uA-XTY" secondAttribute="leading" constant="181" id="XUQ-Vj-ecg"/>
+                                            <constraint firstItem="LnD-Vm-zhM" firstAttribute="top" secondItem="HGA-uA-XTY" secondAttribute="top" constant="29" id="YW2-CM-n7p"/>
+                                            <constraint firstItem="8vr-Dp-DfS" firstAttribute="trailing" secondItem="1IT-vL-95i" secondAttribute="trailing" type="default" id="aGJ-ss-wAm"/>
+                                            <constraint firstItem="T6o-UV-AVn" firstAttribute="top" secondItem="HGA-uA-XTY" secondAttribute="top" constant="64" id="drW-Ev-yD0"/>
+                                            <constraint firstAttribute="trailing" secondItem="1IT-vL-95i" secondAttribute="trailing" constant="10" id="ot4-bg-o92"/>
+                                            <constraint firstItem="6sL-8m-kCq" firstAttribute="top" secondItem="HGA-uA-XTY" secondAttribute="top" constant="5" id="px4-5o-WLd"/>
+                                            <constraint firstItem="1IT-vL-95i" firstAttribute="top" secondItem="HGA-uA-XTY" secondAttribute="top" constant="49" id="ysA-Zk-0ic"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Anchor" id="gEo-TI-5dJ">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="155" id="WFB-nl-jeF">
+                                        <rect key="frame" x="0.0" y="376" width="320" height="155"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="154"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="anchorImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8Bl-fT-6FO">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="ZRh-7S-7tM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hours:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8M-m7-pml">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Everyday:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mj7-pK-PR0">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Kvz-e5-Uvp"/>
+                                                        <constraint firstAttribute="width" constant="76" id="geE-yM-uIs"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="11:00 am - 12:00 am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0T-ch-y0z">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Cag-fb-16G"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Much More Coming Soon !!!!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2I-Sm-rtI">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Y0T-ch-y0z" firstAttribute="top" secondItem="WFB-nl-jeF" secondAttribute="top" constant="56" id="1k6-3K-agf"/>
+                                            <constraint firstAttribute="bottom" secondItem="D2I-Sm-rtI" secondAttribute="bottom" constant="1" id="CId-lD-LuQ"/>
+                                            <constraint firstItem="D2I-Sm-rtI" firstAttribute="centerX" secondItem="WFB-nl-jeF" secondAttribute="centerX" type="default" id="DUP-H4-2OI"/>
+                                            <constraint firstItem="Y8M-m7-pml" firstAttribute="leading" secondItem="8Bl-fT-6FO" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Ka5-9D-rSC"/>
+                                            <constraint firstItem="Y8M-m7-pml" firstAttribute="top" secondItem="WFB-nl-jeF" secondAttribute="top" constant="20" type="default" id="Qne-VM-Bl2"/>
+                                            <constraint firstItem="mj7-pK-PR0" firstAttribute="top" secondItem="WFB-nl-jeF" secondAttribute="top" constant="40" id="S4s-gp-25y"/>
+                                            <constraint firstItem="8Bl-fT-6FO" firstAttribute="top" secondItem="WFB-nl-jeF" secondAttribute="top" constant="20" type="default" id="W2o-nv-ngr"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y0T-ch-y0z" secondAttribute="trailing" constant="15" id="hQB-V7-AZb"/>
+                                            <constraint firstItem="8Bl-fT-6FO" firstAttribute="centerY" secondItem="WFB-nl-jeF" secondAttribute="centerY" type="default" id="lLC-ui-1o5"/>
+                                            <constraint firstAttribute="trailing" secondItem="mj7-pK-PR0" secondAttribute="trailing" constant="58" id="pwO-7f-GJV"/>
+                                            <constraint firstItem="8Bl-fT-6FO" firstAttribute="leading" secondItem="WFB-nl-jeF" secondAttribute="leading" constant="11" id="s3r-Dc-Ece"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="SVc-Lt-uIJ" id="sWP-xz-i4f"/>
+                            <outlet property="delegate" destination="SVc-Lt-uIJ" id="kbh-rO-tsY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFl-k5-cAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="-110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="anchorImage.jpg" width="720" height="960"/>
+        <image name="commonsImage.jpg" width="720" height="960"/>
+        <image name="covePlaceHolder.jpg" width="3264" height="2448"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
