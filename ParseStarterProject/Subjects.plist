@@ -490,6 +490,85 @@
 			<string>Civil Engineering Senior Design Project I</string>
 		</array>
 	</array>
+	<key>Psychology</key>
+	<array>
+		<array>
+			<string>PSY 101</string>
+			<string>General Psychology</string>
+		</array>
+		<array>
+			<string>PSY 214</string>
+			<string>Research Methods: Design</string>
+		</array>
+		<array>
+			<string>PSY 215</string>
+			<string>Research Methods: Analysis</string>
+		</array>
+		<array>
+			<string>PSY 310</string>
+			<string>Behavioral Neuroscience</string>
+		</array>
+		<array>
+			<string>PSY 320</string>
+			<string>Psychology of Learning</string>
+		</array>
+		<array>
+			<string>PSY 340</string>
+			<string>Sensation and Perception</string>
+		</array>
+		<array>
+			<string>PSY 350</string>
+			<string>Social Psychology</string>
+		</array>
+		<array>
+			<string>PSY 356</string>
+			<string>Perspectives on Human Sexuality</string>
+		</array>
+		<array>
+			<string>PSY 360</string>
+			<string>Life Span Development</string>
+		</array>
+		<array>
+			<string>PSY 375</string>
+			<string>The Self</string>
+		</array>
+		<array>
+			<string>PSY 380</string>
+			<string>Abnormal Psychology</string>
+		</array>
+		<array>
+			<string>PSY 391</string>
+			<string>Psychology &amp; Economics</string>
+		</array>
+		<array>
+			<string>PSY 391</string>
+			<string>Relationships</string>
+		</array>
+		<array>
+			<string>PSY 391</string>
+			<string>Drugs and Behavior</string>
+		</array>
+		<array>
+			<string>400</string>
+			<string>History of Psychology</string>
+		</array>
+		<array>
+			<string>PSY 462</string>
+			<string>Group Counseling</string>
+		</array>
+		<array>
+			<string>PSY 480</string>
+			<string>Clinical and Counseling Psychology</string>
+		</array>
+		<array>
+			<string>PSY  494</string>
+			<string>Neuroscience Research</string>
+		</array>
+		<array>
+			<string>PSY 494</string>
+			<string>Clinical Psychology Research</string>
+		</array>
+	</array>
 	<key>Chinese</key>
 	<array>
 		<array>

@@ -7,6 +7,7 @@
 //
 
 #import "WMAboutSectionViewController.h"
+#import <Parse/Parse.h>
 
 @interface WMAboutSectionViewController ()
 
@@ -36,4 +37,9 @@
 
 
 
+- (IBAction)logOut:(id)sender
+{
+    [PFUser logOut];
+    [[self navigationController] popToRootViewControllerAnimated:YES];
+}
 @end
