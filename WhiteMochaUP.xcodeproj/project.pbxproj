@@ -1405,8 +1405,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: John Liedtke (JQGA5FS44F)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Liedtke (JQGA5FS44F)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: John Liedtke (BX5CP76VJ3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: John Liedtke (BX5CP76VJ3)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1419,8 +1419,8 @@
 				INFOPLIST_FILE = "ParseStarterProject/WhiteMochaUP-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = WhiteMochaUP;
-				PROVISIONING_PROFILE = "7FE4492B-93DF-49F9-BB5F-350A29A6495B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7FE4492B-93DF-49F9-BB5F-350A29A6495B";
+				PROVISIONING_PROFILE = "D6B3450D-E73D-4358-B7AF-1E13592CA373";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D6B3450D-E73D-4358-B7AF-1E13592CA373";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1430,8 +1430,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: John Liedtke (JQGA5FS44F)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Liedtke (JQGA5FS44F)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: John Liedtke (BX5CP76VJ3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: John Liedtke (BX5CP76VJ3)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1443,8 +1443,8 @@
 				INFOPLIST_FILE = "ParseStarterProject/WhiteMochaUP-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = WhiteMochaUP;
-				PROVISIONING_PROFILE = "7FE4492B-93DF-49F9-BB5F-350A29A6495B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7FE4492B-93DF-49F9-BB5F-350A29A6495B";
+				PROVISIONING_PROFILE = "D6B3450D-E73D-4358-B7AF-1E13592CA373";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D6B3450D-E73D-4358-B7AF-1E13592CA373";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

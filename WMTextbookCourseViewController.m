@@ -61,7 +61,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [levels count];
+    int count = 0;
+    for (int i =0; i < [levels count]; i++) {
+        NSString *levelString = [levels objectAtIndex:i];
+        NSArray *classLevels = [self sortedLevels:[[levelString substringWithRange:NSMakeRange(0, 1)] intValue]];
+        if ([classLevels count] > 0) {
+            count++;
+        }
+    }
+    return count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
