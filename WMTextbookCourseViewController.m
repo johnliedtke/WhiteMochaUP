@@ -27,14 +27,15 @@
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Subjects" ofType:@"plist"];
         
         // Load the file content and read the data into array
-        levels = [NSArray arrayWithObjects:@"100", @"200", @"300", @"400", @"500", nil];
+        levels = [[NSMutableArray alloc] init];
+        levelNumbers = [[NSMutableArray alloc] init];
     
         courses = [[NSDictionary alloc] initWithContentsOfFile:path];
+        
         
        // Appearance
         PURPLEBACK
         [self setTitle:@"Marketplace"];
-        
     }
     return self;
 }
@@ -43,12 +44,21 @@
 {
     [super viewDidLoad];
     NSLog(@"%@ <---", [self subject]);
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    
+    //[[sortedLevels objectAtIndex:[indexPath row]] objectAtIndex:0]]
+    selectedCourses = [courses objectForKey:[self subject]];
+    for (int i =1; i <= 5; i++) {
+        NSArray *testArray = [self sortedLevels:i];
+        if ([testArray count] > 0) {
+            NSString *levelString = [NSString stringWithFormat:@"%d00", i];
+            [levels addObject:levelString];
+            NSNumber  *number = [NSNumber numberWithInt:i];
+            [levelNumbers addObject:number];
+        }
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,27 +71,20 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    int count = 0;
-    for (int i =0; i < [levels count]; i++) {
-        NSString *levelString = [levels objectAtIndex:i];
-        NSArray *classLevels = [self sortedLevels:[[levelString substringWithRange:NSMakeRange(0, 1)] intValue]];
-        if ([classLevels count] > 0) {
-            count++;
-        }
-    }
-    return count;
+    return [levels count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray *sortedLevels = [self sortedLevels:++section];
+    
+    NSArray *sortedLevels = [self sortedLevels:[levelNumbers[section] intValue]];
+    
     return [sortedLevels count];
 }
 
 // Returns an array with the specified level
 - (NSArray *)sortedLevels:(int)level
 {
-    NSArray *selectedCourses = [courses objectForKey:[self subject]];
     NSString *pricePattern = @"(?:^[a-z]{1,4}\\s)";
     NSError *error = NULL;
     NSMutableArray *sortedLevels = [[NSMutableArray alloc] init];
@@ -122,7 +125,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"UITableViewCell"];
     }
 
-    NSArray *sortedLevels = [self sortedLevels:([indexPath section] + 1)];
+    NSArray *sortedLevels = [self sortedLevels:[levelNumbers[[indexPath section]] intValue]];
     [[cell textLabel] setText:[[sortedLevels objectAtIndex:[indexPath row]] objectAtIndex:0]];
     [[cell detailTextLabel] setText:[[sortedLevels objectAtIndex:[indexPath row]] objectAtIndex:1]];
     

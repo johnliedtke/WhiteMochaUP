@@ -13,7 +13,9 @@
 @interface WMTextbookCourseViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 {
     NSDictionary *courses;
-    NSArray *levels;
+    NSMutableArray *levels;
+    NSArray *selectedCourses;
+    NSMutableArray *levelNumbers;
 }
 
 @property (nonatomic, unsafe_unretained) NSArray *subjects;

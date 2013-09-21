@@ -435,6 +435,132 @@
 			<string>Organic Chem Research</string>
 		</array>
 	</array>
+	<key>Computer Science</key>
+	<array>
+		<array>
+			<string>CS 201</string>
+			<string>Introduction to Scientific Programming</string>
+		</array>
+		<array>
+			<string>CS 203</string>
+			<string>Introduction to Computer Science</string>
+		</array>
+		<array>
+			<string>CS 301</string>
+			<string>Object-oriented Design</string>
+		</array>
+		<array>
+			<string>CS XXX</string>
+			<string>Data Structures</string>
+		</array>
+		<array>
+			<string>CS 421</string>
+			<string>Artificial Intelligence</string>
+		</array>
+		<array>
+			<string>CS 423</string>
+			<string>Computational Biology</string>
+		</array>
+		<array>
+			<string>CS 441</string>
+			<string>Software Engineering</string>
+		</array>
+		<array>
+			<string>CS 451</string>
+			<string>Theory of Computation</string>
+		</array>
+	</array>
+	<key>Communications Studies </key>
+	<array>
+		<array>
+			<string>CST 101</string>
+			<string>Introduction to Communication Studies</string>
+		</array>
+		<array>
+			<string>CST 107</string>
+			<string>Effective Public Speaking</string>
+		</array>
+		<array>
+			<string>CST 225</string>
+			<string>Fundamentals of Interpersonal Communication</string>
+		</array>
+		<array>
+			<string>CST 233</string>
+			<string>Introduction to Organizational Communication Theory</string>
+		</array>
+		<array>
+			<string>CST 300</string>
+			<string>Communication Research</string>
+		</array>
+		<array>
+			<string>CST 301</string>
+			<string>Media and Society</string>
+		</array>
+		<array>
+			<string>CST 307</string>
+			<string>Advanced Public Speaking</string>
+		</array>
+		<array>
+			<string>CST 320</string>
+			<string>Rhetorical Theory and Criticism</string>
+		</array>
+		<array>
+			<string>CST 332</string>
+			<string>Collaborative Leadership in Groups</string>
+		</array>
+		<array>
+			<string>CST 333</string>
+			<string>Applied Organizational Communication Skills</string>
+		</array>
+		<array>
+			<string>CST 352</string>
+			<string>News Writing and Reporting</string>
+		</array>
+		<array>
+			<string>CST 362</string>
+			<string>Introduction to Public Relations</string>
+		</array>
+		<array>
+			<string>CST 364</string>
+			<string>Visual Communication</string>
+		</array>
+		<array>
+			<string>CST 391</string>
+			<string>Event Planning</string>
+		</array>
+		<array>
+			<string>391</string>
+			<string>Creativity &amp; Digital Tools</string>
+		</array>
+		<array>
+			<string>CST 402</string>
+			<string>Social Media and Cultures</string>
+		</array>
+		<array>
+			<string>CST 431</string>
+			<string>Cross-cultural Communication and Identity</string>
+		</array>
+		<array>
+			<string>CST 433</string>
+			<string>Advanced Organizational Communication</string>
+		</array>
+		<array>
+			<string>CST 434</string>
+			<string>Examining Organizational Communication in Natural Settings</string>
+		</array>
+		<array>
+			<string>CST 463</string>
+			<string>Opinion Writing</string>
+		</array>
+		<array>
+			<string>CST 483</string>
+			<string>Grace in the Wilderness: Conflict in The Bible</string>
+		</array>
+		<array>
+			<string>CST 491</string>
+			<string>Int&apos;l Engagement &amp; Leadership</string>
+		</array>
+	</array>
 	<key>Civil Engineering</key>
 	<array>
 		<array>
@@ -569,6 +695,262 @@
 			<string>Clinical Psychology Research</string>
 		</array>
 	</array>
+	<key>Education</key>
+	<array>
+		<array>
+			<string>ED 101</string>
+			<string>Aim for Excellence</string>
+		</array>
+		<array>
+			<string>ED 102</string>
+			<string>University Success</string>
+		</array>
+		<array>
+			<string>ED 150</string>
+			<string>Introduction to Education</string>
+		</array>
+		<array>
+			<string>ED 320</string>
+			<string>Foundations of Education</string>
+		</array>
+		<array>
+			<string>ED 330</string>
+			<string>Polocies and Practices for Diverse Learners</string>
+		</array>
+		<array>
+			<string>ED 340</string>
+			<string>ECE/ELEM Physical Education</string>
+		</array>
+		<array>
+			<string>ED 387</string>
+			<string>Service Learning in Mathematics or Reading or Science</string>
+		</array>
+		<array>
+			<string>ED 403</string>
+			<string>Language and Communication: Support and Strategies</string>
+		</array>
+		<array>
+			<string>ED 406</string>
+			<string>Academic Assessment: Curriculum and Instruction for Diverse Learners</string>
+		</array>
+		<array>
+			<string>ED 409</string>
+			<string>Methods and Materials for Teaching ESOL</string>
+		</array>
+		<array>
+			<string>ED 410</string>
+			<string>Linguistics</string>
+		</array>
+		<array>
+			<string>ED 411</string>
+			<string>Assessment</string>
+		</array>
+		<array>
+			<string>ED 414</string>
+			<string>Children&apos;s and Adolescent Literature and Library</string>
+		</array>
+		<array>
+			<string>ED 426</string>
+			<string>ECE/ELEM Classroom Relationships and Management</string>
+		</array>
+		<array>
+			<string>ED 427</string>
+			<string>MS/HS Classroom Relationships and Management</string>
+		</array>
+		<array>
+			<string>ED 445</string>
+			<string>ECE/ELEM Mathematics and Science Methods</string>
+		</array>
+		<array>
+			<string>ED 447</string>
+			<string>Fostering Creativity in the Classroom</string>
+		</array>
+		<array>
+			<string>ED 452</string>
+			<string>MS/HS Content Methods: Language Arts</string>
+		</array>
+		<array>
+			<string>ED 453</string>
+			<string>MS/HS Content Methods: Math</string>
+		</array>
+		<array>
+			<string>ED 454</string>
+			<string>MS/HS Content Methods: World Language</string>
+		</array>
+		<array>
+			<string>ED 456</string>
+			<string>MS/HS Content Methods: Social Studies</string>
+		</array>
+		<array>
+			<string>ED 457</string>
+			<string>MS/HS Content Methods: Science</string>
+		</array>
+		<array>
+			<string>ED 460</string>
+			<string>Endorsement Portfolio -ESL</string>
+		</array>
+		<array>
+			<string>ED 464</string>
+			<string>Reading Practicum PK-12</string>
+		</array>
+		<array>
+			<string>ED 468</string>
+			<string>Special Education Practicum PK-12</string>
+		</array>
+	</array>
+	<key>Drama</key>
+	<array>
+		<array>
+			<string>DRM 207</string>
+			<string>Introduction to Theatre Design &amp; Communication</string>
+		</array>
+		<array>
+			<string>DRM 307</string>
+			<string>Survey of Theatre History</string>
+		</array>
+		<array>
+			<string>DRM 325</string>
+			<string>Acting for Non-Majors</string>
+		</array>
+		<array>
+			<string>DRM 353</string>
+			<string>Beginning Scenic Design</string>
+		</array>
+		<array>
+			<string>DRM 422</string>
+			<string>Advanced Acting</string>
+		</array>
+		<array>
+			<string>DRM 424</string>
+			<string>Graduate Preparation Workshop</string>
+		</array>
+		<array>
+			<string>DRM 427</string>
+			<string>Playwriting</string>
+		</array>
+		<array>
+			<string>DRM 455</string>
+			<string>Music Theatre Workshop</string>
+		</array>
+		<array>
+			<string>DRM 456</string>
+			<string>Decorative Arts for the Stage</string>
+		</array>
+		<array>
+			<string>DRM 463</string>
+			<string>Advanced Costume Design</string>
+		</array>
+		<array>
+			<string>DRM 490</string>
+			<string>Abnormal Psychology</string>
+		</array>
+		<array>
+			<string>DRM 507</string>
+			<string>Survey of Theatre History I</string>
+		</array>
+		<array>
+			<string>DRM 510</string>
+			<string>Theories of Dramatic Criticism</string>
+		</array>
+		<array>
+			<string>DRM 521</string>
+			<string>Acting Pedagogy</string>
+		</array>
+		<array>
+			<string>DRM 533</string>
+			<string>Advanced Play Direction</string>
+		</array>
+	</array>
+	<key>Electrical Engineering</key>
+	<array>
+		<array>
+			<string>EE 231</string>
+			<string>Logic Design</string>
+		</array>
+		<array>
+			<string>EE 261</string>
+			<string>Electrical Circuits</string>
+		</array>
+		<array>
+			<string>EE 333</string>
+			<string>Computer Organization</string>
+		</array>
+		<array>
+			<string>EE 351</string>
+			<string>Electronic Circuits I</string>
+		</array>
+		<array>
+			<string>EE 404</string>
+			<string>Automatic Control Systems</string>
+		</array>
+		<array>
+			<string>EE 420</string>
+			<string>Engergy Conversion</string>
+		</array>
+		<array>
+			<string>EE 435</string>
+			<string>Verilog Digital Systems Modeling</string>
+		</array>
+		<array>
+			<string>EE 451</string>
+			<string>Advanced Analog Electronics</string>
+		</array>
+	</array>
+	<key>English</key>
+	<array>
+		<array>
+			<string>ENG 101</string>
+			<string>English as a Second Language for International Students: Advanced</string>
+		</array>
+		<array>
+			<string>ENG 107</string>
+			<string>College Writing</string>
+		</array>
+		<array>
+			<string>ENG 112</string>
+			<string>Introduction to Literature</string>
+		</array>
+		<array>
+			<string>ENG 309</string>
+			<string>Writing Workshop: Fiction</string>
+		</array>
+		<array>
+			<string>ENG 311</string>
+			<string>Advanced Writing</string>
+		</array>
+		<array>
+			<string>ENG 317</string>
+			<string>Composition Theory and Practice</string>
+		</array>
+		<array>
+			<string>ENG 326</string>
+			<string>Shakespeare: Representative Plays</string>
+		</array>
+		<array>
+			<string>ENG 343</string>
+			<string>Studies in Nonfiction</string>
+		</array>
+		<array>
+			<string>ENG 344</string>
+			<string>Romantic Literature 1785-1830</string>
+		</array>
+		<array>
+			<string>ENG 346</string>
+			<string>Modern British Literature 1900-1945</string>
+		</array>
+		<array>
+			<string>ENG 354</string>
+			<string>American Literature Beginnings-1865</string>
+		</array>
+		<array>
+			<string>ENG 489</string>
+			<string>Fremantle, Australia</string>
+		</array>
+		<array>
+			<string>ENG 491</string>
+			<string>Multi-Ethnic American Lit</string>
+		</array>
+	</array>
 	<key>Chinese</key>
 	<array>
 		<array>
@@ -590,6 +972,48 @@
 		<array>
 			<string>CHN 491</string>
 			<string>Second Language Strat/Theory</string>
+		</array>
+	</array>
+	<key>Dance</key>
+	<array>
+		<array>
+			<string>DNC 214</string>
+			<string>Jazz Dance</string>
+		</array>
+		<array>
+			<string>DNC 216</string>
+			<string>Introduction to Ballet I</string>
+		</array>
+		<array>
+			<string>DNC 315</string>
+			<string>Jazz and Modern</string>
+		</array>
+		<array>
+			<string>DNC 316</string>
+			<string>Jazz Dance II</string>
+		</array>
+		<array>
+			<string>DNC 317</string>
+			<string>Ballet II</string>
+		</array>
+	</array>
+	<key>Aerospace Studies</key>
+	<array>
+		<array>
+			<string>AS 101</string>
+			<string>Foundations of the U.S. Air Force</string>
+		</array>
+		<array>
+			<string>AS 201</string>
+			<string>The Evaluation of USAF Air &amp; Space Power</string>
+		</array>
+		<array>
+			<string>AS 301</string>
+			<string>Leadership &amp; Management</string>
+		</array>
+		<array>
+			<string>AS 401</string>
+			<string>National Security Affairs &amp; Preparation for Active Duty</string>
 		</array>
 	</array>
 </dict>

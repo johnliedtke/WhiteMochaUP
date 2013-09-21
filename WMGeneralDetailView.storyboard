@@ -81,6 +81,7 @@
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="August 12, 5:07 PM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9O-cG-VBg">
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="188" id="Rkw-hv-aum"/>
                                                         <constraint firstAttribute="height" constant="30" id="y6k-4n-8on"/>
                                                     </constraints>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,12 +104,10 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="XFf-ej-fQ3" firstAttribute="leading" secondItem="96F-NM-8Jj" secondAttribute="leading" type="default" id="26X-Ie-sv4"/>
-                                            <constraint firstItem="F9O-cG-VBg" firstAttribute="trailing" secondItem="Tbk-RY-wzg" secondAttribute="trailing" type="default" id="3QP-FX-gpu"/>
                                             <constraint firstItem="66Z-nv-E4q" firstAttribute="trailing" secondItem="XFf-ej-fQ3" secondAttribute="trailing" type="default" id="3iS-qG-ub8"/>
                                             <constraint firstItem="WlB-Ln-lNT" firstAttribute="leading" secondItem="F9O-cG-VBg" secondAttribute="leading" type="default" id="3qB-eU-Rbt"/>
                                             <constraint firstItem="Tbk-RY-wzg" firstAttribute="trailing" secondItem="EQh-ek-Ow9" secondAttribute="trailing" type="default" id="5TA-pf-sdk"/>
                                             <constraint firstItem="9KM-eq-Dae" firstAttribute="trailing" secondItem="66Z-nv-E4q" secondAttribute="trailing" type="default" id="7Lz-YE-j4h"/>
-                                            <constraint firstItem="WlB-Ln-lNT" firstAttribute="trailing" secondItem="F9O-cG-VBg" secondAttribute="trailing" type="default" id="800-ud-s4G"/>
                                             <constraint firstItem="F9O-cG-VBg" firstAttribute="centerY" secondItem="66Z-nv-E4q" secondAttribute="centerY" type="default" id="FVh-Fg-hxr"/>
                                             <constraint firstItem="Tbk-RY-wzg" firstAttribute="top" secondItem="jai-9o-Jaf" secondAttribute="top" constant="29" id="Fci-No-5S6"/>
                                             <constraint firstAttribute="bottom" secondItem="WlB-Ln-lNT" secondAttribute="bottom" constant="3" id="GF1-ap-kje"/>
@@ -121,6 +120,7 @@
                                             <constraint firstItem="Tbk-RY-wzg" firstAttribute="baseline" secondItem="XFf-ej-fQ3" secondAttribute="baseline" type="default" id="ZjF-Kk-oXB"/>
                                             <constraint firstItem="EQh-ek-Ow9" firstAttribute="leading" secondItem="jai-9o-Jaf" secondAttribute="leading" constant="102" id="aSt-hk-qzf"/>
                                             <constraint firstItem="F9O-cG-VBg" firstAttribute="top" secondItem="jai-9o-Jaf" secondAttribute="top" constant="51" id="f2N-Qx-Rgh"/>
+                                            <constraint firstItem="Tbk-RY-wzg" firstAttribute="trailing" secondItem="WlB-Ln-lNT" secondAttribute="trailing" type="default" id="ifZ-ZX-329"/>
                                             <constraint firstItem="F9O-cG-VBg" firstAttribute="leading" secondItem="Tbk-RY-wzg" secondAttribute="leading" type="default" id="pWd-eG-OGM"/>
                                             <constraint firstItem="96F-NM-8Jj" firstAttribute="leading" secondItem="jai-9o-Jaf" secondAttribute="leading" constant="24" id="q4c-4g-bZC"/>
                                             <constraint firstItem="XFf-ej-fQ3" firstAttribute="trailing" secondItem="96F-NM-8Jj" secondAttribute="trailing" type="default" id="sh6-jt-XSE"/>

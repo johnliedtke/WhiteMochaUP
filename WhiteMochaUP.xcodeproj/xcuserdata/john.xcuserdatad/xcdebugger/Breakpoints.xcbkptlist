@@ -535,7 +535,20 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WMTextbookCourseViewController.m"
-         timestampString = "400793095.03224"
+         timestampString = "401477129.781892"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
+         landmarkName = "-sortedLevels:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "WMTextbookCourseViewController.m"
+         timestampString = "401477129.781892"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "97"
@@ -548,11 +561,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WMTextbookCourseViewController.m"
-         timestampString = "400793095.03224"
+         timestampString = "401477129.781892"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
+         startingLineNumber = "71"
+         endingLineNumber = "71"
+         landmarkName = "@implementation WMTextbookCourseViewController"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "WMTextbookCourseViewController.m"
+         timestampString = "401477129.781892"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
+         landmarkName = "-initWithStyle:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "WMTextbookCourseViewController.m"
+         timestampString = "401477129.781892"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "86"
+         endingLineNumber = "86"
          landmarkName = "-sortedLevels:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -561,12 +600,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WMTextbookCourseViewController.m"
-         timestampString = "400793095.03224"
+         timestampString = "401477129.781892"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "71"
-         endingLineNumber = "71"
-         landmarkName = "-numberOfSectionsInTableView:"
+         startingLineNumber = "88"
+         endingLineNumber = "88"
+         landmarkName = "-sortedLevels:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -574,12 +613,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WMTextbookCourseViewController.m"
-         timestampString = "400792769.589709"
+         timestampString = "401477129.781892"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "64"
-         endingLineNumber = "64"
-         landmarkName = "-numberOfSectionsInTableView:"
+         startingLineNumber = "87"
+         endingLineNumber = "87"
+         landmarkName = "-sortedLevels:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

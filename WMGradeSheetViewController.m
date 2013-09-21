@@ -199,7 +199,7 @@
             NSString *percent;
             percent = [NSString stringWithFormat:@" %.01f ",[score doubleValue]/[maxPoints doubleValue] * 100];
             [cell.scorePercent setText:[NSString stringWithFormat:@"%@%%", percent]];
-            [gradeNameArray insertObject:assignmentName atIndex:0];
+            [gradeNameArray insertObject:assignmentName atIndex:indexPath.row];
             return cell;
         }
         return cell;
