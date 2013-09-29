@@ -11,6 +11,7 @@
 #import "WMRegisterViewController.h"
 #import <MessageUI/MFMailComposeViewController.h>
 #import <MessageUI/MessageUI.h>
+@class WMWebViewController;
 
 
 @interface WMHomeViewController : UITableViewController<MFMailComposeViewControllerDelegate,PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, RegisterViewDelegate, UITableViewDelegate, UITabBarControllerDelegate>
@@ -28,6 +29,30 @@
     IBOutlet UITableViewCell *topPartCell;
     IBOutlet UIButton *aboutButton;
     IBOutlet UIButton *feedbackButton;
+    IBOutlet UIButton *studyButton;
+    NSNumber *voteCount;
+    
+    
+    // Poll Buttons
+    NSArray *voteButtons;
+    IBOutlet UIButton *aButton;
+    IBOutlet UIButton *bButton;
+    IBOutlet UIButton *cButton;
+    IBOutlet UIButton *dButton;
+    
+    // Result Buttons
+    UIButton *aResultButton;
+    UIButton *bResultButton;
+    UIButton *cResultButton;
+    UIButton *dResultButton;
+    
+    // Vote Labels
+    IBOutlet UILabel *aLabel;
+    IBOutlet UILabel *bLabel;
+    IBOutlet UILabel *cLabel;
+    IBOutlet UILabel *dLabel;
+    
+    IBOutlet UILabel *voteLabel;
 }
 
 
@@ -36,6 +61,16 @@
 @property (nonatomic, strong) PFObject *poll;
 - (IBAction)aboutAction:(id)sender;
 - (IBAction)feedbackAction:(id)sender;
+
+// Result actions
+- (IBAction)aAction:(id)sender;
+- (IBAction)bAction:(id)sender;
+- (IBAction)cAction:(id)sender;
+- (IBAction)dAction:(id)sender;
+- (IBAction)studyAction:(id)sender;
+
+
+
 
 
 

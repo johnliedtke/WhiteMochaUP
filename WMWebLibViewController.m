@@ -1,14 +1,18 @@
 //
-//  WMWebViewController.m
+//  WMWebLibViewController.m
 //  WhiteMochaUP
 //
-//  Created by John Liedtke on 7/28/13.
+//  Created by John Liedtke on 9/27/13.
 //
 //
 
-#import "WMWebViewController.h"
+#import "WMWebLibViewController.h"
 
-@implementation WMWebViewController
+@interface WMWebLibViewController ()
+
+@end
+
+@implementation WMWebLibViewController
 
 -(void)loadView
 {
@@ -16,8 +20,8 @@
     CGRect screenFrame = [[UIScreen mainScreen] applicationFrame];
     UIWebView *wv = [[UIWebView alloc] initWithFrame:screenFrame];
     // Tell the web view to scale web content to fit within bounds of webview
-    [wv setScalesPageToFit:NO];
-    [wv stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document. body.style.zoom = %f;", _sizeScreen]];
+    //[wv setScalesPageToFit:NO];
+    //[wv stringByEvaluatingJavaScriptFromString:@"document. body.style.zoom = 5.0;"];
     
     [self setView:wv];
 }

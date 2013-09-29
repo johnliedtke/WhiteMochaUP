@@ -11,12 +11,15 @@
 #import "WMCustomLoginViewController.h"
 #import "WMConstants.h"
 #import "WMAboutSectionViewController.h"
+#import "WMWebViewController.h"
+
 
 @interface WMHomeViewController ()
 
 @end
 
 @implementation WMHomeViewController
+
 
 - (void)viewDidLoad
 {
@@ -29,13 +32,13 @@
     [dateLabel setText:[dateFormatter stringFromDate:[NSDate date]]];
     
     
-    // Buttons
+    // Blue Button
     UIImage *buttonImage = [[UIImage imageNamed:@"blueButton.png"]
                             resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
     UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blueButtonHighlight.png"]
                                      resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
     
-    // orange
+    // Orange Button
     UIImage *orangeButtonImage = [[UIImage imageNamed:@"orangeButton.png"]
                             resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
     UIImage *orangeButtonImageHighlight = [[UIImage imageNamed:@"orangeButtonHighlight.png"]
@@ -47,24 +50,43 @@
     UIImage *greyHighlight = [[UIImage imageNamed:@"greyButtonHighlight.png"]
                                            resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
     
+    // Green Button
+    UIImage *greenImage = [[UIImage imageNamed:@"greenButton.png"]
+                          resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    UIImage *greenHighlight = [[UIImage imageNamed:@"greenButtonHighlight.png"]
+                              resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    // Tan Button
+    UIImage *tanImage = [[UIImage imageNamed:@"tanButton.png"]
+                           resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    UIImage *tanHighlight = [[UIImage imageNamed:@"tanButtonHighlight.png"]
+                               resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    
     [aboutButton setBackgroundImage:greyImage forState:UIControlStateNormal];
     [aboutButton setBackgroundImage:greyHighlight forState:UIControlStateHighlighted];
     [feedbackButton setBackgroundImage:greyImage forState:UIControlStateNormal];
     [feedbackButton setBackgroundImage:greyHighlight forState:UIControlStateHighlighted];
+    [studyButton setBackgroundImage:greyImage forState:UIControlStateNormal];
+    [studyButton setBackgroundImage:greyHighlight forState:UIControlStateHighlighted];
     
     // Set the background for any states you plan to use
-    [yesButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [yesButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
-    [noButton setBackgroundImage:orangeButtonImage forState:UIControlStateNormal];
-    [noButton setBackgroundImage:orangeButtonImageHighlight forState:UIControlStateHighlighted];
+    [aButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [aButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
+    [bButton setBackgroundImage:orangeButtonImage forState:UIControlStateNormal];
+    [bButton setBackgroundImage:orangeButtonImageHighlight forState:UIControlStateHighlighted];
+    [cButton setBackgroundImage:greenImage forState:UIControlStateNormal];
+    [cButton setBackgroundImage:greenHighlight forState:UIControlStateHighlighted];
+    [dButton setBackgroundImage:tanImage forState:UIControlStateNormal];
+    [dButton setBackgroundImage:tanHighlight forState:UIControlStateHighlighted];
+    
     
     // Title
     self.navigationItem.title = @"White Mocha";
     UIColor *color = [[UIColor alloc] initWithRed:253/255.0 green:253/255.0 blue:253/255.0 alpha:1.0];
     [[pollCell contentView] setBackgroundColor:color];
     
-    [yesButton setEnabled:NO];
-    [noButton setEnabled:NO];
+    // Init button states
+    voteButtons = [[NSArray alloc] initWithObjects:aButton, bButton, cButton, dButton, nil];
+    [self enableVoteButtons:NO];
     [self setupRefreshControl];
     [self retrieveResults];
     
@@ -85,6 +107,15 @@
 
     
 }
+
+// Enable/Diable Vote Buttons
+- (void)enableVoteButtons:(BOOL)enable
+{
+    for (UIButton *b in voteButtons) {
+        [b setEnabled:enable];
+    }
+}
+
 
 -(void)checkEmailConfirmed
 {
@@ -111,6 +142,7 @@
 {
     refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(retrieveResults) forControlEvents:UIControlEventValueChanged];
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     [self setRefreshControl:refreshControl];
     
 }
@@ -133,46 +165,149 @@
 
 -(void)refreshResults
 {
-    [yesResultButton removeFromSuperview];
-    [noResultButton removeFromSuperview];
+    //[yesResultButton removeFromSuperview];
+    //[noResultButton removeFromSuperview];
+    // Remove button to refresh
+    
+    [aLabel setText:[[self poll] objectForKey:@"aVote"]];
+    [aButton setTitle:[[self poll] objectForKey:@"aVote"] forState:UIControlStateNormal];
+    [bLabel setText:[[self poll] objectForKey:@"bVote"]];
+    [bButton setTitle:[[self poll] objectForKey:@"bVote"] forState:UIControlStateNormal];
+    [cButton setTitle:[[self poll] objectForKey:@"cVote"] forState:UIControlStateNormal];
+    [cLabel setText:[[self poll] objectForKey:@"cVote"]];
+    [dLabel setText:[[self poll] objectForKey:@"dVote"]];
+    [dButton setTitle:[[self poll] objectForKey:@"dVote"] forState:UIControlStateNormal];
+    
+    
+    
+    
+    NSArray *resultButtons = [[NSArray alloc] initWithObjects:aResultButton, bResultButton, cResultButton, dResultButton, nil];
+    for (UIButton *b in resultButtons) {
+        [b removeFromSuperview];
+    }
+    
+    
+    
     UIImage *buttonImage = [[UIImage imageNamed:@"blueButton.png"]
                             resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
     UIImage *orangeButtonImage = [[UIImage imageNamed:@"orangeButton.png"]
                                   resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    UIImage *greenButtonImage = [[UIImage imageNamed:@"greenButton.png"]
+                            resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    UIImage *tanButtonImage = [[UIImage imageNamed:@"tanButton.png"]
+                                  resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
    
     // Votes
-    NSNumber *yesVotes = [[self poll] objectForKey:@"yesVotes"];
-    NSLog(@"%d***", [yesVotes integerValue]);
-    NSNumber *noVotes = [[self poll] objectForKey:@"noVotes"];
-    double totalVotes = [yesVotes doubleValue] + [noVotes doubleValue];
+    NSNumber *aVotes = [[self poll] objectForKey:@"aVotes"];
+    NSNumber *bVotes = [[self poll] objectForKey:@"bVotes"];
+    NSNumber *cVotes = [[self poll] objectForKey:@"cVotes"];
+    NSNumber *dVotes = [[self poll] objectForKey:@"dVotes"];
+    NSArray *votesArray = [[NSArray alloc] initWithObjects:aVotes,bVotes,cVotes,dVotes, nil];
+    
+    double totalVotes = [aVotes doubleValue] + [bVotes doubleValue] + [cVotes doubleValue] + [dVotes doubleValue];
+    
+    // Calculate max
+    double maxVotes = [aVotes doubleValue];
+    for (NSNumber *number in votesArray) {
+        if (maxVotes < [number doubleValue])
+            maxVotes = [number doubleValue];
+    }
+    
+    voteCount = [NSNumber numberWithDouble:totalVotes];
+    
+    int multFactor = 180;
+    int xSpace = 125;
+    int height = 32;
+    
+    // A Results
+    aResultButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    float aRounded = [aVotes doubleValue] / totalVotes * 100;
+    [aResultButton setTitle:[NSString stringWithFormat:@"%.0f%%", roundf(aRounded)]forState:UIControlStateNormal];
+    float aWidth;
+    if ([aVotes doubleValue] == maxVotes) {
+        aWidth = multFactor;
+    } else {
+         aWidth = ([aVotes doubleValue] / totalVotes) * multFactor + 10;
+    }
+    aResultButton.frame = CGRectMake(xSpace, 36, aWidth, height);
+    [aResultButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [aResultButton setBackgroundImage:buttonImage forState:UIControlStateHighlighted];
+    [[aResultButton titleLabel] setFont:[UIFont boldSystemFontOfSize:13]];
+    [pollCell addSubview:aResultButton];
+    
+    // B Results
+    bResultButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    float bRounded = [bVotes doubleValue] / totalVotes * 100;
+    [bResultButton setTitle:[NSString stringWithFormat:@"%.0f%%", roundf(bRounded)]forState:UIControlStateNormal];
+    float bWidth;
+    if ([bVotes doubleValue] == maxVotes) {
+        bWidth = multFactor;
+    } else {
+        bWidth = ([bVotes doubleValue] / totalVotes) * multFactor + 10;
+    }
+    bResultButton.frame = CGRectMake(xSpace, 77, bWidth, height);
+    [bResultButton setBackgroundImage:orangeButtonImage forState:UIControlStateNormal];
+    [bResultButton setBackgroundImage:orangeButtonImage forState:UIControlStateHighlighted];
+    [[bResultButton titleLabel] setFont:[UIFont boldSystemFontOfSize:13]];
+    [pollCell addSubview:bResultButton];
+    
+    // C Results
+    cResultButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    float cRounded = [cVotes doubleValue] / totalVotes * 100;
+    [cResultButton setTitle:[NSString stringWithFormat:@"%.0f%%", roundf(cRounded)]forState:UIControlStateNormal];
+    float cWidth;
+    if ([cVotes doubleValue] == maxVotes) {
+        cWidth = multFactor;
+    } else {
+        cWidth = ([cVotes doubleValue] / totalVotes) * multFactor + 10;
+    }
+    cResultButton.frame = CGRectMake(xSpace, 120, cWidth, height);
+    [cResultButton setBackgroundImage:greenButtonImage forState:UIControlStateNormal];
+    [cResultButton setBackgroundImage:greenButtonImage forState:UIControlStateHighlighted];
+    [[cResultButton titleLabel] setFont:[UIFont boldSystemFontOfSize:13]];
+    [pollCell addSubview:cResultButton];
     
     
-    // Yes Results
-    yesResultButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    float roundedNo = [yesVotes doubleValue] / totalVotes * 100;
-    [yesResultButton setTitle:[NSString stringWithFormat:@"%.0f%% YES", roundf(roundedNo)]forState:UIControlStateNormal];
-    float yesWidth = ([yesVotes doubleValue] / totalVotes) * 300;
-    NSLog(@"%f width", yesWidth);
-    yesResultButton.frame = CGRectMake(20, 35, yesWidth, 31.0);
-    [yesResultButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [yesResultButton setBackgroundImage:buttonImage forState:UIControlStateHighlighted];
-    [[yesResultButton titleLabel] setFont:[UIFont boldSystemFontOfSize:13]];
-    [pollCell addSubview:yesResultButton];
+    // D Results
+    dResultButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    float dRounded = [dVotes doubleValue] / totalVotes * 100;
+    [dResultButton setTitle:[NSString stringWithFormat:@"%.0f%%", roundf(dRounded)]forState:UIControlStateNormal];
+    float dWidth;
+    if ([dVotes doubleValue] == maxVotes) {
+        dWidth = multFactor;
+    } else {
+        dWidth = ([cVotes doubleValue] / totalVotes) * multFactor + 10;
+    }
+    dResultButton.frame = CGRectMake(xSpace, 162, dWidth, height);
+    [dResultButton setBackgroundImage:tanButtonImage forState:UIControlStateNormal];
+    [dResultButton setBackgroundImage:tanButtonImage forState:UIControlStateHighlighted];
+    [[dResultButton titleLabel] setFont:[UIFont boldSystemFontOfSize:13]];
+    [pollCell addSubview:dResultButton];
     
-    // No Results
-    noResultButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    float rounded = [noVotes doubleValue] / totalVotes * 100;
-    [noResultButton setTitle:[NSString stringWithFormat:@"%.0f%% NO", roundf(rounded)] forState:UIControlStateNormal];
-    float noWidth = ([noVotes integerValue] / totalVotes) * 300;
-    noResultButton.frame = CGRectMake(20, 72, noWidth, 31);
-    [noResultButton setBackgroundImage:orangeButtonImage forState:UIControlStateNormal];
-    [noResultButton setBackgroundImage:orangeButtonImage forState:UIControlStateHighlighted];
-    [[noResultButton titleLabel] setFont:[UIFont boldSystemFontOfSize:13]];
-    [pollCell addSubview:noResultButton];
     
     [pollLabel setText:[[self poll] objectForKey:@"poll"]];
     [refreshControl endRefreshing];
     //[self hasUserVoted];
+}
+
+-(NSNumber *)calculateWidth:(float)percent
+{
+    if (percent < .25) {
+        return [NSNumber numberWithFloat:98.0 + 10 + 10] ;
+    } else if ( percent < .30) {
+        return [NSNumber numberWithFloat:110.0];
+    } else if ( percent < .50) {
+        return [NSNumber numberWithFloat:140.0 + 10];
+    } else if (percent < .75) {
+        return [NSNumber numberWithFloat:210.0 + 10];
+    } else if ( percent < .85) {
+        return [NSNumber numberWithFloat:238 + 10];
+    } else if (percent < .95) {
+        return [NSNumber numberWithFloat:270 + 10];
+    } else {
+        return [NSNumber numberWithFloat:275 + 10];
+    }
+    
 }
 
 
@@ -292,17 +427,6 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
-
 -(void)userVoted
 {
     PFObject *updatePoll = [self poll];
@@ -326,8 +450,7 @@
             }
         }];
     }
-    [yesButton setEnabled:NO];
-    [noButton setEnabled:NO];
+    [self enableVoteButtons:NO];
 }
 
 - (IBAction)yesAction:(id)sender
@@ -390,12 +513,34 @@
         }
 
     }
+    NSArray *resultButtons = [[NSArray alloc] initWithObjects:aResultButton, bResultButton, cResultButton, dResultButton, nil];
+    NSArray *labels = [[NSArray alloc] initWithObjects:aLabel,bLabel,cLabel,dLabel, nil];
     if (voted) {
-            [yesButton setEnabled:NO];
-            [noButton setEnabled:NO];
+        for (UIButton *b in voteButtons) {
+            [b setEnabled:NO];
+            [b setHidden:YES];
+        }
+        for (UIButton *b in resultButtons) {
+            [b setHidden:NO];
+        }
+        for (UILabel *label in labels) {
+            [label setHidden:NO];
+        }
+        [voteLabel setText:[NSString stringWithFormat:@"Results (%d Votes)", [voteCount intValue]]];
+       
     } else {
-        [yesButton setEnabled:YES];
-        [noButton setEnabled:YES];
+        for (UIButton *b in voteButtons) {
+
+            [b setEnabled:YES];
+            [b setHidden:NO];
+        }
+        for (UIButton *b in resultButtons) {
+            [b setHidden:YES];
+        }
+        for (UILabel *label in labels) {
+            [label setHidden:YES];
+        }
+        [voteLabel setText:@"Please Vote!"];
     }
 }
 - (IBAction)aboutAction:(id)sender
@@ -422,5 +567,119 @@
         NSLog(@"It's away!");
     }
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
+- (IBAction)aAction:(id)sender
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"WMPoll"];
+    [query whereKey:@"currentPoll" equalTo:[NSNumber numberWithBool:TRUE]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            PFObject *updatePoll = objects[0];
+            [updatePoll incrementKey:@"aVotes"];
+            [updatePoll saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    //[self retrieveResults];
+                    [self userVoted];
+                } else {
+                    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"There was an error!" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+                    [av show];
+                }
+            }];
+        } else {
+            
+        }
+    }];
+}
+
+- (IBAction)bAction:(id)sender
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"WMPoll"];
+    [query whereKey:@"currentPoll" equalTo:[NSNumber numberWithBool:TRUE]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            PFObject *updatePoll = objects[0];
+            [updatePoll incrementKey:@"bVotes"];
+            [updatePoll saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    //[self retrieveResults];
+                    [self userVoted];
+                } else {
+                    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"There was an error!" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+                    [av show];
+                }
+            }];
+        } else {
+            
+        }
+    }];
+}
+
+- (IBAction)cAction:(id)sender
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"WMPoll"];
+    [query whereKey:@"currentPoll" equalTo:[NSNumber numberWithBool:TRUE]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            PFObject *updatePoll = objects[0];
+            [updatePoll incrementKey:@"cVotes"];
+            [updatePoll saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    //[self retrieveResults];
+                    [self userVoted];
+                } else {
+                    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"There was an error!" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+                    [av show];
+                }
+            }];
+        } else {
+            
+        }
+    }];
+}
+
+- (IBAction)dAction:(id)sender
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"WMPoll"];
+    [query whereKey:@"currentPoll" equalTo:[NSNumber numberWithBool:TRUE]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            PFObject *updatePoll = objects[0];
+            [updatePoll incrementKey:@"dVotes"];
+            [updatePoll saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    //[self retrieveResults];
+                    [self userVoted];
+                } else {
+                    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"There was an error!" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+                    [av show];
+                }
+            }];
+        } else {
+            
+        }
+    }];
+}
+
+- (IBAction)studyAction:(id)sender
+{
+    
+    CGRect screenFrame = [[UIScreen mainScreen] applicationFrame];
+    UIWebView *webview=[[UIWebView alloc]initWithFrame:screenFrame];
+    NSString *url=@"http://up.libcal.com/mobile.php?action=8&tid=2306&d=2013-08-14&hs=r";
+    NSURL *nsurl=[NSURL URLWithString:url];
+    NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
+    [webview loadRequest:nsrequest];
+        [webview stringByEvaluatingJavaScriptFromString:@"document. body.style.zoom = 5.0;"];
+    UIViewController *webViewController = [[UIViewController alloc] init];
+    [webViewController setTitle:@"Study Room"];
+    
+    [webViewController setView:webview];
+
+    
+
+    
+    [[self navigationController] pushViewController:webViewController animated:YES];
 }
 @end

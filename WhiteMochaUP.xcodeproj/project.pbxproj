@@ -163,6 +163,15 @@
 		5233CB9D179E691E00D9F380 /* whiteBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5233CB9C179E691E00D9F380 /* whiteBG.png */; };
 		5247761817B9807F00A81E88 /* WMDetailImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5247761717B9807F00A81E88 /* WMDetailImage.storyboard */; };
 		5247761B17B9809C00A81E88 /* WMDetailImgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247761A17B9809C00A81E88 /* WMDetailImgViewController.m */; };
+		5265D86C17F017E40066FCEC /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D86817F017E40066FCEC /* greenButton.png */; };
+		5265D86D17F017E40066FCEC /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D86917F017E40066FCEC /* greenButton@2x.png */; };
+		5265D86E17F017E40066FCEC /* greenButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D86A17F017E40066FCEC /* greenButtonHighlight.png */; };
+		5265D86F17F017E40066FCEC /* greenButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D86B17F017E40066FCEC /* greenButtonHighlight@2x.png */; };
+		5265D87417F019A20066FCEC /* tanButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D87017F019A20066FCEC /* tanButton.png */; };
+		5265D87517F019A20066FCEC /* tanButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D87117F019A20066FCEC /* tanButton@2x.png */; };
+		5265D87617F019A20066FCEC /* tanButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D87217F019A20066FCEC /* tanButtonHighlight.png */; };
+		5265D87717F019A20066FCEC /* tanButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D87317F019A20066FCEC /* tanButtonHighlight@2x.png */; };
+		5265D87A17F65BD20066FCEC /* WMWebLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5265D87917F65BD20066FCEC /* WMWebLibViewController.m */; };
 		5290F74317B01EBE000E08D9 /* WMHousingListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5290F74217B01EBE000E08D9 /* WMHousingListingsViewController.m */; };
 		5293E75617B736650022A7B8 /* WMRidesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5293E75517B736650022A7B8 /* WMRidesCell.m */; };
 		5293E75817B736A50022A7B8 /* WMRidesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293E75717B736A50022A7B8 /* WMRidesCell.xib */; };
@@ -428,6 +437,16 @@
 		5247761717B9807F00A81E88 /* WMDetailImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMDetailImage.storyboard; sourceTree = "<group>"; };
 		5247761917B9809C00A81E88 /* WMDetailImgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDetailImgViewController.h; sourceTree = "<group>"; };
 		5247761A17B9809C00A81E88 /* WMDetailImgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDetailImgViewController.m; sourceTree = "<group>"; };
+		5265D86817F017E40066FCEC /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
+		5265D86917F017E40066FCEC /* greenButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButton@2x.png"; sourceTree = "<group>"; };
+		5265D86A17F017E40066FCEC /* greenButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButtonHighlight.png; sourceTree = "<group>"; };
+		5265D86B17F017E40066FCEC /* greenButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		5265D87017F019A20066FCEC /* tanButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tanButton.png; sourceTree = "<group>"; };
+		5265D87117F019A20066FCEC /* tanButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tanButton@2x.png"; sourceTree = "<group>"; };
+		5265D87217F019A20066FCEC /* tanButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tanButtonHighlight.png; sourceTree = "<group>"; };
+		5265D87317F019A20066FCEC /* tanButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tanButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		5265D87817F65BD20066FCEC /* WMWebLibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMWebLibViewController.h; sourceTree = "<group>"; };
+		5265D87917F65BD20066FCEC /* WMWebLibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMWebLibViewController.m; sourceTree = "<group>"; };
 		5290F74117B01EBE000E08D9 /* WMHousingListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHousingListingsViewController.h; sourceTree = "<group>"; };
 		5290F74217B01EBE000E08D9 /* WMHousingListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHousingListingsViewController.m; sourceTree = "<group>"; };
 		5293E75417B736650022A7B8 /* WMRidesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMRidesCell.h; sourceTree = "<group>"; };
@@ -685,6 +704,14 @@
 				5233CB9C179E691E00D9F380 /* whiteBG.png */,
 				521A9E8C17D32F75006E6734 /* greyButton.png */,
 				521A9E8D17D32F75006E6734 /* greyButton@2x.png */,
+				5265D86817F017E40066FCEC /* greenButton.png */,
+				5265D87017F019A20066FCEC /* tanButton.png */,
+				5265D87117F019A20066FCEC /* tanButton@2x.png */,
+				5265D87217F019A20066FCEC /* tanButtonHighlight.png */,
+				5265D87317F019A20066FCEC /* tanButtonHighlight@2x.png */,
+				5265D86917F017E40066FCEC /* greenButton@2x.png */,
+				5265D86A17F017E40066FCEC /* greenButtonHighlight.png */,
+				5265D86B17F017E40066FCEC /* greenButtonHighlight@2x.png */,
 				521A9E8E17D32F75006E6734 /* greyButtonHighlight.png */,
 				521A9E8F17D32F75006E6734 /* greyButtonHighlight@2x.png */,
 			);
@@ -952,6 +979,8 @@
 				52FE99C717A60F4F00E926F4 /* WMRSSItem.h */,
 				52FE99C817A60F4F00E926F4 /* WMRSSItem.m */,
 				52FE99CA17A6413600E926F4 /* WMWebViewController.h */,
+				5265D87817F65BD20066FCEC /* WMWebLibViewController.h */,
+				5265D87917F65BD20066FCEC /* WMWebLibViewController.m */,
 				52FE99CB17A6413600E926F4 /* WMWebViewController.m */,
 				529CCA8A17BD6AF8000E5CF0 /* WMClubFormViewController.h */,
 				529CCA8B17BD6AF8000E5CF0 /* WMClubFormViewController.m */,
@@ -1238,6 +1267,14 @@
 				52A834EF17E1A54C00E49E27 /* Default-568h@2x.png in Resources */,
 				52A834F117E1A56C00E49E27 /* Default.png in Resources */,
 				52A834F217E1A62400E49E27 /* Default.png in Resources */,
+				5265D86C17F017E40066FCEC /* greenButton.png in Resources */,
+				5265D86D17F017E40066FCEC /* greenButton@2x.png in Resources */,
+				5265D86E17F017E40066FCEC /* greenButtonHighlight.png in Resources */,
+				5265D86F17F017E40066FCEC /* greenButtonHighlight@2x.png in Resources */,
+				5265D87417F019A20066FCEC /* tanButton.png in Resources */,
+				5265D87517F019A20066FCEC /* tanButton@2x.png in Resources */,
+				5265D87617F019A20066FCEC /* tanButtonHighlight.png in Resources */,
+				5265D87717F019A20066FCEC /* tanButtonHighlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1319,6 +1356,7 @@
 				520ADCCB17CC3AD8004DF55C /* RootTableViewController.m in Sources */,
 				520ADCEA17D19031004DF55C /* WMFoodSectionViewController.m in Sources */,
 				521A9E9817D33B98006E6734 /* WMAboutSectionViewController.m in Sources */,
+				5265D87A17F65BD20066FCEC /* WMWebLibViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1405,8 +1443,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Liedtke (BX5CP76VJ3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: John Liedtke (BX5CP76VJ3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Liedtke (JQGA5FS44F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Liedtke (JQGA5FS44F)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1419,8 +1457,8 @@
 				INFOPLIST_FILE = "ParseStarterProject/WhiteMochaUP-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = WhiteMochaUP;
-				PROVISIONING_PROFILE = "D6B3450D-E73D-4358-B7AF-1E13592CA373";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D6B3450D-E73D-4358-B7AF-1E13592CA373";
+				PROVISIONING_PROFILE = "7FE4492B-93DF-49F9-BB5F-350A29A6495B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7FE4492B-93DF-49F9-BB5F-350A29A6495B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1430,8 +1468,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Liedtke (BX5CP76VJ3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: John Liedtke (BX5CP76VJ3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: John Liedtke (JQGA5FS44F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: John Liedtke (JQGA5FS44F)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1443,8 +1481,8 @@
 				INFOPLIST_FILE = "ParseStarterProject/WhiteMochaUP-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = WhiteMochaUP;
-				PROVISIONING_PROFILE = "D6B3450D-E73D-4358-B7AF-1E13592CA373";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D6B3450D-E73D-4358-B7AF-1E13592CA373";
+				PROVISIONING_PROFILE = "7FE4492B-93DF-49F9-BB5F-350A29A6495B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7FE4492B-93DF-49F9-BB5F-350A29A6495B";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

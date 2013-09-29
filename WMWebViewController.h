@@ -14,5 +14,6 @@
 }
 
 @property (nonatomic, readonly) UIWebView *webView;
+@property (nonatomic) float sizeScreen;
 
 @end

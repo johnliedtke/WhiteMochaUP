@@ -7,6 +7,7 @@
 //
 
 #import "WMFoodSectionViewController.h"
+#import "WMConstants.h"
 
 @interface WMFoodSectionViewController ()
 
@@ -18,12 +19,57 @@
 {
     [super viewDidLoad];
     [[self navigationItem] setTitle:@"Places to Eat"];
+    
+    [self setupRefreshControl];
+    [self updateHours];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+                
+}
+
+
+-(void)updateHours
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"WMFoodHours"];
+    
+    [query getObjectInBackgroundWithId:@"XigEyM87u0" block:^(PFObject *object, NSError *error) {
+        hours = object;
+        // Commons
+        [commonsMonThurs setText:[hours objectForKey:@"commonsMonThurs"]];
+        [comMonThuHours setText:[hours objectForKey:@"comMonThuHours"]];
+        [comFriday setText:[hours objectForKey:@"comFriday"]];
+        [comFriHours setText:[hours objectForKey:@"comFriHours"]];
+        [comSaturday setText:[hours objectForKey:@"comSaturday"]];
+        [comSaturdayHours setText:[hours objectForKey:@"comSaturdayHours"]];
+        [comSunday setText:[hours objectForKey:@"comSunday"]];
+        [comSunHours setText:[hours objectForKey:@"comSunHours"]];
+        
+        // Cove
+        [coveMonThuHours setText:[hours objectForKey:@"coveMonThuHours"]];
+        [coveMonThurs setText:[hours objectForKey:@"coveMonThurs"]];
+        [coveFridaySaturday setText:[hours objectForKey:@"coveFridaySaturday"]];
+        [coveFriSatHours setText:[hours objectForKey:@"coveFriSatHours"]];
+        [coveSatSun setText:[hours objectForKey:@"coveSatSun"]];
+        [coveSatSunHours setText:[hours objectForKey:@"coveSatSunHours"]];
+        
+        // Anchor
+        [anchorHours setText:[hours objectForKey:@"anchorHours"]];
+        [refreshControl endRefreshing];
+        [[self tableView] reloadData];
+    }];
+    
+    
+
+}
+
+-(void)setupRefreshControl
+{
+    refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(updateHours) forControlEvents:UIControlEventValueChanged];
+        refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
+    //[refreshControl setTintColor:PURPLECOLOR];
+    [self setRefreshControl:refreshControl];
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,13 +85,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+   
 }
 
 @end

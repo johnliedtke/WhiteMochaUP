@@ -66,6 +66,7 @@
     
     refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(getConnections) forControlEvents:UIControlEventValueChanged];
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     tableViewController.refreshControl = refreshControl;
 
     
@@ -443,6 +444,7 @@
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     
     // Load the request inot the web view
+        [webViewController setSizeScreen:5.0];
     [[webViewController webView] loadRequest:req];
     
     // Set zoom

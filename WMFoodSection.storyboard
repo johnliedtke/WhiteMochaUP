@@ -35,7 +35,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Monday - Thurs:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCh-pa-JhW">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCh-pa-JhW">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="124" id="VZV-Nc-IDa"/>
                                                         <constraint firstAttribute="height" constant="21" id="ZQI-Bq-17v"/>
@@ -71,7 +71,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7:30 am - Midnight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALM-ef-gyJ">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALM-ef-gyJ">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="OxD-kk-FMT"/>
                                                         <constraint firstAttribute="width" constant="143" id="svd-XT-4ND"/>
@@ -80,17 +80,19 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7:30 am - 11:00 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vG-iQ-cYN">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7:30 am - 8:00 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vG-iQ-cYN">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="0VA-NW-l8z"/>
+                                                        <constraint firstAttribute="width" constant="105" id="zMI-UF-DQ3"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10:00 am - 11:00 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1l-0U-f08">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10:00 am - 8:00pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1l-0U-f08">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="cmx-iX-cX8"/>
+                                                        <constraint firstAttribute="width" constant="111" id="etl-uO-MSV"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -155,7 +157,6 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saturday &amp; Sunday:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6o-UV-AVn">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="dCg-cz-MTT"/>
-                                                        <constraint firstAttribute="width" constant="134" id="svX-ub-5hx"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14.699999809265137"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -186,23 +187,45 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Friday and Saturday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQf-rK-KEv">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="DEC-dW-ebG"/>
+                                                        <constraint firstAttribute="width" constant="134" id="Dn0-bm-l7F"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14.699999809265137"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10:00 pm - 1:00 am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBk-4B-qKf">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Ho1-cx-8eF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="8vr-Dp-DfS" firstAttribute="top" secondItem="1IT-vL-95i" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3RA-pB-zCY"/>
-                                            <constraint firstItem="jXa-kn-oQc" firstAttribute="centerY" secondItem="HGA-uA-XTY" secondAttribute="centerY" type="default" id="8ZI-U2-MNi"/>
+                                            <constraint firstAttribute="bottom" secondItem="T6o-UV-AVn" secondAttribute="bottom" constant="29" id="7Di-O4-5Yr"/>
                                             <constraint firstItem="jXa-kn-oQc" firstAttribute="top" secondItem="HGA-uA-XTY" secondAttribute="top" constant="20" type="default" id="95M-aJ-nE6"/>
-                                            <constraint firstItem="T6o-UV-AVn" firstAttribute="leading" secondItem="LnD-Vm-zhM" secondAttribute="leading" type="default" id="CMt-5L-s0p"/>
                                             <constraint firstItem="jXa-kn-oQc" firstAttribute="leading" secondItem="HGA-uA-XTY" secondAttribute="leading" constant="8" id="CWh-Pa-0et"/>
-                                            <constraint firstItem="8vr-Dp-DfS" firstAttribute="leading" secondItem="1IT-vL-95i" secondAttribute="leading" type="default" id="Khi-py-A34"/>
+                                            <constraint firstAttribute="bottom" secondItem="jXa-kn-oQc" secondAttribute="bottom" constant="20" type="default" id="EFg-GF-8Ij"/>
+                                            <constraint firstAttribute="bottom" secondItem="XBk-4B-qKf" secondAttribute="bottom" constant="48" id="JTY-eJ-q4R"/>
+                                            <constraint firstItem="xQf-rK-KEv" firstAttribute="centerY" secondItem="jXa-kn-oQc" secondAttribute="centerY" type="default" id="NZr-nL-DSn"/>
+                                            <constraint firstItem="XBk-4B-qKf" firstAttribute="leading" secondItem="8vr-Dp-DfS" secondAttribute="leading" type="default" id="S8Q-R4-ZlZ"/>
                                             <constraint firstItem="6sL-8m-kCq" firstAttribute="leading" secondItem="jXa-kn-oQc" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Ue4-6F-d6S"/>
+                                            <constraint firstItem="xQf-rK-KEv" firstAttribute="trailing" secondItem="T6o-UV-AVn" secondAttribute="trailing" type="default" id="X6e-Kt-sZx"/>
                                             <constraint firstItem="LnD-Vm-zhM" firstAttribute="leading" secondItem="HGA-uA-XTY" secondAttribute="leading" constant="181" id="XUQ-Vj-ecg"/>
                                             <constraint firstItem="LnD-Vm-zhM" firstAttribute="top" secondItem="HGA-uA-XTY" secondAttribute="top" constant="29" id="YW2-CM-n7p"/>
-                                            <constraint firstItem="8vr-Dp-DfS" firstAttribute="trailing" secondItem="1IT-vL-95i" secondAttribute="trailing" type="default" id="aGJ-ss-wAm"/>
-                                            <constraint firstItem="T6o-UV-AVn" firstAttribute="top" secondItem="HGA-uA-XTY" secondAttribute="top" constant="64" id="drW-Ev-yD0"/>
-                                            <constraint firstAttribute="trailing" secondItem="1IT-vL-95i" secondAttribute="trailing" constant="10" id="ot4-bg-o92"/>
+                                            <constraint firstItem="XBk-4B-qKf" firstAttribute="leading" secondItem="1IT-vL-95i" secondAttribute="leading" type="default" id="ZQW-CZ-Wkq"/>
+                                            <constraint firstItem="xQf-rK-KEv" firstAttribute="leading" secondItem="LnD-Vm-zhM" secondAttribute="leading" type="default" id="ebE-mD-I8m"/>
+                                            <constraint firstAttribute="trailing" secondItem="1IT-vL-95i" secondAttribute="trailing" constant="10" id="jJH-ir-77Z"/>
                                             <constraint firstItem="6sL-8m-kCq" firstAttribute="top" secondItem="HGA-uA-XTY" secondAttribute="top" constant="5" id="px4-5o-WLd"/>
+                                            <constraint firstItem="XBk-4B-qKf" firstAttribute="trailing" secondItem="1IT-vL-95i" secondAttribute="trailing" type="default" id="tW6-Gs-BCS"/>
+                                            <constraint firstItem="xQf-rK-KEv" firstAttribute="leading" secondItem="T6o-UV-AVn" secondAttribute="leading" type="default" id="uvG-Tw-cKT"/>
+                                            <constraint firstAttribute="bottom" secondItem="8vr-Dp-DfS" secondAttribute="bottom" constant="15" id="xL7-o9-xMH"/>
                                             <constraint firstItem="1IT-vL-95i" firstAttribute="top" secondItem="HGA-uA-XTY" secondAttribute="top" constant="49" id="ysA-Zk-0ic"/>
                                         </constraints>
                                     </tableViewCell>
@@ -244,8 +267,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Much More Coming Soon !!!!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2I-Sm-rtI">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Off Campus Ratings Coming Soon!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2I-Sm-rtI">
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -274,6 +297,23 @@
                             <outlet property="delegate" destination="SVc-Lt-uIJ" id="kbh-rO-tsY"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="anchorHours" destination="Y0T-ch-y0z" id="uAm-ZS-mSr"/>
+                        <outlet property="comFriHours" destination="9vG-iQ-cYN" id="0Ee-LX-vc6"/>
+                        <outlet property="comFriday" destination="KBM-e5-7pi" id="C3e-X1-GLl"/>
+                        <outlet property="comMonThuHours" destination="ALM-ef-gyJ" id="PpT-ot-iWM"/>
+                        <outlet property="comSaturday" destination="P6b-U3-60b" id="gM0-O6-QAT"/>
+                        <outlet property="comSaturdayHours" destination="K1l-0U-f08" id="CNO-Gr-PR9"/>
+                        <outlet property="comSunHours" destination="bfM-hb-jkq" id="r68-4E-P9A"/>
+                        <outlet property="comSunday" destination="5di-df-JDs" id="D0A-aB-O41"/>
+                        <outlet property="commonsMonThurs" destination="rCh-pa-JhW" id="iIo-J6-UrB"/>
+                        <outlet property="coveFriSatHours" destination="XBk-4B-qKf" id="ACm-qX-eWe"/>
+                        <outlet property="coveFridaySaturday" destination="xQf-rK-KEv" id="wcZ-Mx-L7z"/>
+                        <outlet property="coveMonThuHours" destination="1IT-vL-95i" id="i8L-4v-95E"/>
+                        <outlet property="coveMonThurs" destination="LnD-Vm-zhM" id="yeo-9z-vYJ"/>
+                        <outlet property="coveSatSun" destination="T6o-UV-AVn" id="blg-ug-bNb"/>
+                        <outlet property="coveSatSunHours" destination="8vr-Dp-DfS" id="Npy-yy-ClC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFl-k5-cAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,14 +325,6 @@
         <image name="commonsImage.jpg" width="720" height="960"/>
         <image name="covePlaceHolder.jpg" width="3264" height="2448"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="WMFoodSectionViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WMFoodSectionViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
