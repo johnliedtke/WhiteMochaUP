@@ -13,7 +13,7 @@
 // Events
 NSString * const SPORTS = @"Game-Athletics";
 NSString * const ACADEMICS = @"Academic Calendar";
-NSString * const CLUBS = @"Meeting";
+NSString * const CLUBS = @"Student Club";
 NSString * const FUN = @"fun";
 NSString * const INTAMURAL = @"Intramural";
 

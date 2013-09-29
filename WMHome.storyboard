@@ -339,46 +339,6 @@
         <image name="homelogo.png" width="150" height="81"/>
         <image name="poll.png" width="128" height="128"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UIRefreshControl" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIRefreshControl.h"/>
-        </class>
-        <class className="WMHomeViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WMHomeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="aAction:"/>
-                <relationship kind="action" name="aboutAction:"/>
-                <relationship kind="action" name="bAction:"/>
-                <relationship kind="action" name="cAction:"/>
-                <relationship kind="action" name="dAction:"/>
-                <relationship kind="action" name="feedbackAction:"/>
-                <relationship kind="action" name="noAction:"/>
-                <relationship kind="action" name="studyAction:"/>
-                <relationship kind="action" name="yesAction:"/>
-                <relationship kind="outlet" name="aButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="aLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="aboutButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="bButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="bLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="feedbackButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="noButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="pollCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="pollLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="studyButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="topPartCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="voteLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="yesButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

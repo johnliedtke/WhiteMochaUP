@@ -538,6 +538,8 @@
         return [[evt clubCategory] isEqualToString:@"academic"];
     } else if ([[self eventSelected] isEqualToString:SPORTS]) {
         return [[evt clubCategory] isEqualToString:@"clubSports"] || [[evt eventType] isEqualToString:INTAMURAL];
+    } else if ([[evt eventType] isEqualToString:@"Student Club"]) {
+        return YES;
     } else {
         return NO;
     }
