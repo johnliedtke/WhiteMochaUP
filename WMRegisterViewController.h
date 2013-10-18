@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import "WMGenderSelectViewController.h"
-#import "WMYearSelectViewController.h"
 #import "WMPrevNext.h"
 
 @protocol RegisterViewDelegate <NSObject>
@@ -18,7 +16,7 @@
 
 @end
 
-@interface WMRegisterViewController : UITableViewController <UITextFieldDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, GenderSelectDelegate, YearSelectDelegate, WMPrevNextDelegate>
+@interface WMRegisterViewController : UITableViewController <UITextFieldDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, WMPrevNextDelegate>
 {
     UITextField *fullNameField;
     UITextField *emailField;

@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         [doneButton setTintColor:[UIColor colorWithRed:34.0/255.0 green:97.0/255.0 blue:221.0/255.0 alpha:1]];
+       
     }
     return self;
 }
@@ -28,6 +29,7 @@
     // Drawing code
 }
 */
+
 
 - (IBAction)doneAction:(id)sender
 {

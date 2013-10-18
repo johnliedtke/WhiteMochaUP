@@ -52,12 +52,16 @@
     IBOutlet UILabel *cLabel;
     IBOutlet UILabel *dLabel;
     
+    // Percentage Labels
+    UILabel *aPercentLabel;
+    UILabel *bPercentLabel;
+    UILabel *cPercentLabel;
+    UILabel *dPercentLabel;
+    
     IBOutlet UILabel *voteLabel;
 }
 
 
-- (IBAction)yesAction:(id)sender;
-- (IBAction)noAction:(id)sender;
 @property (nonatomic, strong) PFObject *poll;
 - (IBAction)aboutAction:(id)sender;
 - (IBAction)feedbackAction:(id)sender;

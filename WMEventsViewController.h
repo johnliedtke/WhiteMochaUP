@@ -10,9 +10,12 @@
 #import <Parse/Parse.h>
 #import "WMAddEventDelegate.h"
 #import "WMConstants.h"
+#import "WMEventDetailViewController.h"
 @class WMRSSChannel, WMWebViewController;
 
-@interface WMEventsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSURLConnectionDelegate, NSURLConnectionDataDelegate, NSXMLParserDelegate, WMAddEventDelegate>
+
+
+@interface WMEventsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSURLConnectionDelegate, NSURLConnectionDataDelegate, NSXMLParserDelegate, WMAddEventDelegate, WMEventDetailDelegate>
 {
 
     __unsafe_unretained IBOutlet UISegmentedControl *eventsSwitcher;

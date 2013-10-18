@@ -63,6 +63,8 @@
     [datePicker addTarget:self action:@selector(datePickerValueChanged) forControlEvents:UIControlEventValueChanged];
     [datePicker setDatePickerMode:UIDatePickerModeDateAndTime];
     [dateField setInputView:datePicker];
+    
+    [postLabel setFont:[UIFont fontWithName:@"Museo Slab" size:17]];
 
     
 }
@@ -258,9 +260,9 @@
         }
         
         if (component == 0)
-            [attributedString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:14] range:NSMakeRange(0, attributedString.length)];
+            [attributedString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12] range:NSMakeRange(0, attributedString.length)];
         else
-            [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(0, attributedString.length)];
+            [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:10] range:NSMakeRange(0, attributedString.length)];
 
         return attributedString;
     }

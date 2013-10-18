@@ -45,14 +45,12 @@
         [lab setFont:[UIFont fontWithName:@"Museo Slab" size:18]];
     }
     
-    UIBarButtonItem *listButton = [[UIBarButtonItem alloc] initWithTitle:@"List" style:UIBarButtonItemStylePlain target:self action:@selector(list)];
-    [listButton setTintColor:PURPLECOLOR];
+    UIBarButtonItem *listButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(list)];
     [[self navigationItem] setRightBarButtonItem:listButton];
     
     // Appearance
-    PURPLEBACK
     [[self navigationItem] setTitle:@"Marketplace"];
-    
+    PURPLEBACK;
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,11 +70,11 @@
     [label setBackgroundColor:[UIColor clearColor]];
     
     if (section == 0) {
-        [label setFrame:CGRectMake(15, 5, 300, 30)];
+        [label setFrame:CGRectMake(16, 5, 300, 30)];
         [label setText:@"FOR SALE"];
         return headerView;
     } else {
-        [label setFrame:CGRectMake(15, -5, 300, 30)];
+        [label setFrame:CGRectMake(16, -5, 300, 30)];
         [label setText:@"SERVICES"];
         return headerView;
     }

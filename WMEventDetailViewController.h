@@ -10,6 +10,13 @@
 #import "WMEvent.h"
 #import <Parse/Parse.h>
 
+@protocol WMEventDetailDelegate <NSObject>
+
+-(void)deleteListing:(PFObject *)event;
+
+@end
+
+
 @interface WMEventDetailViewController : UITableViewController
 {
     __weak IBOutlet UITextField *titleField;
@@ -26,6 +33,8 @@
     UIBarButtonItem *deleteButton;
     UIDatePicker *datePicker;
     
+    UIAlertView *deleteView;
+    
 }
 
 @property (nonatomic, strong) WMEvent *event;
@@ -37,5 +46,6 @@
 @property (nonatomic, strong) NSString *time;
 @property (nonatomic, strong) NSString *sponsor;
 @property (nonatomic, strong) NSString *details;
+@property (nonatomic, unsafe_unretained) id <WMEventDetailDelegate> eventDetailDelegate;
 
 @end

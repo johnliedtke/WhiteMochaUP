@@ -7,8 +7,6 @@
 //
 
 #import "WMRegisterViewController.h"
-#import "WMGenderSelectViewController.h"
-#import "WMYearSelectViewController.h"
 #import "WMConstants.h"
 
 @interface WMRegisterViewController ()
@@ -43,9 +41,8 @@
     [self.tableView addGestureRecognizer:gestureRecognizer];
     gestureRecognizer.cancelsTouchesInView = NO;
     
-    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(dismissList)];
-    [cancel setTintColor:PURPLECOLOR];
-    [[self navigationItem] setLeftBarButtonItem:cancel];
+    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissList)];
+    [[self navigationItem] setRightBarButtonItem:cancel];
     
     
     // Init keyboard crap

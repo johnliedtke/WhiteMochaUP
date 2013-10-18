@@ -20,6 +20,7 @@
     __weak IBOutlet UITextField *feeField;
     __weak IBOutlet UITextView *otherInfoTextView;
     
+    IBOutlet UILabel *postLabel;
 }
 
 @end

@@ -41,12 +41,10 @@
     [datePicker setDatePickerMode:UIDatePickerModeDateAndTime];
     [whenField setInputView:datePicker];
     
+    [postLabel setFont:[UIFont fontWithName:@"Museo Slab" size:16.0]];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+
  
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)datePickerValueChanged
@@ -106,6 +104,11 @@
         return !(newLength > 25);
     }
     return YES;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

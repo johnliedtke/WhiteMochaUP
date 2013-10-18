@@ -66,7 +66,6 @@
     
     refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(getConnections) forControlEvents:UIControlEventValueChanged];
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     tableViewController.refreshControl = refreshControl;
 
     
@@ -75,11 +74,15 @@
     [self getConnections];
     
     // Add event
-    UIBarButtonItem *addEventButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStyleBordered target:self action:@selector(addEvent)];
-    [addEventButton setTintColor:PURPLECOLOR];
+   // UIBarButtonItem *addEventButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStyleBordered target:self action:@selector(addEvent)];
+    UIBarButtonItem *addEventButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addEvent)];
+    //[addEventButton setTintColor:PURPLECOLOR];
     [[self navigationItem] setRightBarButtonItem:addEventButton];
-
-
+    
+    //
+    [eventsSwitcher setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+    [eventsSwitcher setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateSelected];
+    [eventsSwitcher setTintColor:[[UIColor alloc] initWithRed:98/255.0 green:87.0/255.0 blue:159.0/255.0 alpha:1.0]];
     
 }
 
@@ -175,6 +178,14 @@
             image = [UIImage imageNamed:@"volleyball.png"];
         } else if ([[item category] isEqualToString:ACADEMICS]) {
             image = [UIImage imageNamed:@"book2.png"];
+        } else if ([itemTitle rangeOfString:@"basketball" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"basketall.png"];
+        } else if ([itemTitle rangeOfString:@"intramural" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"intramural.png"];
+        } else if ([itemTitle rangeOfString:@"robot" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"robot.png"];
+        } else if ([itemTitle rangeOfString:@"movie" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"movie.png"];
         } else {
             image = [UIImage imageNamed:@"wow.png"];
         }
@@ -461,84 +472,32 @@
         UIStoryboard *story = [UIStoryboard storyboardWithName:@"WMEventDetailView" bundle:nil];
         WMEventDetailViewController *eventDetailView = [story instantiateViewControllerWithIdentifier:@"WMEventDetailView"];
         [eventDetailView setEvent:entry];
+        [eventDetailView setEventDetailDelegate:self];
         [[self navigationController] pushViewController:eventDetailView animated:YES];
     }
 }
 
+-(void)deleteListing:(PFObject *)event
+{
+    [event deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [self getConnections];
+            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"Event was deleted! Refreshing..." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+            [av show];
+        } else if (error) {
+            NSLog(@"Error");
+        }
+    }];
+}
 
-//   // WMRSSItem *item = [[channel items] objectAtIndex:[indexPath row]];
-//    WMRSSItem *item;// = [[eventDictionary objectForKey:dates[[indexPath section]]] objectAtIndex:[indexPath row]];
-//    PFObject *parseEvent;
-//
-//
-//    if ([[[eventDictionary objectForKey:dates[[indexPath section]]] objectAtIndex:[indexPath row]] isKindOfClass:[WMRSSItem class]]) {
-//        item = [[eventDictionary objectForKey:dates[[indexPath section]]] objectAtIndex:[indexPath row]];
-//
-//        // Remove the time fromt the title
-//        NSString *title = [item title];
-//        NSError *error;
-//
-//        // Our sexy little pattern
-//        NSString *titlePattern = @"^(.*?)\\d\\:\\d{2}";
-//        NSRange stringRange = NSMakeRange(0, title.length);
-//        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:titlePattern options:NSRegularExpressionCaseInsensitive error:&error];
-//
-//        NSTextCheckingResult *match = [regex firstMatchInString:title options:0 range:stringRange];
-//
-//        NSString *itemTitle;
-//        if ([[item category] isEqualToString:SPORTS])
-//            itemTitle = [title substringWithRange:[match rangeAtIndex:1]];    // [match rangeAtIndex:1] gives the range of the group in parentheses
-//        else
-//            itemTitle = [item title];
-//
-//
-//
-//        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//
-//        [dateFormatter setDateFormat:@"h:mm"];
-//        [[cell timeLabel] setText:[dateFormatter stringFromDate:[item eventDate]]];
-//        [dateFormatter setDateFormat:@"a"];
-//        [[cell periodLabel] setText:[dateFormatter stringFromDate:[item eventDate]]];
-//
-//
-//        // Location
-//        NSRange range = [[item about] rangeOfString:@"-"];
-//        NSString *substring = [[[item about] substringFromIndex:NSMaxRange(range)] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-//
-//        [[cell locationLabel] setText:substring];
-//
-//        // Title
-//        [[cell titleLabel] setText:itemTitle];
-//        [[cell icon] setImage:[UIImage imageNamed:@"classic.png"]];
-//
-//        if ([[self eventSelected] isEqualToString:ACADEMICS]) {
-//            [[cell icon] setImage:[UIImage imageNamed:@"book2.png"]];
-//        }
-//
-//        // Image
-//        if ([itemTitle rangeOfString:@"soccer" options:NSCaseInsensitiveSearch].location != NSNotFound) {
-//            UIImage *img = [UIImage imageNamed:@"classic.png"];
-//            [[cell icon] setImage:img];
-//        } else if ([itemTitle rangeOfString:@"volleyball" options:NSCaseInsensitiveSearch].location != NSNotFound) {
-//            [[cell icon] setImage:[UIImage imageNamed:@"volleyball.png"]];
-//        }    else {
-//            // [[cell icon] setImage:nil];
-//        }
-//
-//        return cell;
-//
-//    } else {
-//        parseEvent = [[eventDictionary objectForKey:dates[[indexPath section]]] objectAtIndex:[indexPath row]];
-//        [[cell titleLabel] setText:[parseEvent objectForKey:@"club"]];
-//        return cell;
-//    }
+
 
 - (BOOL)doesClubPertain:(WMEvent *)evt {
     if ([[self eventSelected] isEqualToString:ACADEMICS]) {
         return [[evt clubCategory] isEqualToString:@"academic"];
     } else if ([[self eventSelected] isEqualToString:SPORTS]) {
         return [[evt clubCategory] isEqualToString:@"clubSports"] || [[evt eventType] isEqualToString:INTAMURAL];
-    } else if ([[evt eventType] isEqualToString:@"Student Club"]) {
+    } else if ([[evt eventType] isEqualToString:@"Student Club"] && ![[self eventSelected] isEqualToString:FUN]) {
         return YES;
     } else {
         return NO;

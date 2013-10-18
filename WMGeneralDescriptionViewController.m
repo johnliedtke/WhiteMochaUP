@@ -22,9 +22,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [textView setDelegate:self];
-
-        
-                                                                                                                                
     }
     return self;
 }
@@ -44,8 +41,7 @@
     
     // Edit
     if ([self doesOwn]) {
-        editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editListing)];
-        [editButton setTintColor:PURPLECOLOR];
+        editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editListing)];
         [[self navigationItem] setRightBarButtonItem:editButton];
        
     }
@@ -64,8 +60,7 @@
 #pragma mark - Edit crap
 - (void)editListing
 {
-    doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleBordered target:self action:@selector(doneEditing)];
-    [doneButton setTintColor:PURPLECOLOR];
+    doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing)];
     [[self navigationItem] setRightBarButtonItem:doneButton];
     [textView becomeFirstResponder];
     editButton = nil;
@@ -77,8 +72,7 @@
 
 - (void)doneEditing
 {
-    editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editListing)];
-    [editButton setTintColor:PURPLECOLOR];
+    editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editListing)];
     [[self navigationItem] setRightBarButtonItem:editButton];
     doneButton = nil;
     
@@ -92,10 +86,6 @@
     }
     
 }
-
-
-
-
 
 -(void)goBack
 {

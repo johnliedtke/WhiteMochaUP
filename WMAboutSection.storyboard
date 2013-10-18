@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="17B-oI-cCv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="17B-oI-cCv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--About Section View Controller-->
         <scene sceneID="1vb-oC-0X6">
             <objects>
                 <tableViewController storyboardIdentifier="WMAboutSection" id="17B-oI-cCv" customClass="WMAboutSectionViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="524" sectionHeaderHeight="22" sectionFooterHeight="22" id="BEh-wJ-opN">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="524" sectionHeaderHeight="22" sectionFooterHeight="22" id="BEh-wJ-opN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -18,11 +19,12 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="524" id="O3T-tZ-Gfs">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O3T-tZ-Gfs" id="kn9-4s-W1w">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7jp-Pd-1JS">
+                                                    <rect key="frame" x="20" y="20" width="280" height="290"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="290" id="2hh-O0-X7G"/>
@@ -35,23 +37,22 @@ schumacher15@up.edu</string>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djw-9m-IvM">
+                                                    <rect key="frame" x="125" y="318" width="70" height="36"/>
+                                                    <color key="backgroundColor" red="0.43529411759999997" green="0.4039215686" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="aO6-UL-H2p"/>
                                                         <constraint firstAttribute="width" constant="70" id="hVO-wq-Kpt"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                     <state key="normal" title="Log Out">
-                                                        <color key="titleColor" red="0.32486001450000002" green="0.11585304489999999" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <state key="highlighted">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="logOut:" destination="17B-oI-cCv" eventType="touchUpInside" id="pcA-68-KzQ"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="whitemocha.org for new and updates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zq4-7J-tNs">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="whitemocha.org for news and updates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zq4-7J-tNs">
+                                                    <rect key="frame" x="0.0" y="228" width="320" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="45p-7D-fGd"/>
                                                     </constraints>
@@ -59,17 +60,16 @@ schumacher15@up.edu</string>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="7jp-Pd-1JS" secondAttribute="trailing" constant="20" type="default" id="Fme-7c-Fhd"/>
-                                            <constraint firstItem="7jp-Pd-1JS" firstAttribute="top" secondItem="O3T-tZ-Gfs" secondAttribute="top" constant="20" type="default" id="LZg-0e-3b9"/>
-                                            <constraint firstItem="zq4-7J-tNs" firstAttribute="trailing" secondItem="O3T-tZ-Gfs" secondAttribute="trailing" type="default" id="cNE-Lp-GCu"/>
-                                            <constraint firstAttribute="bottom" secondItem="djw-9m-IvM" secondAttribute="bottom" constant="221" id="cWA-co-b0b"/>
-                                            <constraint firstItem="7jp-Pd-1JS" firstAttribute="leading" secondItem="O3T-tZ-Gfs" secondAttribute="leading" constant="20" type="default" id="ezP-lX-M3r"/>
-                                            <constraint firstItem="zq4-7J-tNs" firstAttribute="top" secondItem="O3T-tZ-Gfs" secondAttribute="top" constant="228" id="pOA-cy-MRB"/>
-                                            <constraint firstItem="zq4-7J-tNs" firstAttribute="leading" secondItem="O3T-tZ-Gfs" secondAttribute="leading" type="default" id="phU-FH-OLa"/>
-                                            <constraint firstItem="djw-9m-IvM" firstAttribute="centerX" secondItem="zq4-7J-tNs" secondAttribute="centerX" type="default" id="rQR-D0-2ax"/>
+                                            <constraint firstItem="zq4-7J-tNs" firstAttribute="top" secondItem="O3T-tZ-Gfs" secondAttribute="top" constant="228" id="25P-qK-Bfo"/>
+                                            <constraint firstItem="7jp-Pd-1JS" firstAttribute="leading" secondItem="O3T-tZ-Gfs" secondAttribute="leading" constant="20" id="L6k-hs-4vV"/>
+                                            <constraint firstItem="zq4-7J-tNs" firstAttribute="trailing" secondItem="O3T-tZ-Gfs" secondAttribute="trailing" id="OeI-yD-paH"/>
+                                            <constraint firstItem="7jp-Pd-1JS" firstAttribute="top" secondItem="O3T-tZ-Gfs" secondAttribute="top" constant="20" id="OfE-X1-mNr"/>
+                                            <constraint firstAttribute="trailing" secondItem="7jp-Pd-1JS" secondAttribute="trailing" constant="20" id="Pdb-bb-uHW"/>
+                                            <constraint firstItem="zq4-7J-tNs" firstAttribute="leading" secondItem="O3T-tZ-Gfs" secondAttribute="leading" id="Z4a-Xe-nYp"/>
+                                            <constraint firstAttribute="bottom" secondItem="djw-9m-IvM" secondAttribute="bottom" constant="170" id="klb-cW-wIW"/>
+                                            <constraint firstItem="djw-9m-IvM" firstAttribute="centerX" secondItem="zq4-7J-tNs" secondAttribute="centerX" id="mcl-Dk-SQ9"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -86,17 +86,6 @@ schumacher15@up.edu</string>
             <point key="canvasLocation" x="-70" y="1"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="WMAboutSectionViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WMAboutSectionViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="logOut:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

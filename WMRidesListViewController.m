@@ -66,8 +66,7 @@
     [[self tableView] registerNib:[UINib nibWithNibName:@"WMRidesCell" bundle:nil]
            forCellReuseIdentifier:@"WMRidesCell"];
     
-    UIBarButtonItem *listButton = [[UIBarButtonItem alloc] initWithTitle:@"List" style:UIBarButtonItemStylePlain target:self action:@selector(listFurniture)];
-    [listButton setTintColor:PURPLECOLOR];
+    UIBarButtonItem *listButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(listFurniture)];
     [[self navigationItem] setRightBarButtonItem:listButton];
     
     

@@ -18,6 +18,7 @@
     __weak IBOutlet UITextField *locationField;
     __weak IBOutlet UITextView *detailsTextView;
     __weak IBOutlet UITextField *typeField;
+    IBOutlet UILabel *postLabel;
     
     // Pickers
     UIDatePicker *datePicker;

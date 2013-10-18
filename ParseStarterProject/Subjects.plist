@@ -951,6 +951,131 @@
 			<string>Multi-Ethnic American Lit</string>
 		</array>
 	</array>
+	<key>Environmental Studies</key>
+	<array>
+		<array>
+			<string>ENV 100</string>
+			<string>Earth Systems Science</string>
+		</array>
+		<array>
+			<string>ENV 111</string>
+			<string>Natural Hazards in the Pacific Northwest</string>
+		</array>
+		<array>
+			<string>ENV 182</string>
+			<string>Environmental Science</string>
+		</array>
+		<array>
+			<string>ENV 191H</string>
+			<string>Food Sustainability</string>
+		</array>
+		<array>
+			<string>ENV 384</string>
+			<string>Remote Sensing and Geographic Information Systems</string>
+		</array>
+		<array>
+			<string>ENV 385</string>
+			<string>Environmental Microbiology</string>
+		</array>
+		<array>
+			<string>ENV 387</string>
+			<string>Environmental Laboratory</string>
+		</array>
+		<array>
+			<string>ENV 391</string>
+			<string>Climate (Gore) Science</string>
+		</array>
+		<array>
+			<string>ENV 501</string>
+			<string>Systems Thinking, Resilience and Sustainability</string>
+		</array>
+	</array>
+	<key>Fine Arts</key>
+	<array>
+		<array>
+			<string>FA 125</string>
+			<string>Basic Design</string>
+		</array>
+		<array>
+			<string>FA 203</string>
+			<string>Development of the Fine Arts in Europe</string>
+		</array>
+		<array>
+			<string>FA 207</string>
+			<string>Introduction to Fine Arts</string>
+		</array>
+		<array>
+			<string>FA 215</string>
+			<string>Introduction to Photography</string>
+		</array>
+		<array>
+			<string>FA 226</string>
+			<string>Painting I</string>
+		</array>
+		<array>
+			<string>FA 228</string>
+			<string>Ceramics I</string>
+		</array>
+		<array>
+			<string>FA 242</string>
+			<string>Drawing I</string>
+		</array>
+		<array>
+			<string>FA 244</string>
+			<string>Sculpture I</string>
+		</array>
+		<array>
+			<string>FA 317</string>
+			<string>Creative Photography</string>
+		</array>
+		<array>
+			<string>FA 318</string>
+			<string>Digital Photography</string>
+		</array>
+		<array>
+			<string>FA 327</string>
+			<string>Painting II</string>
+		</array>
+		<array>
+			<string>FA 329</string>
+			<string>Ceramics II</string>
+		</array>
+		<array>
+			<string>FA 343</string>
+			<string>Drawing II</string>
+		</array>
+		<array>
+			<string>FA 345</string>
+			<string>Sculpture II: Stone Carving</string>
+		</array>
+		<array>
+			<string>FA 350</string>
+			<string>Art History I</string>
+		</array>
+	</array>
+	<key>French</key>
+	<array>
+		<array>
+			<string>FRN 101</string>
+			<string>Elementary French</string>
+		</array>
+		<array>
+			<string>FRN 201</string>
+			<string>Intermediate French</string>
+		</array>
+		<array>
+			<string>FRN 301</string>
+			<string>Advanced French Conversation</string>
+		</array>
+		<array>
+			<string>FRN 417</string>
+			<string>Advanced French Grammar and Conversation</string>
+		</array>
+		<array>
+			<string>FRN 491</string>
+			<string>Second Language Start/Theory</string>
+		</array>
+	</array>
 	<key>Chinese</key>
 	<array>
 		<array>
@@ -972,6 +1097,41 @@
 		<array>
 			<string>CHN 491</string>
 			<string>Second Language Strat/Theory</string>
+		</array>
+	</array>
+	<key>German</key>
+	<array>
+		<array>
+			<string>GRM 101</string>
+			<string>Elementary German</string>
+		</array>
+		<array>
+			<string>GRM 105</string>
+			<string>Accelerated Elementary German</string>
+		</array>
+		<array>
+			<string>GRM 201</string>
+			<string>Intermediate German</string>
+		</array>
+		<array>
+			<string>GRM 301</string>
+			<string>German Conversation and Composition</string>
+		</array>
+		<array>
+			<string>GRM 311</string>
+			<string>Advanced Conversation and Composition</string>
+		</array>
+		<array>
+			<string>GRM 353</string>
+			<string>Introduction to Literary and Cultural Analysis</string>
+		</array>
+		<array>
+			<string>GRM 355</string>
+			<string>Advanced Conversation and Composition and Austrian Images</string>
+		</array>
+		<array>
+			<string>GRM 491</string>
+			<string>Second Language Start/Theory</string>
 		</array>
 	</array>
 	<key>Dance</key>
@@ -1014,6 +1174,148 @@
 		<array>
 			<string>AS 401</string>
 			<string>National Security Affairs &amp; Preparation for Active Duty</string>
+		</array>
+	</array>
+	<key>History</key>
+	<array>
+		<array>
+			<string>HST 210</string>
+			<string>United States: Early America</string>
+		</array>
+		<array>
+			<string>HST 211</string>
+			<string>United States: Modern America</string>
+		</array>
+		<array>
+			<string>HST 220</string>
+			<string>Foundations of Western Civilization</string>
+		</array>
+		<array>
+			<string>HST 221</string>
+			<string>Modern Western Civilization</string>
+		</array>
+		<array>
+			<string>HST 251</string>
+			<string>Modern East Asia</string>
+		</array>
+		<array>
+			<string>HST 254</string>
+			<string>Colonial Latin America</string>
+		</array>
+		<array>
+			<string>HST 300</string>
+			<string>Introduction to Historical Methods</string>
+		</array>
+		<array>
+			<string>HST 318</string>
+			<string>Cold War America</string>
+		</array>
+		<array>
+			<string>HST 321</string>
+			<string>Modern American Women&apos;s History</string>
+		</array>
+		<array>
+			<string>HST 330</string>
+			<string>Ancient Mediterranean World</string>
+		</array>
+		<array>
+			<string>HST 346</string>
+			<string>Modern Germany</string>
+		</array>
+		<array>
+			<string>HST 352</string>
+			<string>The United States and the Pacific Rim</string>
+		</array>
+		<array>
+			<string>HST 357</string>
+			<string>Technology, Resources, and Environment in World History</string>
+		</array>
+		<array>
+			<string>HST 391</string>
+			<string>Pacific Northwest History</string>
+		</array>
+		<array>
+			<string>HST 391</string>
+			<string>History of Modern Cuba</string>
+		</array>
+	</array>
+	<key>Mathematics</key>
+	<array>
+		<array>
+			<string>MTH 105</string>
+			<string>Mathematics for Elementary Teachers</string>
+		</array>
+		<array>
+			<string>MTH 111</string>
+			<string>Precalculust I</string>
+		</array>
+		<array>
+			<string>MTH 112</string>
+			<string>Precalculus II</string>
+		</array>
+		<array>
+			<string>MTH 121</string>
+			<string>Calculus for Business and Social Science</string>
+		</array>
+		<array>
+			<string>MTH 141</string>
+			<string>Finite Mathematics</string>
+		</array>
+		<array>
+			<string>MTH 160</string>
+			<string>Quantitative Reasoning</string>
+		</array>
+		<array>
+			<string>MTH 161</string>
+			<string>Elementary Statistics</string>
+		</array>
+		<array>
+			<string>MTH 201</string>
+			<string>Calculus I</string>
+		</array>
+		<array>
+			<string>MTH 202</string>
+			<string>Calculus II</string>
+		</array>
+		<array>
+			<string>MTH 301</string>
+			<string>Vector Calculus</string>
+		</array>
+		<array>
+			<string>MTH 303</string>
+			<string>Computational Methods in Physical Sciences</string>
+		</array>
+		<array>
+			<string>MTH 311</string>
+			<string>Discrete Structures</string>
+		</array>
+		<array>
+			<string>MTH 321</string>
+			<string>Ordinary Differential Equations</string>
+		</array>
+		<array>
+			<string>MTH 341</string>
+			<string>Introduction to Linear Algebra</string>
+		</array>
+		<array>
+			<string>MTH 356</string>
+			<string>Mathematical Methods for Science and Engineering</string>
+		</array>
+		<array>
+			<string>MTH 401</string>
+			<string>Real Analysis I</string>
+		</array>
+		<array>
+			<string>MTH 441</string>
+			<string>Modern Algebra I</string>
+		</array>
+		<array>
+			<string>MTH 461</string>
+			<string>Probability and Statistics I</string>
+		</array>
+		<array>
+			<string>MTH 491</string>
+			<string>Cryptography</string>
 		</array>
 	</array>
 </dict>

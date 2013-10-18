@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     // Font
-    [rideDetailsLabel setFont:[UIFont fontWithName:@"Museo Slab" size:17]];
+    [rideDetailsLabel setFont:[UIFont fontWithName:@"Museo Slab" size:16]];
     [self setTitle:@"Ride"];
     
     // Set Fields
@@ -38,34 +38,34 @@
     // Fee
     [feeField setText:[[self ride] objectForKey:@"fee"]];
     
-    // Driver
-    PFUser *theSeller = [[self ride] objectForKey:@"rider"];
-    NSString *objectID = [theSeller objectId];
-    self.driver = [PFQuery getUserObjectWithId:objectID];
-    [driverField setText:[self.driver objectForKey:@"fullName"]];
+    // Fetch driver information
+    PFUser *driver = [[self ride] objectForKey:@"rider"];
+    NSString *objectID = [driver objectId];
+    [[PFUser query] getObjectInBackgroundWithId:objectID block:^(PFObject *object, NSError *error) {
+        [self setDriver:object];
+        [driverField setText:[self.driver objectForKey:@"fullName"]];
+        // Edit the listing
+        if ([self doesUserOwnListing]) {
+            editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editListing)];
+            [[self navigationItem] setRightBarButtonItem:editButton];
+        }
+        [[self tableView] reloadData];
+    }];
+    
+    
     
     // DisAble Field
     editFields = [[NSArray alloc] initWithObjects:toField, fromField, departureField, feeField, nil];
 
-    // Buttons
-    UITableViewCell *cell = [[self tableView] cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
-    UIView *view = [[UIView alloc] init];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button.png"]];
-    [view addSubview:imageView];
+    // Labels
+    [emaiLabel setFont:[UIFont fontWithName:@"Museo Slab" size:16]];
+    [textLabel setFont:[UIFont fontWithName:@"Museo Slab" size:16]];
     
-    [cell setBackgroundColor:[UIColor redColor]];
-     emailCell.backgroundView = [[UIView alloc] initWithFrame:cell.backgroundView.frame];
-    [emailCell setBackgroundView:imageView];
-    [emaiLabel setFont:[UIFont fontWithName:@"Museo Slab" size:17]];
     
+
  
     
-    // Edit the listing
-    if ([self doesUserOwnListing]) {
-        editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editListing)];
-        [editButton setTintColor:PURPLECOLOR];
-        [[self navigationItem] setRightBarButtonItem:editButton];
-    }
+  
     
     // Keyboard PREV NEXT
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"WMPrevNext" owner:self options:nil];
@@ -94,25 +94,17 @@
     
     // Navigation
     [[self navigationItem] setLeftItemsSupplementBackButton:YES];
-    
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 #pragma mark - Edit Listing
 
 - (void)editListing
 {
-    doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleBordered target:self action:@selector(doneEditing)];
-    [doneButton setTintColor:PURPLECOLOR];
+    doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing)];
     [[self navigationItem] setRightBarButtonItem:doneButton];
     editButton = nil;
-    deleteButton = [[UIBarButtonItem alloc] initWithTitle:@"Delete" style:UIBarButtonItemStyleBordered target:self action:@selector(deleteRide)];
-    [deleteButton setTintColor:PURPLECOLOR];
+    deleteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteRide)];
     [[self navigationItem] setLeftBarButtonItem:deleteButton];
     
     for (UITextField *tf in editFields) {
@@ -135,8 +127,7 @@
 
 - (void)doneEditing
 {
-    editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editListing)];
-    [editButton setTintColor:PURPLECOLOR];
+    editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editListing)];
     [[self navigationItem] setRightBarButtonItem:editButton];
     doneButton = nil;
     deleteButton = nil;
@@ -251,25 +242,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([indexPath section] == 0 && [indexPath row] == 5) {
+    if ([indexPath section] == 0 && [indexPath row] == 2) {
         WMGeneralDescriptionViewController *descriptionView = [[WMGeneralDescriptionViewController alloc] init];
         [descriptionView setText:[[self ride] objectForKey:@"otherInfo"]];
         [descriptionView setDoesOwn:[self doesUserOwnListing]];
         [descriptionView setGeneralDescriptionDelegate:self];
         [[self navigationController] pushViewController:descriptionView animated:YES];
-    } else if ([indexPath section] == 1) {
+    } else if (([indexPath section] == 1 && [indexPath row] == 0)) {
         MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
         [mailViewController setMailComposeDelegate:self];
         [mailViewController setSubject:[NSString stringWithFormat:@"RIDE TO: %@ FROM: %@", [[self ride] objectForKey:@"to"], [[self ride] objectForKey:@"from"]]];
         [mailViewController setToRecipients:[NSArray arrayWithObject:[[self driver] objectForKey:@"email"]]];
         [self presentViewController:mailViewController animated:YES completion:NULL];
-    } else if ([indexPath section] == 2) {
+    } else if ([indexPath section] == 1 && [indexPath row] == 1) {
         if ([[self ride] objectForKey:@"phone"]) {
             MFMessageComposeViewController *smsController = [[MFMessageComposeViewController alloc] init];
             [smsController setRecipients:[[NSArray alloc] initWithObjects:[[self ride] objectForKey:@"phone"], nil]];
             [smsController setMessageComposeDelegate:self];
             [self presentViewController:smsController animated:YES completion:NULL];
-        } else {
+        } else  {
             UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Oh no!" message:@"Seller did not include a phone number." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
             [av show];
         }

@@ -29,6 +29,9 @@
     
     // Prev next
     WMPrevNext *prevNext;
+    
+    // Labels
+    IBOutlet UILabel *postEventLabel;
 }
 
 @property (nonatomic, strong) NSString *eventType;

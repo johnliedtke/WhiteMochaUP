@@ -97,8 +97,7 @@
 - (void)canEdit {
     // Edit the listing
     if ([self doesUserOwnListing]) {
-        editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editListing)];
-        [editButton setTintColor:PURPLECOLOR];
+        editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editListing)];
         [[self navigationItem] setRightBarButtonItem:editButton];
         
     }
@@ -107,13 +106,11 @@
 
 - (void)editListing
 {
-    doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleBordered target:self action:@selector(doneEditing)];
-    [doneButton setTintColor:PURPLECOLOR];
+    doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing)];
     [[self navigationItem] setRightBarButtonItem:doneButton];
     
     // Delete button
-    deleteButton = [[UIBarButtonItem alloc] initWithTitle:@"Delete" style:UIBarButtonItemStyleBordered target:self action:@selector(deleteListing)];
-    [deleteButton setTintColor:PURPLECOLOR];
+    deleteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteListing)];
     [[self navigationItem] setLeftBarButtonItem:deleteButton];
     
     // Regex
@@ -145,8 +142,7 @@
 
 - (void)doneEditing
 {
-    editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editListing)];
-    [editButton setTintColor:PURPLECOLOR];
+    editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editListing)];
     [[self navigationItem] setRightBarButtonItem:editButton];
     [[self navigationItem] setLeftBarButtonItem:nil];
     

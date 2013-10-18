@@ -21,8 +21,8 @@
     [super viewDidLoad];
     
     // exit
-    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"exit.png"] forState:UIControlStateNormal];
-    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"exit.png"] forState:UIControlStateHighlighted];
+    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"exit1.png"] forState:UIControlStateNormal];
+    //[self.logInView.dismissButton setImage:[UIImage imageNamed:@"exit.png"] forState:UIControlStateHighlighted];
 
     
     // Logo
@@ -69,8 +69,7 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-
-    [self.logInView.logo setFrame:CGRectMake(83.0f, 20.0f, 148.0f, 80.0f)];
+    [self.logInView.logo setFrame:CGRectMake(83.0f, 30.0f, 148.0f, 80.0f)];
     [self.logInView.signUpButton setFrame:CGRectMake(35.0f, 315.0f, 250.0f, 41.0f)];
     [self.logInView.logInButton setFrame:CGRectMake(35.0f, 225.0f, 250.0f, 41.0f)];
     [self.logInView.logInButton setTitle:@" " forState:UIControlStateNormal];

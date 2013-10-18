@@ -40,8 +40,7 @@
         // Edit the listing
         if ([objectID isEqualToString:[[PFUser currentUser] objectId]]) {
             editFields = [[NSArray alloc] initWithObjects:titleField,locationField,timeField,creatorField,sponsorField,detailsTextView, nil];
-            editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editListing)];
-            [editButton setTintColor:PURPLECOLOR];
+            editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editListing)];
             [[self navigationItem] setRightBarButtonItem:editButton];
         }
     }];
@@ -80,12 +79,10 @@
 
 - (void)editListing
 {
-    doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleBordered target:self action:@selector(doneEditing)];
-    [doneButton setTintColor:PURPLECOLOR];
+    doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing)];
     [[self navigationItem] setRightBarButtonItem:doneButton];
     editButton = nil;
-    deleteButton = [[UIBarButtonItem alloc] initWithTitle:@"Delete" style:UIBarButtonItemStyleBordered target:self action:@selector(deleteRide)];
-    [deleteButton setTintColor:PURPLECOLOR];
+    deleteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteRide)];
     [[self navigationItem] setLeftBarButtonItem:deleteButton];
     
     for (UITextField *tf in editFields) {
@@ -106,24 +103,25 @@
 
 - (void)deleteRide
 {
-    [[[self event] parseObject] deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        UIAlertView *av;
-        if (succeeded) {
-            av = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"Event has been deleted" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
-            [av show];
-            [[self navigationController] popViewControllerAnimated:YES];
-        } else {
-            av = [[UIAlertView alloc] initWithTitle:@"Error!" message:[error description] delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
-            [av show];
-        }
-    }];
+    deleteView = [[UIAlertView alloc] initWithTitle:@"Confirm Deletion" message:@"Please confirm deletion of listing." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Delete", nil];
+    [deleteView show];
 
 }
 
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (alertView == deleteView) {
+        if (buttonIndex == 1) {
+            [[self eventDetailDelegate] deleteListing:[[self event] parseObject]];
+            [[self navigationController] popViewControllerAnimated:YES];
+        }
+    }
+}
+
+
 - (void)doneEditing
 {
-    editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editListing)];
-    [editButton setTintColor:PURPLECOLOR];
+    editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editListing)];
     [[self navigationItem] setRightBarButtonItem:editButton];
     doneButton = nil;
     deleteButton = nil;

@@ -60,10 +60,7 @@
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"WMPrevNext" owner:self options:nil];
     prevNext = [subviewArray objectAtIndex:0];
     [prevNext setPrevNextDelegate:self];
- 
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+
  
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -207,6 +204,8 @@
         [[cell textLabel] setText:@"List Item"];
         [[cell textLabel] setTextAlignment:NSTextAlignmentCenter];
         [[cell textLabel] setFont:[UIFont fontWithName:@"Museo Slab" size:18]];
+        [cell setBackgroundColor:PURPLECOLOR];
+        [[cell textLabel] setTextColor:[UIColor whiteColor]];
         [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
     }
     

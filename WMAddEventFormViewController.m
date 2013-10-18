@@ -45,7 +45,7 @@
     
     // Appearance
     PURPLEBACK
-    
+    [postEventLabel setFont:[UIFont fontWithName:@"Museo Slab" size:18]];
     
 }
 

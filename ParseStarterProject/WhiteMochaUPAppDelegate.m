@@ -1,6 +1,5 @@
 #import <Parse/Parse.h>
 #import "WhiteMochaUPAppDelegate.h"
-#import "ParseStarterProjectViewController.h"
 #import "WMMarketPlaceHomeViewController.h"
 #import "WMWebViewController.h"
 #import "WMEventsViewController.h"
@@ -12,6 +11,8 @@
 #import <CoreData/CoreData.h>
 #import "RootTableViewController.h"
 #import "WMFoodSectionViewController.h"
+#import "WMNavigationBar.h"
+#import "WMNavigationController.h"
 
 
 @implementation WhiteMochaUPAppDelegate
@@ -48,10 +49,13 @@
     [defaultACL setPublicReadAccess:YES];
     
     // Navigation bar
-    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Museo Slab" size:22],UITextAttributeFont,nil]];
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Museo Slab" size:22],UITextAttributeFont, [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,nil]];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
+    
+
     
     
-    UIImage *navBarImg = [UIImage imageNamed:@"navigationbar.png"];
     
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
@@ -63,14 +67,8 @@
     UITabBarItem *market = [[UITabBarItem alloc] initWithTitle:@"Market" image:[UIImage imageNamed:@"market.png"] tag:1];
     [marketplaceHomeController setTabBarItem:market];
     
-   // [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"plainBack3.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    
-    UINavigationController *marketNavigation = [[UINavigationController alloc] initWithRootViewController:marketplaceHomeController];
-    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Back" style: UIBarButtonItemStyleBordered target: nil action: nil];
-    [newBackButton setTintColor:PURPLECOLOR];
-    [[marketNavigation navigationItem] setBackBarButtonItem:newBackButton];
-    [[marketNavigation navigationBar] setBackgroundImage:navBarImg forBarMetrics:UIBarMetricsDefault];
-    [[marketNavigation navigationBar] setBackgroundColor:[UIColor blackColor]];
+    // Push marketplace onto a navigation controller
+    WMNavigationController *marketNavigation = [[WMNavigationController alloc] initWithRootViewController:marketplaceHomeController];
     
     // Create Events Section
     WMEventsViewController *evc = [[WMEventsViewController alloc] init];
@@ -78,19 +76,13 @@
     [evc setTabBarItem:events];
     WMWebViewController *wvc = [[WMWebViewController alloc] init];
     [evc setWebViewController:wvc];
-    UINavigationController *eventsNavigation = [[UINavigationController alloc] initWithRootViewController:evc];
-    [[eventsNavigation navigationBar] setBackgroundImage:navBarImg forBarMetrics:UIBarMetricsDefault];
-    [[eventsNavigation navigationBar] setBackgroundColor:[UIColor blackColor]];
+    WMNavigationController *eventsNavigation = [[WMNavigationController alloc] initWithRootViewController:evc];
+
     
     // Create class crap
     RootTableViewController *classes = [[RootTableViewController alloc] init];
-
-    
-    UINavigationController *classNavigation = [[UINavigationController alloc] initWithRootViewController:classes];
+    WMNavigationController *classNavigation = [[WMNavigationController alloc] initWithRootViewController:classes];
     [classes setManagedObjectContext:self.managedObjectContext];
-    [[classNavigation navigationItem] setBackBarButtonItem:newBackButton];
-    [[classNavigation navigationBar] setBackgroundImage:navBarImg forBarMetrics:UIBarMetricsDefault];
-    [[classNavigation navigationBar] setBackgroundColor:[UIColor blackColor]];
    
     UITabBarItem *eventsItem = [[UITabBarItem alloc] initWithTitle:@"Classes" image:[UIImage imageNamed:@"class.png"] tag:3];
     [classNavigation setTabBarItem:eventsItem];
@@ -102,36 +94,34 @@
     UITabBarItem *foodItem = [[UITabBarItem alloc] initWithTitle:@"Food" image:[UIImage imageNamed:@"food.png"] tag:5];
     [food setTabBarItem:foodItem];
     
-    UINavigationController *foodNavigation = [[UINavigationController alloc] initWithRootViewController:food];
-    [[foodNavigation navigationItem] setBackBarButtonItem:newBackButton];
-    [[foodNavigation navigationBar] setBackgroundImage:navBarImg forBarMetrics:UIBarMetricsDefault];
-    [[foodNavigation navigationBar] setBackgroundColor:[UIColor blackColor]];
-   // WMLogInViewController *loginViewController = [[WMLogInViewController alloc] init];
+    WMNavigationController *foodNavigation = [[WMNavigationController alloc] initWithRootViewController:food];
 
-    //[loginViewController setSignUpController:registerViewController];
     
-    // Home
+    // Home Navigation
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"WMHome" bundle:nil];
     WMHomeViewController *homeViewController = [story instantiateViewControllerWithIdentifier:@"WMHome"];
     UITabBarItem *homeItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"home.png"] tag:0];
     [homeViewController setTabBarItem:homeItem];
+    WMNavigationController *homeNavigation = [[WMNavigationController alloc] initWithRootViewController:homeViewController];
     
     
-    UINavigationController *homeNavigation = [[UINavigationController alloc] initWithRootViewController:homeViewController];
-    [[homeNavigation navigationBar] setBackgroundImage:navBarImg forBarMetrics:UIBarMetricsDefault];
-    [[homeNavigation navigationBar] setBackgroundColor:[UIColor blackColor]];
-    
+
     // Create the navigation for the app
     tabBarController = [[UITabBarController alloc] init];
-    [[tabBarController tabBar] setBackgroundColor:[UIColor blackColor]];
-    [[tabBarController tabBar] setBackgroundImage:[UIImage imageNamed:@"tabbar.png"]];
-    [[UITabBar appearance] setTintColor:[[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:1.0]];
+    UIColor *grayColor = [[UIColor alloc] initWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0];
+
+    [[tabBarController tabBar] setTranslucent:NO];
+    [[tabBarController tabBar] setBarTintColor:grayColor];
+    [[tabBarController tabBar] setSelectedImageTintColor:PURPLECOLOR];
+    [[tabBarController tabBar] setBarStyle:UIBarStyleBlack];
+    [[tabBarController tabBar] setTintColor:[UIColor whiteColor]];
+
     
+    // View Controllers Array
     NSArray *controllers = [NSArray arrayWithObjects:homeNavigation, classNavigation, eventsNavigation, foodNavigation, marketNavigation, nil];
     
     [tabBarController setViewControllers:controllers];
     
-   //self.window.rootViewController = logInViewController;
     [[self window] setRootViewController:tabBarController];
     [self.window makeKeyAndVisible];
 

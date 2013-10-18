@@ -44,10 +44,11 @@
     NSString *from;
     NSDate *departure;
     NSString *fee;
+    IBOutlet UILabel *textLabel;
 }
 
 @property (nonatomic, strong) PFObject *ride;
-@property (nonatomic, strong) PFUser *driver;
+@property (nonatomic, strong) PFObject *driver;
 @property (nonatomic, weak) id <WMRideDetailDelegate> delegate;
 
 
