@@ -50,7 +50,7 @@
         // Set Title
         [self setTitle:@"Marketplace"];
         
-        
+      
         
     }
     return self;
@@ -71,8 +71,7 @@
     [[self tableView] registerNib:[UINib nibWithNibName:@"WMFurnitureCell" bundle:nil]
            forCellReuseIdentifier:@"furnitureCell"];
     
-    UIBarButtonItem *listButton = [[UIBarButtonItem alloc] initWithTitle:@"List" style:UIBarButtonItemStylePlain target:self action:@selector(listFurniture)];
-    [listButton setTintColor:PURPLECOLOR];
+    UIBarButtonItem *listButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(listFurniture)];
     [[self navigationItem] setRightBarButtonItem:listButton];
     
 }

@@ -13,6 +13,7 @@
 #import "WMAboutSectionViewController.h"
 #import "WMWebViewController.h"
 #import "WMNavigationController.h"
+#import "WMAddPollQuestionViewController.h"
 
 @interface WMHomeViewController ()
 
@@ -105,6 +106,14 @@
     
 
 
+    
+}
+
+-(void)addNewPoll
+{
+    UIStoryboard *storyPoll = [UIStoryboard storyboardWithName:@"WMAddPoll" bundle:nil];
+    WMAddPollQuestionViewController *addPollVC = [storyPoll instantiateViewControllerWithIdentifier:@"WMAddPoll"];
+    [[self navigationController] pushViewController:addPollVC animated:YES];
     
 }
 
@@ -217,7 +226,11 @@
     
     int multFactor = 180;
     int xSpace = 105;
-    int height = 32;
+    int height = 25;
+    UIColor *blueColor = [[UIColor alloc] initWithRed:76.0/255.0 green:142.0/255.0 blue:215.0/255.0 alpha:1.0];
+    UIColor *redColor = [[UIColor alloc] initWithRed:218.0/255.0 green:80.0/255.0 blue:36.0/255.0 alpha:1.0];
+    UIColor *greenColor = [[UIColor alloc] initWithRed:153.0/255.0 green:168.0/255.0 blue:70.0/255.0 alpha:1.0];
+    UIColor *orangeColor = [[UIColor alloc] initWithRed:219.0/255.0 green:160.0/255.0 blue:34.0/255.0 alpha:1.0];
     
     // A Results
     aResultButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -233,9 +246,10 @@
     [aPercentLabel setFont:[UIFont boldSystemFontOfSize:13]];
     [aPercentLabel setText:[NSString stringWithFormat:@"%.0f%%", roundf(aRounded)]];
     [pollCell addSubview:aPercentLabel];
-    aResultButton.frame = CGRectMake(xSpace, 36, aWidth, height);
-    [aResultButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [aResultButton setBackgroundImage:buttonImage forState:UIControlStateHighlighted];
+    aResultButton.frame = CGRectMake(xSpace, 40, aWidth, height);
+    //[aResultButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    //[aResultButton setBackgroundImage:buttonImage forState:UIControlStateHighlighted];
+    [aResultButton setBackgroundColor:blueColor];
     [[aResultButton titleLabel] setFont:[UIFont boldSystemFontOfSize:13]];
     [pollCell addSubview:aResultButton];
     
@@ -253,9 +267,10 @@
     [bPercentLabel setFont:[UIFont boldSystemFontOfSize:13]];
     [bPercentLabel setText:[NSString stringWithFormat:@"%.0f%%", roundf(bRounded)]];
     [pollCell addSubview:bPercentLabel];
-    bResultButton.frame = CGRectMake(xSpace, 77, bWidth, height);
-    [bResultButton setBackgroundImage:orangeButtonImage forState:UIControlStateNormal];
-    [bResultButton setBackgroundImage:orangeButtonImage forState:UIControlStateHighlighted];
+    bResultButton.frame = CGRectMake(xSpace, 82, bWidth, height);
+    //[bResultButton setBackgroundImage:orangeButtonImage forState:UIControlStateNormal];
+    //[bResultButton setBackgroundImage:orangeButtonImage forState:UIControlStateHighlighted];
+    [bResultButton setBackgroundColor:redColor];
     [[bResultButton titleLabel] setFont:[UIFont boldSystemFontOfSize:13]];
     [pollCell addSubview:bResultButton];
     
@@ -273,9 +288,10 @@
     [cPercentLabel setFont:[UIFont boldSystemFontOfSize:13]];
     [cPercentLabel setText:[NSString stringWithFormat:@"%.0f%%", roundf(cRounded)]];
     [pollCell addSubview:cPercentLabel];
-    cResultButton.frame = CGRectMake(xSpace, 120, cWidth, height);
-    [cResultButton setBackgroundImage:greenButtonImage forState:UIControlStateNormal];
-    [cResultButton setBackgroundImage:greenButtonImage forState:UIControlStateHighlighted];
+    cResultButton.frame = CGRectMake(xSpace, 125, cWidth, height);
+   // [cResultButton setBackgroundImage:greenButtonImage forState:UIControlStateNormal];
+   // [cResultButton setBackgroundImage:greenButtonImage forState:UIControlStateHighlighted];
+    [cResultButton setBackgroundColor:greenColor];
     [[cResultButton titleLabel] setFont:[UIFont boldSystemFontOfSize:13]];
     [pollCell addSubview:cResultButton];
     
@@ -290,13 +306,14 @@
     } else {
         dWidth = ([cVotes doubleValue] / totalVotes) * multFactor + 10;
     }
-    dPercentLabel = [[UILabel alloc] initWithFrame:CGRectMake(xSpace+dWidth+5, 166, 35, 21)];
+    dPercentLabel = [[UILabel alloc] initWithFrame:CGRectMake(xSpace+dWidth+5, 168, 35, 21)];
     [dPercentLabel setFont:[UIFont boldSystemFontOfSize:13]];
     [dPercentLabel setText:[NSString stringWithFormat:@"%.0f%%", roundf(dRounded)]];
     [pollCell addSubview:dPercentLabel];
-    dResultButton.frame = CGRectMake(xSpace, 162, dWidth, height);
-    [dResultButton setBackgroundImage:tanButtonImage forState:UIControlStateNormal];
-    [dResultButton setBackgroundImage:tanButtonImage forState:UIControlStateHighlighted];
+    dResultButton.frame = CGRectMake(xSpace, 168, dWidth, height);
+   // [dResultButton setBackgroundImage:tanButtonImage forState:UIControlStateNormal];
+   // [dResultButton setBackgroundImage:tanButtonImage forState:UIControlStateHighlighted];
+    [dResultButton setBackgroundColor:orangeColor];
     [[dResultButton titleLabel] setFont:[UIFont boldSystemFontOfSize:13]];
     [pollCell addSubview:dResultButton];
     
@@ -373,6 +390,16 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MMM d"];
     [dateLabel setText:[dateFormatter stringFromDate:[NSDate date]]];
+    
+    
+    // Can add poll?
+    NSString *userID = [[PFUser currentUser] objectId];
+    if ([userID isEqualToString:@"TP1zH9PHeJ"] || [userID isEqualToString:@"wd8wxq46wl"]) {
+        UIBarButtonItem *addPoll = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewPoll)];
+        [[self navigationItem] setRightBarButtonItem:addPoll];
+    } else {
+        [[self navigationItem] setRightBarButtonItem:nil];
+    }
 
 }
 

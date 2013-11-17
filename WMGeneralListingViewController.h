@@ -14,7 +14,7 @@
 #import "WMPrevNext.h"
 
 
-@interface WMGeneralListingViewController : UITableViewController <UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NewImageDelegate, WMDescriptionDelegate, WMPrevNextDelegate>
+@interface WMGeneralListingViewController : UITableViewController <UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NewImageDelegate, WMDescriptionDelegate, WMPrevNextDelegate, UIAlertViewDelegate>
 {
     UITextField *titleField;
     UITextField *priceField;
@@ -25,6 +25,7 @@
     NSString *imageLabelText;
     UIColor *imageLabelColor;
     WMPrevNext *prevNext;
+    UIAlertView *successAlertView;
 }
 
 @property (nonatomic, retain) NSString *title;

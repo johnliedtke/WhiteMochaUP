@@ -175,6 +175,8 @@
 		52952B3C17B8AD6A001F5044 /* Subjects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52952B3B17B8AD6A001F5044 /* Subjects.plist */; };
 		52973DA717A0D2FE00C07A17 /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 52973DA617A0D2FE00C07A17 /* tabbar.png */; };
 		52973DAB17A0D7FA00C07A17 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 52973DAA17A0D7FA00C07A17 /* home.png */; };
+		5297EE9318386F73008A69FA /* WMAddPoll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297EE9218386F73008A69FA /* WMAddPoll.storyboard */; };
+		5297EE9618386FFE008A69FA /* WMAddPollQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5297EE9518386FFE008A69FA /* WMAddPollQuestionViewController.m */; };
 		5298DCCA17BB39C3004E3575 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 5298DCC917BB39C2004E3575 /* book.png */; };
 		5298DCCC17BB3A9D004E3575 /* book2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5298DCCB17BB3A9D004E3575 /* book2.png */; };
 		529CCA8717BC5828000E5CF0 /* clubs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 529CCA8617BC5828000E5CF0 /* clubs.plist */; };
@@ -451,6 +453,9 @@
 		52952B3B17B8AD6A001F5044 /* Subjects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Subjects.plist; path = ParseStarterProject/Subjects.plist; sourceTree = "<group>"; };
 		52973DA617A0D2FE00C07A17 /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar.png; path = ../../WMPhotoshop/tabbar.png; sourceTree = "<group>"; };
 		52973DAA17A0D7FA00C07A17 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../home.png; sourceTree = "<group>"; };
+		5297EE9218386F73008A69FA /* WMAddPoll.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMAddPoll.storyboard; sourceTree = "<group>"; };
+		5297EE9418386FFE008A69FA /* WMAddPollQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMAddPollQuestionViewController.h; sourceTree = "<group>"; };
+		5297EE9518386FFE008A69FA /* WMAddPollQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMAddPollQuestionViewController.m; sourceTree = "<group>"; };
 		5298DCC917BB39C2004E3575 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
 		5298DCCB17BB3A9D004E3575 /* book2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book2.png; sourceTree = "<group>"; };
 		529CCA8617BC5828000E5CF0 /* clubs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = clubs.plist; sourceTree = "<group>"; };
@@ -614,6 +619,9 @@
 			children = (
 				09ABC08013A1D52D009C3FCF /* WhiteMochaUPAppDelegate.h */,
 				09ABC08113A1D52D009C3FCF /* WhiteMochaUPAppDelegate.m */,
+				5297EE9418386FFE008A69FA /* WMAddPollQuestionViewController.h */,
+				5297EE9518386FFE008A69FA /* WMAddPollQuestionViewController.m */,
+				5297EE9218386F73008A69FA /* WMAddPoll.storyboard */,
 				52ACDEC11811C312000105BE /* WM Classes */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
@@ -1189,6 +1197,7 @@
 				5224ED5617B995A7005199A1 /* home@2x.png in Resources */,
 				5224ED5917B99FB0005199A1 /* events.png in Resources */,
 				5224ED5A17B99FB0005199A1 /* events@2x.png in Resources */,
+				5297EE9318386F73008A69FA /* WMAddPoll.storyboard in Resources */,
 				5224ED5D17B9A3EB005199A1 /* market.png in Resources */,
 				5224ED5E17B9A3EB005199A1 /* market@2x.png in Resources */,
 				5224ED6117B9A4E2005199A1 /* class.png in Resources */,
@@ -1320,6 +1329,7 @@
 				52047247178E792700BF5A0F /* WMGeneralDetailViewController.m in Sources */,
 				5204724B178F6E9300BF5A0F /* WMGeneralDescriptionViewController.m in Sources */,
 				528D97AC180D1B19008897C6 /* WMNavigationBar.m in Sources */,
+				5297EE9618386FFE008A69FA /* WMAddPollQuestionViewController.m in Sources */,
 				5233CB8E179CDED400D9F380 /* WMDetailImageViewController.m in Sources */,
 				5233CB92179E397700D9F380 /* WMWhiteGradient.m in Sources */,
 				52FE99AF17A47A1F00E926F4 /* WMFurnitureDetailCell.m in Sources */,
@@ -1452,8 +1462,9 @@
 				GCC_PREFIX_HEADER = "ParseStarterProject/WhiteMochaUP-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "ParseStarterProject/WhiteMochaUP-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WhiteMochaUP;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1472,8 +1483,9 @@
 				GCC_PREFIX_HEADER = "ParseStarterProject/WhiteMochaUP-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "ParseStarterProject/WhiteMochaUP-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WhiteMochaUP;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

@@ -398,9 +398,9 @@
             [newParseListing setACL:listingACL];
             [newParseListing saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (succeeded) {
-                    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"You're listing was successfully added." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
-                    [av show];
-                    [[self navigationController] popToRootViewControllerAnimated:YES];
+                    successAlertView = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"You're listing was successfully added." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+                    [successAlertView show];
+                    
                 } else {
                     UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"There was a problem." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
                     [av show];
@@ -411,6 +411,13 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:errors delegate:self cancelButtonTitle:@"OKAY" otherButtonTitles:nil];
             [alert show];
         }
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView == successAlertView) {
+        [[self navigationController] popToRootViewControllerAnimated:YES];
     }
 }
 

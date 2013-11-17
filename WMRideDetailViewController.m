@@ -55,7 +55,7 @@
     
     
     // DisAble Field
-    editFields = [[NSArray alloc] initWithObjects:toField, fromField, departureField, feeField, nil];
+    editFields = [[NSArray alloc] initWithObjects:toField, fromField, departureField, nil];
 
     // Labels
     [emaiLabel setFont:[UIFont fontWithName:@"Museo Slab" size:16]];

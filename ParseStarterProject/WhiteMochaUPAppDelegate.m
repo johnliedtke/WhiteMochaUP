@@ -52,10 +52,22 @@
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Museo Slab" size:22],UITextAttributeFont, [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,nil]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
-    
-
-    
-    
+//    // Admin Roles
+//    PFACL *roleACL = [PFACL ACL];
+//    [roleACL setPublicReadAccess:YES];
+//    PFRole *role = [PFRole roleWithName:@"Admin" acl:roleACL];
+//    
+//    
+//    // John
+//    NSString *objectID = @"TP1zH9PHeJ";
+//    PFObject *john;
+//    [[PFUser query] getObjectInBackgroundWithId:objectID block:^(PFObject *object, NSError *error) {
+//        [self setJohn:object];
+//    }];
+//
+//    [[role users] addObject:john];
+//    [role saveInBackground];
+//    
     
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     

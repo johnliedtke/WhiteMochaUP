@@ -2,7 +2,7 @@
 //  WMCourseDetailCell.h
 //  ParseStarterProject
 //
-//  Created by Derek Schumacher on 7/29/13.
+//  Created by Derek Schumacher (loser who is a mofo) on 7/29/13.
 //
 //
 

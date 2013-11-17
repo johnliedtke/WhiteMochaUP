@@ -1,5 +1,6 @@
 @class ParseStarterProjectViewController;
 @class WMNewLoginViewController;
+#include <Parse/Parse.h>
 
 @interface WhiteMochaUPAppDelegate : NSObject <UIApplicationDelegate>
 {
@@ -14,6 +15,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (strong, nonatomic) PFObject *john;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
