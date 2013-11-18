@@ -195,16 +195,13 @@
         [b removeFromSuperview];
     }
     
+    NSArray *results = [[NSArray alloc] initWithObjects:aPercentLabel, bPercentLabel, cPercentLabel, dPercentLabel, nil];
+    for (UILabel *b in results) {
+        [b removeFromSuperview];
+    }
     
     
-    UIImage *buttonImage = [[UIImage imageNamed:@"blueButton.png"]
-                            resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
-    UIImage *orangeButtonImage = [[UIImage imageNamed:@"orangeButton.png"]
-                                  resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
-    UIImage *greenButtonImage = [[UIImage imageNamed:@"greenButton.png"]
-                            resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
-    UIImage *tanButtonImage = [[UIImage imageNamed:@"tanButton.png"]
-                                  resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+
    
     // Votes
     NSNumber *aVotes = [[self poll] objectForKey:@"aVotes"];
@@ -304,7 +301,7 @@
     if ([dVotes doubleValue] == maxVotes) {
         dWidth = multFactor;
     } else {
-        dWidth = ([cVotes doubleValue] / totalVotes) * multFactor + 10;
+        dWidth = ([dVotes doubleValue] / totalVotes) * multFactor + 10;
     }
     dPercentLabel = [[UILabel alloc] initWithFrame:CGRectMake(xSpace+dWidth+5, 168, 35, 21)];
     [dPercentLabel setFont:[UIFont boldSystemFontOfSize:13]];
@@ -629,7 +626,7 @@
                 }
             }];
         } else {
-            
+            NSLog(@"Problems");
         }
     }];
 }

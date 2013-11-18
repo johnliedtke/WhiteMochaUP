@@ -1,42 +1,41 @@
 //
 //  WMCourseAddFormViewController.h
-//  ParseStarterProject
+//  WMActualCourseUpdate
 //
-//  Created by Derek Schumacher on 7/27/13.
-//
+//  Created by Derek Schumacher on 10/23/13.
+//  Copyright (c) 2013 Schumacher Enterprises. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "Course.h"
 #import <CoreData/CoreData.h>
-#import "WMPrevNext.h"
+#import "WMCourseObject.h"
 
-@protocol addCourseDelegate <NSObject>
--(void) addCourse: (NSString *)courseName;
+@protocol reloadCoursesDelegate <NSObject>
+
+-(void) reloadCourseData;
 @end
 
-@interface WMCourseAddFormViewController : UITableViewController<UITextFieldDelegate, WMPrevNextDelegate>{
-    NSString *profName_;
+@interface WMCourseAddFormViewController : UITableViewController<UITextFieldDelegate>
+{
     NSString *courseTitle_;
-    NSString *courseNumber_;
+    NSString *profName_;
+    NSString *numCredits_;
     
+    UITextField * courseTitleField_;
     UITextField *profNameField_;
-    UITextField *courseTitleField_;
-    UITextField *courseNumberField_;
-    
-    WMPrevNext *prevNext;
+    UITextField *numCreditsField_;
 }
 
+@property (nonatomic,copy) NSString *courseTitle;
+@property (nonatomic, copy) NSString *profName;
+@property (nonatomic, copy) NSString *numCredits;
+
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+-(void) formSubmit;
 -(UITextField*) makeTextField:(NSString*)text
                   placeholder: (NSString*)placeholder;
 
 - (IBAction)textFieldFinished:(id)sender;
 
-@property (nonatomic, unsafe_unretained) id <addCourseDelegate> courseDelegate;
-@property (nonatomic,copy) NSString* profName;
-@property (nonatomic, copy) NSString* courseTitle;
-@property (nonatomic, copy) NSString* courseNumber;
-
-//For Core Data:
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end

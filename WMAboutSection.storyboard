@@ -29,7 +29,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="290" id="2hh-O0-X7G"/>
                                                     </constraints>
-                                                    <string key="text">WM version 0.1.0.2 Beta (2013) is created and maintained by John Slade and Derek Schumacher and is in no way an official entity of the University of Portland. Any questions, comments, concerns, or suggestions please email one of the following addresses:
+                                                    <string key="text">WM version 0.1.1.2 Beta (2013) is created and maintained by John Slade and Derek Schumacher and is in no way an official entity of the University of Portland. Any questions, comments, concerns, or suggestions please email one of the following addresses:
 
 liedtke15@up.edu 
 schumacher15@up.edu</string>
@@ -59,15 +59,20 @@ schumacher15@up.edu</string>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Want to develop for White Mocha? Email us!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="xKO-aN-Dge">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Want to develop for White Mocha? Email us!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="xKO-aN-Dge">
                                                     <rect key="frame" x="0.0" y="270" width="320" height="34"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="L6v-Zj-3wD"/>
+                                                        <constraint firstAttribute="height" constant="34" id="L6v-Zj-3wD"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xKO-aN-Dge" firstAttribute="trailing" secondItem="zq4-7J-tNs" secondAttribute="trailing" id="EBB-vw-mCb"/>
+                                                <constraint firstItem="djw-9m-IvM" firstAttribute="top" secondItem="xKO-aN-Dge" secondAttribute="bottom" constant="14" id="Zi7-88-y3y"/>
+                                                <constraint firstItem="xKO-aN-Dge" firstAttribute="leading" secondItem="zq4-7J-tNs" secondAttribute="leading" id="p10-D8-2Xi"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
                                             <constraint firstItem="zq4-7J-tNs" firstAttribute="top" secondItem="O3T-tZ-Gfs" secondAttribute="top" constant="228" id="25P-qK-Bfo"/>

@@ -1,6 +1,7 @@
 @class ParseStarterProjectViewController;
 @class WMNewLoginViewController;
-#include <Parse/Parse.h>
+#import <Parse/Parse.h>
+
 
 @interface WhiteMochaUPAppDelegate : NSObject <UIApplicationDelegate>
 {

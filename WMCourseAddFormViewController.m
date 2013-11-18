@@ -1,57 +1,44 @@
 //
 //  WMCourseAddFormViewController.m
-//  ParseStarterProject
+//  WMActualCourseUpdate
 //
-//  Created by Derek Schumacher on 7/27/13.
-//
+//  Created by Derek Schumacher on 10/23/13.
+//  Copyright (c) 2013 Schumacher Enterprises. All rights reserved.
 //
 
 #import "WMCourseAddFormViewController.h"
-#import <Parse/Parse.h>
-#import "WMConstants.h"
 
-#define ACCEPTABLEPROF_CHARACTERS @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ."
-#define ACCEPTABLECOURSETITLE_CHARACTERS @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-#define ACCEPTABLECOURSENUMBER_CHARACTERS @"0123456789"
+#define ACCEPTABLECOURSETITLECHARACTERS @"abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+#define ACCEPTABLEPROFNAMECHARACTERS @"abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 @interface WMCourseAddFormViewController ()
 
 @end
 
 @implementation WMCourseAddFormViewController
-@synthesize profName = profName_ ;
+
 @synthesize courseTitle = courseTitle_;
-@synthesize courseNumber = courseNumber_;
+@synthesize profName = profName_;
+@synthesize numCredits = numCredits_;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:UITableViewStyleGrouped];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[self navigationItem] setTitle:@"Add Course"];
-    PURPLEBACK
-    
-    // Init keyboard crap
-    NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"WMPrevNext" owner:self options:nil];
-    prevNext = [subviewArray objectAtIndex:0];
-    [prevNext setPrevNextDelegate:self];
-    
-    /*
-     self.profName = @"";
-     self.courseTitle = @"";
-     self.courseNumber = @"";
-     */
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
+ 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,247 +51,150 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    
+
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if(section == 0){
-        return 3;
-    }
-    else{
-        return 1;
-    }
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    [prevNext setUp:textField];
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [prevNext setFields:[[NSMutableArray alloc] initWithObjects:profNameField_,courseTitleField_, courseNumberField_, nil]];
-    if ([indexPath section] == 0 && [indexPath row] == [prevNext currentIndex]-1) {
-        [[[cell subviews] objectAtIndex:0] becomeFirstResponder];
-        NSLog(@"meow");
-    }
-}
-- (void)donePressed
-{
-    [self.view endEditing:YES];
-}
-
--(void)prevNextPressed:(UITextField *)textField
-{
-    NSIndexPath *index = [NSIndexPath indexPathForRow:[prevNext currentIndex] inSection:0];
-    [[self tableView] scrollToRowAtIndexPath:index atScrollPosition:UITableViewScrollPositionMiddle
-                                    animated:YES];
-    [textField becomeFirstResponder];
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
-    if(cell == nil){
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"courseCell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"courseCell"];
     }
     
     // Configure the cell...
-    //make the cell unselectable:
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     UITextField *tf = nil;
-    if(indexPath.section == 0){
-        switch (indexPath.row) {
-            case 0:
-                cell.textLabel.text = @"Professor";
-                if (profNameField_ == nil) {
-                    tf = profNameField_ = [self makeTextField:self.profName placeholder:@"Dr. Meow"];
-                    [tf setAutocapitalizationType:UITextAutocapitalizationTypeSentences];
-
-                }
-                [cell addSubview:profNameField_];
-                break;
-            case 1:
-                cell.textLabel.text = @"Course Title";
-                if (courseTitleField_ == nil) {
-                    tf = courseTitleField_ = [self makeTextField:self.courseTitle placeholder:@"MTH"];
-                    [tf setAutocapitalizationType:UITextAutocapitalizationTypeAllCharacters];
-
-                }
-                [cell addSubview:courseTitleField_];
-                break;
-            case 2:
-                cell.textLabel.text = @"Course Number";
-                if (courseNumberField_ == nil) {
-                    tf = courseNumberField_ = [self makeTextField:self.courseNumber placeholder:@"101"];
-                    [courseNumberField_ setKeyboardType:UIKeyboardTypeDecimalPad];
-                }
-                [cell addSubview:courseNumberField_];
-                break;
-            default:
-                break;
-        }
+    switch (indexPath.row) {
+        case 0:
+            [cell.textLabel setText:@"Course Title"];
+            if (courseTitleField_ == nil) {
+                tf = courseTitleField_ = [self makeTextField:self.courseTitle placeholder:@"EGR 110"];
+            }
+            [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+            [cell addSubview:courseTitleField_];
+            break;
+        case 1:
+            [cell.textLabel setText:@"Professor"];
+            if (profNameField_ == nil) {
+                tf = profNameField_ = [self makeTextField:self.profName placeholder:@"Hoffbeck"];
+            }
+            [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+            [cell addSubview:profNameField_];
+            break;
+        case 2:
+            [cell.textLabel setText:@"Number of Credits"];
+            if (numCreditsField_ == nil) {
+                tf = numCreditsField_ = [self makeTextField:self.numCredits placeholder:@"3"];
+            }
+            [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+            [cell addSubview:numCreditsField_];
+            break;
+        case 3:
+            [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
+            [cell.textLabel setText:@"Submit"];
+        default:
+            break;
     }
     
-    tf.frame = CGRectMake(160, 12, 170, 30);
+    tf.frame = CGRectMake(190, 8, 170, 30);
     [tf addTarget:self action:@selector(textFieldFinished:) forControlEvents:UIControlEventEditingDidEndOnExit];
-    tf.delegate = self ;
-    if(indexPath.section == 1){
-        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-        [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
-        cell.textLabel.text = @"Submit";
-    }
+    tf.delegate = self;
+    
     return cell;
 }
 
-
-#pragma mark - Table view delegate
-
+//This method is called when the user selects something in the table view
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 1) {
-        //Dismiss the keyboard:
-        [self.view endEditing:YES];
+    if (indexPath.row == 3) {
+        //Call the formSubmit Method:
+        [self formSubmit];
+    }
+}
+
+//This method is used to create the section headers:
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return @"Add a Course";
+    }
+    else{
+        return @"List of Courses";
+    }
+}
+
+//This method is called when the submit button is pressed:
+-(void) formSubmit
+{
+    //Dismiss the keyboard when this button is pressed:
+    [self.view endEditing:YES];
+    BOOL checker = YES;
+    NSMutableString *errorMessage = [[NSMutableString alloc] init];
+    if(self.courseTitle == nil || [self.courseTitle isEqualToString:@""]){
+        [errorMessage appendString:@"Please enter a course title. "];
+        checker = NO;
+    }
+    if (self.profName == nil || [self.profName isEqualToString:@""]) {
+        [errorMessage appendString:@"Please enter a professor name."];
+        checker = NO;
+    }
+    
+    //If it conforms to the format, check the name against what we have stored on core data, to make sure the user has entered a unique course title:
+    if (checker == YES) {
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Course" inManagedObjectContext:self.managedObjectContext];
         
-        NSString *profName = self.profName;
-        NSString *courseTitle = self.courseTitle;
-        NSString *courseNumber = self.courseNumber;
+        [request setEntity:entity];
         
-        NSMutableString *errorMessageString = [[NSMutableString alloc] init];
-        errorMessageString = [NSMutableString stringWithFormat:@""];
         
-        if (profName == nil || [profName isEqualToString:@""]) {
-            [errorMessageString appendString:@"Please Enter a Valid Professor Name. "];
-        }
-        if (courseTitle == nil || [courseTitle isEqualToString:@""]) {
-            [errorMessageString appendString:@"Please Enter a Valid Course Title. "];
-        }
-        if (courseNumber == nil || [courseNumber isEqualToString:@""]) {
-            [errorMessageString appendString:@"Please Enter a Valid Course Number. "];
-        }
+        NSError *error;
+        NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
         
-        NSString *courseName = [NSString stringWithFormat:@"%@ %@", courseTitle, courseNumber];
-        
-        if(profName && courseTitle && courseNumber && ![profName isEqualToString:@""] && ![courseTitle isEqualToString:@""] && ![courseNumber isEqualToString:@""]){
-            //Make sure the courseTitle and number are unique:
-            //Find the course Object on the core, and compare:
-            //Pull the info off the core:
-            NSManagedObjectContext *context = [self managedObjectContext];
-            NSError *error;
-            NSFetchRequest *request= [[NSFetchRequest alloc] init];
-            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Course" inManagedObjectContext:context];
-            [request setEntity:entity];
-            NSArray *fetchedObjects = [context executeFetchRequest:request error:&error];
-            BOOL checker = YES;
-            for (Course *courses in fetchedObjects) {
-                if ([courses.courseTitle isEqualToString: [NSString stringWithFormat:@"%@ %@" ,self.courseTitle, self.courseNumber]]) {
-                    
+        if (array != nil) {
+            for(Course *courses in array){
+                if([courses.courseTitle isEqualToString:[NSString stringWithFormat:@"%@", self.courseTitle]] && [courses.semesterTitle isEqualToString:[NSString stringWithFormat:@"%@", self.title]]){
                     checker = NO;
-                    [errorMessageString appendString:@"Please Enter a Unique Course Title (course name/number combination)"];
+                    break;
                 }
             }
-            if (checker == YES) {
-                //Add the object to the Core:
-                //NSManagedObjectContext *context = [self managedObjectContext];
-                Course *course = [NSEntityDescription insertNewObjectForEntityForName:@"Course" inManagedObjectContext:context];
-                [course setCourseTitle:courseName];
-                [course setProfessorName:profName];
-                
-                //NSError *error;
-                if (![context save:&error]) {
-                    NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-                }
-                [self.managedObjectContext save:&error];
-                /*
-                 PFObject *courseObject = [PFObject objectWithClassName:@"Course"];
-                 [courseObject setObject: profName forKey:@"ProfessorName"];
-                 [courseObject setObject: courseName forKey:@"CourseTitle"];
-                 //[courseObject setObject:courseNumber forKey:@"CourseNumber"];
-                 [courseObject saveInBackground];
-                 */
-                
-                
-                //Call the delegate method to pass the course name:
-                [[self courseDelegate] addCourse:courseName];
-                
-                [self.navigationController popViewControllerAnimated:YES];
-                
-                UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"Course was successfully added." delegate:nil cancelButtonTitle:@"Done" otherButtonTitles:nil];
-                [success show];
-            }
-                else{
-                    //Display error message:
-                    UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Error" message: errorMessageString delegate:nil cancelButtonTitle:@"Done" otherButtonTitles: nil];
-                    [error show];
-                }
+            [errorMessage appendString:@"Duplicate Course Found. Please enter a unique course name."];
         }
-        else{
-            //Display error message:
-            UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Error" message: errorMessageString delegate:nil cancelButtonTitle:@"Done" otherButtonTitles: nil];
-            [error show];
-
-        }
+    }
+    if (checker == YES) {
+        //Create an instance of a WMCourseObject and save its data:
+        WMCourseObject *objectToSave = [[WMCourseObject alloc] init];
+        [objectToSave setManagedObjectContext:self.managedObjectContext];
+        [objectToSave setCourseTitle:self.courseTitle];
+        [objectToSave setSemesterTitle:self.title];
+        [objectToSave setProfName:self.profName];
+        [objectToSave setNumCredits:self.numCredits];
+        [objectToSave saveData];
         
-    }
-    
-    
-    
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    // Any additional checks to ensure you have the correct textField here.
-    [textField resignFirstResponder];
-    return YES;
-}
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)replacementString
-{
-    if (textField == profNameField_) {
-        NSCharacterSet *acceptableCharacters = [NSCharacterSet characterSetWithCharactersInString:ACCEPTABLEPROF_CHARACTERS];
-        NSInteger maxLength = 25;
-        NSInteger maxProfNameLength = [textField.text length] + [replacementString length] -range.length;
-        if ([replacementString rangeOfCharacterFromSet:[acceptableCharacters invertedSet]].location != NSNotFound || maxProfNameLength >= maxLength) {
-            return NO;
-            
-        }
-        else{
-            return YES;
-        }
+        //Send a reload message to the WMListOfCoursesViewController:
+        [[self.navigationController.viewControllers objectAtIndex:1]
+         reloadCourseData];
         
+        //Go back a view controller:
+        [self.navigationController popViewControllerAnimated:YES];
     }
-    if (textField == courseTitleField_) {
-        NSCharacterSet *acceptableCharacters = [NSCharacterSet characterSetWithCharactersInString:ACCEPTABLECOURSETITLE_CHARACTERS];
-        NSInteger maxLength = 5;
-        NSInteger maxProfNameLength = [textField.text length] + [replacementString length] -range.length;
-        if ([replacementString rangeOfCharacterFromSet:[acceptableCharacters invertedSet]].location != NSNotFound || maxProfNameLength >= maxLength) {
-            return NO;
-            
-        }
-        else{
-            return YES;
-        }
+    else{
+        //Print out an error message:
+        UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Could not Submit." message: errorMessage delegate:nil cancelButtonTitle:@"Done" otherButtonTitles: nil];
+        [error show];
     }
-    if (textField == courseNumberField_) {
-        NSCharacterSet *acceptableCharacters = [NSCharacterSet characterSetWithCharactersInString:ACCEPTABLECOURSENUMBER_CHARACTERS];
-        NSInteger maxLength = 4;
-        NSInteger maxProfNameLength = [textField.text length] + [replacementString length] -range.length;
-        if ([replacementString rangeOfCharacterFromSet:[acceptableCharacters invertedSet]].location != NSNotFound || maxProfNameLength >= maxLength) {
-            return NO;
-            
-        }
-        else{
-            return YES;
-        }
-    }
-    return YES;
+
+    
 }
 
+
+#pragma mark- Text Field Methods:
 -(UITextField*) makeTextField: (NSString*)text
                   placeholder: (NSString*)placeholder  {
 	UITextField *tf = [[UITextField alloc] init];
@@ -313,25 +203,112 @@
 	tf.autocorrectionType = UITextAutocorrectionTypeNo ;
 	tf.autocapitalizationType = UITextAutocapitalizationTypeNone;
 	tf.adjustsFontSizeToFitWidth = YES;
-    [tf setInputAccessoryView:prevNext];
 	tf.textColor = [UIColor colorWithRed:56.0f/255.0f green:84.0f/255.0f blue:135.0f/255.0f alpha:1.0f];
+    
 	return tf ;
 }
+
 // Workaround to hide keyboard when Done is tapped
 - (IBAction)textFieldFinished:(id)sender {
-    // [sender resignFirstResponder];
+    
 }
-// Textfield value changed, store the new value.
+
+//This method is called when the text field value has changed:
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    //************************* Insert Error Checking *************************************************
-	if ( textField == profNameField_ ) {
-		self.profName = textField.text ;
-	} else if ( textField == courseTitleField_ ) {
+	if ( textField == courseTitleField_) {
 		self.courseTitle = textField.text ;
-	} else if ( textField == courseNumberField_ ) {
-		self.courseNumber = textField.text ;
 	}
+    else if (textField == profNameField_){
+        self.profName = textField.text;
+    }
+    else if (textField == numCreditsField_){
+        self.numCredits = textField.text;
+    }
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
+//This method ensures the user can't enter any illegal characters (#defined at the top)
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)replacementString
+{
+    if(textField == courseTitleField_){
+        NSCharacterSet *acceptableCharacters = [NSCharacterSet characterSetWithCharactersInString:ACCEPTABLECOURSETITLECHARACTERS];
+        NSInteger maxLength = 12;
+        NSInteger maxStringLength = [textField.text length] + [replacementString length] -range.length;
+        if ([replacementString rangeOfCharacterFromSet:[acceptableCharacters invertedSet]].location != NSNotFound || maxStringLength >= maxLength) {
+            return NO;
+        }
+        else{
+            return YES;
+        }
+    }
+    
+    if (textField == profNameField_) {
+        NSCharacterSet *acceptableCharacters = [NSCharacterSet characterSetWithCharactersInString:ACCEPTABLEPROFNAMECHARACTERS];
+        NSInteger maxLength = 12;
+        NSInteger maxStringLength = [textField.text length] + [replacementString length] -range.length;
+        if ([replacementString rangeOfCharacterFromSet:[acceptableCharacters invertedSet]].location != NSNotFound || maxStringLength >= maxLength) {
+            return NO;
+        }
+        else{
+            return YES;
+        }
+
+    }
+    return YES;
+}
+/*
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+*/
+
+/*
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }   
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+*/
+
+/*
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+}
+*/
+
+/*
+// Override to support conditional rearranging of the table view.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
+*/
+
+/*
+#pragma mark - Navigation
+
+// In a story board-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+
+ */
 
 @end
-

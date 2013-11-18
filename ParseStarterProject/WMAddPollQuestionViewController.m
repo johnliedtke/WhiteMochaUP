@@ -77,10 +77,10 @@
         [poll setObject:[d text] forKey:@"dVote"];
         
         // Some sexy security
-        PFACL *listingACL = [PFACL ACLWithUser:[PFUser currentUser]];
-        [listingACL setPublicReadAccess:YES];
-        [listingACL setPublicWriteAccess:NO];
-        [poll setACL:listingACL];
+        PFACL *pollACL = [PFACL ACL];
+        [pollACL setPublicReadAccess:TRUE];
+        [pollACL setPublicWriteAccess:TRUE];
+        [poll setACL:pollACL];
         [poll saveInBackground];
         [[self navigationController] popToRootViewControllerAnimated:YES];
     }

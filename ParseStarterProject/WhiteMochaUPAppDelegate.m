@@ -9,10 +9,10 @@
 #import "WMConstants.h"
 #import "WMHomeViewController.h"
 #import <CoreData/CoreData.h>
-#import "RootTableViewController.h"
 #import "WMFoodSectionViewController.h"
 #import "WMNavigationBar.h"
 #import "WMNavigationController.h"
+#import "WMSemesterViewController.h"
 
 
 @implementation WhiteMochaUPAppDelegate
@@ -92,9 +92,12 @@
 
     
     // Create class crap
-    RootTableViewController *classes = [[RootTableViewController alloc] init];
-    WMNavigationController *classNavigation = [[WMNavigationController alloc] initWithRootViewController:classes];
+    WMSemesterViewController *classes = [[WMSemesterViewController alloc] initWithStyle:UITableViewStyleGrouped];
     [classes setManagedObjectContext:self.managedObjectContext];
+    [classes setTitle:@"Class Manager"];
+    //WMEventsViewController *classes = [[WMEventsViewController alloc] init];
+    WMNavigationController *classNavigation = [[WMNavigationController alloc] initWithRootViewController:classes];
+
    
     UITabBarItem *eventsItem = [[UITabBarItem alloc] initWithTitle:@"Classes" image:[UIImage imageNamed:@"class.png"] tag:3];
     [classNavigation setTabBarItem:eventsItem];
@@ -134,6 +137,7 @@
     
     [tabBarController setViewControllers:controllers];
     
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [[self window] setRootViewController:tabBarController];
     [self.window makeKeyAndVisible];
 
@@ -215,6 +219,22 @@
 
 #pragma mark - Core Data stack
 
+- (void)saveContext
+{
+    NSError *error = nil;
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    if (managedObjectContext != nil) {
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
+}
+
+#pragma mark - Core Data stack
+
 // Returns the managed object context for the application.
 // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
 - (NSManagedObjectContext *)managedObjectContext
@@ -238,7 +258,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"ParseStarterProject" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"WMActualCourseUpdate" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -251,7 +271,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ParseStarterProject.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"WMActualCourseUpdate.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -284,20 +304,6 @@
     }
     
     return _persistentStoreCoordinator;
-}
-
-- (void)saveContext
-{
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil) {
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
-    }
 }
 
 #pragma mark - Application's Documents directory

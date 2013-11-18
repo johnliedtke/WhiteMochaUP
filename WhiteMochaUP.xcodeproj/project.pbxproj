@@ -93,28 +93,6 @@
 		520ADC4917CAB352004DF55C /* homelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC4717CAB351004DF55C /* homelogo.png */; };
 		520ADC4A17CAB352004DF55C /* homelogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC4817CAB351004DF55C /* homelogo@2x.png */; };
 		520ADC7C17CC2C90004DF55C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520ADC7A17CC2C73004DF55C /* CoreData.framework */; };
-		520ADCB217CC3A47004DF55C /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADC8A17CC3A47004DF55C /* Course.m */; };
-		520ADCB317CC3A47004DF55C /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC8B17CC3A47004DF55C /* Entitlements.plist */; };
-		520ADCB417CC3A47004DF55C /* Grade.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADC8D17CC3A47004DF55C /* Grade.m */; };
-		520ADCB617CC3A47004DF55C /* ParseStarterProject-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC8F17CC3A47004DF55C /* ParseStarterProject-Info.plist */; };
-		520ADCB717CC3A47004DF55C /* ParseStarterProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 520ADC9117CC3A47004DF55C /* ParseStarterProject.xcdatamodeld */; };
-		520ADCB917CC3A47004DF55C /* WMCourseAddFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADC9617CC3A47004DF55C /* WMCourseAddFormViewController.m */; };
-		520ADCBA17CC3A47004DF55C /* WMCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADC9817CC3A47004DF55C /* WMCourseCell.m */; };
-		520ADCBB17CC3A47004DF55C /* WMCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC9917CC3A47004DF55C /* WMCourseCell.xib */; };
-		520ADCBC17CC3A47004DF55C /* WMCourseChangeGradingScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADC9B17CC3A47004DF55C /* WMCourseChangeGradingScaleViewController.m */; };
-		520ADCBD17CC3A47004DF55C /* WMCourseDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADC9D17CC3A47004DF55C /* WMCourseDetailCell.m */; };
-		520ADCBE17CC3A47004DF55C /* WMCourseDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC9E17CC3A47004DF55C /* WMCourseDetailCell.xib */; };
-		520ADCBF17CC3A47004DF55C /* WMCourseDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADCA017CC3A47004DF55C /* WMCourseDetailController.m */; };
-		520ADCC017CC3A47004DF55C /* WMCourseGradeEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADCA217CC3A47004DF55C /* WMCourseGradeEntryCell.m */; };
-		520ADCC117CC3A47004DF55C /* WMCourseGradeEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADCA417CC3A47004DF55C /* WMCourseGradeEntryViewController.m */; };
-		520ADCC217CC3A47004DF55C /* WMCourseGradeFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADCA617CC3A47004DF55C /* WMCourseGradeFormViewController.m */; };
-		520ADCC317CC3A47004DF55C /* WMCourseGradeSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADCA817CC3A47004DF55C /* WMCourseGradeSheetCell.m */; };
-		520ADCC417CC3A47004DF55C /* WMCourseGradeSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520ADCA917CC3A47004DF55C /* WMCourseGradeSheetCell.xib */; };
-		520ADCC517CC3A47004DF55C /* WMCourseScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADCAB17CC3A47004DF55C /* WMCourseScaleViewController.m */; };
-		520ADCC617CC3A47004DF55C /* WMCourseTrackGradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADCAD17CC3A47004DF55C /* WMCourseTrackGradeViewController.m */; };
-		520ADCC717CC3A47004DF55C /* WMCourseWeightsDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADCAF17CC3A47004DF55C /* WMCourseWeightsDisplayViewController.m */; };
-		520ADCC817CC3A47004DF55C /* WMGradeSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADCB117CC3A47004DF55C /* WMGradeSheetViewController.m */; };
-		520ADCCB17CC3AD8004DF55C /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADCC917CC3AD8004DF55C /* RootTableViewController.m */; };
 		520ADCCD17D14BD5004DF55C /* WMListingCatgeoryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520ADCCC17D14BD3004DF55C /* WMListingCatgeoryView.storyboard */; };
 		520ADCCF17D14FA5004DF55C /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADCCE17D14FA3004DF55C /* desk.png */; };
 		520ADCD117D1507C004DF55C /* hp_tv.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADCD017D1507A004DF55C /* hp_tv.png */; };
@@ -130,7 +108,6 @@
 		520ADCE717D18FA5004DF55C /* WMFoodSection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520ADCE217D18FA5004DF55C /* WMFoodSection.storyboard */; };
 		520ADCEA17D19031004DF55C /* WMFoodSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADCE917D19031004DF55C /* WMFoodSectionViewController.m */; };
 		521A587517B7FFB70092E3E4 /* WMRideDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521A587417B7FFB70092E3E4 /* WMRideDetailViewController.m */; };
-		521A9E8B17D2D975006E6734 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521A9E8A17D2D975006E6734 /* Parse.framework */; };
 		521A9E9017D32F75006E6734 /* greyButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A9E8C17D32F75006E6734 /* greyButton.png */; };
 		521A9E9117D32F75006E6734 /* greyButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A9E8D17D32F75006E6734 /* greyButton@2x.png */; };
 		521A9E9217D32F75006E6734 /* greyButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A9E8E17D32F75006E6734 /* greyButtonHighlight.png */; };
@@ -165,6 +142,22 @@
 		5265D87617F019A20066FCEC /* tanButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D87217F019A20066FCEC /* tanButtonHighlight.png */; };
 		5265D87717F019A20066FCEC /* tanButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D87317F019A20066FCEC /* tanButtonHighlight@2x.png */; };
 		5265D87A17F65BD20066FCEC /* WMWebLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5265D87917F65BD20066FCEC /* WMWebLibViewController.m */; };
+		526F1CB918397EC4007110B1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526F1CB818397EC4007110B1 /* Parse.framework */; };
+		526F1CCB18398390007110B1 /* WMCourseAddFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CBE18398390007110B1 /* WMCourseAddFormViewController.m */; };
+		526F1CCD18398390007110B1 /* WMCourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CC218398390007110B1 /* WMCourseDetailViewController.m */; };
+		526F1CCE18398390007110B1 /* WMCourseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CC418398390007110B1 /* WMCourseObject.m */; };
+		526F1CCF18398390007110B1 /* WMListOfCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CC618398390007110B1 /* WMListOfCoursesViewController.m */; };
+		526F1CD018398390007110B1 /* WMSemesterAddFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CC818398390007110B1 /* WMSemesterAddFormViewController.m */; };
+		526F1CD118398390007110B1 /* WMSemesterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CCA18398390007110B1 /* WMSemesterViewController.m */; };
+		526F1CDA183983E3007110B1 /* WMActualCourseUpdate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CD4183983E3007110B1 /* WMActualCourseUpdate.xcdatamodeld */; };
+		526F1CDB183983E3007110B1 /* WMAddGradingScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CD7183983E3007110B1 /* WMAddGradingScaleViewController.m */; };
+		526F1CDD183983E8007110B1 /* WMAddSyllabusFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CDC183983E8007110B1 /* WMAddSyllabusFormViewController.m */; };
+		526F1CE0183983ED007110B1 /* Grades.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CDF183983ED007110B1 /* Grades.m */; };
+		526F1CE3183983F3007110B1 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CE2183983F3007110B1 /* Course.m */; };
+		526F1CE61839895F007110B1 /* WMCourseAddGradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CE51839895F007110B1 /* WMCourseAddGradeViewController.m */; };
+		526F1CED18398FED007110B1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526F1CEC18398FED007110B1 /* MainWindow.xib */; };
+		528414CC1839A65F00D4A237 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528414CB1839A65F00D4A237 /* Images.xcassets */; };
+		528414CE1839A7AD00D4A237 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528414CD1839A7AD00D4A237 /* Images-2.xcassets */; };
 		528D97AC180D1B19008897C6 /* WMNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 528D97AB180D1B19008897C6 /* WMNavigationBar.m */; };
 		528D97AF180D1B4F008897C6 /* WMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528D97AE180D1B4F008897C6 /* WMNavigationController.m */; };
 		5290F74317B01EBE000E08D9 /* WMHousingListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5290F74217B01EBE000E08D9 /* WMHousingListingsViewController.m */; };
@@ -341,45 +334,6 @@
 		520ADC4717CAB351004DF55C /* homelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homelogo.png; sourceTree = "<group>"; };
 		520ADC4817CAB351004DF55C /* homelogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homelogo@2x.png"; sourceTree = "<group>"; };
 		520ADC7A17CC2C73004DF55C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		520ADC8917CC3A47004DF55C /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
-		520ADC8A17CC3A47004DF55C /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
-		520ADC8B17CC3A47004DF55C /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
-		520ADC8C17CC3A47004DF55C /* Grade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grade.h; sourceTree = "<group>"; };
-		520ADC8D17CC3A47004DF55C /* Grade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grade.m; sourceTree = "<group>"; };
-		520ADC8F17CC3A47004DF55C /* ParseStarterProject-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ParseStarterProject-Info.plist"; sourceTree = "<group>"; };
-		520ADC9017CC3A47004DF55C /* ParseStarterProject-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ParseStarterProject-Prefix.pch"; sourceTree = "<group>"; };
-		520ADC9217CC3A47004DF55C /* ParseStarterProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParseStarterProject.xcdatamodel; sourceTree = "<group>"; };
-		520ADC9517CC3A47004DF55C /* WMCourseAddFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseAddFormViewController.h; sourceTree = "<group>"; };
-		520ADC9617CC3A47004DF55C /* WMCourseAddFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseAddFormViewController.m; sourceTree = "<group>"; };
-		520ADC9717CC3A47004DF55C /* WMCourseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseCell.h; sourceTree = "<group>"; };
-		520ADC9817CC3A47004DF55C /* WMCourseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseCell.m; sourceTree = "<group>"; };
-		520ADC9917CC3A47004DF55C /* WMCourseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMCourseCell.xib; sourceTree = "<group>"; };
-		520ADC9A17CC3A47004DF55C /* WMCourseChangeGradingScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseChangeGradingScaleViewController.h; sourceTree = "<group>"; };
-		520ADC9B17CC3A47004DF55C /* WMCourseChangeGradingScaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseChangeGradingScaleViewController.m; sourceTree = "<group>"; };
-		520ADC9C17CC3A47004DF55C /* WMCourseDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseDetailCell.h; sourceTree = "<group>"; };
-		520ADC9D17CC3A47004DF55C /* WMCourseDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseDetailCell.m; sourceTree = "<group>"; };
-		520ADC9E17CC3A47004DF55C /* WMCourseDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMCourseDetailCell.xib; sourceTree = "<group>"; };
-		520ADC9F17CC3A47004DF55C /* WMCourseDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseDetailController.h; sourceTree = "<group>"; };
-		520ADCA017CC3A47004DF55C /* WMCourseDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseDetailController.m; sourceTree = "<group>"; };
-		520ADCA117CC3A47004DF55C /* WMCourseGradeEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseGradeEntryCell.h; sourceTree = "<group>"; };
-		520ADCA217CC3A47004DF55C /* WMCourseGradeEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseGradeEntryCell.m; sourceTree = "<group>"; };
-		520ADCA317CC3A47004DF55C /* WMCourseGradeEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseGradeEntryViewController.h; sourceTree = "<group>"; };
-		520ADCA417CC3A47004DF55C /* WMCourseGradeEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseGradeEntryViewController.m; sourceTree = "<group>"; };
-		520ADCA517CC3A47004DF55C /* WMCourseGradeFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseGradeFormViewController.h; sourceTree = "<group>"; };
-		520ADCA617CC3A47004DF55C /* WMCourseGradeFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseGradeFormViewController.m; sourceTree = "<group>"; };
-		520ADCA717CC3A47004DF55C /* WMCourseGradeSheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseGradeSheetCell.h; sourceTree = "<group>"; };
-		520ADCA817CC3A47004DF55C /* WMCourseGradeSheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseGradeSheetCell.m; sourceTree = "<group>"; };
-		520ADCA917CC3A47004DF55C /* WMCourseGradeSheetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMCourseGradeSheetCell.xib; sourceTree = "<group>"; };
-		520ADCAA17CC3A47004DF55C /* WMCourseScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseScaleViewController.h; sourceTree = "<group>"; };
-		520ADCAB17CC3A47004DF55C /* WMCourseScaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseScaleViewController.m; sourceTree = "<group>"; };
-		520ADCAC17CC3A47004DF55C /* WMCourseTrackGradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseTrackGradeViewController.h; sourceTree = "<group>"; };
-		520ADCAD17CC3A47004DF55C /* WMCourseTrackGradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseTrackGradeViewController.m; sourceTree = "<group>"; };
-		520ADCAE17CC3A47004DF55C /* WMCourseWeightsDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseWeightsDisplayViewController.h; sourceTree = "<group>"; };
-		520ADCAF17CC3A47004DF55C /* WMCourseWeightsDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseWeightsDisplayViewController.m; sourceTree = "<group>"; };
-		520ADCB017CC3A47004DF55C /* WMGradeSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGradeSheetViewController.h; sourceTree = "<group>"; };
-		520ADCB117CC3A47004DF55C /* WMGradeSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGradeSheetViewController.m; sourceTree = "<group>"; };
-		520ADCC917CC3AD8004DF55C /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
-		520ADCCA17CC3AD8004DF55C /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		520ADCCC17D14BD3004DF55C /* WMListingCatgeoryView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMListingCatgeoryView.storyboard; sourceTree = "<group>"; };
 		520ADCCE17D14FA3004DF55C /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desk.png; sourceTree = "<group>"; };
 		520ADCD017D1507A004DF55C /* hp_tv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_tv.png; sourceTree = "<group>"; };
@@ -397,7 +351,6 @@
 		520ADCE917D19031004DF55C /* WMFoodSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMFoodSectionViewController.m; sourceTree = "<group>"; };
 		521A587317B7FFB70092E3E4 /* WMRideDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMRideDetailViewController.h; sourceTree = "<group>"; };
 		521A587417B7FFB70092E3E4 /* WMRideDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMRideDetailViewController.m; sourceTree = "<group>"; };
-		521A9E8A17D2D975006E6734 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		521A9E8C17D32F75006E6734 /* greyButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyButton.png; sourceTree = "<group>"; };
 		521A9E8D17D32F75006E6734 /* greyButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greyButton@2x.png"; sourceTree = "<group>"; };
 		521A9E8E17D32F75006E6734 /* greyButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyButtonHighlight.png; sourceTree = "<group>"; };
@@ -438,6 +391,37 @@
 		5265D87317F019A20066FCEC /* tanButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tanButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		5265D87817F65BD20066FCEC /* WMWebLibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMWebLibViewController.h; sourceTree = "<group>"; };
 		5265D87917F65BD20066FCEC /* WMWebLibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMWebLibViewController.m; sourceTree = "<group>"; };
+		526F1CB818397EC4007110B1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		526F1CBD18398390007110B1 /* WMCourseAddFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseAddFormViewController.h; sourceTree = "<group>"; };
+		526F1CBE18398390007110B1 /* WMCourseAddFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseAddFormViewController.m; sourceTree = "<group>"; };
+		526F1CC118398390007110B1 /* WMCourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseDetailViewController.h; sourceTree = "<group>"; };
+		526F1CC218398390007110B1 /* WMCourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseDetailViewController.m; sourceTree = "<group>"; };
+		526F1CC318398390007110B1 /* WMCourseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseObject.h; sourceTree = "<group>"; };
+		526F1CC418398390007110B1 /* WMCourseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseObject.m; sourceTree = "<group>"; };
+		526F1CC518398390007110B1 /* WMListOfCoursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMListOfCoursesViewController.h; sourceTree = "<group>"; };
+		526F1CC618398390007110B1 /* WMListOfCoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMListOfCoursesViewController.m; sourceTree = "<group>"; };
+		526F1CC718398390007110B1 /* WMSemesterAddFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSemesterAddFormViewController.h; sourceTree = "<group>"; };
+		526F1CC818398390007110B1 /* WMSemesterAddFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSemesterAddFormViewController.m; sourceTree = "<group>"; };
+		526F1CC918398390007110B1 /* WMSemesterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSemesterViewController.h; sourceTree = "<group>"; };
+		526F1CCA18398390007110B1 /* WMSemesterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSemesterViewController.m; sourceTree = "<group>"; };
+		526F1CD3183983E3007110B1 /* WMActualCourseUpdate-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WMActualCourseUpdate-Prefix.pch"; sourceTree = "<group>"; };
+		526F1CD5183983E3007110B1 /* WMActualCourseUpdate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WMActualCourseUpdate.xcdatamodel; sourceTree = "<group>"; };
+		526F1CD6183983E3007110B1 /* WMAddGradingScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMAddGradingScaleViewController.h; sourceTree = "<group>"; };
+		526F1CD7183983E3007110B1 /* WMAddGradingScaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMAddGradingScaleViewController.m; sourceTree = "<group>"; };
+		526F1CD8183983E3007110B1 /* WMAddSyllabusFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMAddSyllabusFormViewController.h; sourceTree = "<group>"; };
+		526F1CDC183983E8007110B1 /* WMAddSyllabusFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMAddSyllabusFormViewController.m; sourceTree = "<group>"; };
+		526F1CDE183983ED007110B1 /* Grades.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grades.h; sourceTree = "<group>"; };
+		526F1CDF183983ED007110B1 /* Grades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grades.m; sourceTree = "<group>"; };
+		526F1CE1183983F3007110B1 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		526F1CE2183983F3007110B1 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		526F1CE41839895F007110B1 /* WMCourseAddGradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseAddGradeViewController.h; sourceTree = "<group>"; };
+		526F1CE51839895F007110B1 /* WMCourseAddGradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseAddGradeViewController.m; sourceTree = "<group>"; };
+		526F1CEC18398FED007110B1 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
+		528414C81839A21B00D4A237 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		528414C91839A23C00D4A237 /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		528414CA1839A26100D4A237 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		528414CB1839A65F00D4A237 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WhiteMochaUP/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		528414CD1839A7AD00D4A237 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "WhiteMochaUP/Images-2.xcassets"; sourceTree = SOURCE_ROOT; };
 		528D97AA180D1B19008897C6 /* WMNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNavigationBar.h; sourceTree = "<group>"; };
 		528D97AB180D1B19008897C6 /* WMNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNavigationBar.m; sourceTree = "<group>"; };
 		528D97AD180D1B4F008897C6 /* WMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNavigationController.h; sourceTree = "<group>"; };
@@ -548,6 +532,7 @@
 				52B1AB761797D90A008C4326 /* MessageUI.framework in Frameworks */,
 				DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */,
 				4998650515BF305000803E05 /* StoreKit.framework in Frameworks */,
+				526F1CB918397EC4007110B1 /* Parse.framework in Frameworks */,
 				743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */,
 				2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */,
 				099CCEAD13F9E3760039A464 /* libz.1.1.3.dylib in Frameworks */,
@@ -558,7 +543,6 @@
 				092354B313A1D7EB00DA740F /* CFNetwork.framework in Frameworks */,
 				09ABC07213A1D52D009C3FCF /* UIKit.framework in Frameworks */,
 				09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */,
-				521A9E8B17D2D975006E6734 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,9 +552,12 @@
 		09ABC06213A1D52D009C3FCF = {
 			isa = PBXGroup;
 			children = (
+				528414CA1839A26100D4A237 /* AppIcon29x29@2x.png */,
+				528414C91839A23C00D4A237 /* AppIcon40x40@2x.png */,
+				528414C81839A21B00D4A237 /* AppIcon60x60@2x.png */,
+				526F1CBC18398355007110B1 /* derek */,
 				52ACDEBC1811C195000105BE /* Home Screen */,
 				520ADCDD17D18F40004DF55C /* Mocha Bear Food */,
-				520ADC8817CC3A1F004DF55C /* Mocha Bear Class */,
 				52FE99C017A5EB1E00E926F4 /* Events */,
 				52A269D1178A072C002AC9B7 /* Marketplace */,
 				52A269CA1789E5B9002AC9B7 /* Log In Stuff */,
@@ -591,7 +578,7 @@
 		09ABC07013A1D52D009C3FCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				521A9E8A17D2D975006E6734 /* Parse.framework */,
+				526F1CB818397EC4007110B1 /* Parse.framework */,
 				520ADC7A17CC2C73004DF55C /* CoreData.framework */,
 				52B1AB751797D90A008C4326 /* MessageUI.framework */,
 				6372FF571613CC47002132AF /* AdSupport.framework */,
@@ -617,12 +604,15 @@
 		09ABC07713A1D52D009C3FCF /* WhiteMochaUP */ = {
 			isa = PBXGroup;
 			children = (
+				526F1CEC18398FED007110B1 /* MainWindow.xib */,
 				09ABC08013A1D52D009C3FCF /* WhiteMochaUPAppDelegate.h */,
 				09ABC08113A1D52D009C3FCF /* WhiteMochaUPAppDelegate.m */,
 				5297EE9418386FFE008A69FA /* WMAddPollQuestionViewController.h */,
 				5297EE9518386FFE008A69FA /* WMAddPollQuestionViewController.m */,
 				5297EE9218386F73008A69FA /* WMAddPoll.storyboard */,
 				52ACDEC11811C312000105BE /* WM Classes */,
+				528414CB1839A65F00D4A237 /* Images.xcassets */,
+				528414CD1839A7AD00D4A237 /* Images-2.xcassets */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
 			name = WhiteMochaUP;
@@ -719,52 +709,6 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		520ADC8817CC3A1F004DF55C /* Mocha Bear Class */ = {
-			isa = PBXGroup;
-			children = (
-				520ADC8917CC3A47004DF55C /* Course.h */,
-				520ADC8A17CC3A47004DF55C /* Course.m */,
-				520ADC8B17CC3A47004DF55C /* Entitlements.plist */,
-				520ADC8C17CC3A47004DF55C /* Grade.h */,
-				520ADC8D17CC3A47004DF55C /* Grade.m */,
-				520ADC8F17CC3A47004DF55C /* ParseStarterProject-Info.plist */,
-				520ADC9017CC3A47004DF55C /* ParseStarterProject-Prefix.pch */,
-				520ADC9117CC3A47004DF55C /* ParseStarterProject.xcdatamodeld */,
-				520ADC9517CC3A47004DF55C /* WMCourseAddFormViewController.h */,
-				520ADC9617CC3A47004DF55C /* WMCourseAddFormViewController.m */,
-				520ADC9717CC3A47004DF55C /* WMCourseCell.h */,
-				520ADC9817CC3A47004DF55C /* WMCourseCell.m */,
-				520ADC9917CC3A47004DF55C /* WMCourseCell.xib */,
-				520ADC9A17CC3A47004DF55C /* WMCourseChangeGradingScaleViewController.h */,
-				520ADC9B17CC3A47004DF55C /* WMCourseChangeGradingScaleViewController.m */,
-				520ADC9C17CC3A47004DF55C /* WMCourseDetailCell.h */,
-				520ADC9D17CC3A47004DF55C /* WMCourseDetailCell.m */,
-				520ADC9E17CC3A47004DF55C /* WMCourseDetailCell.xib */,
-				520ADC9F17CC3A47004DF55C /* WMCourseDetailController.h */,
-				520ADCA017CC3A47004DF55C /* WMCourseDetailController.m */,
-				520ADCA117CC3A47004DF55C /* WMCourseGradeEntryCell.h */,
-				520ADCA217CC3A47004DF55C /* WMCourseGradeEntryCell.m */,
-				520ADCA317CC3A47004DF55C /* WMCourseGradeEntryViewController.h */,
-				520ADCA417CC3A47004DF55C /* WMCourseGradeEntryViewController.m */,
-				520ADCA517CC3A47004DF55C /* WMCourseGradeFormViewController.h */,
-				520ADCA617CC3A47004DF55C /* WMCourseGradeFormViewController.m */,
-				520ADCA717CC3A47004DF55C /* WMCourseGradeSheetCell.h */,
-				520ADCA817CC3A47004DF55C /* WMCourseGradeSheetCell.m */,
-				520ADCA917CC3A47004DF55C /* WMCourseGradeSheetCell.xib */,
-				520ADCAA17CC3A47004DF55C /* WMCourseScaleViewController.h */,
-				520ADCAB17CC3A47004DF55C /* WMCourseScaleViewController.m */,
-				520ADCAC17CC3A47004DF55C /* WMCourseTrackGradeViewController.h */,
-				520ADCAD17CC3A47004DF55C /* WMCourseTrackGradeViewController.m */,
-				520ADCAE17CC3A47004DF55C /* WMCourseWeightsDisplayViewController.h */,
-				520ADCAF17CC3A47004DF55C /* WMCourseWeightsDisplayViewController.m */,
-				520ADCCA17CC3AD8004DF55C /* RootTableViewController.h */,
-				520ADCC917CC3AD8004DF55C /* RootTableViewController.m */,
-				520ADCB017CC3A47004DF55C /* WMGradeSheetViewController.h */,
-				520ADCB117CC3A47004DF55C /* WMGradeSheetViewController.m */,
-			);
-			name = "Mocha Bear Class";
-			sourceTree = "<group>";
-		};
 		520ADCD217D15080004DF55C /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -817,6 +761,37 @@
 				520ADBF417C5B845004DF55C /* WMGeneralDViewController.m */,
 			);
 			name = Furniture;
+			sourceTree = "<group>";
+		};
+		526F1CBC18398355007110B1 /* derek */ = {
+			isa = PBXGroup;
+			children = (
+				526F1CD8183983E3007110B1 /* WMAddSyllabusFormViewController.h */,
+				526F1CDC183983E8007110B1 /* WMAddSyllabusFormViewController.m */,
+				526F1CDE183983ED007110B1 /* Grades.h */,
+				526F1CDF183983ED007110B1 /* Grades.m */,
+				526F1CE1183983F3007110B1 /* Course.h */,
+				526F1CE2183983F3007110B1 /* Course.m */,
+				526F1CD3183983E3007110B1 /* WMActualCourseUpdate-Prefix.pch */,
+				526F1CD4183983E3007110B1 /* WMActualCourseUpdate.xcdatamodeld */,
+				526F1CD6183983E3007110B1 /* WMAddGradingScaleViewController.h */,
+				526F1CD7183983E3007110B1 /* WMAddGradingScaleViewController.m */,
+				526F1CBD18398390007110B1 /* WMCourseAddFormViewController.h */,
+				526F1CBE18398390007110B1 /* WMCourseAddFormViewController.m */,
+				526F1CC118398390007110B1 /* WMCourseDetailViewController.h */,
+				526F1CE41839895F007110B1 /* WMCourseAddGradeViewController.h */,
+				526F1CE51839895F007110B1 /* WMCourseAddGradeViewController.m */,
+				526F1CC218398390007110B1 /* WMCourseDetailViewController.m */,
+				526F1CC318398390007110B1 /* WMCourseObject.h */,
+				526F1CC418398390007110B1 /* WMCourseObject.m */,
+				526F1CC518398390007110B1 /* WMListOfCoursesViewController.h */,
+				526F1CC618398390007110B1 /* WMListOfCoursesViewController.m */,
+				526F1CC718398390007110B1 /* WMSemesterAddFormViewController.h */,
+				526F1CC818398390007110B1 /* WMSemesterAddFormViewController.m */,
+				526F1CC918398390007110B1 /* WMSemesterViewController.h */,
+				526F1CCA18398390007110B1 /* WMSemesterViewController.m */,
+			);
+			name = derek;
 			sourceTree = "<group>";
 		};
 		529CCA9017BF6908000E5CF0 /* Event Icons */ = {
@@ -1143,6 +1118,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
+				TargetAttributes = {
+					09ABC06C13A1D52D009C3FCF = {
+						DevelopmentTeam = JQGA5FS44F;
+					};
+				};
 			};
 			buildConfigurationList = 09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "WhiteMochaUP" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1186,6 +1166,7 @@
 				52FE99EB17A7A03C00E926F4 /* WMTextbookCourseViewController.xib in Resources */,
 				52FE99F317A9E59000E926F4 /* WMTextbookDescViewController.xib in Resources */,
 				52FE99FA17AA06EB00E926F4 /* WMTextbookDescCell.xib in Resources */,
+				528414CE1839A7AD00D4A237 /* Images-2.xcassets in Resources */,
 				52FE9A0017AA22C300E926F4 /* WMTextbookTextCell.xib in Resources */,
 				52FE9A1017AC782D00E926F4 /* WMHousingCell.xib in Resources */,
 				52B5847417B2C44D00AA8457 /* WMPrevNext.xib in Resources */,
@@ -1238,6 +1219,7 @@
 				52D7E3C317C5807D001B9C42 /* tableBack.png in Resources */,
 				52D7E3C717C5AB48001B9C42 /* tableBack@2x.png in Resources */,
 				520ADBF217C5B25B004DF55C /* WMGeneralDetailView.storyboard in Resources */,
+				526F1CED18398FED007110B1 /* MainWindow.xib in Resources */,
 				520ADBFD17C5F8A4004DF55C /* loginBack.png in Resources */,
 				520ADC0C17C6017C004DF55C /* loginLogo.png in Resources */,
 				520ADC0D17C6017C004DF55C /* loginLogo@2x.png in Resources */,
@@ -1268,12 +1250,7 @@
 				520ADC4617CAA906004DF55C /* orangeButtonHighlight@2x.png in Resources */,
 				520ADC4917CAB352004DF55C /* homelogo.png in Resources */,
 				520ADC4A17CAB352004DF55C /* homelogo@2x.png in Resources */,
-				520ADCB317CC3A47004DF55C /* Entitlements.plist in Resources */,
-				520ADCB617CC3A47004DF55C /* ParseStarterProject-Info.plist in Resources */,
-				520ADCBB17CC3A47004DF55C /* WMCourseCell.xib in Resources */,
-				520ADCBE17CC3A47004DF55C /* WMCourseDetailCell.xib in Resources */,
 				52EAEEEE180F1A6000F32C28 /* intramural.png in Resources */,
-				520ADCC417CC3A47004DF55C /* WMCourseGradeSheetCell.xib in Resources */,
 				520ADCCD17D14BD5004DF55C /* WMListingCatgeoryView.storyboard in Resources */,
 				520ADCCF17D14FA5004DF55C /* desk.png in Resources */,
 				520ADCD117D1507C004DF55C /* hp_tv.png in Resources */,
@@ -1284,6 +1261,7 @@
 				520ADCDC17D17754004DF55C /* WMMarketPlaceHome.storyboard in Resources */,
 				520ADCE317D18FA5004DF55C /* anchorImage.jpg in Resources */,
 				520ADCE417D18FA5004DF55C /* commonsImage.jpg in Resources */,
+				528414CC1839A65F00D4A237 /* Images.xcassets in Resources */,
 				520ADCE517D18FA5004DF55C /* covePlaceHolder.jpg in Resources */,
 				52ACDEB91810CAB0000105BE /* forward-25.png in Resources */,
 				520ADCE617D18FA5004DF55C /* Default-568h@2x.png in Resources */,
@@ -1319,12 +1297,18 @@
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
 				09ABC08213A1D52D009C3FCF /* WhiteMochaUPAppDelegate.m in Sources */,
 				52B0A3FC1785EE670008448E /* WMRegisterViewController.m in Sources */,
+				526F1CE61839895F007110B1 /* WMCourseAddGradeViewController.m in Sources */,
+				526F1CD018398390007110B1 /* WMSemesterAddFormViewController.m in Sources */,
 				52A269D4178A09B3002AC9B7 /* WMMarketPlaceHomeViewController.m in Sources */,
 				52047215178A39CF00BF5A0F /* WMGeneralListingViewController.m in Sources */,
+				526F1CCB18398390007110B1 /* WMCourseAddFormViewController.m in Sources */,
 				5204721B178A7CF000BF5A0F /* WMDescriptionViewController.m in Sources */,
+				526F1CCE18398390007110B1 /* WMCourseObject.m in Sources */,
+				526F1CCD18398390007110B1 /* WMCourseDetailViewController.m in Sources */,
 				5204721F178B51B200BF5A0F /* WMFurniture.m in Sources */,
 				52047228178BCDE600BF5A0F /* WMMarketImageViewController.m in Sources */,
 				5204722C178C9C8700BF5A0F /* WMFurnitureListingsViewController.m in Sources */,
+				526F1CE3183983F3007110B1 /* Course.m in Sources */,
 				52047234178CB0F500BF5A0F /* WMFurnitureCell.m in Sources */,
 				52047247178E792700BF5A0F /* WMGeneralDetailViewController.m in Sources */,
 				5204724B178F6E9300BF5A0F /* WMGeneralDescriptionViewController.m in Sources */,
@@ -1342,11 +1326,15 @@
 				52FE99D517A6E0D300E926F4 /* WMEventsViewController.m in Sources */,
 				52FE99DA17A762B700E926F4 /* WMListingCategoryViewController.m in Sources */,
 				52FE99EA17A7A03C00E926F4 /* WMTextbookCourseViewController.m in Sources */,
+				526F1CDA183983E3007110B1 /* WMActualCourseUpdate.xcdatamodeld in Sources */,
+				526F1CDB183983E3007110B1 /* WMAddGradingScaleViewController.m in Sources */,
 				52FE99F217A9E59000E926F4 /* WMTextbookDescViewController.m in Sources */,
 				52FE99F617A9E6B500E926F4 /* WMTextbookDescCell.m in Sources */,
 				52FE99FE17AA223B00E926F4 /* WMTextbookTextCell.m in Sources */,
 				52FE9A0417AC2E6200E926F4 /* WMTextbookListingsViewController.m in Sources */,
 				52FE9A0817AC54E800E926F4 /* WMOtherListingsViewController.m in Sources */,
+				526F1CD118398390007110B1 /* WMSemesterViewController.m in Sources */,
+				526F1CDD183983E8007110B1 /* WMAddSyllabusFormViewController.m in Sources */,
 				52FE9A0C17AC780700E926F4 /* WMHousingCell.m in Sources */,
 				5290F74317B01EBE000E08D9 /* WMHousingListingsViewController.m in Sources */,
 				52B5847817B2C52700AA8457 /* WMPrevNext.m in Sources */,
@@ -1364,25 +1352,10 @@
 				520A577A17C2997E004B0A75 /* WMConstants.m in Sources */,
 				520A578117C30C7A004B0A75 /* WMEventDetailViewController.m in Sources */,
 				520ADBF517C5B845004DF55C /* WMGeneralDViewController.m in Sources */,
+				526F1CE0183983ED007110B1 /* Grades.m in Sources */,
 				520ADC0917C5FF1C004DF55C /* WMCustomLoginViewController.m in Sources */,
 				520ADC3E17CAA019004DF55C /* WMHomeViewController.m in Sources */,
-				520ADCB217CC3A47004DF55C /* Course.m in Sources */,
-				520ADCB417CC3A47004DF55C /* Grade.m in Sources */,
-				520ADCB717CC3A47004DF55C /* ParseStarterProject.xcdatamodeld in Sources */,
-				520ADCB917CC3A47004DF55C /* WMCourseAddFormViewController.m in Sources */,
-				520ADCBA17CC3A47004DF55C /* WMCourseCell.m in Sources */,
-				520ADCBC17CC3A47004DF55C /* WMCourseChangeGradingScaleViewController.m in Sources */,
-				520ADCBD17CC3A47004DF55C /* WMCourseDetailCell.m in Sources */,
-				520ADCBF17CC3A47004DF55C /* WMCourseDetailController.m in Sources */,
-				520ADCC017CC3A47004DF55C /* WMCourseGradeEntryCell.m in Sources */,
-				520ADCC117CC3A47004DF55C /* WMCourseGradeEntryViewController.m in Sources */,
-				520ADCC217CC3A47004DF55C /* WMCourseGradeFormViewController.m in Sources */,
-				520ADCC317CC3A47004DF55C /* WMCourseGradeSheetCell.m in Sources */,
-				520ADCC517CC3A47004DF55C /* WMCourseScaleViewController.m in Sources */,
-				520ADCC617CC3A47004DF55C /* WMCourseTrackGradeViewController.m in Sources */,
-				520ADCC717CC3A47004DF55C /* WMCourseWeightsDisplayViewController.m in Sources */,
-				520ADCC817CC3A47004DF55C /* WMGradeSheetViewController.m in Sources */,
-				520ADCCB17CC3AD8004DF55C /* RootTableViewController.m in Sources */,
+				526F1CCF18398390007110B1 /* WMListOfCoursesViewController.m in Sources */,
 				520ADCEA17D19031004DF55C /* WMFoodSectionViewController.m in Sources */,
 				521A9E9817D33B98006E6734 /* WMAboutSectionViewController.m in Sources */,
 				5265D87A17F65BD20066FCEC /* WMWebLibViewController.m in Sources */,
@@ -1451,11 +1424,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					/Users/john/Desktop,
+					/Users/john/Dropbox/WhiteMochaUP,
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1473,11 +1450,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					/Users/john/Desktop,
+					/Users/john/Dropbox/WhiteMochaUP,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseStarterProject/WhiteMochaUP-Prefix.pch";
@@ -1515,13 +1496,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		520ADC9117CC3A47004DF55C /* ParseStarterProject.xcdatamodeld */ = {
+		526F1CD4183983E3007110B1 /* WMActualCourseUpdate.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				520ADC9217CC3A47004DF55C /* ParseStarterProject.xcdatamodel */,
+				526F1CD5183983E3007110B1 /* WMActualCourseUpdate.xcdatamodel */,
 			);
-			currentVersion = 520ADC9217CC3A47004DF55C /* ParseStarterProject.xcdatamodel */;
-			path = ParseStarterProject.xcdatamodeld;
+			currentVersion = 526F1CD5183983E3007110B1 /* WMActualCourseUpdate.xcdatamodel */;
+			path = WMActualCourseUpdate.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
