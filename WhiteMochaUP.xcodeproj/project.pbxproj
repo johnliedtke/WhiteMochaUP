@@ -130,7 +130,8 @@
 		5233CB8E179CDED400D9F380 /* WMDetailImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5233CB8C179CDED400D9F380 /* WMDetailImageViewController.m */; };
 		5233CB8F179CDED400D9F380 /* WMDetailImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233CB8D179CDED400D9F380 /* WMDetailImageViewController.xib */; };
 		5233CB92179E397700D9F380 /* WMWhiteGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5233CB91179E397700D9F380 /* WMWhiteGradient.m */; };
-		5233CB9D179E691E00D9F380 /* whiteBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5233CB9C179E691E00D9F380 /* whiteBG.png */; };
+		5244ECF218652782009ACC5E /* whiteBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECF118652782009ACC5E /* whiteBG.png */; };
+		5244ECF4186527D0009ACC5E /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECF3186527D0009ACC5E /* tabbar.png */; };
 		5247761817B9807F00A81E88 /* WMDetailImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5247761717B9807F00A81E88 /* WMDetailImage.storyboard */; };
 		5247761B17B9809C00A81E88 /* WMDetailImgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247761A17B9809C00A81E88 /* WMDetailImgViewController.m */; };
 		5265D86C17F017E40066FCEC /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D86817F017E40066FCEC /* greenButton.png */; };
@@ -166,7 +167,6 @@
 		5293E75B17B739190022A7B8 /* WMRidesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5293E75A17B739190022A7B8 /* WMRidesListViewController.m */; };
 		5293E75F17B764CA0022A7B8 /* WMRideDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5293E75E17B764CA0022A7B8 /* WMRideDetailView.storyboard */; };
 		52952B3C17B8AD6A001F5044 /* Subjects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52952B3B17B8AD6A001F5044 /* Subjects.plist */; };
-		52973DA717A0D2FE00C07A17 /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 52973DA617A0D2FE00C07A17 /* tabbar.png */; };
 		52973DAB17A0D7FA00C07A17 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 52973DAA17A0D7FA00C07A17 /* home.png */; };
 		5297EE9318386F73008A69FA /* WMAddPoll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297EE9218386F73008A69FA /* WMAddPoll.storyboard */; };
 		5297EE9618386FFE008A69FA /* WMAddPollQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5297EE9518386FFE008A69FA /* WMAddPollQuestionViewController.m */; };
@@ -377,7 +377,8 @@
 		5233CB8D179CDED400D9F380 /* WMDetailImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMDetailImageViewController.xib; sourceTree = "<group>"; };
 		5233CB90179E397700D9F380 /* WMWhiteGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMWhiteGradient.h; sourceTree = "<group>"; };
 		5233CB91179E397700D9F380 /* WMWhiteGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMWhiteGradient.m; sourceTree = "<group>"; };
-		5233CB9C179E691E00D9F380 /* whiteBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteBG.png; path = ../WMPhotoshop/whiteBG.png; sourceTree = "<group>"; };
+		5244ECF118652782009ACC5E /* whiteBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteBG.png; sourceTree = "<group>"; };
+		5244ECF3186527D0009ACC5E /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar.png; sourceTree = "<group>"; };
 		5247761717B9807F00A81E88 /* WMDetailImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMDetailImage.storyboard; sourceTree = "<group>"; };
 		5247761917B9809C00A81E88 /* WMDetailImgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDetailImgViewController.h; sourceTree = "<group>"; };
 		5247761A17B9809C00A81E88 /* WMDetailImgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDetailImgViewController.m; sourceTree = "<group>"; };
@@ -435,7 +436,6 @@
 		5293E75A17B739190022A7B8 /* WMRidesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMRidesListViewController.m; sourceTree = "<group>"; };
 		5293E75E17B764CA0022A7B8 /* WMRideDetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMRideDetailView.storyboard; sourceTree = "<group>"; };
 		52952B3B17B8AD6A001F5044 /* Subjects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Subjects.plist; path = ParseStarterProject/Subjects.plist; sourceTree = "<group>"; };
-		52973DA617A0D2FE00C07A17 /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar.png; path = ../../WMPhotoshop/tabbar.png; sourceTree = "<group>"; };
 		52973DAA17A0D7FA00C07A17 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../home.png; sourceTree = "<group>"; };
 		5297EE9218386F73008A69FA /* WMAddPoll.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMAddPoll.storyboard; sourceTree = "<group>"; };
 		5297EE9418386FFE008A69FA /* WMAddPollQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMAddPollQuestionViewController.h; sourceTree = "<group>"; };
@@ -632,7 +632,7 @@
 				520A576C17C2054E004B0A75 /* furniture@2x.png */,
 				52973DAA17A0D7FA00C07A17 /* home.png */,
 				52047241178E231300BF5A0F /* plainBack3.png */,
-				52973DA617A0D2FE00C07A17 /* tabbar.png */,
+				5244ECF3186527D0009ACC5E /* tabbar.png */,
 				52047235178CFDFB00BF5A0F /* navigationbar.png */,
 				52D7E3C617C5AB48001B9C42 /* tableBack@2x.png */,
 				520ADBFC17C5F8A3004DF55C /* loginBack.png */,
@@ -692,7 +692,7 @@
 		52047224178B5A3F00BF5A0F /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				5233CB9C179E691E00D9F380 /* whiteBG.png */,
+				5244ECF118652782009ACC5E /* whiteBG.png */,
 				521A9E8C17D32F75006E6734 /* greyButton.png */,
 				521A9E8D17D32F75006E6734 /* greyButton@2x.png */,
 				5265D86817F017E40066FCEC /* greenButton.png */,
@@ -1148,6 +1148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09ABC07C13A1D52D009C3FCF /* InfoPlist.strings in Resources */,
+				5244ECF4186527D0009ACC5E /* tabbar.png in Resources */,
 				09144A7313C2997E00388B00 /* Entitlements.plist in Resources */,
 				52A269C617895B8F002AC9B7 /* Museo_Slab.otf in Resources */,
 				52EAEEE6180E027200F32C28 /* back-25@2x.png in Resources */,
@@ -1158,8 +1159,6 @@
 				52047242178E231300BF5A0F /* plainBack3.png in Resources */,
 				5204724C178F6E9300BF5A0F /* WMGeneralDescriptionViewController.xib in Resources */,
 				5233CB8F179CDED400D9F380 /* WMDetailImageViewController.xib in Resources */,
-				5233CB9D179E691E00D9F380 /* whiteBG.png in Resources */,
-				52973DA717A0D2FE00C07A17 /* tabbar.png in Resources */,
 				52973DAB17A0D7FA00C07A17 /* home.png in Resources */,
 				52FE99B217A47A4D00E926F4 /* WMFurnitureDetailCell.xib in Resources */,
 				52FE99D617A6E0D300E926F4 /* WMEventsViewController.xib in Resources */,
@@ -1185,6 +1184,7 @@
 				5224ED6217B9A4E2005199A1 /* class@2x.png in Resources */,
 				5224ED6517B9A63E005199A1 /* food.png in Resources */,
 				5224ED6617B9A63E005199A1 /* food@2x.png in Resources */,
+				5244ECF218652782009ACC5E /* whiteBG.png in Resources */,
 				5224ED6B17B9C361005199A1 /* WMEventCell.xib in Resources */,
 				5224ED7017BAAD89005199A1 /* classic.png in Resources */,
 				5224ED7217BAD611005199A1 /* volleyball.png in Resources */,
