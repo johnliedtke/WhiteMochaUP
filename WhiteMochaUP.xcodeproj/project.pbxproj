@@ -61,14 +61,7 @@
 		520A578F17C494C8004B0A75 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 520A578E17C494C4004B0A75 /* Icon.png */; };
 		520ADBF217C5B25B004DF55C /* WMGeneralDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520ADBF117C5B25B004DF55C /* WMGeneralDetailView.storyboard */; };
 		520ADBF517C5B845004DF55C /* WMGeneralDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADBF417C5B845004DF55C /* WMGeneralDViewController.m */; };
-		520ADBFD17C5F8A4004DF55C /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADBFC17C5F8A3004DF55C /* loginBack.png */; };
 		520ADC0917C5FF1C004DF55C /* WMCustomLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520ADC0817C5FF1B004DF55C /* WMCustomLoginViewController.m */; };
-		520ADC0C17C6017C004DF55C /* loginLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC0A17C6017C004DF55C /* loginLogo.png */; };
-		520ADC0D17C6017C004DF55C /* loginLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC0B17C6017C004DF55C /* loginLogo@2x.png */; };
-		520ADC1017C69245004DF55C /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC0E17C69245004DF55C /* signup.png */; };
-		520ADC1117C69245004DF55C /* signup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC0F17C69245004DF55C /* signup@2x.png */; };
-		520ADC1417C6A7DD004DF55C /* signupHover.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC1217C6A7DD004DF55C /* signupHover.png */; };
-		520ADC1517C6A7DD004DF55C /* signupHover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC1317C6A7DD004DF55C /* signupHover@2x.png */; };
 		520ADC1817C81F23004DF55C /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC1617C81F22004DF55C /* loginButton.png */; };
 		520ADC1917C81F23004DF55C /* loginButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC1717C81F22004DF55C /* loginButton@2x.png */; };
 		520ADC1C17C824FF004DF55C /* loginButtonNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 520ADC1A17C824FF004DF55C /* loginButtonNew.png */; };
@@ -132,6 +125,13 @@
 		5233CB92179E397700D9F380 /* WMWhiteGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5233CB91179E397700D9F380 /* WMWhiteGradient.m */; };
 		5244ECF218652782009ACC5E /* whiteBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECF118652782009ACC5E /* whiteBG.png */; };
 		5244ECF4186527D0009ACC5E /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECF3186527D0009ACC5E /* tabbar.png */; };
+		5244ECF618652B89009ACC5E /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECF518652B89009ACC5E /* loginBack.png */; };
+		5244ECF918652BE9009ACC5E /* loginLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECF718652BE9009ACC5E /* loginLogo.png */; };
+		5244ECFA18652BE9009ACC5E /* loginLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECF818652BE9009ACC5E /* loginLogo@2x.png */; };
+		5244ECFD18652C8E009ACC5E /* signupHover.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECFB18652C8E009ACC5E /* signupHover.png */; };
+		5244ECFE18652C8E009ACC5E /* signupHover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECFC18652C8E009ACC5E /* signupHover@2x.png */; };
+		5244ED0118652CC1009ACC5E /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECFF18652CC1009ACC5E /* signup.png */; };
+		5244ED0218652CC1009ACC5E /* signup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ED0018652CC1009ACC5E /* signup@2x.png */; };
 		5247761817B9807F00A81E88 /* WMDetailImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5247761717B9807F00A81E88 /* WMDetailImage.storyboard */; };
 		5247761B17B9809C00A81E88 /* WMDetailImgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247761A17B9809C00A81E88 /* WMDetailImgViewController.m */; };
 		5265D86C17F017E40066FCEC /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D86817F017E40066FCEC /* greenButton.png */; };
@@ -193,8 +193,6 @@
 		52B5847817B2C52700AA8457 /* WMPrevNext.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B5847717B2C52700AA8457 /* WMPrevNext.m */; };
 		52BE072517B41CE8005B739E /* WMRides.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BE072417B41CE8005B739E /* WMRides.storyboard */; };
 		52BE072A17B4243F005B739E /* WMRidesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE072917B4243F005B739E /* WMRidesViewController.m */; };
-		52D7E3C317C5807D001B9C42 /* tableBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D7E3C217C5807D001B9C42 /* tableBack.png */; };
-		52D7E3C717C5AB48001B9C42 /* tableBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D7E3C617C5AB48001B9C42 /* tableBack@2x.png */; };
 		52EAEEE4180E016F00F32C28 /* forward-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EAEEE3180E016F00F32C28 /* forward-32@2x.png */; };
 		52EAEEE6180E027200F32C28 /* back-25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EAEEE5180E027200F32C28 /* back-25@2x.png */; };
 		52EAEEEE180F1A6000F32C28 /* intramural.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EAEEED180F1A6000F32C28 /* intramural.png */; };
@@ -300,15 +298,8 @@
 		520ADBF117C5B25B004DF55C /* WMGeneralDetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMGeneralDetailView.storyboard; sourceTree = "<group>"; };
 		520ADBF317C5B845004DF55C /* WMGeneralDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGeneralDViewController.h; sourceTree = "<group>"; };
 		520ADBF417C5B845004DF55C /* WMGeneralDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGeneralDViewController.m; sourceTree = "<group>"; };
-		520ADBFC17C5F8A3004DF55C /* loginBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginBack.png; path = ../../WMPhotoshop/loginBack.png; sourceTree = "<group>"; };
 		520ADC0717C5FF1B004DF55C /* WMCustomLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCustomLoginViewController.h; sourceTree = "<group>"; };
 		520ADC0817C5FF1B004DF55C /* WMCustomLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCustomLoginViewController.m; sourceTree = "<group>"; };
-		520ADC0A17C6017C004DF55C /* loginLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginLogo.png; path = ../../WMPhotoshop/loginLogo.png; sourceTree = "<group>"; };
-		520ADC0B17C6017C004DF55C /* loginLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginLogo@2x.png"; path = "../../WMPhotoshop/loginLogo@2x.png"; sourceTree = "<group>"; };
-		520ADC0E17C69245004DF55C /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signup.png; path = ../../WMPhotoshop/signup.png; sourceTree = "<group>"; };
-		520ADC0F17C69245004DF55C /* signup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "signup@2x.png"; path = "../../WMPhotoshop/signup@2x.png"; sourceTree = "<group>"; };
-		520ADC1217C6A7DD004DF55C /* signupHover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signupHover.png; path = ../../WMPhotoshop/signupHover.png; sourceTree = "<group>"; };
-		520ADC1317C6A7DD004DF55C /* signupHover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "signupHover@2x.png"; path = "../../WMPhotoshop/signupHover@2x.png"; sourceTree = "<group>"; };
 		520ADC1617C81F22004DF55C /* loginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginButton.png; sourceTree = "<group>"; };
 		520ADC1717C81F22004DF55C /* loginButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginButton@2x.png"; sourceTree = "<group>"; };
 		520ADC1A17C824FF004DF55C /* loginButtonNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginButtonNew.png; sourceTree = "<group>"; };
@@ -379,6 +370,13 @@
 		5233CB91179E397700D9F380 /* WMWhiteGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMWhiteGradient.m; sourceTree = "<group>"; };
 		5244ECF118652782009ACC5E /* whiteBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteBG.png; sourceTree = "<group>"; };
 		5244ECF3186527D0009ACC5E /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar.png; sourceTree = "<group>"; };
+		5244ECF518652B89009ACC5E /* loginBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBack.png; sourceTree = "<group>"; };
+		5244ECF718652BE9009ACC5E /* loginLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginLogo.png; path = ../loginLogo.png; sourceTree = "<group>"; };
+		5244ECF818652BE9009ACC5E /* loginLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginLogo@2x.png"; path = "../loginLogo@2x.png"; sourceTree = "<group>"; };
+		5244ECFB18652C8E009ACC5E /* signupHover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signupHover.png; sourceTree = "<group>"; };
+		5244ECFC18652C8E009ACC5E /* signupHover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signupHover@2x.png"; sourceTree = "<group>"; };
+		5244ECFF18652CC1009ACC5E /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
+		5244ED0018652CC1009ACC5E /* signup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup@2x.png"; sourceTree = "<group>"; };
 		5247761717B9807F00A81E88 /* WMDetailImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMDetailImage.storyboard; sourceTree = "<group>"; };
 		5247761917B9809C00A81E88 /* WMDetailImgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDetailImgViewController.h; sourceTree = "<group>"; };
 		5247761A17B9809C00A81E88 /* WMDetailImgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDetailImgViewController.m; sourceTree = "<group>"; };
@@ -468,8 +466,6 @@
 		52BE072417B41CE8005B739E /* WMRides.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMRides.storyboard; sourceTree = "<group>"; };
 		52BE072817B4243F005B739E /* WMRidesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMRidesViewController.h; sourceTree = "<group>"; };
 		52BE072917B4243F005B739E /* WMRidesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMRidesViewController.m; sourceTree = "<group>"; };
-		52D7E3C217C5807D001B9C42 /* tableBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tableBack.png; path = ../../WMPhotoshop/tableBack.png; sourceTree = "<group>"; };
-		52D7E3C617C5AB48001B9C42 /* tableBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tableBack@2x.png"; path = "../../WMPhotoshop/tableBack@2x.png"; sourceTree = "<group>"; };
 		52EAEEE3180E016F00F32C28 /* forward-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-32@2x.png"; sourceTree = "<group>"; };
 		52EAEEE5180E027200F32C28 /* back-25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-25@2x.png"; sourceTree = "<group>"; };
 		52EAEEED180F1A6000F32C28 /* intramural.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intramural.png; sourceTree = "<group>"; };
@@ -623,8 +619,13 @@
 			isa = PBXGroup;
 			children = (
 				52A834F017E1A56C00E49E27 /* Default.png */,
+				5244ECFF18652CC1009ACC5E /* signup.png */,
+				5244ED0018652CC1009ACC5E /* signup@2x.png */,
+				5244ECF718652BE9009ACC5E /* loginLogo.png */,
+				5244ECF818652BE9009ACC5E /* loginLogo@2x.png */,
 				52A834EE17E1A54C00E49E27 /* Default-568h@2x.png */,
 				520A578E17C494C4004B0A75 /* Icon.png */,
+				5244ECF518652B89009ACC5E /* loginBack.png */,
 				520A578C17C494BB004B0A75 /* Icon@2x.png */,
 				520ADC3217CA85B3004DF55C /* poll.png */,
 				520A576A17C2038D004B0A75 /* furniture.png */,
@@ -634,9 +635,6 @@
 				52047241178E231300BF5A0F /* plainBack3.png */,
 				5244ECF3186527D0009ACC5E /* tabbar.png */,
 				52047235178CFDFB00BF5A0F /* navigationbar.png */,
-				52D7E3C617C5AB48001B9C42 /* tableBack@2x.png */,
-				520ADBFC17C5F8A3004DF55C /* loginBack.png */,
-				52D7E3C217C5807D001B9C42 /* tableBack.png */,
 				520ADC2A17C96605004DF55C /* exit.png */,
 				520ADC4717CAB351004DF55C /* homelogo.png */,
 				520ADC4817CAB351004DF55C /* homelogo@2x.png */,
@@ -657,24 +655,20 @@
 				520ADC2717C95813004DF55C /* loginBox@2x.png */,
 				520ADC1E17C82769004DF55C /* loginButtonNewHover.png */,
 				520ADC1F17C82769004DF55C /* loginButtonNewHover@2x.png */,
-				520ADC0A17C6017C004DF55C /* loginLogo.png */,
 				520ADC1A17C824FF004DF55C /* loginButtonNew.png */,
 				520ADC1B17C824FF004DF55C /* loginButtonNew@2x.png */,
 				520ADC1617C81F22004DF55C /* loginButton.png */,
 				52A834EA17E1A26800E49E27 /* Default-568h@2x.png */,
 				52A834EC17E1A28B00E49E27 /* Default@2x.png */,
 				520ADC1717C81F22004DF55C /* loginButton@2x.png */,
-				520ADC1217C6A7DD004DF55C /* signupHover.png */,
-				520ADC1317C6A7DD004DF55C /* signupHover@2x.png */,
-				520ADC0E17C69245004DF55C /* signup.png */,
-				520ADC0F17C69245004DF55C /* signup@2x.png */,
-				520ADC0B17C6017C004DF55C /* loginLogo@2x.png */,
 				5224ED5517B995A7005199A1 /* home@2x.png */,
 				5224ED5F17B9A4E2005199A1 /* class.png */,
 				5224ED6317B9A63E005199A1 /* food.png */,
 				5224ED6417B9A63E005199A1 /* food@2x.png */,
 				5224ED6017B9A4E2005199A1 /* class@2x.png */,
 				5224ED5B17B9A3EB005199A1 /* market.png */,
+				5244ECFB18652C8E009ACC5E /* signupHover.png */,
+				5244ECFC18652C8E009ACC5E /* signupHover@2x.png */,
 				5224ED5C17B9A3EB005199A1 /* market@2x.png */,
 				5224ED5717B99FB0005199A1 /* events.png */,
 				5224ED5817B99FB0005199A1 /* events@2x.png */,
@@ -1170,6 +1164,7 @@
 				52FE9A1017AC782D00E926F4 /* WMHousingCell.xib in Resources */,
 				52B5847417B2C44D00AA8457 /* WMPrevNext.xib in Resources */,
 				52BE072517B41CE8005B739E /* WMRides.storyboard in Resources */,
+				5244ECF618652B89009ACC5E /* loginBack.png in Resources */,
 				5293E75817B736A50022A7B8 /* WMRidesCell.xib in Resources */,
 				5293E75F17B764CA0022A7B8 /* WMRideDetailView.storyboard in Resources */,
 				52952B3C17B8AD6A001F5044 /* Subjects.plist in Resources */,
@@ -1197,6 +1192,7 @@
 				520A574417C16D76004B0A75 /* WMAddEventCategories.storyboard in Resources */,
 				520A574917C17D04004B0A75 /* gop.png in Resources */,
 				520A575017C1B508004B0A75 /* phil.png in Resources */,
+				5244ECFE18652C8E009ACC5E /* signupHover@2x.png in Resources */,
 				520A575217C1B66A004B0A75 /* english.png in Resources */,
 				520A575417C1B82C004B0A75 /* mlk.png in Resources */,
 				520A575817C1BA0B004B0A75 /* pineapple.png in Resources */,
@@ -1216,25 +1212,18 @@
 				520A578D17C494BE004B0A75 /* Icon@2x.png in Resources */,
 				520A578F17C494C8004B0A75 /* Icon.png in Resources */,
 				52ACDEBB1810CAB6000105BE /* forward-25@2x.png in Resources */,
-				52D7E3C317C5807D001B9C42 /* tableBack.png in Resources */,
-				52D7E3C717C5AB48001B9C42 /* tableBack@2x.png in Resources */,
 				520ADBF217C5B25B004DF55C /* WMGeneralDetailView.storyboard in Resources */,
 				526F1CED18398FED007110B1 /* MainWindow.xib in Resources */,
-				520ADBFD17C5F8A4004DF55C /* loginBack.png in Resources */,
-				520ADC0C17C6017C004DF55C /* loginLogo.png in Resources */,
-				520ADC0D17C6017C004DF55C /* loginLogo@2x.png in Resources */,
-				520ADC1017C69245004DF55C /* signup.png in Resources */,
 				52EAEEF2180F1D2300F32C28 /* movie.png in Resources */,
-				520ADC1117C69245004DF55C /* signup@2x.png in Resources */,
-				520ADC1417C6A7DD004DF55C /* signupHover.png in Resources */,
-				520ADC1517C6A7DD004DF55C /* signupHover@2x.png in Resources */,
 				520ADC1817C81F23004DF55C /* loginButton.png in Resources */,
 				520ADC1917C81F23004DF55C /* loginButton@2x.png in Resources */,
 				520ADC1C17C824FF004DF55C /* loginButtonNew.png in Resources */,
 				520ADC1D17C824FF004DF55C /* loginButtonNew@2x.png in Resources */,
 				520ADC2017C82769004DF55C /* loginButtonNewHover.png in Resources */,
+				5244ED0218652CC1009ACC5E /* signup@2x.png in Resources */,
 				520ADC2117C82769004DF55C /* loginButtonNewHover@2x.png in Resources */,
 				520ADC2817C95813004DF55C /* loginBox.png in Resources */,
+				5244ED0118652CC1009ACC5E /* signup.png in Resources */,
 				520ADC2917C95813004DF55C /* loginBox@2x.png in Resources */,
 				520ADC2C17C96606004DF55C /* exit.png in Resources */,
 				520ADC2D17C96606004DF55C /* exit@2x.png in Resources */,
@@ -1264,6 +1253,7 @@
 				528414CC1839A65F00D4A237 /* Images.xcassets in Resources */,
 				520ADCE517D18FA5004DF55C /* covePlaceHolder.jpg in Resources */,
 				52ACDEB91810CAB0000105BE /* forward-25.png in Resources */,
+				5244ECFA18652BE9009ACC5E /* loginLogo@2x.png in Resources */,
 				520ADCE617D18FA5004DF55C /* Default-568h@2x.png in Resources */,
 				520ADCE717D18FA5004DF55C /* WMFoodSection.storyboard in Resources */,
 				521A9E9017D32F75006E6734 /* greyButton.png in Resources */,
@@ -1271,6 +1261,7 @@
 				521A9E9217D32F75006E6734 /* greyButtonHighlight.png in Resources */,
 				521A9E9317D32F75006E6734 /* greyButtonHighlight@2x.png in Resources */,
 				521A9E9517D33B7B006E6734 /* WMAboutSection.storyboard in Resources */,
+				5244ECF918652BE9009ACC5E /* loginLogo.png in Resources */,
 				52A834EB17E1A26800E49E27 /* Default-568h@2x.png in Resources */,
 				52A834ED17E1A28B00E49E27 /* Default@2x.png in Resources */,
 				52A834EF17E1A54C00E49E27 /* Default-568h@2x.png in Resources */,
@@ -1281,6 +1272,7 @@
 				5265D86E17F017E40066FCEC /* greenButtonHighlight.png in Resources */,
 				5265D86F17F017E40066FCEC /* greenButtonHighlight@2x.png in Resources */,
 				5265D87417F019A20066FCEC /* tanButton.png in Resources */,
+				5244ECFD18652C8E009ACC5E /* signupHover.png in Resources */,
 				5265D87517F019A20066FCEC /* tanButton@2x.png in Resources */,
 				5265D87617F019A20066FCEC /* tanButtonHighlight.png in Resources */,
 				5265D87717F019A20066FCEC /* tanButtonHighlight@2x.png in Resources */,
