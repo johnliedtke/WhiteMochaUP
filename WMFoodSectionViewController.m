@@ -8,6 +8,7 @@
 
 #import "WMFoodSectionViewController.h"
 #import "WMConstants.h"
+#import "WMPlaceInfoViewController.h"
 
 @interface WMFoodSectionViewController ()
 
@@ -22,10 +23,20 @@
     
     [self setupRefreshControl];
     [self updateHours];
+    
+    
 
-                
+    
+    UIBarButtonItem *placeInfo = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(placeInfo)];
+    [[self navigationItem] setRightBarButtonItem:placeInfo];
 }
 
+- (void)placeInfo
+{
+    UIStoryboard *placeInfoStory = [UIStoryboard storyboardWithName:@"WMPlaceInfo" bundle:nil];
+    WMPlaceInfoViewController *placeInfoViewController = [placeInfoStory instantiateViewControllerWithIdentifier:@"WMPlaceInfo"];
+    [[self navigationController] pushViewController:placeInfoViewController animated:YES];
+}
 
 -(void)updateHours
 {

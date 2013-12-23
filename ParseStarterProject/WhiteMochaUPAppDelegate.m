@@ -13,7 +13,9 @@
 #import "WMNavigationBar.h"
 #import "WMNavigationController.h"
 #import "WMSemesterViewController.h"
-
+#import "WMPlace.h"
+#import "WMPlaceInfo.h"
+#import "WMPlaceItem.h"
 
 @implementation WhiteMochaUPAppDelegate
 
@@ -29,6 +31,9 @@
     
     // Register our subclasses
     //[WMUser registerSubclass];
+    [WMPlace registerSubclass];
+    [WMPlaceInfo registerSubclass];
+    [WMPlaceItem registerSubclass];
 
 
     
@@ -72,6 +77,15 @@
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
     // Override point for customization after application launch.
+    
+    
+    
+//    WMPlaceInfo *testPlaceInfo = [[WMPlaceInfo alloc] initWithDefaults];
+//    [testPlaceInfo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"It saved and worked woo hoo mate!");
+//        }
+//    }];
     
     // Create marketplace
     UIStoryboard *marketStory = [UIStoryboard storyboardWithName:@"WMMarketPlaceHome" bundle:nil];

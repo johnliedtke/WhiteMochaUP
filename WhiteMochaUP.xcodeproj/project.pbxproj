@@ -132,6 +132,13 @@
 		5244ECFE18652C8E009ACC5E /* signupHover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECFC18652C8E009ACC5E /* signupHover@2x.png */; };
 		5244ED0118652CC1009ACC5E /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ECFF18652CC1009ACC5E /* signup.png */; };
 		5244ED0218652CC1009ACC5E /* signup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5244ED0018652CC1009ACC5E /* signup@2x.png */; };
+		5244ED06186559D1009ACC5E /* WMPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5244ED05186559D1009ACC5E /* WMPlace.m */; };
+		5244ED091865691A009ACC5E /* WMPlaceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5244ED081865691A009ACC5E /* WMPlaceInfo.m */; };
+		5244ED0C18664065009ACC5E /* WMPlaceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5244ED0B18664065009ACC5E /* WMPlaceItem.m */; };
+		5244ED181867C382009ACC5E /* WMPlaceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5244ED171867C382009ACC5E /* WMPlaceInfoViewController.m */; };
+		5244ED1A1867C3CF009ACC5E /* WMPlaceInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5244ED191867C3CF009ACC5E /* WMPlaceInfo.storyboard */; };
+		5244ED201868E946009ACC5E /* WMPlaceInfoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5244ED1E1868E946009ACC5E /* WMPlaceInfoEditViewController.m */; };
+		5244ED211868E946009ACC5E /* WMPlaceInfoEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5244ED1F1868E946009ACC5E /* WMPlaceInfoEditViewController.xib */; };
 		5247761817B9807F00A81E88 /* WMDetailImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5247761717B9807F00A81E88 /* WMDetailImage.storyboard */; };
 		5247761B17B9809C00A81E88 /* WMDetailImgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247761A17B9809C00A81E88 /* WMDetailImgViewController.m */; };
 		5265D86C17F017E40066FCEC /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D86817F017E40066FCEC /* greenButton.png */; };
@@ -377,6 +384,18 @@
 		5244ECFC18652C8E009ACC5E /* signupHover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signupHover@2x.png"; sourceTree = "<group>"; };
 		5244ECFF18652CC1009ACC5E /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
 		5244ED0018652CC1009ACC5E /* signup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup@2x.png"; sourceTree = "<group>"; };
+		5244ED04186559D1009ACC5E /* WMPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlace.h; sourceTree = "<group>"; };
+		5244ED05186559D1009ACC5E /* WMPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlace.m; sourceTree = "<group>"; };
+		5244ED071865691A009ACC5E /* WMPlaceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlaceInfo.h; sourceTree = "<group>"; };
+		5244ED081865691A009ACC5E /* WMPlaceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlaceInfo.m; sourceTree = "<group>"; };
+		5244ED0A18664065009ACC5E /* WMPlaceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlaceItem.h; sourceTree = "<group>"; };
+		5244ED0B18664065009ACC5E /* WMPlaceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlaceItem.m; sourceTree = "<group>"; };
+		5244ED161867C382009ACC5E /* WMPlaceInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlaceInfoViewController.h; sourceTree = "<group>"; };
+		5244ED171867C382009ACC5E /* WMPlaceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlaceInfoViewController.m; sourceTree = "<group>"; };
+		5244ED191867C3CF009ACC5E /* WMPlaceInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMPlaceInfo.storyboard; sourceTree = "<group>"; };
+		5244ED1D1868E946009ACC5E /* WMPlaceInfoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlaceInfoEditViewController.h; sourceTree = "<group>"; };
+		5244ED1E1868E946009ACC5E /* WMPlaceInfoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlaceInfoEditViewController.m; sourceTree = "<group>"; };
+		5244ED1F1868E946009ACC5E /* WMPlaceInfoEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMPlaceInfoEditViewController.xib; sourceTree = "<group>"; };
 		5247761717B9807F00A81E88 /* WMDetailImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMDetailImage.storyboard; sourceTree = "<group>"; };
 		5247761917B9809C00A81E88 /* WMDetailImgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDetailImgViewController.h; sourceTree = "<group>"; };
 		5247761A17B9809C00A81E88 /* WMDetailImgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDetailImgViewController.m; sourceTree = "<group>"; };
@@ -551,6 +570,7 @@
 				528414CA1839A26100D4A237 /* AppIcon29x29@2x.png */,
 				528414C91839A23C00D4A237 /* AppIcon40x40@2x.png */,
 				528414C81839A21B00D4A237 /* AppIcon60x60@2x.png */,
+				5244ED03186559B6009ACC5E /* Places */,
 				526F1CBC18398355007110B1 /* derek */,
 				52ACDEBC1811C195000105BE /* Home Screen */,
 				520ADCDD17D18F40004DF55C /* Mocha Bear Food */,
@@ -757,6 +777,33 @@
 			name = Furniture;
 			sourceTree = "<group>";
 		};
+		5244ED03186559B6009ACC5E /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				5244ED04186559D1009ACC5E /* WMPlace.h */,
+				5244ED05186559D1009ACC5E /* WMPlace.m */,
+				5244ED0D1867C230009ACC5E /* Place Info */,
+			);
+			name = Places;
+			sourceTree = "<group>";
+		};
+		5244ED0D1867C230009ACC5E /* Place Info */ = {
+			isa = PBXGroup;
+			children = (
+				5244ED161867C382009ACC5E /* WMPlaceInfoViewController.h */,
+				5244ED171867C382009ACC5E /* WMPlaceInfoViewController.m */,
+				5244ED191867C3CF009ACC5E /* WMPlaceInfo.storyboard */,
+				5244ED1D1868E946009ACC5E /* WMPlaceInfoEditViewController.h */,
+				5244ED1E1868E946009ACC5E /* WMPlaceInfoEditViewController.m */,
+				5244ED1F1868E946009ACC5E /* WMPlaceInfoEditViewController.xib */,
+				5244ED071865691A009ACC5E /* WMPlaceInfo.h */,
+				5244ED081865691A009ACC5E /* WMPlaceInfo.m */,
+				5244ED0A18664065009ACC5E /* WMPlaceItem.h */,
+				5244ED0B18664065009ACC5E /* WMPlaceItem.m */,
+			);
+			name = "Place Info";
+			sourceTree = "<group>";
+		};
 		526F1CBC18398355007110B1 /* derek */ = {
 			isa = PBXGroup;
 			children = (
@@ -828,7 +875,6 @@
 				52ACDEC31811C430000105BE /* Market Classes */,
 				52A269D3178A09B3002AC9B7 /* WMMarketPlaceHomeViewController.m */,
 				520ADCDB17D17752004DF55C /* WMMarketPlaceHome.storyboard */,
-				52ACDEC21811C3FC000105BE /* FOR SALE */,
 				52B5845917B1BEDF00AA8457 /* Services */,
 				52FE99E617A789A400E926F4 /* List (Sell) */,
 				52047224178B5A3F00BF5A0F /* Images */,
@@ -907,13 +953,6 @@
 			);
 			name = "WM Classes";
 			path = ..;
-			sourceTree = "<group>";
-		};
-		52ACDEC21811C3FC000105BE /* FOR SALE */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "FOR SALE";
 			sourceTree = "<group>";
 		};
 		52ACDEC31811C430000105BE /* Market Classes */ = {
@@ -1151,6 +1190,7 @@
 				52047231178CA5C300BF5A0F /* WMFurnitureCell.xib in Resources */,
 				52047236178CFDFB00BF5A0F /* navigationbar.png in Resources */,
 				52047242178E231300BF5A0F /* plainBack3.png in Resources */,
+				5244ED1A1867C3CF009ACC5E /* WMPlaceInfo.storyboard in Resources */,
 				5204724C178F6E9300BF5A0F /* WMGeneralDescriptionViewController.xib in Resources */,
 				5233CB8F179CDED400D9F380 /* WMDetailImageViewController.xib in Resources */,
 				52973DAB17A0D7FA00C07A17 /* home.png in Resources */,
@@ -1185,6 +1225,7 @@
 				5224ED7217BAD611005199A1 /* volleyball.png in Resources */,
 				5298DCCA17BB39C3004E3575 /* book.png in Resources */,
 				5298DCCC17BB3A9D004E3575 /* book2.png in Resources */,
+				5244ED211868E946009ACC5E /* WMPlaceInfoEditViewController.xib in Resources */,
 				529CCA8717BC5828000E5CF0 /* clubs.plist in Resources */,
 				529CCA8917BD6ADE000E5CF0 /* WMClubForm.storyboard in Resources */,
 				529CCA9217BF6929000E5CF0 /* donkey.png in Resources */,
@@ -1286,9 +1327,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5244ED0C18664065009ACC5E /* WMPlaceItem.m in Sources */,
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
 				09ABC08213A1D52D009C3FCF /* WhiteMochaUPAppDelegate.m in Sources */,
 				52B0A3FC1785EE670008448E /* WMRegisterViewController.m in Sources */,
+				5244ED091865691A009ACC5E /* WMPlaceInfo.m in Sources */,
 				526F1CE61839895F007110B1 /* WMCourseAddGradeViewController.m in Sources */,
 				526F1CD018398390007110B1 /* WMSemesterAddFormViewController.m in Sources */,
 				52A269D4178A09B3002AC9B7 /* WMMarketPlaceHomeViewController.m in Sources */,
@@ -1304,6 +1347,7 @@
 				52047234178CB0F500BF5A0F /* WMFurnitureCell.m in Sources */,
 				52047247178E792700BF5A0F /* WMGeneralDetailViewController.m in Sources */,
 				5204724B178F6E9300BF5A0F /* WMGeneralDescriptionViewController.m in Sources */,
+				5244ED201868E946009ACC5E /* WMPlaceInfoEditViewController.m in Sources */,
 				528D97AC180D1B19008897C6 /* WMNavigationBar.m in Sources */,
 				5297EE9618386FFE008A69FA /* WMAddPollQuestionViewController.m in Sources */,
 				5233CB8E179CDED400D9F380 /* WMDetailImageViewController.m in Sources */,
@@ -1325,6 +1369,7 @@
 				52FE99FE17AA223B00E926F4 /* WMTextbookTextCell.m in Sources */,
 				52FE9A0417AC2E6200E926F4 /* WMTextbookListingsViewController.m in Sources */,
 				52FE9A0817AC54E800E926F4 /* WMOtherListingsViewController.m in Sources */,
+				5244ED181867C382009ACC5E /* WMPlaceInfoViewController.m in Sources */,
 				526F1CD118398390007110B1 /* WMSemesterViewController.m in Sources */,
 				526F1CDD183983E8007110B1 /* WMAddSyllabusFormViewController.m in Sources */,
 				52FE9A0C17AC780700E926F4 /* WMHousingCell.m in Sources */,
@@ -1343,6 +1388,7 @@
 				520A577717C210D9004B0A75 /* WMAddEventFormViewController.m in Sources */,
 				520A577A17C2997E004B0A75 /* WMConstants.m in Sources */,
 				520A578117C30C7A004B0A75 /* WMEventDetailViewController.m in Sources */,
+				5244ED06186559D1009ACC5E /* WMPlace.m in Sources */,
 				520ADBF517C5B845004DF55C /* WMGeneralDViewController.m in Sources */,
 				526F1CE0183983ED007110B1 /* Grades.m in Sources */,
 				520ADC0917C5FF1C004DF55C /* WMCustomLoginViewController.m in Sources */,
