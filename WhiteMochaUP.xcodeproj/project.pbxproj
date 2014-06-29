@@ -134,6 +134,7 @@
 		5224ED6E17B9C37B005199A1 /* WMEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5224ED6D17B9C37B005199A1 /* WMEventCell.m */; };
 		5224ED7017BAAD89005199A1 /* classic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5224ED6F17BAAD88005199A1 /* classic.png */; };
 		5224ED7217BAD611005199A1 /* volleyball.png in Resources */ = {isa = PBXBuildFile; fileRef = 5224ED7117BAD610005199A1 /* volleyball.png */; };
+		5229B0551960D30900B95A0B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5229B0541960D30900B95A0B /* Parse.framework */; };
 		5233CB8E179CDED400D9F380 /* WMDetailImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5233CB8C179CDED400D9F380 /* WMDetailImageViewController.m */; };
 		5233CB8F179CDED400D9F380 /* WMDetailImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233CB8D179CDED400D9F380 /* WMDetailImageViewController.xib */; };
 		5233CB92179E397700D9F380 /* WMWhiteGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5233CB91179E397700D9F380 /* WMWhiteGradient.m */; };
@@ -171,7 +172,6 @@
 		5265D87617F019A20066FCEC /* tanButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D87217F019A20066FCEC /* tanButtonHighlight.png */; };
 		5265D87717F019A20066FCEC /* tanButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D87317F019A20066FCEC /* tanButtonHighlight@2x.png */; };
 		5265D87A17F65BD20066FCEC /* WMWebLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5265D87917F65BD20066FCEC /* WMWebLibViewController.m */; };
-		526F1CB918397EC4007110B1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526F1CB818397EC4007110B1 /* Parse.framework */; };
 		526F1CCB18398390007110B1 /* WMCourseAddFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CBE18398390007110B1 /* WMCourseAddFormViewController.m */; };
 		526F1CCD18398390007110B1 /* WMCourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CC218398390007110B1 /* WMCourseDetailViewController.m */; };
 		526F1CCE18398390007110B1 /* WMCourseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 526F1CC418398390007110B1 /* WMCourseObject.m */; };
@@ -450,6 +450,7 @@
 		5224ED6D17B9C37B005199A1 /* WMEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMEventCell.m; sourceTree = "<group>"; };
 		5224ED6F17BAAD88005199A1 /* classic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classic.png; sourceTree = "<group>"; };
 		5224ED7117BAD610005199A1 /* volleyball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volleyball.png; sourceTree = "<group>"; };
+		5229B0541960D30900B95A0B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5233CB8B179CDED400D9F380 /* WMDetailImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDetailImageViewController.h; sourceTree = "<group>"; };
 		5233CB8C179CDED400D9F380 /* WMDetailImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDetailImageViewController.m; sourceTree = "<group>"; };
 		5233CB8D179CDED400D9F380 /* WMDetailImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMDetailImageViewController.xib; sourceTree = "<group>"; };
@@ -500,7 +501,6 @@
 		5265D87317F019A20066FCEC /* tanButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tanButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		5265D87817F65BD20066FCEC /* WMWebLibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMWebLibViewController.h; sourceTree = "<group>"; };
 		5265D87917F65BD20066FCEC /* WMWebLibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMWebLibViewController.m; sourceTree = "<group>"; };
-		526F1CB818397EC4007110B1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		526F1CBD18398390007110B1 /* WMCourseAddFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseAddFormViewController.h; sourceTree = "<group>"; };
 		526F1CBE18398390007110B1 /* WMCourseAddFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCourseAddFormViewController.m; sourceTree = "<group>"; };
 		526F1CC118398390007110B1 /* WMCourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCourseDetailViewController.h; sourceTree = "<group>"; };
@@ -689,7 +689,7 @@
 				52B1AB761797D90A008C4326 /* MessageUI.framework in Frameworks */,
 				DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */,
 				4998650515BF305000803E05 /* StoreKit.framework in Frameworks */,
-				526F1CB918397EC4007110B1 /* Parse.framework in Frameworks */,
+				5229B0551960D30900B95A0B /* Parse.framework in Frameworks */,
 				743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */,
 				2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */,
 				099CCEAD13F9E3760039A464 /* libz.1.1.3.dylib in Frameworks */,
@@ -738,7 +738,7 @@
 		09ABC07013A1D52D009C3FCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				526F1CB818397EC4007110B1 /* Parse.framework */,
+				5229B0541960D30900B95A0B /* Parse.framework */,
 				520ADC7A17CC2C73004DF55C /* CoreData.framework */,
 				52B1AB751797D90A008C4326 /* MessageUI.framework */,
 				6372FF571613CC47002132AF /* AdSupport.framework */,
@@ -1834,6 +1834,7 @@
 					"$(SRCROOT)",
 					/Users/john/Desktop,
 					/Users/john/Dropbox/WhiteMochaUP,
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1863,6 +1864,7 @@
 					"$(SRCROOT)",
 					/Users/john/Desktop,
 					/Users/john/Dropbox/WhiteMochaUP,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseStarterProject/WhiteMochaUP-Prefix.pch";
