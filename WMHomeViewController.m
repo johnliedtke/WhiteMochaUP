@@ -14,6 +14,7 @@
 #import "WMWebViewController.h"
 #import "WMNavigationController.h"
 #import "WMAddPollQuestionViewController.h"
+#import "WMPollViewController.h"
 
 @interface WMHomeViewController ()
 
@@ -25,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    PURPLEBACK
+    //PURPLEBACK
     
     // DateLabel
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -111,10 +112,11 @@
 
 -(void)addNewPoll
 {
-    UIStoryboard *storyPoll = [UIStoryboard storyboardWithName:@"WMAddPoll" bundle:nil];
-    WMAddPollQuestionViewController *addPollVC = [storyPoll instantiateViewControllerWithIdentifier:@"WMAddPoll"];
-    [[self navigationController] pushViewController:addPollVC animated:YES];
-    
+    //    UIStoryboard *storyPoll = [UIStoryboard storyboardWithName:@"WMAddPoll" bundle:nil];
+//    WMAddPollQuestionViewController *addPollVC = [storyPoll instantiateViewControllerWithIdentifier:@"WMAddPoll"];
+//    [[self navigationController] pushViewController:addPollVC animated:YES];
+    WMPollViewController *pollViewController = [[WMPollViewController alloc] init];
+    [[self navigationController] pushViewController:pollViewController animated:YES];
 }
 
 // Enable/Diable Vote Buttons
@@ -151,7 +153,7 @@
 {
     refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(retrieveResults) forControlEvents:UIControlEventValueChanged];
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
+    //refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     [self setRefreshControl:refreshControl];
     
 }
@@ -233,11 +235,12 @@
     aResultButton = [UIButton buttonWithType:UIButtonTypeCustom];
     float aRounded = [aVotes doubleValue] / totalVotes * 100;
     //[aResultButton setTitle:[NSString stringWithFormat:@"%.0f%%", roundf(aRounded)]forState:UIControlStateNormal];
+    float extraWidth = ((maxVotes /totalVotes) * (1.0/3.0) * multFactor);
     float aWidth;
     if ([aVotes doubleValue] == maxVotes) {
         aWidth = multFactor;
     } else {
-         aWidth = ([aVotes doubleValue] / totalVotes) * multFactor + 10;
+         aWidth = (([aVotes doubleValue] / totalVotes) * multFactor) + extraWidth;
     }
     aPercentLabel = [[UILabel alloc] initWithFrame:CGRectMake(xSpace+aWidth+5, 41, 35, 21)];
     [aPercentLabel setFont:[UIFont boldSystemFontOfSize:13]];
@@ -258,7 +261,7 @@
     if ([bVotes doubleValue] == maxVotes) {
         bWidth = multFactor;
     } else {
-        bWidth = ([bVotes doubleValue] / totalVotes) * multFactor + 10;
+        bWidth = ([bVotes doubleValue] / totalVotes) * multFactor + extraWidth;
     }
     bPercentLabel = [[UILabel alloc] initWithFrame:CGRectMake(xSpace+bWidth+5, 82, 35, 21)];
     [bPercentLabel setFont:[UIFont boldSystemFontOfSize:13]];
@@ -279,7 +282,7 @@
     if ([cVotes doubleValue] == maxVotes) {
         cWidth = multFactor;
     } else {
-        cWidth = ([cVotes doubleValue] / totalVotes) * multFactor + 10;
+        cWidth = ([cVotes doubleValue] / totalVotes) * multFactor + extraWidth;
     }
     cPercentLabel = [[UILabel alloc] initWithFrame:CGRectMake(xSpace+cWidth+5, 124, 35, 21)];
     [cPercentLabel setFont:[UIFont boldSystemFontOfSize:13]];
@@ -301,7 +304,7 @@
     if ([dVotes doubleValue] == maxVotes) {
         dWidth = multFactor;
     } else {
-        dWidth = ([dVotes doubleValue] / totalVotes) * multFactor + 10;
+        dWidth = ([dVotes doubleValue] / totalVotes) * multFactor + extraWidth;
     }
     dPercentLabel = [[UILabel alloc] initWithFrame:CGRectMake(xSpace+dWidth+5, 168, 35, 21)];
     [dPercentLabel setFont:[UIFont boldSystemFontOfSize:13]];
@@ -364,8 +367,8 @@
 
         
         // Assign our sign up controller to be displayed from the login controller
-        [logInViewController setSignUpController:loginNavigation];
-        [customLogin setSignUpController:loginNavigation];
+        [logInViewController setSignUpController:(PFSignUpViewController *)loginNavigation];
+        [customLogin setSignUpController:(PFSignUpViewController *)loginNavigation];
         
         // Present the log in view controller
         [self presentViewController:customLogin animated:YES completion:NULL];

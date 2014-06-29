@@ -10,6 +10,7 @@
 #import "WMPlaceInfo.h"
 #import "WMPlaceItem.h"
 #import "WMNavigationController.h"
+#import "WMWebViewController.h"
 
 @interface WMPlaceInfoViewController ()
 
@@ -22,6 +23,10 @@
 {
     [super viewDidLoad];
     _doneLoading = false;
+    _canEdit = false;
+    
+    // Add an edit button
+    [self doneEditing];
     
     PFQuery *query = [PFQuery queryWithClassName:@"WMPlaceInfo"];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
@@ -40,6 +45,23 @@
         
         }
     }];
+}
+
+// Edit stuff
+- (void)allowEditing
+{
+    _canEdit = true;
+    _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing)];
+    [[self navigationItem] setRightBarButtonItem:_doneButton];
+}
+
+// Done editing
+- (void)doneEditing
+{
+    _canEdit = false;
+    _editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(allowEditing)];
+    [[self navigationItem] setRightBarButtonItem:_editButton];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,14 +101,62 @@
     return cell;
 }
 
+//// Turn editing on/off
+//- (NSIndexPath *)tableView:(UITableView *)tv willSelectRowAtIndexPath:(NSIndexPath *)path
+//{
+//    if (_canEdit)
+//        return path;
+//    else
+//        return nil;
+//}
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    WMPlaceInfoEditViewController *placeInfoEditViewController = [[WMPlaceInfoEditViewController alloc] init];
-    WMNavigationController *placeInfoEdittNavigation = [[WMNavigationController alloc] initWithRootViewController:placeInfoEditViewController];
     WMPlaceItem *placeItem = [[[self placeInfo] infoItems] objectAtIndex:[indexPath row]];
-    [placeInfoEditViewController setPlaceItem:placeItem];
-    [self presentViewController:placeInfoEdittNavigation animated:YES completion:nil];
+   // NSString *meow = [[[self placeInfo] website] itemTitle];
+    if (_canEdit) {
+        WMPlaceInfoEditViewController *placeInfoEditViewController = [[WMPlaceInfoEditViewController alloc] init];
+        WMNavigationController *placeInfoEdittNavigation = [[WMNavigationController alloc] initWithRootViewController:placeInfoEditViewController];
+                [placeInfoEditViewController setPlaceItem:placeItem];
+        [placeInfoEditViewController setDelegate:self];
+        [self setUpadteIndex:indexPath];
+        [self presentViewController:placeInfoEdittNavigation animated:YES completion:nil];
+    } else if ([[placeItem itemTitle] isEqualToString:[[[self placeInfo] website] itemTitle]]) {
+        // Constructa URL wit the link string of the item
+        NSURL *url = [NSURL URLWithString:[[[self placeInfo] website] itemContents]];
+        
+        // Contruct a request object with that URL
+        NSURLRequest *req = [NSURLRequest requestWithURL:url];
+        
+        // Load the request inot the web view
+        [_webViewController setSizeScreen:5.0];
+        [[_webViewController webView] loadRequest:req];
+        
+        // Set zoom
+        [[_webViewController webView] stringByEvaluatingJavaScriptFromString:@"document. body.style.zoom = 5.0;"];
+        
+        // Set the title of the web view controller's navigation item
+        [[_webViewController navigationItem] setTitle:@"Events"];
+        
+        // Push the web view controller onto the navigation stack - this implicitly
+        // creates the web view controller's view the first through
+        
+        [[self navigationController] pushViewController:_webViewController animated:YES];
+
+            
+    }
+}
+
+- (void)doneEditingItem:(WMPlaceItem *)newItem
+{
+    if (newItem) {
+        WMPlaceItem *placeItem = [[[self placeInfo] infoItems] objectAtIndex:[[self upadteIndex] row]];
+        [placeItem setItemContents:[newItem itemContents]];
+        [[self tableView] reloadData];
+
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

@@ -9,6 +9,7 @@
 #import "WMFoodSectionViewController.h"
 #import "WMConstants.h"
 #import "WMPlaceInfoViewController.h"
+#import "WMOnCampusFoodViewController.h"
 
 @interface WMFoodSectionViewController ()
 
@@ -24,7 +25,7 @@
     [self setupRefreshControl];
     [self updateHours];
     
-    
+    PURPLEBACK
 
     
     UIBarButtonItem *placeInfo = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(placeInfo)];
@@ -33,9 +34,12 @@
 
 - (void)placeInfo
 {
-    UIStoryboard *placeInfoStory = [UIStoryboard storyboardWithName:@"WMPlaceInfo" bundle:nil];
-    WMPlaceInfoViewController *placeInfoViewController = [placeInfoStory instantiateViewControllerWithIdentifier:@"WMPlaceInfo"];
-    [[self navigationController] pushViewController:placeInfoViewController animated:YES];
+    WMOnCampusFoodViewController *onCampusFoodController = [[WMOnCampusFoodViewController alloc] init];
+    
+    [[self navigationController] pushViewController:onCampusFoodController animated:YES];
+//    UIStoryboard *placeInfoStory = [UIStoryboard storyboardWithName:@"WMPlaceInfo" bundle:nil];
+//    WMPlaceInfoViewController *placeInfoViewController = [placeInfoStory instantiateViewControllerWithIdentifier:@"WMPlaceInfo"];
+//    [[self navigationController] pushViewController:placeInfoViewController animated:YES];
 }
 
 -(void)updateHours

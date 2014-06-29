@@ -51,6 +51,7 @@
     // Cell shit
     [eventsTable registerNib:[UINib nibWithNibName:@"WMEventCell" bundle:nil]
       forCellReuseIdentifier:@"WMEventCell"];
+
     
     // Segmented thingy
     [eventsSwitcher addTarget:self
@@ -177,17 +178,37 @@
         } else if ([itemTitle rangeOfString:@"volleyball" options:NSCaseInsensitiveSearch].location != NSNotFound) {
             image = [UIImage imageNamed:@"volleyball.png"];
         } else if ([[item category] isEqualToString:ACADEMICS]) {
-            image = [UIImage imageNamed:@"book2.png"];
+            image = [UIImage imageNamed:@"school-50.png"];
         } else if ([itemTitle rangeOfString:@"basketball" options:NSCaseInsensitiveSearch].location != NSNotFound) {
             image = [UIImage imageNamed:@"basketall.png"];
         } else if ([itemTitle rangeOfString:@"intramural" options:NSCaseInsensitiveSearch].location != NSNotFound) {
-            image = [UIImage imageNamed:@"intramural.png"];
+            image = [UIImage imageNamed:@"trophy-50.png"];
         } else if ([itemTitle rangeOfString:@"robot" options:NSCaseInsensitiveSearch].location != NSNotFound) {
-            image = [UIImage imageNamed:@"robot.png"];
+            image = [UIImage imageNamed:@"robot-50.png"];
         } else if ([itemTitle rangeOfString:@"movie" options:NSCaseInsensitiveSearch].location != NSNotFound) {
-            image = [UIImage imageNamed:@"movie.png"];
+            image = [UIImage imageNamed:@"movie-50.png"];
+        } else if ([itemTitle rangeOfString:@"mass" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"cross-50.png"];
+        } else if ([itemTitle rangeOfString:@"ecology" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"leaf-50.png"];
+        } else if ([itemTitle rangeOfString:@"ACM" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"cat-50.png"];
+        } else if ([itemTitle rangeOfString:@"IEEE" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"computer-50.png"];
+        } else if ([itemTitle rangeOfString:@"dance" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"cat-50.png"];
+        } else if ([itemTitle rangeOfString:@"tau" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"pi-50.png"];
+        } else if ([itemTitle rangeOfString:@"music" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"music-50.png"];
+        } else if ([itemTitle rangeOfString:@"fish" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"clown_fish-50.png"];
+        } else if ([itemTitle rangeOfString:@"sport" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"sports_mode-50.png"];
+        } else if ([itemTitle rangeOfString:@"international" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            image = [UIImage imageNamed:@"great_wall-50.png"];
         } else {
-            image = [UIImage imageNamed:@"wow.png"];
+            image = [UIImage imageNamed:@"calendar-50.png"];
         }
         
         
@@ -431,7 +452,7 @@
     
     
     
-
+    
     
     return cell;
 }

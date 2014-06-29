@@ -35,6 +35,7 @@
     
     // Make the text field pop up
     [_editTextField becomeFirstResponder];
+    [_editTextField setDelegate:self];
     
     // Set the edit field text
     [_editTextField setText:[[self placeItem] itemContents]];
@@ -43,9 +44,15 @@
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelEditing)];
     [[self navigationItem] setLeftBarButtonItem:cancelButton];
     
-    // Add the edit button
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(doneEditing)];
-    [[self navigationItem] setRightBarButtonItem:editButton];
+    // Add the done button
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing)];
+    [[self navigationItem] setRightBarButtonItem:doneButton];
+    
+    // Adjust the keyboard
+    if ([[[self placeItem] itemContents] rangeOfString:@"phone" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+        [_editTextField setKeyboardType:UIKeyboardTypeDecimalPad];
+    }
+    [_editTextField setReturnKeyType:UIReturnKeyDone];
 }
 
 #pragma mark Editing
@@ -65,6 +72,12 @@
     [_confirmationAlertView show];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self doneEditing];
+    return YES;
+}
+
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
@@ -73,7 +86,7 @@
             return;
         } else {
             // Do some checks on the input
-#pragma mark
+
             // Update the object
             [[self placeItem] setItemContents:[_editTextField text]];
             

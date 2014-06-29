@@ -24,6 +24,9 @@
     [self.tableView addGestureRecognizer:gestureRecognizer];
     gestureRecognizer.cancelsTouchesInView = NO;
     
+    [self.navigationController.toolbar addSubview:[[[UINib nibWithNibName:@"WMCommentBar" bundle:nil] instantiateWithOwner:self options:nil] objectAtIndex:0]];
+    [self.navigationController setToolbarHidden:NO animated:YES];
+    
     // Title
     [self setTitle:@"Add Event"];
     

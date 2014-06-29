@@ -7,6 +7,7 @@
 //
 
 #import "WMConstants.h"
+#import "UIColor+WMColors.h"
 
 @implementation WMConstants
 

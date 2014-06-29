@@ -16,6 +16,13 @@
 #import "WMPlace.h"
 #import "WMPlaceInfo.h"
 #import "WMPlaceItem.h"
+#import "WMOnCampusFood.h"
+#import "WMOnCampusFoodHours.h"
+#import "WMPollViewController.h"
+#import "WMPoll.h"
+#import "WMPollAnswer.h"
+#import "WMComment.h"
+
 
 @implementation WhiteMochaUPAppDelegate
 
@@ -34,7 +41,12 @@
     [WMPlace registerSubclass];
     [WMPlaceInfo registerSubclass];
     [WMPlaceItem registerSubclass];
-
+    [WMOnCampusFood registerSubclass];
+    [WMOnCampusFoodHours registerSubclass];
+    [WMPoll registerSubclass];
+    [WMPollAnswer registerSubclass];
+    [WMComment registerSubclass];
+    
 
     
     [Parse setApplicationId:@"FiAFviJalDgCeyLR5xLxju31oDiUEPrn0QN2tjST"
@@ -48,13 +60,32 @@
     //[PFUser enableAutomaticUser];
 
     
+
+    
+    
+    
+    
+    
+    //WMComment *comment = [[WMComment alloc] initWithComment:@"test" author:@"john"];
+    //[comment saveInBackground];
+    
     PFACL *defaultACL = [PFACL ACL];
 
     // If you would like all objects to be private by default, remove this line.
     [defaultACL setPublicReadAccess:YES];
     
     // Navigation bar
-    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Museo Slab" size:22],UITextAttributeFont, [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,nil]];
+//    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Museo Slab" size:22],UITextAttributeFont, [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,nil]];
+    
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:
+  @{NSFontAttributeName: [UIFont fontWithName:@"Museo Slab" size:22.0],
+    NSForegroundColorAttributeName : [UIColor whiteColor],
+    NSStrokeColorAttributeName : [UIColor redColor],
+    NSStrokeWidthAttributeName : @3}];
+    
+    
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
 //    // Admin Roles
@@ -87,63 +118,96 @@
 //        }
 //    }];
     
-    // Create marketplace
+    /*
+     * Market Place
+     *
+     */
     UIStoryboard *marketStory = [UIStoryboard storyboardWithName:@"WMMarketPlaceHome" bundle:nil];
     WMMarketPlaceHomeViewController *marketplaceHomeController= [marketStory instantiateViewControllerWithIdentifier:@"WMMarketPlaceHome"];
-    UITabBarItem *market = [[UITabBarItem alloc] initWithTitle:@"Market" image:[UIImage imageNamed:@"market.png"] tag:1];
+    UITabBarItem *market = [[UITabBarItem alloc] initWithTitle:@"Market" image:[[UIImage imageNamed:@"market_new.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] tag:1];
+    [market setSelectedImage:[[UIImage imageNamed:@"market_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [market setTitlePositionAdjustment:UIOffsetMake(2.0, 0.0)];
+
     [marketplaceHomeController setTabBarItem:market];
     
     // Push marketplace onto a navigation controller
     WMNavigationController *marketNavigation = [[WMNavigationController alloc] initWithRootViewController:marketplaceHomeController];
     
+    
+    
+    /*
+     * Events
+     *
+     */
     // Create Events Section
     WMEventsViewController *evc = [[WMEventsViewController alloc] init];
-    UITabBarItem *events = [[UITabBarItem alloc] initWithTitle:@"Events" image:[UIImage imageNamed:@"events.png"] tag:2];
-    [evc setTabBarItem:events];
+    //UITabBarItem *events = [[UITabBarItem alloc] initWithTitle:@"Events" image:[UIImage imageNamed:@"middle_new.png"] tag:2];
+    UITabBarItem *upEvents = [[UITabBarItem alloc] initWithTitle:@"Events" image:[[UIImage imageNamed:@"events_final.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] tag:2];
+    [upEvents setSelectedImage:[[UIImage imageNamed:@"events_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [upEvents setTitlePositionAdjustment:UIOffsetMake(1.0, 0.0)];
+    [evc setTabBarItem:upEvents];
+    
+    
+    
     WMWebViewController *wvc = [[WMWebViewController alloc] init];
     [evc setWebViewController:wvc];
     WMNavigationController *eventsNavigation = [[WMNavigationController alloc] initWithRootViewController:evc];
-
     
+    /*
+     * Class Navigation
+     *
+     */
     // Create class crap
     WMSemesterViewController *classes = [[WMSemesterViewController alloc] initWithStyle:UITableViewStyleGrouped];
     [classes setManagedObjectContext:self.managedObjectContext];
     [classes setTitle:@"Class Manager"];
     //WMEventsViewController *classes = [[WMEventsViewController alloc] init];
     WMNavigationController *classNavigation = [[WMNavigationController alloc] initWithRootViewController:classes];
-
-   
-    UITabBarItem *eventsItem = [[UITabBarItem alloc] initWithTitle:@"Classes" image:[UIImage imageNamed:@"class.png"] tag:3];
-    [classNavigation setTabBarItem:eventsItem];
     
+    UITabBarItem *classItem = [[UITabBarItem alloc] initWithTitle:@"Classes" image:[[UIImage imageNamed:@"class_new.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"class_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [classItem setTag:3];
+    [classNavigation setTabBarItem:classItem];
+    
+    
+    /*
+     * Food Navigation
+     *
+     */
     // Create food section
     UIStoryboard *storyFood = [UIStoryboard storyboardWithName:@"WMFoodSection" bundle:nil];
     WMFoodSectionViewController *food = [storyFood instantiateViewControllerWithIdentifier:@"WMFoodSection"];
 
-    UITabBarItem *foodItem = [[UITabBarItem alloc] initWithTitle:@"Food" image:[UIImage imageNamed:@"food.png"] tag:5];
+    UITabBarItem *foodItem = [[UITabBarItem alloc] initWithTitle:@"Food" image:[[UIImage imageNamed:@"food_new.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] tag:5];
     [food setTabBarItem:foodItem];
+    [foodItem setSelectedImage:[[UIImage imageNamed:@"food_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
     WMNavigationController *foodNavigation = [[WMNavigationController alloc] initWithRootViewController:food];
 
     
-    // Home Navigation
-    UIStoryboard *story = [UIStoryboard storyboardWithName:@"WMHome" bundle:nil];
-    WMHomeViewController *homeViewController = [story instantiateViewControllerWithIdentifier:@"WMHome"];
-    UITabBarItem *homeItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"home.png"] tag:0];
-    [homeViewController setTabBarItem:homeItem];
-    WMNavigationController *homeNavigation = [[WMNavigationController alloc] initWithRootViewController:homeViewController];
+    /*
+     * Home navigation
+     *
+     */
+    WMPollViewController *pollVC = [[WMPollViewController alloc] init];
+    
+//    UIStoryboard *story = [UIStoryboard storyboardWithName:@"WMHome" bundle:nil];
+//    WMHomeViewController *homeViewController = [story instantiateViewControllerWithIdentifier:@"WMHome"];
+    UITabBarItem *homeItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:[[UIImage imageNamed:@"home_new.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] tag:0];
+    [homeItem setSelectedImage:[[UIImage imageNamed:@"home_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    //[homeViewController setTabBarItem:homeItem];
+    [pollVC setTabBarItem:homeItem];
+    WMNavigationController *homeNavigation = [[WMNavigationController alloc] initWithRootViewController:pollVC];
     
     
 
     // Create the navigation for the app
     tabBarController = [[UITabBarController alloc] init];
-    UIColor *grayColor = [[UIColor alloc] initWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0];
 
     [[tabBarController tabBar] setTranslucent:NO];
-    [[tabBarController tabBar] setBarTintColor:grayColor];
+    [[tabBarController tabBar] setBarTintColor:[UIColor whiteColor]];
     [[tabBarController tabBar] setSelectedImageTintColor:PURPLECOLOR];
-    [[tabBarController tabBar] setBarStyle:UIBarStyleBlack];
-    [[tabBarController tabBar] setTintColor:[UIColor whiteColor]];
+    [[tabBarController tabBar] setBarStyle:UIBarStyleDefault];
+    [[tabBarController tabBar] setTintColor:PURPLECOLOR];
 
     
     // View Controllers Array

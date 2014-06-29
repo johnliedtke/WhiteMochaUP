@@ -14,7 +14,7 @@
 
 @end
 
-@interface WMPlaceInfoEditViewController : UIViewController <UIAlertViewDelegate>
+@interface WMPlaceInfoEditViewController : UIViewController <UIAlertViewDelegate, UITextFieldDelegate>
 {
     @private
     IBOutlet UITextField *_editTextField;

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" rowHeight="201" id="bS8-S0-ZDU" customClass="WMCommentTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bS8-S0-ZDU" id="qy2-gT-goe">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pfd-e1-zJb">
+                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="QKL-sa-AR3"/>
+                            <constraint firstAttribute="width" constant="40" id="zLL-dc-FGy"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2u-84-ZPJ">
+                        <rect key="frame" x="60" y="28" width="217" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1 hour ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEl-ed-TQS">
+                        <rect key="frame" x="60" y="43" width="217" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.52549019610000003" green="0.36078431370000003" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="John Liedtke" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyQ-dg-2Uk">
+                        <rect key="frame" x="60" y="7" width="217" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="y2u-84-ZPJ" firstAttribute="top" secondItem="yyQ-dg-2Uk" secondAttribute="bottom" id="7F2-0E-obH"/>
+                    <constraint firstItem="yyQ-dg-2Uk" firstAttribute="top" secondItem="qy2-gT-goe" secondAttribute="top" constant="7" id="9ju-Uf-bru"/>
+                    <constraint firstItem="CEl-ed-TQS" firstAttribute="top" secondItem="y2u-84-ZPJ" secondAttribute="bottom" id="Eqj-pk-VGB"/>
+                    <constraint firstItem="Pfd-e1-zJb" firstAttribute="top" secondItem="qy2-gT-goe" secondAttribute="top" constant="10" id="ZNo-5B-bM6"/>
+                    <constraint firstItem="CEl-ed-TQS" firstAttribute="top" secondItem="y2u-84-ZPJ" secondAttribute="bottom" id="m6e-92-4P1"/>
+                    <constraint firstItem="y2u-84-ZPJ" firstAttribute="top" secondItem="yyQ-dg-2Uk" secondAttribute="bottom" id="pdO-AS-d5U"/>
+                    <constraint firstItem="Pfd-e1-zJb" firstAttribute="leading" secondItem="qy2-gT-goe" secondAttribute="leading" constant="10" id="yj7-bU-UIC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="authorLabel" destination="yyQ-dg-2Uk" id="fNa-zY-b2B"/>
+                <outlet property="commentImageView" destination="Pfd-e1-zJb" id="F6R-lC-S14"/>
+                <outlet property="commentTextView" destination="y2u-84-ZPJ" id="oHN-k2-udD"/>
+            </connections>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" rowHeight="201" id="TeG-Mc-23d" customClass="WMCommentTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TeG-Mc-23d" id="Kit-B5-tJV">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vEP-0a-zBb">
+                        <rect key="frame" x="10" y="10" width="45" height="45"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="f7x-gQ-cTz"/>
+                            <constraint firstAttribute="width" constant="45" id="xIn-tG-D1G"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vnz-3r-Jss">
+                        <rect key="frame" x="65" y="27" width="217" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 hour ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXV-ja-tvK">
+                        <rect key="frame" x="65" y="45" width="217" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Liedtke" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5v-5U-xCn">
+                        <rect key="frame" x="65" y="7" width="217" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vEP-0a-zBb" firstAttribute="leading" secondItem="Kit-B5-tJV" secondAttribute="leading" constant="10" id="8bf-us-q3m"/>
+                    <constraint firstItem="vnz-3r-Jss" firstAttribute="leading" secondItem="vEP-0a-zBb" secondAttribute="trailing" constant="10" id="DAM-Kq-aSL"/>
+                    <constraint firstItem="jXV-ja-tvK" firstAttribute="top" secondItem="vnz-3r-Jss" secondAttribute="bottom" constant="3" id="GPr-6C-loy"/>
+                    <constraint firstItem="vEP-0a-zBb" firstAttribute="top" secondItem="Kit-B5-tJV" secondAttribute="top" constant="10" id="JVR-hB-rts"/>
+                    <constraint firstAttribute="trailing" secondItem="jXV-ja-tvK" secondAttribute="trailing" constant="18" id="Kto-5l-aVD"/>
+                    <constraint firstAttribute="trailing" secondItem="vnz-3r-Jss" secondAttribute="trailing" constant="18" id="Lk7-3o-06U"/>
+                    <constraint firstItem="vnz-3r-Jss" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Kit-B5-tJV" secondAttribute="top" constant="27" id="P0A-X7-xhc"/>
+                    <constraint firstItem="jXV-ja-tvK" firstAttribute="leading" secondItem="vEP-0a-zBb" secondAttribute="trailing" constant="10" id="TUF-B3-4Tz"/>
+                    <constraint firstItem="jXV-ja-tvK" firstAttribute="top" secondItem="vnz-3r-Jss" secondAttribute="bottom" constant="3" id="V8H-td-z8Q"/>
+                    <constraint firstItem="vnz-3r-Jss" firstAttribute="top" secondItem="Kit-B5-tJV" secondAttribute="top" constant="27" id="a3w-Qa-Ffc"/>
+                    <constraint firstAttribute="bottom" secondItem="jXV-ja-tvK" secondAttribute="bottom" constant="10" id="kOL-0o-3MS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="authorLabel" destination="n5v-5U-xCn" id="dex-Rd-HNk"/>
+                <outlet property="commentImageView" destination="vEP-0a-zBb" id="Fbz-Im-fEr"/>
+                <outlet property="commentTextView" destination="vnz-3r-Jss" id="Wlc-hq-yf9"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="BL7-jW-Gnw" customClass="WMCommentBar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-Hi-vTZ">
+                    <rect key="frame" x="10" y="6" width="250" height="32"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLi-t8-Cx2">
+                    <rect key="frame" x="268" y="5" width="47" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="47" id="Aqq-QR-Ut7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Post">
+                        <color key="titleColor" red="0.52549019610000003" green="0.36078431370000003" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="postButton:" destination="BL7-jW-Gnw" eventType="touchUpInside" id="BlG-Hu-SlY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cQ-kw-y6f" userLabel="Secret Button">
+                    <rect key="frame" x="10" y="0.0" width="250" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="textViewActivated:" destination="BL7-jW-Gnw" eventType="touchUpInside" id="eA5-gX-qp0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="KQm-Hi-vTZ" firstAttribute="leading" secondItem="BL7-jW-Gnw" secondAttribute="leading" constant="10" id="Ccq-bf-upB"/>
+                <constraint firstItem="KQm-Hi-vTZ" firstAttribute="bottom" secondItem="gLi-t8-Cx2" secondAttribute="bottom" constant="3" id="Fd8-14-wdN"/>
+                <constraint firstItem="1cQ-kw-y6f" firstAttribute="leading" secondItem="KQm-Hi-vTZ" secondAttribute="leading" id="L45-eJ-d2D"/>
+                <constraint firstItem="1cQ-kw-y6f" firstAttribute="centerY" secondItem="gLi-t8-Cx2" secondAttribute="centerY" id="Quq-61-Nmq"/>
+                <constraint firstAttribute="trailing" secondItem="gLi-t8-Cx2" secondAttribute="trailing" constant="5" id="RtB-rh-Tva"/>
+                <constraint firstItem="KQm-Hi-vTZ" firstAttribute="top" secondItem="gLi-t8-Cx2" secondAttribute="top" constant="1" id="U0n-lF-qvW"/>
+                <constraint firstItem="gLi-t8-Cx2" firstAttribute="leading" secondItem="KQm-Hi-vTZ" secondAttribute="trailing" constant="8" symbolic="YES" id="Zdg-Ev-JMU"/>
+                <constraint firstItem="1cQ-kw-y6f" firstAttribute="top" secondItem="BL7-jW-Gnw" secondAttribute="top" id="gRh-v5-gJv"/>
+                <constraint firstItem="gLi-t8-Cx2" firstAttribute="leading" secondItem="1cQ-kw-y6f" secondAttribute="trailing" constant="8" symbolic="YES" id="nGJ-Aq-I8g"/>
+                <constraint firstItem="gLi-t8-Cx2" firstAttribute="top" secondItem="BL7-jW-Gnw" secondAttribute="top" constant="5" id="unN-2x-yTp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="postButton" destination="gLi-t8-Cx2" id="d6d-Mr-x13"/>
+                <outlet property="textView" destination="KQm-Hi-vTZ" id="Ecw-gI-bHz"/>
+            </connections>
+        </view>
+    </objects>
+</document>

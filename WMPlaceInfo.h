@@ -45,7 +45,7 @@
 // Gots a tv?
 @property (nonatomic, strong) WMPlaceItem *tv;
 
-// The array that contains all of these bad boys
+// The array that contains all/Users/John/Dropbox/WhiteMochaUP/WMPlaceInfo.h of these bad boys
 @property (nonatomic, strong) NSArray *infoItems;
 
 
