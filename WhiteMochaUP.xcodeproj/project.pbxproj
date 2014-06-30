@@ -710,9 +710,6 @@
 			isa = PBXGroup;
 			children = (
 				5206181C19382A0E00EA8E21 /* Poll 2.0 */,
-				528414CA1839A26100D4A237 /* AppIcon29x29@2x.png */,
-				528414C91839A23C00D4A237 /* AppIcon40x40@2x.png */,
-				528414C81839A21B00D4A237 /* AppIcon60x60@2x.png */,
 				52A9E90E187A18850018D632 /* New Food */,
 				5244ED03186559B6009ACC5E /* Places */,
 				526F1CBC18398355007110B1 /* derek */,
@@ -902,7 +899,7 @@
 			name = "Mocha Bear Food";
 			sourceTree = "<group>";
 		};
-		52106BFA1960892E00F58BC8 /* Cells */ = {
+		52106BFA1960892E00F58BC8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				523967B51944022200364E86 /* WMAnswerLabelTableViewCell.h */,
@@ -915,7 +912,7 @@
 				529ED8831943CB3500649D46 /* WMPieChartTableViewCell.m */,
 				529ED8841943CB3500649D46 /* WMPieChartTableViewCell.xib */,
 			);
-			name = Cells;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		52106BFB1960894D00F58BC8 /* Views */ = {
@@ -1127,7 +1124,7 @@
 		529ED87E1943C38600649D46 /* Results */ = {
 			isa = PBXGroup;
 			children = (
-				52106BFA1960892E00F58BC8 /* Cells */,
+				52106BFA1960892E00F58BC8 /* Views */,
 				529ED87F1943C5A500649D46 /* WMPollResultsViewController.h */,
 				529ED8801943C5A500649D46 /* WMPollResultsViewController.m */,
 				523967BA1945164C00364E86 /* UIViewController+WMChangeTabItems.h */,
@@ -1331,6 +1328,9 @@
 		52B5847517B2C4E500AA8457 /* PrevNext */ = {
 			isa = PBXGroup;
 			children = (
+				528414CA1839A26100D4A237 /* AppIcon29x29@2x.png */,
+				528414C91839A23C00D4A237 /* AppIcon40x40@2x.png */,
+				528414C81839A21B00D4A237 /* AppIcon60x60@2x.png */,
 				52B5847617B2C52700AA8457 /* WMPrevNext.h */,
 				52B5847717B2C52700AA8457 /* WMPrevNext.m */,
 				52B5847317B2C44D00AA8457 /* WMPrevNext.xib */,

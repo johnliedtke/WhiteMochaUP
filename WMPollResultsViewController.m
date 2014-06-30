@@ -283,28 +283,21 @@ static const int COMMENTS_HEADER_HEIGHT = 45;
 {
     [self.pieChart reloadData];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.tableView.numberOfSections)] withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:COMMENTS_SECTION] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 - (void)handleRefresh
 {
-    [[WMPoll currentPollQuery] getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+    [PFCloud callFunctionInBackground:@"currentPoll" withParameters:@{}
+                                block:^(NSDictionary *pollInfo, NSError *error) {
         if (!error) {
-            self.poll = (WMPoll *)object;
-            [[WMComment fetchFiveComments:_poll] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                if (!error) {
-                    [self.refreshControl endRefreshing];
-                    [self updateUI];
-                    [self hasUserVoted];
-                    [self.comments removeAllObjects];
-                    [self.comments addObjectsFromArray:objects];
-                    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:COMMENTS_SECTION] withRowAnimation:UITableViewRowAnimationFade];
-                }
-            }];
-            [[WMComment countComments:_poll] countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
-                if (!error) {
-                    _commentCount = number;
-                }
-            }];
+            self.poll = pollInfo[@"poll"][0];
+            [self.comments removeAllObjects];
+            [self.comments addObjectsFromArray:pollInfo[@"comments"]];
+            _commentCount = [pollInfo[@"count"] integerValue];
+            [self.refreshControl endRefreshing];
+            [self updateUI];
+            [self hasUserVoted];
         }
     }];
 }
@@ -327,13 +320,15 @@ static const int COMMENTS_HEADER_HEIGHT = 45;
 
 - (void)showComments:(BOOL)showKeyboard
 {
-    WMCommentsViewController *commentsVC = [[WMCommentsViewController alloc] initWithParent:_poll];
-    [commentsVC setParent:_poll];
-    if (showKeyboard) {
-        [commentsVC.commentBar.textView becomeFirstResponder];
-        [commentsVC setShowKeyboardOnLoad:YES];
+    if (_poll) {
+        WMCommentsViewController *commentsVC = [[WMCommentsViewController alloc] initWithParent:_poll];
+        [commentsVC setParent:_poll];
+        if (showKeyboard) {
+            [commentsVC.commentBar.textView becomeFirstResponder];
+            [commentsVC setShowKeyboardOnLoad:YES];
+        }
+        [self.navigationController pushViewController:commentsVC animated:YES];
     }
-    [self.navigationController pushViewController:commentsVC animated:YES];
 }
 
 - (NSMutableArray *)comments
