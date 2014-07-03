@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 #import "WMCommentBar.h"
 
-@interface WMCommentsViewController : PFQueryTableViewController <WMCommentBarDelegate>
+@interface WMCommentsViewController : PFQueryTableViewController <WMCommentBarDelegate,UIActionSheetDelegate>
 
 @property (nonatomic, strong) PFObject *parent;
 @property (nonatomic, readonly) WMCommentBar *commentBar;

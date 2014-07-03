@@ -17,11 +17,13 @@
 @property (nonatomic, retain) NSMutableArray *voters; // of PFUser
 @property (nonatomic, readwrite) NSMutableArray *answers; // of WMAnswer
 @property (nonatomic, readwrite) BOOL currentPoll;
+@property (nonatomic, readwrite) NSDate *pollDate;
+@property (nonatomic, readwrite) NSUInteger pollNumber;
 
 @end
 
 @implementation WMPoll
-@dynamic votes, question, voters, answers, currentPoll;
+@dynamic votes, question, voters, answers, currentPoll, pollDate, pollNumber;
 
 + (NSString *)parseClassName
 {

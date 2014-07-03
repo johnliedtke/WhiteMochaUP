@@ -26,6 +26,7 @@
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) UIAlertView *confirmAletView;
 @property (nonatomic) BOOL emailConfirmed;
+@property (strong, nonatomic) IBOutlet UILabel *pollNumberLabel;
 
 @end
 
@@ -96,6 +97,7 @@ const static int ROW_HEIGHT = 60;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:YES];
+    [self loginStuff];
     [self hasUserVoted];
 }
 
@@ -237,7 +239,7 @@ const static int ANSWERS_SECTION = 0;
 - (void)updateUI
 {
     //[self.tableView reloadData];
-    
+    [_pollNumberLabel setText:[NSString stringWithFormat:@"Poll of the day #%d",_poll.pollNumber]];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationBottom];
      self.questionLabel.text = self.poll.question;
     

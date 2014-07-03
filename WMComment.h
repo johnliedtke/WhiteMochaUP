@@ -37,7 +37,7 @@ typedef void (^WMCommentAddedCompletionBlock)(BOOL success, NSError *error);
             parent:(PFObject *)parent
          withBlock:(WMCommentAddedCompletionBlock)callback;
 + (NSString *)postDateString:(NSDate *)postDate;
-
++ (UILabel *)noCommentsLabel:(CGRect)frame;
 
 
 

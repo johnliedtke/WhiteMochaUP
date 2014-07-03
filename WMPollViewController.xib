@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WMPollViewController">
             <connections>
                 <outlet property="dateLabel" destination="5V7-J8-W0f" id="kD7-pK-gvo"/>
+                <outlet property="pollNumberLabel" destination="6pY-1F-2gA" id="hdq-0g-Ne5"/>
                 <outlet property="questionLabel" destination="oE8-bI-qH6" id="B98-bm-Kil"/>
                 <outlet property="tableView" destination="CQn-Ka-pkM" id="YFT-fg-m4G"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

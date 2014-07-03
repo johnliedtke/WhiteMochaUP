@@ -8,6 +8,13 @@
 
 #import "WMSocialTableViewCell.h"
 
+@interface WMSocialTableViewCell ()
+
+@property (strong, nonatomic) IBOutlet UITextView *lastVotedTextView;
+
+
+@end
+
 @implementation WMSocialTableViewCell
 
 - (void)awakeFromNib
@@ -20,6 +27,17 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setLastVotedLabel
+{
+//    if (_poll.votes == 0) {
+//        NSString *noVoted = @"You're the first to vote";
+//        _lastVotedTextView.text = noVoted;
+//    } else {
+//        NSMutableAttributedString *voted = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ last voted.", [_poll]]
+//        
+//    }
 }
 
 - (void)setFrame:(CGRect)frame {

@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Poll of the Day #103" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3L-WA-Ow6" userLabel="PollNum - Poll of the Day #103">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Poll of the Day #" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3L-WA-Ow6" userLabel="PollNum - Poll of the Day #103">
                         <rect key="frame" x="10" y="3" width="145" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
@@ -38,6 +38,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateLabel" destination="zk1-Ne-B69" id="6K8-YP-nTO"/>
+                <outlet property="pollNumberLabel" destination="p3L-WA-Ow6" id="SVv-Bk-aPx"/>
                 <outlet property="questionLabel" destination="mZ7-Le-K3T" id="92d-eY-hSe"/>
             </connections>
         </tableViewCell>

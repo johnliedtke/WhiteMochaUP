@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WMPoll.h"
 
 @interface WMSocialTableViewCell : UITableViewCell
+
+@property (nonatomic, readwrite) WMPoll *poll;
 
 @end

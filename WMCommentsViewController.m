@@ -11,9 +11,15 @@
 #import "WMComment.h"
 #import "WMCommentBar.h"
 
+
 @interface WMCommentsViewController ()
 
+@property (nonatomic, readwrite) UIActionSheet *commentActionSheet;
+@property (nonatomic, readwrite) NSIndexPath *actionIndexPath;
+
+
 @property (nonatomic, readwrite) WMCommentBar *commentBar;
+@property (nonatomic, readwrite) UILabel *noCommentsLabel;
 
 @end
 
@@ -21,10 +27,11 @@
 
 - (id)initWithParent:(PFObject *)parent
 {
+    self.parent = parent;
     self = [self initWithStyle:UITableViewStylePlain];
     
     if (self) {
-        self.parent = parent;
+
     }
     return self;
 }
@@ -60,7 +67,6 @@
                                                      name:UIKeyboardDidShowNotification
                                                    object:nil];
         
-        
   
     }
     return self;
@@ -90,7 +96,7 @@
 {
     if (indexPath.row < self.objects.count) {
         return [[[self objects] objectAtIndex:indexPath.row] commentHeight];
-    } else return  50;
+    } else return  70;
 }
 
 
@@ -100,15 +106,20 @@
     [super viewDidLoad];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMCommentTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentLoadMoreCell" bundle:nil] forCellReuseIdentifier:@"WMCommentLoadMoreCell"];
     
     // Hiding keyboard/toolbar
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     gestureRecognizer.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:gestureRecognizer];
     
-    
     // Comment Bar
     [_commentBar setDelegate:self];
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
+                                          initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = 1.0; //seconds
+    [self.tableView addGestureRecognizer:lpgr];
+
 
     
 //    UIToolbar *toolBar = self.navigationController.toolbar;
@@ -133,12 +144,30 @@
         [_commentBar.textView becomeFirstResponder];
         _showKeyboardOnLoad = NO;
     }
+
+
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self updateCommentsLabel];
 
 
+}
+
+
+- (void)updateCommentsLabel
+{
+    if (self.objects.count == 0 && !self.isLoading) {
+        [UIView animateWithDuration:2.0 delay:10 options:UIViewAnimationOptionCurveLinear | UIViewAnimationOptionAllowUserInteraction animations:^{
+                    [self.view addSubview:_noCommentsLabel = [WMComment noCommentsLabel:CGRectMake(0.0, 150.0, self.view.bounds.size.width, 50)]];
+        } completion:^(BOOL finished) {
+            
+        }];
+    } else {
+        [_noCommentsLabel removeFromSuperview];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -178,20 +207,23 @@
  // all objects ordered by createdAt descending.
  - (PFQuery *)queryForTable {
  PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-     if (_parent) {
+     if (self.parent) {
          [query whereKey:@"parent" equalTo:_parent];
+     } else {
      }
      [query includeKey:@"user"];
  // If Pull To Refresh is enabled, query against the network by default.
  if (self.pullToRefreshEnabled) {
- query.cachePolicy = kPFCachePolicyNetworkOnly;
+     query.cachePolicy = kPFCachePolicyNetworkOnly;
  }
  
  // If no objects are loaded in memory, we look to the cache first to fill the table
  // and then subsequently do a query against the network.
  if (self.objects.count == 0) {
- query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+ query.cachePolicy = kPFCachePolicyNetworkElseCache;
+
  }
+
  
  [query orderByDescending:@"createdAt"];
  
@@ -214,10 +246,62 @@
      // Configure the cell
      WMCommentTableViewCell *newCell = (WMCommentTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"WMCommentTableViewCell"];
      [newCell setComment:(WMComment *)object];
+     
+     if (self.objects.count > 0) {
+         [self updateCommentsLabel];
+
+     }
+     
+     
+
  
  return newCell;
  }
 
+-(void)handleLongPress:(UILongPressGestureRecognizer *)longPress
+{
+    if (_commentActionSheet) {
+        _commentActionSheet = nil;
+    } else {
+        CGPoint location = [longPress locationInView:self.tableView];
+        _actionIndexPath = [self.tableView indexPathForRowAtPoint:location];
+        WMComment *commentToDelete = [self objects][_actionIndexPath.row];
+        if ([commentToDelete.user.objectId isEqualToString:[PFUser currentUser].objectId]) {
+            
+            
+            
+            _commentActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete" otherButtonTitles:nil];
+            
+//            for (UIView *subview in _commentActionSheet.subviews) {
+//                if ([subview isKindOfClass:[UIButton class]]) {
+//                    UIButton *button = (UIButton *)subview;
+//                    if ([button.titleLabel.text isEqualToString:@"Cancel"]) {
+//                        NSLog(@"wow");
+//                    }
+//                    [button setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+//                    [[button titleLabel] setTextColor:[UIColor purpleColor]];
+//                }
+//            }
+            
+            
+            [_commentActionSheet showFromTabBar:self.tabBarController.tabBar];
+        }
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        WMComment *commentToDelete = [self objects][_actionIndexPath.row];
+        [commentToDelete deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                [self loadObjects];
+            } else {
+                NSLog(@"Didn't work");
+            }
+        }];
+    }
+}
 
 /*
  // Override if you need to change the ordering of objects in the table.
@@ -226,11 +310,11 @@
  }
  */
 
-/*
+
  // Override to customize the look of the cell that allows the user to load the next page of objects.
  // The default implementation is a UITableViewCellStyleDefault cell with simple labels.
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
- static NSString *CellIdentifier = @"NextPage";
+ static NSString *CellIdentifier = @"WMCommentLoadMoreCell";
  
  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
  
@@ -239,11 +323,10 @@
  }
  
  cell.selectionStyle = UITableViewCellSelectionStyleNone;
- cell.textLabel.text = @"Load more...";
- 
+
  return cell;
  }
- */
+
 
 #pragma mark - UITableViewDataSource
 
@@ -284,6 +367,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    NSLog(@"selected");
 }
 
 

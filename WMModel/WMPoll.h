@@ -16,6 +16,8 @@ typedef void (^WMCurrentPollCompletionBlock)(BOOL success, WMPoll *poll, NSError
 @property (nonatomic,readonly) NSString *question;
 @property (nonatomic, readonly) NSArray *answers; // of WMAnswer
 @property (nonatomic, readonly) BOOL currentPoll;
+@property (nonatomic, readonly) NSMutableArray *voters;
+@property (nonatomic, readonly) NSUInteger pollNumber;
 
 // designated initialzer
 - (instancetype)initWithQuestion:(NSString *)question

@@ -44,6 +44,8 @@
 		5206183F193BE6E700EA8E21 /* WMPollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5206183D193BE6E700EA8E21 /* WMPollViewController.xib */; };
 		52061842193C27FD00EA8E21 /* WMPollFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52061841193C27FD00EA8E21 /* WMPollFooterView.m */; };
 		52061844193C281000EA8E21 /* WMPollFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52061843193C281000EA8E21 /* WMPollFooterView.xib */; };
+		52065B861964EECE00E010EB /* WMCommentLoadMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52065B841964EECE00E010EB /* WMCommentLoadMoreCell.m */; };
+		52065B871964EECE00E010EB /* WMCommentLoadMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52065B851964EECE00E010EB /* WMCommentLoadMoreCell.xib */; };
 		520A574417C16D76004B0A75 /* WMAddEventCategories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520A574317C16D76004B0A75 /* WMAddEventCategories.storyboard */; };
 		520A574717C16EF6004B0A75 /* WMAddEventCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520A574617C16EF6004B0A75 /* WMAddEventCategoriesViewController.m */; };
 		520A574917C17D04004B0A75 /* gop.png in Resources */ = {isa = PBXBuildFile; fileRef = 520A574817C17D04004B0A75 /* gop.png */; };
@@ -344,6 +346,9 @@
 		52061840193C27FD00EA8E21 /* WMPollFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPollFooterView.h; sourceTree = "<group>"; };
 		52061841193C27FD00EA8E21 /* WMPollFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPollFooterView.m; sourceTree = "<group>"; };
 		52061843193C281000EA8E21 /* WMPollFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMPollFooterView.xib; sourceTree = "<group>"; };
+		52065B831964EECE00E010EB /* WMCommentLoadMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCommentLoadMoreCell.h; sourceTree = "<group>"; };
+		52065B841964EECE00E010EB /* WMCommentLoadMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCommentLoadMoreCell.m; sourceTree = "<group>"; };
+		52065B851964EECE00E010EB /* WMCommentLoadMoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMCommentLoadMoreCell.xib; sourceTree = "<group>"; };
 		520A574317C16D76004B0A75 /* WMAddEventCategories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMAddEventCategories.storyboard; sourceTree = "<group>"; };
 		520A574517C16EF6004B0A75 /* WMAddEventCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMAddEventCategoriesViewController.h; sourceTree = "<group>"; };
 		520A574617C16EF6004B0A75 /* WMAddEventCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMAddEventCategoriesViewController.m; sourceTree = "<group>"; };
@@ -918,6 +923,9 @@
 		52106BFB1960894D00F58BC8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52065B831964EECE00E010EB /* WMCommentLoadMoreCell.h */,
+				52065B841964EECE00E010EB /* WMCommentLoadMoreCell.m */,
+				52065B851964EECE00E010EB /* WMCommentLoadMoreCell.xib */,
 				526FD4881959235900F79F64 /* comenttablecell.xib */,
 				526FD47D1957C3DB00F79F64 /* WMAddCommentTableViewCell.h */,
 				526FD47E1957C3DB00F79F64 /* WMAddCommentTableViewCell.m */,
@@ -1499,6 +1507,7 @@
 				52FE99B217A47A4D00E926F4 /* WMFurnitureDetailCell.xib in Resources */,
 				52FE99D617A6E0D300E926F4 /* WMEventsViewController.xib in Resources */,
 				52FE99EB17A7A03C00E926F4 /* WMTextbookCourseViewController.xib in Resources */,
+				52065B871964EECE00E010EB /* WMCommentLoadMoreCell.xib in Resources */,
 				52FE99F317A9E59000E926F4 /* WMTextbookDescViewController.xib in Resources */,
 				52FE99FA17AA06EB00E926F4 /* WMTextbookDescCell.xib in Resources */,
 				52FE9A0017AA22C300E926F4 /* WMTextbookTextCell.xib in Resources */,
@@ -1714,6 +1723,7 @@
 				52AAC3A2186D823D0048A6D8 /* WMPhoneNumber.m in Sources */,
 				526F1CD118398390007110B1 /* WMSemesterViewController.m in Sources */,
 				526F1CDD183983E8007110B1 /* WMAddSyllabusFormViewController.m in Sources */,
+				52065B861964EECE00E010EB /* WMCommentLoadMoreCell.m in Sources */,
 				5206183E193BE6E700EA8E21 /* WMPollViewController.m in Sources */,
 				52FE9A0C17AC780700E926F4 /* WMHousingCell.m in Sources */,
 				5290F74317B01EBE000E08D9 /* WMHousingListingsViewController.m in Sources */,

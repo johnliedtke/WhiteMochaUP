@@ -44,7 +44,6 @@
     
 }
 
-
 + (void)addComment:(NSString *)comment parent:(PFObject *)parent
 {
     WMComment *newComment = [[WMComment alloc] initWithComment:comment parent:parent];
@@ -132,6 +131,13 @@
     return dateString;
 }
 
-
++ (UILabel *)noCommentsLabel:(CGRect)frame
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = @"No Comments";
+    label.textColor = [UIColor darkGrayColor];
+    return label;
+}
 
 @end
