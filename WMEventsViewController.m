@@ -57,6 +57,11 @@
     [eventsSwitcher addTarget:self
                        action:@selector(action:)
              forControlEvents:UIControlEventValueChanged];
+    //[eventsTable setSeparatorInset:UIEdgeInsetsZero];
+    eventsTable.separatorColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0];
+    eventsTable.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
+
+
     
     // Pull to refresh
 
@@ -208,7 +213,7 @@
         } else if ([itemTitle rangeOfString:@"international" options:NSCaseInsensitiveSearch].location != NSNotFound) {
             image = [UIImage imageNamed:@"great_wall-50.png"];
         } else {
-            image = [UIImage imageNamed:@"calendar-50.png"];
+            image = [UIImage imageNamed:@"soccer.png"];
         }
         
         
@@ -410,6 +415,12 @@
         [parser setDelegate:channel];
     }
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 45.0;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
    return [dates count];
@@ -450,7 +461,9 @@
     // Location
     [[cell locationLabel] setText:[event location]];
     
-    
+    if (indexPath.row % 2 != 0) {
+       // cell.backgroundColor = [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
+    }
     
     
     

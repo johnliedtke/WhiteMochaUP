@@ -22,6 +22,7 @@
 #import "WMPoll.h"
 #import "WMPollAnswer.h"
 #import "WMComment.h"
+#import "WMEvent2.h"
 
 
 @implementation WhiteMochaUPAppDelegate
@@ -46,6 +47,7 @@
     [WMPoll registerSubclass];
     [WMPollAnswer registerSubclass];
     [WMComment registerSubclass];
+    [WMEvent2 registerSubclass];
     
 
     
@@ -140,7 +142,17 @@
      *
      */
     // Create Events Section
-    WMEventsViewController *evc = [[WMEventsViewController alloc] init];
+    
+    UIStoryboard *events2Story =  [UIStoryboard storyboardWithName:@"WMEvents" bundle:nil];
+    UINavigationController *evc = [events2Story instantiateViewControllerWithIdentifier:@"WMEvents"];
+    
+   
+    
+    
+    
+    
+    
+   // WMEventsViewController *evc = [[WMEventsViewController alloc] init];
     //UITabBarItem *events = [[UITabBarItem alloc] initWithTitle:@"Events" image:[UIImage imageNamed:@"middle_new.png"] tag:2];
     UITabBarItem *upEvents = [[UITabBarItem alloc] initWithTitle:@"Events" image:[[UIImage imageNamed:@"events_final.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] tag:2];
     [upEvents setSelectedImage:[[UIImage imageNamed:@"events_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
@@ -150,8 +162,8 @@
     
     
     WMWebViewController *wvc = [[WMWebViewController alloc] init];
-    [evc setWebViewController:wvc];
-    WMNavigationController *eventsNavigation = [[WMNavigationController alloc] initWithRootViewController:evc];
+    //[evc setWebViewController:wvc];
+    //WMNavigationController *eventsNavigation = [[WMNavigationController alloc] initWithRootViewController:evc];
     
     /*
      * Class Navigation
@@ -211,7 +223,7 @@
 
     
     // View Controllers Array
-    NSArray *controllers = [NSArray arrayWithObjects:homeNavigation, classNavigation, eventsNavigation, foodNavigation, marketNavigation, nil];
+    NSArray *controllers = [NSArray arrayWithObjects:homeNavigation, classNavigation, evc, foodNavigation, marketNavigation, nil];
     
     [tabBarController setViewControllers:controllers];
     
@@ -240,8 +252,11 @@
 */
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
-    [PFPush storeDeviceToken:newDeviceToken];
-    [PFPush subscribeToChannelInBackground:@"" target:self selector:@selector(subscribeFinished:error:)];
+    //[PFPush storeDeviceToken:newDeviceToken];
+    //[PFPush subscribeToChannelInBackground:@"" target:self selector:@selector(subscribeFinished:error:)];
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:newDeviceToken];
+    [currentInstallation saveInBackground];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {

@@ -12,6 +12,7 @@
 @interface WMCommentTableViewCell ()
 
 @property (strong, nonatomic) IBOutlet UILabel *postDateLabel;
+@property (strong, nonatomic) CALayer *bordertop;
 
 
 @end
@@ -37,12 +38,12 @@
     [self.contentView.layer setBorderColor:borderColor.CGColor];
     [self.contentView.layer setBorderWidth:1.0];
     
-    CALayer *bottomBorder = [CALayer layer];
+    _bordertop = [CALayer layer];
     
-    bottomBorder.frame = CGRectMake(1.0f, 0, self.frame.size.width+18.0, 1.0f);
+    _bordertop.frame = CGRectMake(1.0f, 0, self.frame.size.width+18.0, 1.0f);
     
-    bottomBorder.backgroundColor = [UIColor whiteColor].CGColor;
-    [self.layer addSublayer:bottomBorder];
+    _bordertop.backgroundColor = [UIColor whiteColor].CGColor;
+    [self.layer addSublayer:_bordertop];
 
     
 }
@@ -114,6 +115,20 @@
     frame.size.width -= 2 * inset;
     [super setFrame:frame];
 }
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    [super setHighlighted:highlighted animated:YES];
+    if (highlighted) {
+        UIColor *highlightColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0];
+        [self setBackgroundColor:highlightColor];
+        _bordertop.backgroundColor = highlightColor.CGColor;
+    } else {
+        [self setBackgroundColor:[UIColor whiteColor]];
+        _bordertop.backgroundColor = [UIColor whiteColor].CGColor;
+    }
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

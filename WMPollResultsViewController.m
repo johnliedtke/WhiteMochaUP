@@ -55,17 +55,6 @@
     [self.tableView addSubview:self.refreshControl];
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
-//    WMPollAnswer *answer1 = [[WMPollAnswer alloc] initWithAnswer:@"Commons' fries"];
-//    WMPollAnswer *answer2 = [[WMPollAnswer alloc] initWithAnswer:@"Cove Fries!"];
-//    WMPollAnswer *answer3 = [[WMPollAnswer alloc] initWithAnswer:@"I'm a healthy person"];
-//    WMPollAnswer *answer4 = [[WMPollAnswer alloc] initWithAnswer:@"I don't like either man"];
-//    
-//    WMPoll *newPoll = [[WMPoll alloc] initWithQuestion:@"What fries do you find most tantalizing?" answers:@[answer1,answer2,answer3,answer4]];
-//    [WMComment addComment:@"Hello my dear friends" parent:newPoll];
-//    [WMComment addComment:@"Cool poll fool" parent:newPoll];
-//
-//    [newPoll saveInBackground];
-
     // Table cells' nibs
     [self.tableView registerNib:[UINib nibWithNibName:@"WMQuestionTableViewCell" bundle:nil]
          forCellReuseIdentifier:@"WMQuestionTableViewCell"];
@@ -73,6 +62,8 @@
          forCellReuseIdentifier:@"WMPieChartTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"WMAnswerLabelTableViewCell" bundle:nil]
          forCellReuseIdentifier:@"WMAnswerLabelTableViewCell"];
+    
+    // Comments
     [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMCommentTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentsHeaderTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMCommentsHeaderTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"WMAddCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMAddCommentTableViewCell"];

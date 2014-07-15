@@ -342,11 +342,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMEventsViewController.m"
-            timestampString = "425532348.091201"
+            timestampString = "426194248.945709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "411"
-            endingLineNumber = "411"
+            startingLineNumber = "416"
+            endingLineNumber = "416"
             landmarkName = "-parser:didStartElement:namespaceURI:qualifiedName:attributes:"
             landmarkType = "5">
          </BreakpointContent>
@@ -358,11 +358,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMEventsViewController.m"
-            timestampString = "425532348.091201"
+            timestampString = "426194248.945709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -374,11 +374,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMEventsViewController.m"
-            timestampString = "425532348.091201"
+            timestampString = "426194248.945709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "431"
-            endingLineNumber = "431"
+            startingLineNumber = "442"
+            endingLineNumber = "442"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -390,11 +390,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMEventsViewController.m"
-            timestampString = "425532348.091201"
+            timestampString = "426194248.945709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -406,11 +406,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMEventsViewController.m"
-            timestampString = "425532348.091201"
+            timestampString = "426194248.945709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -422,11 +422,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMEventsViewController.m"
-            timestampString = "425532348.091201"
+            timestampString = "426194248.945709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "428"
-            endingLineNumber = "428"
+            startingLineNumber = "439"
+            endingLineNumber = "439"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -486,7 +486,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseStarterProject/WhiteMochaUPAppDelegate.m"
-            timestampString = "425752961.891559"
+            timestampString = "426399462.552829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -502,11 +502,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseStarterProject/WhiteMochaUPAppDelegate.m"
-            timestampString = "425752961.891559"
+            timestampString = "426399462.552829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "5">
          </BreakpointContent>
@@ -534,11 +534,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMEventsViewController.m"
-            timestampString = "425532348.091201"
+            timestampString = "426194248.945709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "-getConnections"
             landmarkType = "5">
          </BreakpointContent>
@@ -1216,7 +1216,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseStarterProject/WhiteMochaUPAppDelegate.m"
-            timestampString = "425752961.891559"
+            timestampString = "426399462.552829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
@@ -1344,11 +1344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentTableViewCell.m"
-            timestampString = "425706807.306073"
+            timestampString = "426184241.725595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127">
+            startingLineNumber = "142"
+            endingLineNumber = "142">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1518,11 +1518,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
             landmarkName = "@implementation WMPollResultsViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1566,11 +1566,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-viewWillDisappear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1582,11 +1582,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "@implementation WMPollResultsViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1614,11 +1614,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "425968990.660212"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
             <Locations>
@@ -1708,11 +1708,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "@implementation WMPollResultsViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1740,11 +1740,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1756,11 +1756,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1772,11 +1772,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1788,11 +1788,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentTableViewCell.m"
-            timestampString = "425706807.306073"
+            timestampString = "426184241.725595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "-setComment:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1820,11 +1820,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1852,11 +1852,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentsViewController.m"
-            timestampString = "426055130.029591"
+            timestampString = "426401153.940392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -1932,11 +1932,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentsViewController.m"
-            timestampString = "426055130.029591"
+            timestampString = "426401153.940392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -1996,11 +1996,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentsViewController.m"
-            timestampString = "426055130.029591"
+            timestampString = "426401153.940392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "@implementation WMCommentsViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -2012,11 +2012,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentsViewController.m"
-            timestampString = "426055130.029591"
+            timestampString = "426401117.170818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "-initWithParent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2028,11 +2028,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentsViewController.m"
-            timestampString = "426055130.029591"
+            timestampString = "426401117.170818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "-initWithParent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2124,11 +2124,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentTableViewCell.m"
-            timestampString = "425706826.305689"
+            timestampString = "426184241.725595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "-setComment:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2220,11 +2220,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
             landmarkName = "-updateUI"
             landmarkType = "5">
          </BreakpointContent>
@@ -2236,11 +2236,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
             landmarkName = "-updateUI"
             landmarkType = "5">
          </BreakpointContent>
@@ -2252,11 +2252,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "-numberOfSlicesInPieChart:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2268,11 +2268,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "-pieChart:valueForSliceAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2284,11 +2284,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "-pieChart:valueForSliceAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2300,11 +2300,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "331"
-            endingLineNumber = "331"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "-showComments:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2316,11 +2316,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "294"
-            endingLineNumber = "294"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
             landmarkName = "-handleRefresh"
             landmarkType = "5">
          </BreakpointContent>
@@ -2332,11 +2332,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "296"
-            endingLineNumber = "296"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
             landmarkName = "-handleRefresh"
             landmarkType = "5">
          </BreakpointContent>
@@ -2348,11 +2348,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMPollResultsViewController.m"
-            timestampString = "426040724.774957"
+            timestampString = "426986410.1472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "331"
-            endingLineNumber = "331"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "-showComments:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2364,11 +2364,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentsViewController.m"
-            timestampString = "426055130.029591"
+            timestampString = "426401153.940392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "-queryForTable"
             landmarkType = "5">
          </BreakpointContent>
@@ -2380,27 +2380,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentsViewController.m"
-            timestampString = "426055130.029591"
+            timestampString = "426401153.940392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "-queryForTable"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WMCommentsViewController.m"
-            timestampString = "426055130.029591"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "@implementation WMCommentsViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -2412,11 +2396,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentsViewController.m"
-            timestampString = "426055130.029591"
+            timestampString = "426401153.940392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "@implementation WMCommentsViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WMCommentsViewController.m"
+            timestampString = "426401153.940392"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "-tableView:cellForRowAtIndexPath:object:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2428,11 +2428,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMCommentsViewController.m"
-            timestampString = "426055130.029591"
+            timestampString = "426401153.940392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "-handleLongPress:"
             landmarkType = "5">
          </BreakpointContent>

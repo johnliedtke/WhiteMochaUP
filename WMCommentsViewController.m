@@ -10,6 +10,9 @@
 #import "WMCommentTableViewCell.h"
 #import "WMComment.h"
 #import "WMCommentBar.h"
+#import "MBProgressHUD.h"
+#import "UIColor+WMColors.h"
+#import "UIViewController+ScrollingNavbar.h"
 
 
 @interface WMCommentsViewController ()
@@ -66,6 +69,8 @@
                                                  selector:@selector(changeFirstResponder)
                                                      name:UIKeyboardDidShowNotification
                                                    object:nil];
+        [self followScrollView:self.tableView];
+
         
   
     }
@@ -180,6 +185,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    [self showNavBarAnimated:NO];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -293,14 +299,23 @@
 {
     if (buttonIndex == 0) {
         WMComment *commentToDelete = [self objects][_actionIndexPath.row];
+        
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDModeIndeterminate;
+        hud.labelText = @"Deleting comment...";
+        //hud.color = [UIColor WMPurpleColorTransparent];
+        hud.graceTime = 2.0;
         [commentToDelete deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
                 [self loadObjects];
+                [hud hide:YES];
             } else {
-                NSLog(@"Didn't work");
+                NSLog(@"ERROR");
             }
         }];
+    
     }
+    
 }
 
 /*

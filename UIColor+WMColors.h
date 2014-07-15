@@ -11,5 +11,7 @@
 @interface UIColor (WMColors)
 
 + (UIColor *)WMPurpleColor;
++ (UIColor *)WMPurpleColorTransparent;
++ (UIColor *)WMBorderColor;
 
 @end

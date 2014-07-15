@@ -14,5 +14,15 @@
     return [UIColor colorWithRed:134.0/255.0f green:92.0/255.0f blue:168.0/255.0f alpha:1.0f];
 }
 
++ (UIColor *)WMPurpleColorTransparent {
+    return [UIColor colorWithRed:134.0/255.0f green:92.0/255.0f blue:168.0/255.0f alpha:0.8f];
+}
+
++ (UIColor *)WMBorderColor {
+    return [UIColor colorWithRed:225.0/255.0 green:225.0/255.0 blue:225.0/255.0 alpha:1.0];
+}
+
+
+
 
 @end

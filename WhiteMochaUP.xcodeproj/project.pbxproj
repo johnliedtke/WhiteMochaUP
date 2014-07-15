@@ -46,6 +46,8 @@
 		52061844193C281000EA8E21 /* WMPollFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52061843193C281000EA8E21 /* WMPollFooterView.xib */; };
 		52065B861964EECE00E010EB /* WMCommentLoadMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52065B841964EECE00E010EB /* WMCommentLoadMoreCell.m */; };
 		52065B871964EECE00E010EB /* WMCommentLoadMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52065B851964EECE00E010EB /* WMCommentLoadMoreCell.xib */; };
+		52077043196A55D7007BE7CB /* WMEventsMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52077042196A55D7007BE7CB /* WMEventsMainController.m */; };
+		5207705B196B8E25007BE7CB /* WMEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 5207705A196B8E25007BE7CB /* WMEvents.m */; };
 		520A574417C16D76004B0A75 /* WMAddEventCategories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520A574317C16D76004B0A75 /* WMAddEventCategories.storyboard */; };
 		520A574717C16EF6004B0A75 /* WMAddEventCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520A574617C16EF6004B0A75 /* WMAddEventCategoriesViewController.m */; };
 		520A574917C17D04004B0A75 /* gop.png in Resources */ = {isa = PBXBuildFile; fileRef = 520A574817C17D04004B0A75 /* gop.png */; };
@@ -136,7 +138,6 @@
 		5224ED6E17B9C37B005199A1 /* WMEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5224ED6D17B9C37B005199A1 /* WMEventCell.m */; };
 		5224ED7017BAAD89005199A1 /* classic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5224ED6F17BAAD88005199A1 /* classic.png */; };
 		5224ED7217BAD611005199A1 /* volleyball.png in Resources */ = {isa = PBXBuildFile; fileRef = 5224ED7117BAD610005199A1 /* volleyball.png */; };
-		5229B0551960D30900B95A0B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5229B0541960D30900B95A0B /* Parse.framework */; };
 		5233CB8E179CDED400D9F380 /* WMDetailImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5233CB8C179CDED400D9F380 /* WMDetailImageViewController.m */; };
 		5233CB8F179CDED400D9F380 /* WMDetailImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5233CB8D179CDED400D9F380 /* WMDetailImageViewController.xib */; };
 		5233CB92179E397700D9F380 /* WMWhiteGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5233CB91179E397700D9F380 /* WMWhiteGradient.m */; };
@@ -163,6 +164,7 @@
 		5244ED211868E946009ACC5E /* WMPlaceInfoEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5244ED1F1868E946009ACC5E /* WMPlaceInfoEditViewController.xib */; };
 		5247761817B9807F00A81E88 /* WMDetailImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5247761717B9807F00A81E88 /* WMDetailImage.storyboard */; };
 		5247761B17B9809C00A81E88 /* WMDetailImgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247761A17B9809C00A81E88 /* WMDetailImgViewController.m */; };
+		5251BEA71974D75900152B71 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5251BEA61974D75900152B71 /* Parse.framework */; };
 		525EF938194D0C7B00DF9F55 /* WMCommentTextViewBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525EF937194D0C7B00DF9F55 /* WMCommentTextViewBar.xib */; };
 		525EF93B194D0C8C00DF9F55 /* WMCommentTextViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 525EF93A194D0C8C00DF9F55 /* WMCommentTextViewBar.m */; };
 		5265D86C17F017E40066FCEC /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5265D86817F017E40066FCEC /* greenButton.png */; };
@@ -190,7 +192,6 @@
 		526FD4801957C3DB00F79F64 /* WMAddCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 526FD47E1957C3DB00F79F64 /* WMAddCommentTableViewCell.m */; };
 		526FD4811957C3DB00F79F64 /* WMAddCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526FD47F1957C3DB00F79F64 /* WMAddCommentTableViewCell.xib */; };
 		526FD4871957DDB900F79F64 /* WMCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526FD4861957DDB900F79F64 /* WMCommentsViewController.m */; };
-		526FD4891959235900F79F64 /* comenttablecell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526FD4881959235900F79F64 /* comenttablecell.xib */; };
 		527AB6C318D015F6008CE849 /* basketball-256@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 527AB6C218D015F6008CE849 /* basketball-256@2x.png */; };
 		527AB6C518D017CB008CE849 /* basketball-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 527AB6C418D017CB008CE849 /* basketball-75.png */; };
 		527AB6C718D019A0008CE849 /* basketball-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 527AB6C618D019A0008CE849 /* basketball-50.png */; };
@@ -256,10 +257,15 @@
 		52B1AB761797D90A008C4326 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B1AB751797D90A008C4326 /* MessageUI.framework */; };
 		52B5847417B2C44D00AA8457 /* WMPrevNext.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B5847317B2C44D00AA8457 /* WMPrevNext.xib */; };
 		52B5847817B2C52700AA8457 /* WMPrevNext.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B5847717B2C52700AA8457 /* WMPrevNext.m */; };
+		52BD694A196E3EF90088D5DF /* WMEventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BD6949196E3EF90088D5DF /* WMEventDetailsViewController.m */; };
+		52BD694D197239350088D5DF /* WMRecentCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BD694C197239350088D5DF /* WMRecentCommentsViewController.m */; };
 		52BE072517B41CE8005B739E /* WMRides.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BE072417B41CE8005B739E /* WMRides.storyboard */; };
 		52BE072A17B4243F005B739E /* WMRidesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE072917B4243F005B739E /* WMRidesViewController.m */; };
 		52C2CBD4194D46E400627596 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF521613CC3C002132AF /* Accounts.framework */; };
 		52C2CBD5194D46EC00627596 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF551613CC42002132AF /* Social.framework */; };
+		52DA8EBB196A4BEA009E6F10 /* WMPurpleNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DA8EBA196A4BEA009E6F10 /* WMPurpleNavigationBar.m */; };
+		52DC2D8C19673A4000379958 /* WMEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DC2D8B19673A4000379958 /* WMEvents.storyboard */; };
+		52DC2D921968DE6600379958 /* WMEvent2.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC2D911968DE6600379958 /* WMEvent2.m */; };
 		52EAEEE4180E016F00F32C28 /* forward-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EAEEE3180E016F00F32C28 /* forward-32@2x.png */; };
 		52EAEEE6180E027200F32C28 /* back-25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EAEEE5180E027200F32C28 /* back-25@2x.png */; };
 		52EAEEEE180F1A6000F32C28 /* intramural.png in Resources */ = {isa = PBXBuildFile; fileRef = 52EAEEED180F1A6000F32C28 /* intramural.png */; };
@@ -287,6 +293,7 @@
 		52FE9A0C17AC780700E926F4 /* WMHousingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FE9A0B17AC780700E926F4 /* WMHousingCell.m */; };
 		52FE9A1017AC782D00E926F4 /* WMHousingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FE9A0F17AC782100E926F4 /* WMHousingCell.xib */; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
+		BA03CBD8F68A438296DEAD8A /* libPods-WhiteMochaUP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB127CC6BC044EEBCF927A0 /* libPods-WhiteMochaUP.a */; };
 		DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -307,6 +314,7 @@
 		09ABC08013A1D52D009C3FCF /* WhiteMochaUPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhiteMochaUPAppDelegate.h; sourceTree = "<group>"; };
 		09ABC08113A1D52D009C3FCF /* WhiteMochaUPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhiteMochaUPAppDelegate.m; sourceTree = "<group>"; };
 		09BEF34B13D51C3F001BBCDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		17D0BFCD0CC2476A9AFFB8D1 /* Pods-WhiteMochaUP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteMochaUP.xcconfig"; path = "Pods/Pods-WhiteMochaUP.xcconfig"; sourceTree = "<group>"; };
 		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		52047213178A39CF00BF5A0F /* WMGeneralListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGeneralListingViewController.h; sourceTree = "<group>"; };
@@ -349,6 +357,10 @@
 		52065B831964EECE00E010EB /* WMCommentLoadMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCommentLoadMoreCell.h; sourceTree = "<group>"; };
 		52065B841964EECE00E010EB /* WMCommentLoadMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCommentLoadMoreCell.m; sourceTree = "<group>"; };
 		52065B851964EECE00E010EB /* WMCommentLoadMoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMCommentLoadMoreCell.xib; sourceTree = "<group>"; };
+		52077041196A55D7007BE7CB /* WMEventsMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMEventsMainController.h; sourceTree = "<group>"; };
+		52077042196A55D7007BE7CB /* WMEventsMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMEventsMainController.m; sourceTree = "<group>"; };
+		52077059196B8E25007BE7CB /* WMEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMEvents.h; sourceTree = "<group>"; };
+		5207705A196B8E25007BE7CB /* WMEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMEvents.m; sourceTree = "<group>"; };
 		520A574317C16D76004B0A75 /* WMAddEventCategories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMAddEventCategories.storyboard; sourceTree = "<group>"; };
 		520A574517C16EF6004B0A75 /* WMAddEventCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMAddEventCategoriesViewController.h; sourceTree = "<group>"; };
 		520A574617C16EF6004B0A75 /* WMAddEventCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMAddEventCategoriesViewController.m; sourceTree = "<group>"; };
@@ -455,7 +467,6 @@
 		5224ED6D17B9C37B005199A1 /* WMEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMEventCell.m; sourceTree = "<group>"; };
 		5224ED6F17BAAD88005199A1 /* classic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classic.png; sourceTree = "<group>"; };
 		5224ED7117BAD610005199A1 /* volleyball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volleyball.png; sourceTree = "<group>"; };
-		5229B0541960D30900B95A0B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5233CB8B179CDED400D9F380 /* WMDetailImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDetailImageViewController.h; sourceTree = "<group>"; };
 		5233CB8C179CDED400D9F380 /* WMDetailImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDetailImageViewController.m; sourceTree = "<group>"; };
 		5233CB8D179CDED400D9F380 /* WMDetailImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMDetailImageViewController.xib; sourceTree = "<group>"; };
@@ -493,6 +504,7 @@
 		5247761717B9807F00A81E88 /* WMDetailImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMDetailImage.storyboard; sourceTree = "<group>"; };
 		5247761917B9809C00A81E88 /* WMDetailImgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDetailImgViewController.h; sourceTree = "<group>"; };
 		5247761A17B9809C00A81E88 /* WMDetailImgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDetailImgViewController.m; sourceTree = "<group>"; };
+		5251BEA61974D75900152B71 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		525EF937194D0C7B00DF9F55 /* WMCommentTextViewBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMCommentTextViewBar.xib; sourceTree = "<group>"; };
 		525EF939194D0C8C00DF9F55 /* WMCommentTextViewBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCommentTextViewBar.h; sourceTree = "<group>"; };
 		525EF93A194D0C8C00DF9F55 /* WMCommentTextViewBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCommentTextViewBar.m; sourceTree = "<group>"; };
@@ -536,7 +548,6 @@
 		526FD47F1957C3DB00F79F64 /* WMAddCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMAddCommentTableViewCell.xib; sourceTree = "<group>"; };
 		526FD4851957DDB900F79F64 /* WMCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCommentsViewController.h; sourceTree = "<group>"; };
 		526FD4861957DDB900F79F64 /* WMCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCommentsViewController.m; sourceTree = "<group>"; };
-		526FD4881959235900F79F64 /* comenttablecell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = comenttablecell.xib; sourceTree = "<group>"; };
 		527AB6C218D015F6008CE849 /* basketball-256@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basketball-256@2x.png"; sourceTree = "<group>"; };
 		527AB6C418D017CB008CE849 /* basketball-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basketball-75.png"; sourceTree = "<group>"; };
 		527AB6C618D019A0008CE849 /* basketball-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basketball-50.png"; sourceTree = "<group>"; };
@@ -629,9 +640,18 @@
 		52B5847317B2C44D00AA8457 /* WMPrevNext.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMPrevNext.xib; sourceTree = "<group>"; };
 		52B5847617B2C52700AA8457 /* WMPrevNext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPrevNext.h; sourceTree = "<group>"; };
 		52B5847717B2C52700AA8457 /* WMPrevNext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPrevNext.m; sourceTree = "<group>"; };
+		52BD6948196E3EF90088D5DF /* WMEventDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMEventDetailsViewController.h; sourceTree = "<group>"; };
+		52BD6949196E3EF90088D5DF /* WMEventDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMEventDetailsViewController.m; sourceTree = "<group>"; };
+		52BD694B197239350088D5DF /* WMRecentCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMRecentCommentsViewController.h; sourceTree = "<group>"; };
+		52BD694C197239350088D5DF /* WMRecentCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMRecentCommentsViewController.m; sourceTree = "<group>"; };
 		52BE072417B41CE8005B739E /* WMRides.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMRides.storyboard; sourceTree = "<group>"; };
 		52BE072817B4243F005B739E /* WMRidesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMRidesViewController.h; sourceTree = "<group>"; };
 		52BE072917B4243F005B739E /* WMRidesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMRidesViewController.m; sourceTree = "<group>"; };
+		52DA8EB9196A4BEA009E6F10 /* WMPurpleNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPurpleNavigationBar.h; sourceTree = "<group>"; };
+		52DA8EBA196A4BEA009E6F10 /* WMPurpleNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPurpleNavigationBar.m; sourceTree = "<group>"; };
+		52DC2D8B19673A4000379958 /* WMEvents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WMEvents.storyboard; sourceTree = "<group>"; };
+		52DC2D901968DE6600379958 /* WMEvent2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMEvent2.h; sourceTree = "<group>"; };
+		52DC2D911968DE6600379958 /* WMEvent2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMEvent2.m; sourceTree = "<group>"; };
 		52EAEEE3180E016F00F32C28 /* forward-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-32@2x.png"; sourceTree = "<group>"; };
 		52EAEEE5180E027200F32C28 /* back-25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-25@2x.png"; sourceTree = "<group>"; };
 		52EAEEED180F1A6000F32C28 /* intramural.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intramural.png; sourceTree = "<group>"; };
@@ -681,6 +701,7 @@
 		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DDB127CC6BC044EEBCF927A0 /* libPods-WhiteMochaUP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhiteMochaUP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -694,17 +715,18 @@
 				52B1AB761797D90A008C4326 /* MessageUI.framework in Frameworks */,
 				DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */,
 				4998650515BF305000803E05 /* StoreKit.framework in Frameworks */,
-				5229B0551960D30900B95A0B /* Parse.framework in Frameworks */,
 				743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */,
 				2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */,
 				099CCEAD13F9E3760039A464 /* libz.1.1.3.dylib in Frameworks */,
 				09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */,
+				5251BEA71974D75900152B71 /* Parse.framework in Frameworks */,
 				095ACE8613C68EA300566243 /* AudioToolbox.framework in Frameworks */,
 				092354B713A1D83C00DA740F /* MobileCoreServices.framework in Frameworks */,
 				092354B513A1D7F000DA740F /* SystemConfiguration.framework in Frameworks */,
 				092354B313A1D7EB00DA740F /* CFNetwork.framework in Frameworks */,
 				09ABC07213A1D52D009C3FCF /* UIKit.framework in Frameworks */,
 				09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */,
+				BA03CBD8F68A438296DEAD8A /* libPods-WhiteMochaUP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +748,7 @@
 				09ABC07713A1D52D009C3FCF /* WhiteMochaUP */,
 				09ABC07013A1D52D009C3FCF /* Frameworks */,
 				09ABC06E13A1D52D009C3FCF /* Products */,
+				17D0BFCD0CC2476A9AFFB8D1 /* Pods-WhiteMochaUP.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -740,7 +763,7 @@
 		09ABC07013A1D52D009C3FCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5229B0541960D30900B95A0B /* Parse.framework */,
+				5251BEA61974D75900152B71 /* Parse.framework */,
 				520ADC7A17CC2C73004DF55C /* CoreData.framework */,
 				52B1AB751797D90A008C4326 /* MessageUI.framework */,
 				6372FF571613CC47002132AF /* AdSupport.framework */,
@@ -759,6 +782,7 @@
 				4998650415BF305000803E05 /* StoreKit.framework */,
 				092354B413A1D7F000DA740F /* SystemConfiguration.framework */,
 				09ABC07113A1D52D009C3FCF /* UIKit.framework */,
+				DDB127CC6BC044EEBCF927A0 /* libPods-WhiteMochaUP.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -926,7 +950,6 @@
 				52065B831964EECE00E010EB /* WMCommentLoadMoreCell.h */,
 				52065B841964EECE00E010EB /* WMCommentLoadMoreCell.m */,
 				52065B851964EECE00E010EB /* WMCommentLoadMoreCell.xib */,
-				526FD4881959235900F79F64 /* comenttablecell.xib */,
 				526FD47D1957C3DB00F79F64 /* WMAddCommentTableViewCell.h */,
 				526FD47E1957C3DB00F79F64 /* WMAddCommentTableViewCell.m */,
 				526FD47F1957C3DB00F79F64 /* WMAddCommentTableViewCell.xib */,
@@ -936,6 +959,8 @@
 				529C3CA7194A8EED00E39703 /* WMCommentsHeaderTableViewCell.h */,
 				529C3CA8194A8EED00E39703 /* WMCommentsHeaderTableViewCell.m */,
 				529C3CA9194A8EED00E39703 /* WMCommentsHeaderTableViewCell.xib */,
+				52BD694B197239350088D5DF /* WMRecentCommentsViewController.h */,
+				52BD694C197239350088D5DF /* WMRecentCommentsViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1348,6 +1373,24 @@
 			name = PrevNext;
 			sourceTree = "<group>";
 		};
+		52DA8EB8196A3492009E6F10 /* Events 2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				52077041196A55D7007BE7CB /* WMEventsMainController.h */,
+				52077042196A55D7007BE7CB /* WMEventsMainController.m */,
+				52077059196B8E25007BE7CB /* WMEvents.h */,
+				5207705A196B8E25007BE7CB /* WMEvents.m */,
+				52DC2D8B19673A4000379958 /* WMEvents.storyboard */,
+				52BD6948196E3EF90088D5DF /* WMEventDetailsViewController.h */,
+				52BD6949196E3EF90088D5DF /* WMEventDetailsViewController.m */,
+				52DA8EB9196A4BEA009E6F10 /* WMPurpleNavigationBar.h */,
+				52DA8EBA196A4BEA009E6F10 /* WMPurpleNavigationBar.m */,
+				52DC2D901968DE6600379958 /* WMEvent2.h */,
+				52DC2D911968DE6600379958 /* WMEvent2.m */,
+			);
+			name = "Events 2.0";
+			sourceTree = "<group>";
+		};
 		52FE99B017A47A2A00E926F4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1364,6 +1407,7 @@
 		52FE99C017A5EB1E00E926F4 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				52DA8EB8196A3492009E6F10 /* Events 2.0 */,
 				52FE99D217A6E0D100E926F4 /* WMEventsViewController.h */,
 				52FE99D317A6E0D200E926F4 /* WMEventsViewController.m */,
 				52FE99D417A6E0D200E926F4 /* WMEventsViewController.xib */,
@@ -1436,9 +1480,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09ABC08E13A1D52E009C3FCF /* Build configuration list for PBXNativeTarget "WhiteMochaUP" */;
 			buildPhases = (
+				A5183F3263654687A2BBFCE5 /* Check Pods Manifest.lock */,
 				09ABC06913A1D52D009C3FCF /* Sources */,
 				09ABC06A13A1D52D009C3FCF /* Frameworks */,
 				09ABC06B13A1D52D009C3FCF /* Resources */,
+				0F55D8970DE444E6B6B6AD4F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1507,6 +1553,7 @@
 				52FE99B217A47A4D00E926F4 /* WMFurnitureDetailCell.xib in Resources */,
 				52FE99D617A6E0D300E926F4 /* WMEventsViewController.xib in Resources */,
 				52FE99EB17A7A03C00E926F4 /* WMTextbookCourseViewController.xib in Resources */,
+				52DC2D8C19673A4000379958 /* WMEvents.storyboard in Resources */,
 				52065B871964EECE00E010EB /* WMCommentLoadMoreCell.xib in Resources */,
 				52FE99F317A9E59000E926F4 /* WMTextbookDescViewController.xib in Resources */,
 				52FE99FA17AA06EB00E926F4 /* WMTextbookDescCell.xib in Resources */,
@@ -1532,7 +1579,6 @@
 				5224ED6217B9A4E2005199A1 /* class@2x.png in Resources */,
 				5224ED6517B9A63E005199A1 /* food.png in Resources */,
 				5224ED6617B9A63E005199A1 /* food@2x.png in Resources */,
-				526FD4891959235900F79F64 /* comenttablecell.xib in Resources */,
 				527AB6D318D02216008CE849 /* cat-50.png in Resources */,
 				5244ECF218652782009ACC5E /* whiteBG.png in Resources */,
 				527AB6E318D02913008CE849 /* great_wall-50.png in Resources */,
@@ -1656,6 +1702,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F55D8970DE444E6B6B6AD4F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-WhiteMochaUP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5183F3263654687A2BBFCE5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		09ABC06913A1D52D009C3FCF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1671,7 +1750,9 @@
 				5244ED091865691A009ACC5E /* WMPlaceInfo.m in Sources */,
 				526F1CE61839895F007110B1 /* WMCourseAddGradeViewController.m in Sources */,
 				526F1CD018398390007110B1 /* WMSemesterAddFormViewController.m in Sources */,
+				52DA8EBB196A4BEA009E6F10 /* WMPurpleNavigationBar.m in Sources */,
 				5206182E193ADAD300EA8E21 /* WMPollAnswerTableViewCell.m in Sources */,
+				52BD694A196E3EF90088D5DF /* WMEventDetailsViewController.m in Sources */,
 				52A269D4178A09B3002AC9B7 /* WMMarketPlaceHomeViewController.m in Sources */,
 				52A9E919187CAA0F0018D632 /* WMOnCampusFoodViewController.m in Sources */,
 				520C27C719455B820098E538 /* WMComment.m in Sources */,
@@ -1696,6 +1777,7 @@
 				528D97AC180D1B19008897C6 /* WMNavigationBar.m in Sources */,
 				5297EE9618386FFE008A69FA /* WMAddPollQuestionViewController.m in Sources */,
 				523967B81944022200364E86 /* WMAnswerLabelTableViewCell.m in Sources */,
+				52077043196A55D7007BE7CB /* WMEventsMainController.m in Sources */,
 				5233CB8E179CDED400D9F380 /* WMDetailImageViewController.m in Sources */,
 				529ED8811943C5A500649D46 /* WMPollResultsViewController.m in Sources */,
 				5233CB92179E397700D9F380 /* WMWhiteGradient.m in Sources */,
@@ -1737,6 +1819,7 @@
 				5224ED6E17B9C37B005199A1 /* WMEventCell.m in Sources */,
 				529CCA8C17BD6AF8000E5CF0 /* WMClubFormViewController.m in Sources */,
 				5206181F193AA03100EA8E21 /* WMPoll.m in Sources */,
+				52DC2D921968DE6600379958 /* WMEvent2.m in Sources */,
 				529CCA8F17BF10D0000E5CF0 /* WMEvent.m in Sources */,
 				526FD4871957DDB900F79F64 /* WMCommentsViewController.m in Sources */,
 				52061842193C27FD00EA8E21 /* WMPollFooterView.m in Sources */,
@@ -1747,9 +1830,11 @@
 				520A577417C20F15004B0A75 /* WMNoCopyPasteField.m in Sources */,
 				520A577717C210D9004B0A75 /* WMAddEventFormViewController.m in Sources */,
 				520A577A17C2997E004B0A75 /* WMConstants.m in Sources */,
+				52BD694D197239350088D5DF /* WMRecentCommentsViewController.m in Sources */,
 				520A578117C30C7A004B0A75 /* WMEventDetailViewController.m in Sources */,
 				5244ED06186559D1009ACC5E /* WMPlace.m in Sources */,
 				520ADBF517C5B845004DF55C /* WMGeneralDViewController.m in Sources */,
+				5207705B196B8E25007BE7CB /* WMEvents.m in Sources */,
 				526F1CE0183983ED007110B1 /* Grades.m in Sources */,
 				520ADC0917C5FF1C004DF55C /* WMCustomLoginViewController.m in Sources */,
 				520ADC3E17CAA019004DF55C /* WMHomeViewController.m in Sources */,
@@ -1831,6 +1916,7 @@
 		};
 		09ABC08F13A1D52E009C3FCF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17D0BFCD0CC2476A9AFFB8D1 /* Pods-WhiteMochaUP.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1853,7 +1939,7 @@
 				INFOPLIST_FILE = "ParseStarterProject/WhiteMochaUP-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WhiteMochaUP;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "B92FA771-5A48-42A5-AFA2-4427AAA8287C";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1861,6 +1947,7 @@
 		};
 		09ABC09013A1D52E009C3FCF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17D0BFCD0CC2476A9AFFB8D1 /* Pods-WhiteMochaUP.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1882,7 +1969,7 @@
 				INFOPLIST_FILE = "ParseStarterProject/WhiteMochaUP-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WhiteMochaUP;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "B92FA771-5A48-42A5-AFA2-4427AAA8287C";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
