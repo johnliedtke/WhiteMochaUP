@@ -23,10 +23,27 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
+    
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        self.view.translatesAutoresizingMaskIntoConstraints = NO;
+
+         }
+    return self;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    
+    if (self) {
+        [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMCommentTableViewCell"];
+        [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentsHeaderTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMCommentsHeaderTableViewCell"];
+        [self.tableView registerNib:[UINib nibWithNibName:@"WMAddCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMAddCommentTableViewCell"];
+        self.view.translatesAutoresizingMaskIntoConstraints = NO;
+
     }
+    
     return self;
 }
 
@@ -40,6 +57,8 @@
 {
     [super viewDidLoad];
     
+    self.view.translatesAutoresizingMaskIntoConstraints = NO;
+    
     // TableView background color
     UIColor *whiteKind = [[UIColor alloc] initWithRed:238.0/255.0
                                                 green:238.0/255
@@ -47,6 +66,17 @@
                                                 alpha:1.0];
     
     self.tableView.backgroundColor = whiteKind;
+    self.tableView.scrollEnabled = NO;
+    
+    
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"WMPoll2"];
+    [query whereKey:@"currentPoll" equalTo:[NSNumber numberWithBool:true]];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        _parent = object;
+        [self handleRefresh];
+        
+    }];
     
     // Comment Cells
     [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMCommentTableViewCell"];
@@ -70,11 +100,14 @@
 - (void)handleRefresh
 {
     PFQuery *query = [PFQuery queryWithClassName:@"WMComment"];
+    [query includeKey:@"user"];
+    [query whereKey:@"parent" equalTo:_parent];
     query.limit = 3;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             [self.comments addObjectsFromArray:objects];
             [self.tableView reloadData];
+            [self.delegate loadedComments:CGRectMake(0, 0, 0, 0)];
         }
     }];
     
@@ -97,6 +130,20 @@ const static int COMMENTS_ADD_SECTION = 2;
     } else {
         return 1;
     }
+}
+
+static const int COMMENTS_HEADER_HEIGHT = 45;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == COMMENT_HEADER_SECTION) {
+        return COMMENTS_HEADER_HEIGHT;
+    } else if (indexPath.section == COMMENTS_SECTION) { // Comments
+        return [[_comments objectAtIndex:indexPath.row] commentHeight];
+    } else if (indexPath.section == COMMENTS_ADD_SECTION) {
+        return 50;
+    }
+    return 10;
+
 }
 
 
@@ -179,15 +226,16 @@ const static int COMMENTS_ADD_SECTION = 2;
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    
+    
 }
-*/
+
 
 @end

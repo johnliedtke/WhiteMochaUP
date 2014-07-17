@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WMRecentCommentsViewController.h"
 
-@interface WMEventDetailsViewController : UIViewController
+@interface WMEventDetailsViewController : UIViewController <WMRecentCommentsDelegate>
 
 @end
