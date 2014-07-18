@@ -22,6 +22,11 @@
     return [UIColor colorWithRed:225.0/255.0 green:225.0/255.0 blue:225.0/255.0 alpha:1.0];
 }
 
++ (UIColor *)WMBackgroundColor {
+    return [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1.0];
+
+}
+
 
 
 

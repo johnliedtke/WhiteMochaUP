@@ -13,5 +13,7 @@
 + (UIColor *)WMPurpleColor;
 + (UIColor *)WMPurpleColorTransparent;
 + (UIColor *)WMBorderColor;
++ (UIColor *)WMBackgroundColor;
+
 
 @end

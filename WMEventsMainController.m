@@ -170,7 +170,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     WMEventDetailsViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"WMEventDetails"];
-    [self.navigationController pushViewController:newView animated:YES];
+    [self performSegueWithIdentifier:@"detailSegue" sender:self];
 }
 
 /*
@@ -223,15 +223,18 @@
  */
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"detailSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        WMEventDetailsViewController *detailVC = [segue destinationViewController];
+        detailVC.event = [[self.events.eventsDictionary objectForKey:self.events.dates[[indexPath section]]] objectAtIndex:[indexPath row]];
+    }
 }
-*/
+
 
 @end
