@@ -17,6 +17,8 @@
 @property (nonatomic, strong, readwrite) NSString *location;
 @property (nonatomic, strong, readwrite) NSString *category;
 @property (nonatomic, strong, readwrite) NSString *subCategory;
+@property (nonatomic, strong, readwrite) NSString *sponsor;
+@property (nonatomic, strong, readwrite) WMPointer *commentPointer;
 
 @property (nonatomic, strong, readwrite) NSDate *start;
 @property (nonatomic, strong, readwrite) NSDate *end;
@@ -27,7 +29,7 @@
 @end
 
 @implementation WMEvent2
-@dynamic title, details, start, end, allDay, type, category, subCategory, location;
+@dynamic title, details, start, end, allDay, type, category, subCategory, location, sponsor, commentPointer;
 
 + (NSString *)parseClassName
 {
@@ -35,6 +37,24 @@
 }
 
 
+- (NSString *)displayDate
+{
+    if (self.allDay) {
+        return @"All Day Event";
+    }
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"eeee, MMMM d"];
+    NSString *date = [dateFormatter stringFromDate:self.start];
+    [dateFormatter setDateFormat:@"h:mm a"];
+    NSString *startTime = [dateFormatter stringFromDate:self.start];
+    if (!self.end) {
+        return [NSString stringWithFormat:@"%@ %@",date,startTime];
+    } else {
+        NSString *endTime = [dateFormatter stringFromDate:self.end];
+        return [NSString stringWithFormat:@"%@\n%@ - %@",date,startTime,endTime];
+    }
+}
 
 
 

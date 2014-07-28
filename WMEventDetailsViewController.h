@@ -15,4 +15,5 @@
 
 @property (nonatomic, strong) WMEvent2 *event;
 
+
 @end

@@ -29,7 +29,7 @@
     _poll = poll;
     _questionLabel.text = _poll.question;
     _dateLabel.text = [WMPoll pollDate];
-    _pollNumberLabel.text = [NSString stringWithFormat:@"Poll of the day #%d",_poll.pollNumber];
+    _pollNumberLabel.text = [NSString stringWithFormat:@"Poll of the day #%lu",(unsigned long)_poll.pollNumber];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

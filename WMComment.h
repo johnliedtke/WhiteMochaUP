@@ -7,6 +7,7 @@
 //
 
 #import <Parse/Parse.h>
+#import "WMPointer.h"
 
 @protocol WMCommentDelegate
 
@@ -22,7 +23,7 @@ typedef void (^WMCommentAddedCompletionBlock)(BOOL success, NSError *error);
 @property (nonatomic, readonly) NSDate *commentDate;
 @property (nonatomic, readonly) NSUInteger *likes;
 @property (nonatomic, readonly) PFUser *user;
-@property (nonatomic, readonly) PFObject *parent;
+@property (nonatomic, readonly) WMPointer *parent;
 
 
 // Designated initialzier 

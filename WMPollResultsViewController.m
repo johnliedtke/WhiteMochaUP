@@ -192,7 +192,7 @@ static const int COMMENTS_HEADER_HEIGHT = 45;
     } else if (indexPath.section == COMMENT_HEADER_SECTION) { // Comments Header
         cell = (WMCommentsHeaderTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"WMCommentsHeaderTableViewCell" forIndexPath:indexPath];
         if (_poll) {
-            [[cell titleLabel] setText:[NSString stringWithFormat:@"Comments (%d)", _commentCount]];
+            [[cell titleLabel] setText:[NSString stringWithFormat:@"Comments (%lu)", _commentCount]];
         }
         [cell setDelegate:self];
 
@@ -314,8 +314,8 @@ static const int COMMENTS_HEADER_HEIGHT = 45;
 - (void)showComments:(BOOL)showKeyboard
 {
     if (_poll) {
-        WMCommentsViewController *commentsVC = [[WMCommentsViewController alloc] initWithParent:_poll];
-        [commentsVC setParent:_poll];
+        WMCommentsViewController *commentsVC = [[WMCommentsViewController alloc] initWithParent:_poll.commentPointer];
+        [commentsVC setParent:_poll.commentPointer];
         if (showKeyboard) {
             [commentsVC.commentBar.textView becomeFirstResponder];
             [commentsVC setShowKeyboardOnLoad:YES];

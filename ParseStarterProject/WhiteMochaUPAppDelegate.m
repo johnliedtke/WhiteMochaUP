@@ -23,6 +23,7 @@
 #import "WMPollAnswer.h"
 #import "WMComment.h"
 #import "WMEvent2.h"
+#import "WMPointer.h"
 
 
 @implementation WhiteMochaUPAppDelegate
@@ -48,6 +49,7 @@
     [WMPollAnswer registerSubclass];
     [WMComment registerSubclass];
     [WMEvent2 registerSubclass];
+    [WMPointer registerSubclass];
     
 
     
@@ -161,7 +163,6 @@
     
     
     
-    WMWebViewController *wvc = [[WMWebViewController alloc] init];
     //[evc setWebViewController:wvc];
     //WMNavigationController *eventsNavigation = [[WMNavigationController alloc] initWithRootViewController:evc];
     
@@ -235,6 +236,10 @@
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
                                                     UIRemoteNotificationTypeAlert|
                                                     UIRemoteNotificationTypeSound];
+    
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     return YES;
 }
 

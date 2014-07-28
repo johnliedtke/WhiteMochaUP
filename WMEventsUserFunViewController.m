@@ -1,20 +1,18 @@
 //
-//  WMTestViewController.m
+//  WMEventsUserFunViewController.m
 //  WhiteMochaUP
 //
-//  Created by John Liedtke on 7/16/14.
+//  Created by John Liedtke on 7/27/14.
 //
 //
 
-#import "WMTestViewController.h"
+#import "WMEventsUserFunViewController.h"
 
-@interface WMTestViewController ()
-@property (strong, nonatomic) IBOutlet UIView *theView;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *theViewHeight;
+@interface WMEventsUserFunViewController ()
 
 @end
 
-@implementation WMTestViewController
+@implementation WMEventsUserFunViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,8 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.theViewHeight.constant = 1000;
 }
 
 - (void)didReceiveMemoryWarning

@@ -11,11 +11,13 @@
 #import "WMCommentTableViewCell.h"
 #import "WMCommentsHeaderTableViewCell.h"
 #import "WMAddCommentTableViewCell.h"
+#import "UIColor+WMColors.h"
 
 
 @interface WMRecentCommentsViewController ()
 
 @property (nonatomic, strong) NSMutableArray *comments;
+@property (nonatomic, readwrite) NSUInteger height;
 
 @end
 
@@ -26,7 +28,7 @@
     
     self = [super initWithStyle:style];
     if (self) {
-        self.view.translatesAutoresizingMaskIntoConstraints = NO;
+        //self.view.translatesAutoresizingMaskIntoConstraints = NO;
 
          }
     return self;
@@ -40,7 +42,7 @@
         [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMCommentTableViewCell"];
         [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentsHeaderTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMCommentsHeaderTableViewCell"];
         [self.tableView registerNib:[UINib nibWithNibName:@"WMAddCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMAddCommentTableViewCell"];
-        self.view.translatesAutoresizingMaskIntoConstraints = NO;
+        //self.view.translatesAutoresizingMaskIntoConstraints = NO;
 
     }
     
@@ -65,7 +67,7 @@
                                                  blue:238.0/255
                                                 alpha:1.0];
     
-    self.tableView.backgroundColor = whiteKind;
+    self.tableView.backgroundColor = [UIColor WMBackgroundColor];
     self.tableView.scrollEnabled = NO;
     
     
@@ -107,7 +109,7 @@
         if (!error) {
             [self.comments addObjectsFromArray:objects];
             [self.tableView reloadData];
-            [self.delegate loadedComments:CGRectMake(0, 0, 0, 0)];
+            [self.delegate loadedComments:CGRectMake(0, 0, 320, [self getHeight])];
         }
     }];
     
@@ -135,17 +137,30 @@ const static int COMMENTS_ADD_SECTION = 2;
 static const int COMMENTS_HEADER_HEIGHT = 45;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSUInteger height = 0;
     if (indexPath.section == COMMENT_HEADER_SECTION) {
-        return COMMENTS_HEADER_HEIGHT;
+        height = COMMENTS_HEADER_HEIGHT;
     } else if (indexPath.section == COMMENTS_SECTION) { // Comments
-        return [[_comments objectAtIndex:indexPath.row] commentHeight];
+        height = [[_comments objectAtIndex:indexPath.row] commentHeight];
     } else if (indexPath.section == COMMENTS_ADD_SECTION) {
-        return 50;
+        height = 50;
     }
-    return 10;
+    _height += height;
+    return height;
 
 }
 
+- (float)getHeight
+{
+    float height = 0;
+    height += COMMENTS_HEADER_HEIGHT;
+    height += 50;
+    for (int i = 0; i < [self.tableView numberOfRowsInSection:COMMENTS_SECTION]; ++i) {
+        CGRect frame = [self.tableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:COMMENTS_SECTION]];
+        height += frame.size.height;
+    }
+    return height;
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {

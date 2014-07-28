@@ -13,6 +13,7 @@
 #import "MBProgressHUD.h"
 #import "UIColor+WMColors.h"
 #import "UIViewController+ScrollingNavbar.h"
+#import "UIViewController+WMComments.h"
 
 
 @interface WMCommentsViewController ()
@@ -69,7 +70,7 @@
                                                  selector:@selector(changeFirstResponder)
                                                      name:UIKeyboardDidShowNotification
                                                    object:nil];
-        [self followScrollView:self.tableView];
+        //[self followScrollView:self.tableView];
 
         
   
@@ -89,12 +90,7 @@
 
 - (void)postButtonPressed:(NSString *)comment
 {
-    [WMComment addComment:comment parent:_parent withBlock:^(BOOL success, NSError *error) {
-        if (success) {
-            [self hideKeyboard];
-            [self loadObjects];
-        }
-    }];
+    [self addComment:comment parent:[self parent] withSelectors:@[@"hideKeyboard",@"loadObjects"]];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -300,20 +296,8 @@
     if (buttonIndex == 0) {
         WMComment *commentToDelete = [self objects][_actionIndexPath.row];
         
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        hud.mode = MBProgressHUDModeIndeterminate;
-        hud.labelText = @"Deleting comment...";
-        //hud.color = [UIColor WMPurpleColorTransparent];
-        hud.graceTime = 2.0;
-        [commentToDelete deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (succeeded) {
-                [self loadObjects];
-                [hud hide:YES];
-            } else {
-                NSLog(@"ERROR");
-            }
-        }];
-    
+        [self deleteComment:commentToDelete withSelectors:@[@"loadObjects"]];
+
     }
     
 }

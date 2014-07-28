@@ -239,7 +239,7 @@ const static int ANSWERS_SECTION = 0;
 - (void)updateUI
 {
     //[self.tableView reloadData];
-    [_pollNumberLabel setText:[NSString stringWithFormat:@"Poll of the day #%d",_poll.pollNumber]];
+    [_pollNumberLabel setText:[NSString stringWithFormat:@"Poll of the day #%d",(int)_poll.pollNumber]];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationBottom];
      self.questionLabel.text = self.poll.question;
     

@@ -15,7 +15,6 @@
 @property (nonatomic, strong) WMEvent2 *event;
 
 
-- (NSUInteger)rowHeight:(NSString *)detailText;
 
 
 

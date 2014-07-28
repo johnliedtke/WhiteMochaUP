@@ -18,7 +18,7 @@
 @property (nonatomic, readwrite) NSDate *commentDate;
 @property (nonatomic, readwrite) NSUInteger *likes;
 @property (nonatomic, strong) UITextView *textView;
-@property (nonatomic, readwrite) PFObject *parent;
+@property (nonatomic, readwrite) WMPointer *parent;
 
 
 @end
@@ -38,7 +38,7 @@
     
     if (self) {
         self.comment = comment;
-        self.parent = parent;
+        //self.parent = parent;
     }
     return self;
     
@@ -114,7 +114,11 @@
     // Create date string
     if (hoursSincePost == 0) { // less than 1 hour
         if (minutesSincePost == 0) { // less than 1 minute
-            dateString = [NSString stringWithFormat:@"%d seconds ago",(int)secondsSincePost];
+            if (secondsSincePost  < 1) {
+                dateString = @"Just now";
+            } else {
+                dateString = [NSString stringWithFormat:@"%d seconds ago",(int)secondsSincePost];
+            }
         } else { // more than 1 minute
             dateString = minutesSincePost == 1 ? [NSString stringWithFormat:@"%lu minute ago", (unsigned long)minutesSincePost] : [NSString stringWithFormat:@"%lu minutes ago",(unsigned long)minutesSincePost];
         }

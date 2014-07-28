@@ -106,6 +106,7 @@
 - (void)handleRefresh
 {
     PFQuery *query = [PFQuery queryWithClassName:@"WMEvent2"];
+    query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         NSLog(@"%@", [objects[0] title]);
         __weak typeof(self) weakSelf = self;
@@ -233,6 +234,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         WMEventDetailsViewController *detailVC = [segue destinationViewController];
         detailVC.event = [[self.events.eventsDictionary objectForKey:self.events.dates[[indexPath section]]] objectAtIndex:[indexPath row]];
+
     }
 }
 

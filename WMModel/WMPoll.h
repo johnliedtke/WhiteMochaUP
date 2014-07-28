@@ -8,6 +8,7 @@
 
 #import <Parse/Parse.h>
 #import "WMPollAnswer.h"
+#import "WMPointer.h"
 
 @interface WMPoll : PFObject<PFSubclassing,UIAlertViewDelegate>
 typedef void (^WMCurrentPollCompletionBlock)(BOOL success, WMPoll *poll, NSError *error);
@@ -18,6 +19,7 @@ typedef void (^WMCurrentPollCompletionBlock)(BOOL success, WMPoll *poll, NSError
 @property (nonatomic, readonly) BOOL currentPoll;
 @property (nonatomic, readonly) NSMutableArray *voters;
 @property (nonatomic, readonly) NSUInteger pollNumber;
+@property (nonatomic, readonly) WMPointer *commentPointer;
 
 // designated initialzer
 - (instancetype)initWithQuestion:(NSString *)question

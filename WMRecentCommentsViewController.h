@@ -23,4 +23,8 @@
 
 @property (nonatomic, weak) id <WMRecentCommentsDelegate> delegate;
 
+@property (nonatomic, readonly) NSUInteger height;
+
+- (float)getHeight;
+
 @end

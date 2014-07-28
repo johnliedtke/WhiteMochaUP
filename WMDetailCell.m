@@ -34,6 +34,8 @@
     // Text View
     self.detailTextView.textContainer.lineFragmentPadding = 0;
     self.detailTextView.textContainerInset = UIEdgeInsetsZero;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+
 
     
     self.layer.borderWidth = 1.0;
@@ -59,6 +61,7 @@
     _event = event;
     _locationLabel.text = _event.location;
     _detailTextView.text = _event.details;
+    _whenLabel.text = [_event displayDate];
 //    self.detailTextView.scrollEnabled = NO;
 //    self.detailTextView.scrollEnabled = YES;
 

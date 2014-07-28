@@ -14,6 +14,10 @@
     return [UIColor colorWithRed:134.0/255.0f green:92.0/255.0f blue:168.0/255.0f alpha:1.0f];
 }
 
++ (UIColor *)WMDarkerPurpleColor {
+    return [UIColor colorWithRed:82.0/255.0f green:36.0/255.0f blue:120.0/255.0f alpha:1.0f];
+}
+
 + (UIColor *)WMPurpleColorTransparent {
     return [UIColor colorWithRed:134.0/255.0f green:92.0/255.0f blue:168.0/255.0f alpha:0.8f];
 }

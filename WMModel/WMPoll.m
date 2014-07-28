@@ -19,11 +19,12 @@
 @property (nonatomic, readwrite) BOOL currentPoll;
 @property (nonatomic, readwrite) NSDate *pollDate;
 @property (nonatomic, readwrite) NSUInteger pollNumber;
+@property (nonatomic, readwrite) WMPointer *commentPointer;
 
 @end
 
 @implementation WMPoll
-@dynamic votes, question, voters, answers, currentPoll, pollDate, pollNumber;
+@dynamic votes, question, voters, answers, currentPoll, pollDate, pollNumber, commentPointer;
 
 + (NSString *)parseClassName
 {
@@ -72,6 +73,7 @@
         self.question = question;
         self.answers = [[NSArray alloc] initWithArray:answers];
         self.votes = 0;
+        self.commentPointer = [[WMPointer alloc] initWithParent:self];
     }
     return self;
 }

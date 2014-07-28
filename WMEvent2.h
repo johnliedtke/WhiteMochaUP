@@ -7,6 +7,7 @@
 //
 
 #import <Parse/Parse.h>
+#import "WMPointer.h"
 
 #define ALL_CATEGORY @"ALL"
 #define SCHOOL_CATEGORY @"SCHOOL"
@@ -23,15 +24,16 @@
 @property (nonatomic, strong, readonly) NSString *location;
 @property (nonatomic, strong, readonly) NSString *category;
 @property (nonatomic, strong, readonly) NSString *subCategory;
+@property (nonatomic, strong, readonly) NSString *sponsor;
 
 @property (nonatomic, strong, readonly) NSDate *start;
 @property (nonatomic, strong, readonly) NSDate *end;
 @property (nonatomic, readonly) BOOL allDay;
+@property (nonatomic, readonly) WMPointer *commentPointer;
 
 
-- (BOOL)isSchoolCategory:(NSString *)event;
-- (BOOL)isSportsCategory:(NSString *)event;
-- (BOOL)isClubsCategory:(NSString *)event;
+
+- (NSString *)displayDate;
 
 
 

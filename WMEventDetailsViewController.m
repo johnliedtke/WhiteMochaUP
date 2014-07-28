@@ -7,26 +7,21 @@
 //
 
 #import "WMEventDetailsViewController.h"
+#import "UIViewController+WMComments.h"
 #import "UIColor+WMColors.h"
 #import "WMRecentCommentsViewController.h"
 #import "WMEventDetailView.h"
-#import "WMEventDetailTextCell.h"
 #import "WMDetailCell.h"
-
-
-
+#import "WMEventSubscribeCell.h"
 
 
 @interface WMEventDetailsViewController ()
 
-
+@property (strong, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) WMEventDetailView *eventDetailView;
 @property (strong, nonatomic) WMDetailCell *detailCell;
 @property (strong, nonatomic) NSMutableDictionary *offscreenCells;
-
-
-
 
 @end
 
@@ -44,6 +39,7 @@
 - (WMEventDetailView *)eventDetailView
 {
     if (!_eventDetailView) _eventDetailView = [WMEventDetailView initView];
+
     return _eventDetailView;
 }
 
@@ -53,11 +49,19 @@
     return _offscreenCells;
 }
 
+- (void)setEvent:(WMEvent2 *)event
+{
+    _event = event;
+    self.navigationItem.title = _event.title;
+    [self setCommentParent:_event.commentPointer];
+    //[self fetchComments:self.tableView];
+
+}
+
 - (WMDetailCell *)detailCell
 {
     if (!_detailCell) {
         WMDetailCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"WMDetailCell"];
-        //[cell configureWithThirdPartyObject:self.app];
         [cell layoutIfNeeded];
     }
     return _detailCell;
@@ -70,17 +74,32 @@
     self.tableView.dataSource = self;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100; // set to whatever your "average" cell height is
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     self.tableView.backgroundColor = [UIColor WMBackgroundColor];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"WMDetailCell" bundle:nil] forCellReuseIdentifier:@"WMDetailCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"WMEventSubscribeCell" bundle:nil] forCellReuseIdentifier:@"WMEventSubscribeCell"];
+    
+    [self fetchComments:self.tableView];
+    
+    if ([self.event.type isEqualToString:@"RSS"]) {
+        [self setEnableComments:[NSNumber numberWithBool:FALSE]];
+    }
+
     
     
+    // Register Cells
+    [self setUpCommentCells:self.tableView];
     
-   
 
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:animated];
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -88,25 +107,33 @@
 
 }
 
+
 #pragma mark - Table view data source
 
 // Sections
 const static int DETAILS_SECTION = 0;
+const static int SUBSCRIBE_SECTION = 1;
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2 + [self numberOfCommentSections];
 }
 
 // Rows
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (section == DETAILS_SECTION)
+        return 1;
+    else if (section == SUBSCRIBE_SECTION)
+        return 1;
+    else
+        return [self numberOfRowsInCommentSection:tableView inSection:section];
 }
 
 // Row height
-const static int ANSWERS_SECTION = 0;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    CGFloat height = 0;
+    if (indexPath.section == DETAILS_SECTION) {
     
     NSString *rereuseIdentifier = @"WMDetailCell";
     
@@ -123,9 +150,13 @@ const static int ANSWERS_SECTION = 0;
     cell.bounds = CGRectMake(0.0f, 0.0f, CGRectGetWidth(tableView.bounds), CGRectGetHeight(cell.bounds));
     [cell setNeedsLayout];
     [cell layoutIfNeeded];
-    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
 
-
+    } else if (indexPath.section == SUBSCRIBE_SECTION) {
+        height = 60.0;
+    } else {
+        return [self heightForCommentRow:tableView indexPath:indexPath];
+    }
     
     return  height;
 }
@@ -136,20 +167,24 @@ const static int ANSWERS_SECTION = 0;
 }
 
 // Header view
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    return nil;
+    if (section == SUBSCRIBE_SECTION) {
+    }
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 25)];
+    [view setBackgroundColor:[UIColor clearColor]];
+    return view;
 }
 
 // Header height
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
+    if (section == SUBSCRIBE_SECTION) {
         return 0;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
+    } else return [self heightForCommentFooter:tableView inSection:section];
     return 0;
 }
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -157,21 +192,22 @@ const static int ANSWERS_SECTION = 0;
     id cell;
     
     if (indexPath.section == DETAILS_SECTION) {
-    cell = (WMEventDetailTextCell *)[tableView dequeueReusableCellWithIdentifier:@"WMDetailCell" forIndexPath:indexPath];
+    cell = (WMDetailCell *)[tableView dequeueReusableCellWithIdentifier:@"WMDetailCell" forIndexPath:indexPath];
         [cell setEvent:self.event];
         
 
+    } else if (indexPath.section == SUBSCRIBE_SECTION) {
+        cell = (WMEventSubscribeCell *)[tableView dequeueReusableCellWithIdentifier:@"WMEventSubscribeCell" forIndexPath:indexPath];
+    } else {
+        return [self setUpCell:tableView indexPath:indexPath];
     }
-    [cell setNeedsUpdateConstraints];
-    [cell updateConstraintsIfNeeded];
-    
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [self didSelectCommentRow:tableView indexPath:indexPath];
 }
 
 
@@ -199,15 +235,12 @@ const static int ANSWERS_SECTION = 0;
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    }
-
-
-- (void)loadedComments:(CGRect)tableViewFrame
-{
-
-
-
+    
 }
+
+
+
+
 
 
 @end
