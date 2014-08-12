@@ -36,7 +36,6 @@
     return @"WMEvent2";
 }
 
-
 - (NSString *)displayDate
 {
     if (self.allDay) {
@@ -45,6 +44,7 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"eeee, MMMM d"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
     NSString *date = [dateFormatter stringFromDate:self.start];
     [dateFormatter setDateFormat:@"h:mm a"];
     NSString *startTime = [dateFormatter stringFromDate:self.start];
@@ -56,29 +56,10 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- (BOOL)hasSubCategory
+{
+    return ![self.subCategory isEqualToString:@""];
+}
 
 
 @end

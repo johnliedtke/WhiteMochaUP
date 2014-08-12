@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WMEventsMainController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface WMEventsMainController : UIViewController <UITableViewDelegate>
 
 @end

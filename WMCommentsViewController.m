@@ -105,6 +105,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setEnableComments:[NSNumber numberWithBool:YES]];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMCommentTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentLoadMoreCell" bundle:nil] forCellReuseIdentifier:@"WMCommentLoadMoreCell"];
@@ -222,7 +223,7 @@
  // If no objects are loaded in memory, we look to the cache first to fill the table
  // and then subsequently do a query against the network.
  if (self.objects.count == 0) {
- query.cachePolicy = kPFCachePolicyNetworkElseCache;
+     query.cachePolicy = kPFCachePolicyNetworkOnly;
 
  }
 

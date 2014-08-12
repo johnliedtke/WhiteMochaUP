@@ -13,6 +13,7 @@
 #define SCHOOL_CATEGORY @"SCHOOL"
 #define SPORTS_CATEGORY @"SPORTS"
 #define CLUBS_CATEGORY @"CLUBS"
+#define FUN_CATEGORY @"FUN"
 #define REFRESH @"REFRESH"
 
 
@@ -34,6 +35,7 @@
 
 
 - (NSString *)displayDate;
+- (BOOL)hasSubCategory;
 
 
 

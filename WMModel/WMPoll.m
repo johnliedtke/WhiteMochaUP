@@ -10,6 +10,7 @@
 #import <Parse/PFObject+Subclass.h>
 #import "WMComment.h"
 
+
 @interface WMPoll ()
 
 @property (nonatomic, readwrite) NSUInteger votes;
@@ -37,9 +38,9 @@
     PFQuery *query = [PFQuery queryWithClassName:@"WMPoll2"];
     [query whereKey:@"currentPoll" equalTo:[NSNumber numberWithBool:YES]];
     [query includeKey:@"answers"];
-   [query includeKey:@"comments"];
+    [query includeKey:@"comments"];
     [query includeKey:@"newComments"];
-    //query.cachePolicy = kPFCachePolicyNetworkElseCache;
+    query.cachePolicy = kPFCachePolicyNetworkElseCache;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             callback(YES, [objects firstObject], error);
@@ -53,6 +54,7 @@
 + (PFQuery *)currentPollQuery
 {
     PFQuery *query = [PFQuery queryWithClassName:@"WMPoll2"];
+    query.cachePolicy = kPFCachePolicyNetworkElseCache;
     [query whereKey:@"currentPoll" equalTo:[NSNumber numberWithBool:YES]];
     [query includeKey:@"answers"];
     return query;

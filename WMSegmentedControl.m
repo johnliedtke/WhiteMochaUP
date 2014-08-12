@@ -8,6 +8,8 @@
 
 #import "WMSegmentedControl.h"
 #import "UIColor+WMColors.h"
+#import "UIFont+FlatUI.h"
+#import "UIColor+FlatUI.h"
 
 @implementation WMSegmentedControl
 
@@ -23,8 +25,9 @@
 {
     [super awakeFromNib];
     self.tintColor = [UIColor WMDarkerPurpleColor];
-    [self setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateNormal];
+    [self setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont flatFontOfSize:13.0]} forState:UIControlStateNormal];
     [self setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateSelected];
+    
 }
 
 /*

@@ -35,6 +35,10 @@
 		52047247178E792700BF5A0F /* WMGeneralDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52047246178E792700BF5A0F /* WMGeneralDetailViewController.m */; };
 		5204724B178F6E9300BF5A0F /* WMGeneralDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52047249178F6E9200BF5A0F /* WMGeneralDescriptionViewController.m */; };
 		5204724C178F6E9300BF5A0F /* WMGeneralDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5204724A178F6E9300BF5A0F /* WMGeneralDescriptionViewController.xib */; };
+		52056C8D198D621E00BEA962 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 52056C8C198D621E00BEA962 /* Reachability.m */; };
+		52056C90198D832700BEA962 /* UIViewController+WMSubcription.m in Sources */ = {isa = PBXBuildFile; fileRef = 52056C8F198D832700BEA962 /* UIViewController+WMSubcription.m */; };
+		52056C93198DAD7100BEA962 /* UIViewController+WMSaveEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 52056C92198DAD7100BEA962 /* UIViewController+WMSaveEdit.m */; };
+		52056C97198EF46600BEA962 /* UIViewController+Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 52056C96198EF46600BEA962 /* UIViewController+Reachability.m */; };
 		5206181F193AA03100EA8E21 /* WMPoll.m in Sources */ = {isa = PBXBuildFile; fileRef = 5206181E193AA03100EA8E21 /* WMPoll.m */; };
 		52061825193ABA3F00EA8E21 /* WMPollAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 52061824193ABA3F00EA8E21 /* WMPollAnswer.m */; };
 		5206182E193ADAD300EA8E21 /* WMPollAnswerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5206182C193ADAD300EA8E21 /* WMPollAnswerTableViewCell.m */; };
@@ -251,6 +255,12 @@
 		529ED8861943CB3500649D46 /* WMPieChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529ED8841943CB3500649D46 /* WMPieChartTableViewCell.xib */; };
 		52A269C617895B8F002AC9B7 /* Museo_Slab.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A269C517895AFB002AC9B7 /* Museo_Slab.otf */; };
 		52A269D4178A09B3002AC9B7 /* WMMarketPlaceHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A269D3178A09B3002AC9B7 /* WMMarketPlaceHomeViewController.m */; };
+		52A630991996A94100693904 /* WMArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A630981996A94100693904 /* WMArrayDataSource.m */; };
+		52A630A51996C75D00693904 /* WMEventSubscriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A630A31996C75D00693904 /* WMEventSubscriptionCell.m */; };
+		52A630A61996C75D00693904 /* WMEventSubscriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A630A41996C75D00693904 /* WMEventSubscriptionCell.xib */; };
+		52A630AC1998416B00693904 /* UIButton+WMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A630AB1998416B00693904 /* UIButton+WMButton.m */; };
+		52A630AF1998434900693904 /* UIImage+WMImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A630AE1998434900693904 /* UIImage+WMImage.m */; };
+		52A630B21999B54400693904 /* WMAddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A630B11999B54400693904 /* WMAddEventViewController.m */; };
 		52A834ED17E1A28B00E49E27 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A834EC17E1A28B00E49E27 /* Default@2x.png */; };
 		52A834F117E1A56C00E49E27 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A834F017E1A56C00E49E27 /* Default.png */; };
 		52A9E911187A1A860018D632 /* WMOnCampusFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A9E910187A1A860018D632 /* WMOnCampusFood.m */; };
@@ -259,6 +269,8 @@
 		52A9E919187CAA0F0018D632 /* WMOnCampusFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A9E918187CAA0F0018D632 /* WMOnCampusFoodViewController.m */; };
 		52A9E91C187DEEC10018D632 /* WMOnCampusFoodHours.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A9E91B187DEEC10018D632 /* WMOnCampusFoodHours.m */; };
 		52AAC3A2186D823D0048A6D8 /* WMPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AAC3A1186D823D0048A6D8 /* WMPhoneNumber.m */; };
+		52AAFF061988B2FB0057EA2E /* WMEditSubscriptionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AAFF051988B2FB0057EA2E /* WMEditSubscriptionController.m */; };
+		52AAFF091989DE720057EA2E /* WMSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AAFF081989DE720057EA2E /* WMSubscription.m */; };
 		52ACDEB91810CAB0000105BE /* forward-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 52ACDEB81810CAB0000105BE /* forward-25.png */; };
 		52ACDEBB1810CAB6000105BE /* forward-25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52ACDEBA1810CAB6000105BE /* forward-25@2x.png */; };
 		52AE6F1B1985A64E00BEC9C1 /* WMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AE6F1A1985A64E00BEC9C1 /* WMSegmentedControl.m */; };
@@ -356,6 +368,15 @@
 		52047248178F6E9200BF5A0F /* WMGeneralDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGeneralDescriptionViewController.h; sourceTree = "<group>"; };
 		52047249178F6E9200BF5A0F /* WMGeneralDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGeneralDescriptionViewController.m; sourceTree = "<group>"; };
 		5204724A178F6E9300BF5A0F /* WMGeneralDescriptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMGeneralDescriptionViewController.xib; sourceTree = "<group>"; };
+		52056C8B198D621E00BEA962 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		52056C8C198D621E00BEA962 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		52056C8E198D832700BEA962 /* UIViewController+WMSubcription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WMSubcription.h"; sourceTree = "<group>"; };
+		52056C8F198D832700BEA962 /* UIViewController+WMSubcription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WMSubcription.m"; sourceTree = "<group>"; };
+		52056C91198DAD7100BEA962 /* UIViewController+WMSaveEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WMSaveEdit.h"; sourceTree = "<group>"; };
+		52056C92198DAD7100BEA962 /* UIViewController+WMSaveEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WMSaveEdit.m"; sourceTree = "<group>"; };
+		52056C94198DAF2500BEA962 /* WMSaveEditDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMSaveEditDelegate.h; sourceTree = "<group>"; };
+		52056C95198EF46600BEA962 /* UIViewController+Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Reachability.h"; sourceTree = "<group>"; };
+		52056C96198EF46600BEA962 /* UIViewController+Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Reachability.m"; sourceTree = "<group>"; };
 		5206181D193AA03100EA8E21 /* WMPoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMPoll.h; path = WMModel/WMPoll.h; sourceTree = "<group>"; };
 		5206181E193AA03100EA8E21 /* WMPoll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMPoll.m; path = WMModel/WMPoll.m; sourceTree = "<group>"; };
 		52061823193ABA3F00EA8E21 /* WMPollAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPollAnswer.h; sourceTree = "<group>"; };
@@ -648,6 +669,17 @@
 		52A269C517895AFB002AC9B7 /* Museo_Slab.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Museo_Slab.otf; sourceTree = "<group>"; };
 		52A269D2178A09B3002AC9B7 /* WMMarketPlaceHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMarketPlaceHomeViewController.h; sourceTree = "<group>"; };
 		52A269D3178A09B3002AC9B7 /* WMMarketPlaceHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMarketPlaceHomeViewController.m; sourceTree = "<group>"; };
+		52A630971996A94100693904 /* WMArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMArrayDataSource.h; sourceTree = "<group>"; };
+		52A630981996A94100693904 /* WMArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMArrayDataSource.m; sourceTree = "<group>"; };
+		52A630A21996C75D00693904 /* WMEventSubscriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMEventSubscriptionCell.h; sourceTree = "<group>"; };
+		52A630A31996C75D00693904 /* WMEventSubscriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMEventSubscriptionCell.m; sourceTree = "<group>"; };
+		52A630A41996C75D00693904 /* WMEventSubscriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMEventSubscriptionCell.xib; sourceTree = "<group>"; };
+		52A630AA1998416B00693904 /* UIButton+WMButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WMButton.h"; sourceTree = "<group>"; };
+		52A630AB1998416B00693904 /* UIButton+WMButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WMButton.m"; sourceTree = "<group>"; };
+		52A630AD1998434900693904 /* UIImage+WMImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WMImage.h"; sourceTree = "<group>"; };
+		52A630AE1998434900693904 /* UIImage+WMImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WMImage.m"; sourceTree = "<group>"; };
+		52A630B01999B54400693904 /* WMAddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMAddEventViewController.h; sourceTree = "<group>"; };
+		52A630B11999B54400693904 /* WMAddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMAddEventViewController.m; sourceTree = "<group>"; };
 		52A834EC17E1A28B00E49E27 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		52A834EE17E1A54C00E49E27 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		52A834F017E1A56C00E49E27 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
@@ -662,6 +694,10 @@
 		52A9E91B187DEEC10018D632 /* WMOnCampusFoodHours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMOnCampusFoodHours.m; sourceTree = "<group>"; };
 		52AAC3A0186D823D0048A6D8 /* WMPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPhoneNumber.h; sourceTree = "<group>"; };
 		52AAC3A1186D823D0048A6D8 /* WMPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPhoneNumber.m; sourceTree = "<group>"; };
+		52AAFF041988B2FB0057EA2E /* WMEditSubscriptionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMEditSubscriptionController.h; sourceTree = "<group>"; };
+		52AAFF051988B2FB0057EA2E /* WMEditSubscriptionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMEditSubscriptionController.m; sourceTree = "<group>"; };
+		52AAFF071989DE720057EA2E /* WMSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSubscription.h; sourceTree = "<group>"; usesTabs = 0; };
+		52AAFF081989DE720057EA2E /* WMSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSubscription.m; sourceTree = "<group>"; };
 		52ACDEB81810CAB0000105BE /* forward-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-25.png"; sourceTree = "<group>"; };
 		52ACDEBA1810CAB6000105BE /* forward-25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-25@2x.png"; sourceTree = "<group>"; };
 		52AE6F191985A64E00BEC9C1 /* WMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSegmentedControl.h; sourceTree = "<group>"; };
@@ -757,6 +793,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092354B513A1D7F000DA740F /* SystemConfiguration.framework in Frameworks */,
 				52C2CBD5194D46EC00627596 /* Social.framework in Frameworks */,
 				52C2CBD4194D46E400627596 /* Accounts.framework in Frameworks */,
 				520ADC7C17CC2C90004DF55C /* CoreData.framework in Frameworks */,
@@ -770,7 +807,6 @@
 				5251BEA71974D75900152B71 /* Parse.framework in Frameworks */,
 				095ACE8613C68EA300566243 /* AudioToolbox.framework in Frameworks */,
 				092354B713A1D83C00DA740F /* MobileCoreServices.framework in Frameworks */,
-				092354B513A1D7F000DA740F /* SystemConfiguration.framework in Frameworks */,
 				092354B313A1D7EB00DA740F /* CFNetwork.framework in Frameworks */,
 				09ABC07213A1D52D009C3FCF /* UIKit.framework in Frameworks */,
 				09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */,
@@ -1175,6 +1211,10 @@
 				5207705A196B8E25007BE7CB /* WMEvents.m */,
 				52DC2D901968DE6600379958 /* WMEvent2.h */,
 				52DC2D911968DE6600379958 /* WMEvent2.m */,
+				52AAFF071989DE720057EA2E /* WMSubscription.h */,
+				52AAFF081989DE720057EA2E /* WMSubscription.m */,
+				52056C8E198D832700BEA962 /* UIViewController+WMSubcription.h */,
+				52056C8F198D832700BEA962 /* UIViewController+WMSubcription.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1203,6 +1243,9 @@
 				52CD1DF11974DB79002CF35A /* WMTextView.m */,
 				52AE6F191985A64E00BEC9C1 /* WMSegmentedControl.h */,
 				52AE6F1A1985A64E00BEC9C1 /* WMSegmentedControl.m */,
+				52A630A21996C75D00693904 /* WMEventSubscriptionCell.h */,
+				52A630A31996C75D00693904 /* WMEventSubscriptionCell.m */,
+				52A630A41996C75D00693904 /* WMEventSubscriptionCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1218,6 +1261,15 @@
 				52D2068719859DFA003BFDFF /* WMEventsUserFunViewController.m */,
 				52D2067719836FD5003BFDFF /* WMSubscriptionViewController.h */,
 				52D2067819836FD5003BFDFF /* WMSubscriptionViewController.m */,
+				52A630971996A94100693904 /* WMArrayDataSource.h */,
+				52A630981996A94100693904 /* WMArrayDataSource.m */,
+				52AAFF041988B2FB0057EA2E /* WMEditSubscriptionController.h */,
+				52AAFF051988B2FB0057EA2E /* WMEditSubscriptionController.m */,
+				52056C91198DAD7100BEA962 /* UIViewController+WMSaveEdit.h */,
+				52056C92198DAD7100BEA962 /* UIViewController+WMSaveEdit.m */,
+				52056C94198DAF2500BEA962 /* WMSaveEditDelegate.h */,
+				52A630B01999B54400693904 /* WMAddEventViewController.h */,
+				52A630B11999B54400693904 /* WMAddEventViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1382,6 +1434,10 @@
 				528D97AE180D1B4F008897C6 /* WMNavigationController.m */,
 				520A577817C2997B004B0A75 /* WMConstants.h */,
 				520A577917C2997C004B0A75 /* WMConstants.m */,
+				52A630AA1998416B00693904 /* UIButton+WMButton.h */,
+				52A630AB1998416B00693904 /* UIButton+WMButton.m */,
+				52A630AD1998434900693904 /* UIImage+WMImage.h */,
+				52A630AE1998434900693904 /* UIImage+WMImage.m */,
 				52B5847517B2C4E500AA8457 /* PrevNext */,
 			);
 			name = "WM Classes";
@@ -1514,6 +1570,10 @@
 				52FE99D217A6E0D100E926F4 /* WMEventsViewController.h */,
 				52FE99D317A6E0D200E926F4 /* WMEventsViewController.m */,
 				52FE99D417A6E0D200E926F4 /* WMEventsViewController.xib */,
+				52056C8B198D621E00BEA962 /* Reachability.h */,
+				52056C8C198D621E00BEA962 /* Reachability.m */,
+				52056C95198EF46600BEA962 /* UIViewController+Reachability.h */,
+				52056C96198EF46600BEA962 /* UIViewController+Reachability.m */,
 				529CCA9017BF6908000E5CF0 /* Event Icons */,
 				52ACDEBE1811C22A000105BE /* Event Views */,
 				52ACDEBD1811C1C2000105BE /* Event Forms */,
@@ -1711,6 +1771,7 @@
 				520A575E17C1C5B8004B0A75 /* academic.png in Resources */,
 				520A576017C1C784004B0A75 /* basketall.png in Resources */,
 				520A576217C1D6BC004B0A75 /* fun.png in Resources */,
+				52A630A61996C75D00693904 /* WMEventSubscriptionCell.xib in Resources */,
 				520A576417C1D734004B0A75 /* meeting.png in Resources */,
 				520A576B17C2038D004B0A75 /* furniture.png in Resources */,
 				520A576D17C2054F004B0A75 /* furniture@2x.png in Resources */,
@@ -1865,7 +1926,9 @@
 				529ED8781943C2E400649D46 /* XYPieChart.m in Sources */,
 				523967BC1945164C00364E86 /* UIViewController+WMChangeTabItems.m in Sources */,
 				529ED8851943CB3500649D46 /* WMPieChartTableViewCell.m in Sources */,
+				52A630AC1998416B00693904 /* UIButton+WMButton.m in Sources */,
 				52047215178A39CF00BF5A0F /* WMGeneralListingViewController.m in Sources */,
+				52056C90198D832700BEA962 /* UIViewController+WMSubcription.m in Sources */,
 				52D20682198425A6003BFDFF /* WMContainerViewController.m in Sources */,
 				526F1CCB18398390007110B1 /* WMCourseAddFormViewController.m in Sources */,
 				529C98631978CAFD00D1E7A5 /* WMEventSubscribeCell.m in Sources */,
@@ -1876,11 +1939,15 @@
 				5204721F178B51B200BF5A0F /* WMFurniture.m in Sources */,
 				52047228178BCDE600BF5A0F /* WMMarketImageViewController.m in Sources */,
 				5204722C178C9C8700BF5A0F /* WMFurnitureListingsViewController.m in Sources */,
+				52AAFF061988B2FB0057EA2E /* WMEditSubscriptionController.m in Sources */,
 				526F1CE3183983F3007110B1 /* Course.m in Sources */,
 				52047234178CB0F500BF5A0F /* WMFurnitureCell.m in Sources */,
 				52047247178E792700BF5A0F /* WMGeneralDetailViewController.m in Sources */,
+				52056C97198EF46600BEA962 /* UIViewController+Reachability.m in Sources */,
 				52D2067619836B37003BFDFF /* WMLeftSegue.m in Sources */,
 				529ED87C1943C37100649D46 /* WMQuestionTableViewCell.m in Sources */,
+				52056C8D198D621E00BEA962 /* Reachability.m in Sources */,
+				52A630A51996C75D00693904 /* WMEventSubscriptionCell.m in Sources */,
 				5204724B178F6E9300BF5A0F /* WMGeneralDescriptionViewController.m in Sources */,
 				5244ED201868E946009ACC5E /* WMPlaceInfoEditViewController.m in Sources */,
 				528D97AC180D1B19008897C6 /* WMNavigationBar.m in Sources */,
@@ -1898,6 +1965,7 @@
 				52FE99C917A60F4F00E926F4 /* WMRSSItem.m in Sources */,
 				52FE99CC17A6413600E926F4 /* WMWebViewController.m in Sources */,
 				52D2068819859DFA003BFDFF /* WMEventsUserFunViewController.m in Sources */,
+				52056C93198DAD7100BEA962 /* UIViewController+WMSaveEdit.m in Sources */,
 				528D97AF180D1B4F008897C6 /* WMNavigationController.m in Sources */,
 				52FE99D517A6E0D300E926F4 /* WMEventsViewController.m in Sources */,
 				529C3CAA194A8EED00E39703 /* WMCommentsHeaderTableViewCell.m in Sources */,
@@ -1934,6 +2002,7 @@
 				5247761B17B9809C00A81E88 /* WMDetailImgViewController.m in Sources */,
 				5224ED6E17B9C37B005199A1 /* WMEventCell.m in Sources */,
 				529C985F1978C1E600D1E7A5 /* WMPurpleButton.m in Sources */,
+				52A630AF1998434900693904 /* UIImage+WMImage.m in Sources */,
 				529CCA8C17BD6AF8000E5CF0 /* WMClubFormViewController.m in Sources */,
 				5206181F193AA03100EA8E21 /* WMPoll.m in Sources */,
 				52DC2D921968DE6600379958 /* WMEvent2.m in Sources */,
@@ -1956,13 +2025,16 @@
 				526F1CE0183983ED007110B1 /* Grades.m in Sources */,
 				520ADC0917C5FF1C004DF55C /* WMCustomLoginViewController.m in Sources */,
 				520ADC3E17CAA019004DF55C /* WMHomeViewController.m in Sources */,
+				52A630B21999B54400693904 /* WMAddEventViewController.m in Sources */,
 				526F1CCF18398390007110B1 /* WMListOfCoursesViewController.m in Sources */,
 				523967C61945501100364E86 /* WMCommentTableViewCell.m in Sources */,
 				52D206701981D072003BFDFF /* WMPointer.m in Sources */,
 				520ADCEA17D19031004DF55C /* WMFoodSectionViewController.m in Sources */,
 				52A9E91C187DEEC10018D632 /* WMOnCampusFoodHours.m in Sources */,
+				52AAFF091989DE720057EA2E /* WMSubscription.m in Sources */,
 				521A9E9817D33B98006E6734 /* WMAboutSectionViewController.m in Sources */,
 				5265D87A17F65BD20066FCEC /* WMWebLibViewController.m in Sources */,
+				52A630991996A94100693904 /* WMArrayDataSource.m in Sources */,
 				52D2067919836FD5003BFDFF /* WMSubscriptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

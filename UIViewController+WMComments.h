@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "WMComment.h"
+#import "WMCommentsHeaderTableViewCell.h"
 
-@interface UIViewController (WMComments)
+@interface UIViewController (WMComments) <WMCommentsHeaderDelegate>
 
 - (void)setUpCommentCells:(UITableView *)tableView;
 
@@ -23,7 +24,7 @@
 - (NSUInteger)numberOfRowsInCommentSection:(UITableView *)tableView inSection:(NSUInteger)section;
 
 
-- (void)setCommentParent:(PFObject *)parent;
+- (void)setCommentParent:(WMPointer *)parent;
 - (void)setEnableComments:(NSNumber *)enabled;
 - (void)fetchComments:(UITableView *)tableView;
 - (float)heightForCommentRow:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;

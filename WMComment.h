@@ -33,9 +33,9 @@ typedef void (^WMCommentAddedCompletionBlock)(BOOL success, NSError *error);
 
 + (PFQuery *)fetchFiveComments:(PFObject *)parent;
 + (PFQuery *)countComments:(PFObject *)parent;
-+ (void)addComment:(NSString *)comment parent:(PFObject *)parernt;
++ (void)addComment:(NSString *)comment parent:(WMPointer *)parernt;
 + (void)addComment:(NSString*)comment
-            parent:(PFObject *)parent
+            parent:(WMPointer *)parent
          withBlock:(WMCommentAddedCompletionBlock)callback;
 + (NSString *)postDateString:(NSDate *)postDate;
 + (UILabel *)noCommentsLabel:(CGRect)frame;

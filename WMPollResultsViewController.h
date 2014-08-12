@@ -12,6 +12,7 @@
 #import "WMCommentsHeaderTableViewCell.h"
 #import "WMCommentTextViewBar.h"
 #import "WMCommentBar.h"
+#import "UIViewController+WMComments.h"
 
 @interface WMPollResultsViewController : UITableViewController <XYPieChartDelegate, XYPieChartDataSource, UIToolbarDelegate, UITableViewDelegate, WMCommentsHeaderDelegate, WMCommentBarDelegate>
 

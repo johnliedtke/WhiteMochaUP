@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "WMRecentCommentsViewController.h"
 #import "WMEvent2.h"
+#import "WMEventSubscribeCell.h"
 
-@interface WMEventDetailsViewController : UIViewController <WMRecentCommentsDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface WMEventDetailsViewController : UIViewController <WMRecentCommentsDelegate, UITableViewDataSource, UITableViewDelegate, WMEventSubscribeCellDelegate>
 
 
 @property (nonatomic, strong) WMEvent2 *event;

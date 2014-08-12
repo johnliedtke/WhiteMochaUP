@@ -20,6 +20,8 @@
 static char recentCommentsKey;
 static char commentParentKey;
 static char enableComments;
+static char commentCountKey;
+
 
 - (void)setEnableComments:(NSNumber *)enabled
 {
@@ -48,6 +50,17 @@ static char enableComments;
 {
     objc_setAssociatedObject(self, &commentParentKey,parent, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
+- (NSNumber *)commentCount
+{
+    return objc_getAssociatedObject(self, &commentCountKey);
+}
+
+- (void)setCommentCount:(NSNumber *)commentCount
+{
+    objc_setAssociatedObject(self, &commentCountKey,commentCount, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 
 - (WMPointer *)parent
 {
@@ -87,21 +100,40 @@ static char enableComments;
 {
     if (![self parent] || ![[self enableComments] boolValue])  return;
     
-    PFQuery *query = [PFQuery queryWithClassName:@"WMComment"];
-    [query includeKey:@"user"];
-    [query whereKey:@"parent" equalTo:[self parent]];
-    query.limit = 3;
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//    PFQuery *query = [PFQuery queryWithClassName:@"WMComment"];
+//    [query includeKey:@"user"];
+//    [query whereKey:@"parent" equalTo:[self parent]];
+//    query.limit = 3;
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        if (!error) {
+//            if (![self recentComments]) {
+//                [self setRecentComments:[NSMutableArray array]];
+//            }
+//            [[self recentComments] removeAllObjects];
+//            [[self recentComments] addObjectsFromArray:objects];
+//            [tableView reloadData];
+//        } else {
+//            NSLog(@"Error with comments");
+//        }
+//    }];
+    if (![self recentComments]) {
+        [self setRecentComments:[NSMutableArray array]];
+    }
+
+    
+    [PFCloud callFunctionInBackground:@"fetchRecentComments" withParameters:@{@"commentPointer" : [self parent].objectId}block:^(NSDictionary *dictionary, NSError *error) {
         if (!error) {
-            if (![self recentComments]) {
-                [self setRecentComments:[NSMutableArray array]];
-            }
-            [[self recentComments] addObjectsFromArray:objects];
+            [[self recentComments] removeAllObjects];
+            [[self recentComments] addObjectsFromArray:[dictionary objectForKey:@"comments"]];
+            [self setCommentCount:[NSNumber numberWithInt:[[dictionary objectForKey:@"count"] intValue]]];
             [tableView reloadData];
+
+    
         } else {
-            NSLog(@"Error with comments");
+            NSLog(@"%@", error);
         }
     }];
+
 }
 
 - (void)deleteComment:(WMComment *)comment withSelectors:(NSArray *)selectors
@@ -213,7 +245,7 @@ static char enableComments;
     id cell;
     if ([self isHeaderSection:tableView inSection:indexPath.section]){
         cell = (WMCommentsHeaderTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"WMCommentsHeaderTableViewCell" forIndexPath:indexPath];
-        [[cell titleLabel] setText:[NSString stringWithFormat:@"Comments (%d)", 0]];
+        [[cell titleLabel] setText:[NSString stringWithFormat:@"Comments (%d)", [[self commentCount] intValue]]];
         [cell setDelegate:self];
     } else if ([self isCommentsSection:tableView inSection:indexPath.section]) {
         cell = (WMCommentTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"WMCommentTableViewCell" forIndexPath:indexPath];
@@ -225,7 +257,6 @@ static char enableComments;
 
     return cell;
 }
-
 
 - (void)showComments:(BOOL)showKeyboard
 {
@@ -246,7 +277,10 @@ static char enableComments;
 }
 
 
-
+- (void)viewAllPressed
+{
+    [self showComments:NO];
+}
 
 
 - (BOOL)isHeaderSection:(UITableView *)tableView inSection:(NSUInteger)section

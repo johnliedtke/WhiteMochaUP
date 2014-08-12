@@ -13,7 +13,8 @@
 #import "WMEventDetailView.h"
 #import "WMDetailCell.h"
 #import "WMEventSubscribeCell.h"
-
+#import "WMSubscription.h"
+#import "UIFont+FlatUI.h"
 
 @interface WMEventDetailsViewController ()
 
@@ -22,6 +23,7 @@
 @property (strong, nonatomic) WMEventDetailView *eventDetailView;
 @property (strong, nonatomic) WMDetailCell *detailCell;
 @property (strong, nonatomic) NSMutableDictionary *offscreenCells;
+@property (strong, nonatomic) WMSubscription *subscription;
 
 @end
 
@@ -49,12 +51,28 @@
     return _offscreenCells;
 }
 
+- (WMSubscription *)subscription
+{
+    if (!_subscription) _subscription = [[WMSubscription alloc] initWithSubscription:self.event.subCategory];
+    return _subscription;
+}
+
 - (void)setEvent:(WMEvent2 *)event
 {
     _event = event;
     self.navigationItem.title = _event.title;
     [self setCommentParent:_event.commentPointer];
     //[self fetchComments:self.tableView];
+    
+//    self.title = _event.title;
+//    UILabel* tlabel=[[UILabel alloc] initWithFrame:CGRectMake(0,0, 200, 40)];
+//    tlabel.text=self.navigationItem.title;
+//    tlabel.textColor=[UIColor whiteColor];
+//    tlabel.font = [UIFont flatFontOfSize:18.0];
+//    tlabel.backgroundColor =[UIColor clearColor];
+//    tlabel.adjustsFontSizeToFitWidth=YES;
+//    self.navigationItem.titleView=tlabel;
+
 
 }
 
@@ -86,6 +104,8 @@
     if ([self.event.type isEqualToString:@"RSS"]) {
         [self setEnableComments:[NSNumber numberWithBool:FALSE]];
     }
+    
+    
 
     
     
@@ -124,7 +144,7 @@ const static int SUBSCRIBE_SECTION = 1;
     if (section == DETAILS_SECTION)
         return 1;
     else if (section == SUBSCRIBE_SECTION)
-        return 1;
+        return [self.event hasSubCategory] ? 1 : 0;
     else
         return [self numberOfRowsInCommentSection:tableView inSection:section];
 }
@@ -198,6 +218,7 @@ const static int SUBSCRIBE_SECTION = 1;
 
     } else if (indexPath.section == SUBSCRIBE_SECTION) {
         cell = (WMEventSubscribeCell *)[tableView dequeueReusableCellWithIdentifier:@"WMEventSubscribeCell" forIndexPath:indexPath];
+        [cell setSubscription:self.subscription];
     } else {
         return [self setUpCell:tableView indexPath:indexPath];
     }

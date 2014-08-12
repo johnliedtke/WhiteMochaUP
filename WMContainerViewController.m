@@ -85,9 +85,37 @@
     [fromViewController willMoveToParentViewController:nil];
     [self addChildViewController:toViewController];
     
+    CATransition* transition = [CATransition animation];
+    transition.duration = .25;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionFromLeft; //kCATransitionMoveIn; //, kCATransitionPush,   kCATransitionReveal, kCATransitionFade
+    //transition.subtype = kCATransitionFromLeft; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
+    
+//    CGFloat width = self.view.frame.size.width;
+//    CGFloat height = self.view.frame.size.height + 100;
+    
+    
+//    [self transitionFromViewController:fromViewController
+//                      toViewController:toViewController
+//                              duration:0.4
+//                               options:UIViewAnimationOptionTransitionNone
+//                            animations:^(void) {
+//                                fromViewController.view.frame = CGRectMake(0 - width, 0, width, height);
+//                                toViewController.view.frame = CGRectMake(0, 0, width, height);
+//                            } 
+//                            completion:^(BOOL finished){
+//                            
+//                                       [fromViewController removeFromParentViewController];
+//                                        [toViewController didMoveToParentViewController:self];
+//                                        self.transitionInProgress = NO;
+//}
+//     ];
+    
+
+
     
     [self transitionFromViewController:fromViewController
-                      toViewController:toViewController duration:0.25 options:UIViewAnimationOptionCurveLinear animations:nil completion:^(BOOL finished) {
+                      toViewController:toViewController duration:0.25 options:UIViewAnimationOptionTransitionCrossDissolve   animations:nil completion:^(BOOL finished) {
         [fromViewController removeFromParentViewController];
         [toViewController didMoveToParentViewController:self];
         self.transitionInProgress = NO;

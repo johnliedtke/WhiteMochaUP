@@ -238,7 +238,7 @@
                                                     UIRemoteNotificationTypeSound];
     
     
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+   // [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
     return YES;
 }

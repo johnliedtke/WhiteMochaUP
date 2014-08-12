@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WMArrayDataSource.h"
 
-@interface WMSubscriptionViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface WMSubscriptionViewController : UIViewController <WMArrayDateSourceDelegate, UITableViewDelegate>
 
 @end

@@ -8,6 +8,7 @@
 
 #import "WMPurpleButton.h"
 #import "UIColor+WMColors.h"
+#import "UIFont+FlatUI.h"
 
 @implementation WMPurpleButton
 
@@ -22,10 +23,12 @@
 
 - (void)awakeFromNib
 {
-    [super awakeFromNib];
+    //[super awakeFromNib];
     self.layer.cornerRadius = 5.0;
     self.backgroundColor = [UIColor WMPurpleColor];
     self.titleLabel.textColor = [UIColor whiteColor];
+    self.titleLabel.font = [UIFont boldFlatFontOfSize:16.0];
+    
 }
 
 /*

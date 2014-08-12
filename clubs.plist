@@ -512,8 +512,6 @@
 		<dict>
 			<key>name</key>
 			<string>Black Student Union</string>
-			<key>abbr</key>
-			<string>BSU</string>
 			<key>image</key>
 			<string>mlk.png</string>
 		</dict>

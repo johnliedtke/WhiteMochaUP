@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -162,6 +162,10 @@ CgoKCgo
                 <outlet property="locationLabel" destination="c8f-bu-8qV" id="Y6A-VT-JSd"/>
                 <outlet property="sponsorLabel" destination="808-Jq-OCc" id="SJB-ml-OPh"/>
                 <outlet property="whenLabel" destination="H0I-N9-Cdm" id="KZB-OO-VNu"/>
+                <outletCollection property="captionLabels" destination="tnA-jr-JDq" id="ei1-M7-Jvt"/>
+                <outletCollection property="captionLabels" destination="WEH-mc-qET" id="jL4-nX-EvH"/>
+                <outletCollection property="captionLabels" destination="WKM-wP-2P9" id="XTd-rQ-9H7"/>
+                <outletCollection property="captionLabels" destination="nWK-4x-bxV" id="PrO-bP-6rU"/>
             </connections>
         </tableViewCell>
     </objects>

@@ -16,6 +16,9 @@
 #import "WMCustomLoginViewController.h"
 #import "WMNavigationController.h"
 #import "UIViewController+WMChangeTabItems.h"
+#import "PFCloud+Cache.h"
+#import "UIViewController+Reachability.h"
+
 
 @interface WMPollViewController ()
 
@@ -206,20 +209,28 @@ const static int ANSWERS_SECTION = 0;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (![self.poll isVotedUser:[PFUser currentUser]] && indexPath.section == ANSWERS_SECTION) {
+    if (![self.poll isVotedUser:[PFUser currentUser]] && indexPath.section == ANSWERS_SECTION && [self isNetworkAvailable] && _poll) {
         _confirmAletView = [[UIAlertView alloc] initWithTitle:[_poll.answers[indexPath.row] answer] message:@"Please confirm your vote." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Confirm", nil];
         [_confirmAletView show];
-        }
+    }
     
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSIndexPath *answerIndexPath = [self.tableView indexPathForSelectedRow];
+    WMPollAnswer *answer = self.poll.answers[answerIndexPath.row];
     if (alertView == _confirmAletView && buttonIndex == 1) {
-        [self.poll userVotedAnswer:self.poll.answers[answerIndexPath.row] user:[PFUser currentUser]];
-        [self hasUserVoted];
-    } else {
+        [PFCloud callFunctionInBackground:@"voteInPoll" withParameters:@{@"user": [PFUser currentUser].objectId, @"answer" : answer.objectId, @"poll" : _poll.objectId}block:^(NSDictionary *what, NSError *error) {
+                if (!error) {
+                    [self handleRefresh];
+
+                } else {
+                    NSLog(@"%@", error);
+                }
+            }];
+
+            } else {
         [self.tableView deselectRowAtIndexPath:answerIndexPath animated:YES];
     }
 }
@@ -249,11 +260,14 @@ const static int ANSWERS_SECTION = 0;
 {
     [WMPoll fetchCurrentPoll:^(BOOL success, WMPoll *poll, NSError *error) {
         if (success) {
-            self.poll = poll;
-            [self.refreshControl endRefreshing];
-            [self updateUI];
-            [self hasUserVoted];
+       
+        } else {
+            
         }
+        self.poll = poll;
+        [self.refreshControl endRefreshing];
+        [self updateUI];
+        [self hasUserVoted];
     }];
 }
 
@@ -321,7 +335,7 @@ const static int ANSWERS_SECTION = 0;
 
 // Sent to the delegate when the log in attempt fails.
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
-    NSLog(@"Failed to log in...");
+    NSLog(@"%@", error);
 }
 
 -(void)checkEmailConfirmed
@@ -329,7 +343,9 @@ const static int ANSWERS_SECTION = 0;
     if (!self.emailConfirmed) {
         if (![PFUser currentUser]) return;
         NSString *userID = [[PFUser currentUser] objectId];
-        [[PFUser query] getObjectInBackgroundWithId:userID block:^(PFObject *object, NSError *error) {
+        PFQuery *query = [PFUser query];
+        query.cachePolicy = kPFCachePolicyCacheElseNetwork;
+        [query getObjectInBackgroundWithId:userID block:^(PFObject *object, NSError *error) {
             bool confirmed = [[object objectForKey:@"emailVerified"] boolValue];
             
             if (!confirmed) {
@@ -340,6 +356,7 @@ const static int ANSWERS_SECTION = 0;
             } else if(confirmed) {
                 self.emailConfirmed = TRUE;
             }
+
         }];
     }
 }

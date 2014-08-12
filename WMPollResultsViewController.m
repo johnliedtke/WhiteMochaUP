@@ -20,6 +20,8 @@
 #import "WMCommentTextViewBar.h"
 #import "WMAddCommentTableViewCell.h"
 #import "WMCommentsViewController.h"
+#import "PFCloud+Cache.h"
+#import "UIViewController+Reachability.h"
 
 @interface WMPollResultsViewController ()
 
@@ -64,11 +66,8 @@
          forCellReuseIdentifier:@"WMAnswerLabelTableViewCell"];
     
     // Comments
-    [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMCommentTableViewCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"WMCommentsHeaderTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMCommentsHeaderTableViewCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"WMAddCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"WMAddCommentTableViewCell"];
-    
-
+    [self setEnableComments:[NSNumber numberWithBool:YES]];
+    [self setUpCommentCells:self.tableView];
 }
 
 
@@ -102,26 +101,19 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 5;
+    return 2 + [self numberOfCommentSections];
 }
 
 const static int QUESTION_PIE_SECTION = 0;
 const static int ANSWERS_SECTION = 1;
-const static int COMMENT_HEADER_SECTION = 2;
-const static int COMMENTS_SECTION = 3;
-const static int COMMENTS_ADD_SECTION = 4;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == QUESTION_PIE_SECTION) { // Question and pie chart
         return 2;
     } else if (section == ANSWERS_SECTION) { // Answers
         return self.poll.answers.count;
-    } else if (section == COMMENT_HEADER_SECTION) { // Comment header
-        return 1;
-    } else if (section == COMMENTS_SECTION) { // Comments
-        return self.comments.count;
-    } else if (section == COMMENTS_ADD_SECTION) {
-        return 1;
+    } else { // Comments
+        return [self numberOfRowsInCommentSection:self.tableView inSection:section];
     }
     return 0;
 }
@@ -130,7 +122,6 @@ const static int COMMENTS_ADD_SECTION = 4;
 static const int QUESTION_ROW_HEIGHT = 72;
 static const int PIE_CHART_HEIGHT = 275;
 static const int ANSWER_LABEL_HEIGHT = 25;
-static const int COMMENTS_HEADER_HEIGHT = 45;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == QUESTION_PIE_SECTION) {
@@ -141,23 +132,15 @@ static const int COMMENTS_HEADER_HEIGHT = 45;
         }
     } else if (indexPath.section == ANSWERS_SECTION) {
         return ANSWER_LABEL_HEIGHT;
-    } else if (indexPath.section == COMMENT_HEADER_SECTION) {
-        return COMMENTS_HEADER_HEIGHT;
-    } else if (indexPath.section == COMMENTS_SECTION) { // Comments
-        return [[_comments objectAtIndex:indexPath.row] commentHeight];
-    } else if (indexPath.section == COMMENTS_ADD_SECTION) {
-        return 50;
+    } else {
+        return [self heightForCommentRow:self.tableView indexPath:indexPath];
     }
     return 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    if (section == COMMENTS_ADD_SECTION) {
-        return 20;
-    } else {
-        return 0;
-    }
+    return [self heightForCommentFooter:self.tableView inSection:section];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -189,20 +172,10 @@ static const int COMMENTS_HEADER_HEIGHT = 45;
         [[cell answerLabel] setText:[self.poll.answers[indexPath.row] answer]];
         [[cell voteLabel] setText:[NSString stringWithFormat:@"%d Votes",(int)[self.poll.answers[indexPath.row] votes]]];
         
-    } else if (indexPath.section == COMMENT_HEADER_SECTION) { // Comments Header
-        cell = (WMCommentsHeaderTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"WMCommentsHeaderTableViewCell" forIndexPath:indexPath];
-        if (_poll) {
-            [[cell titleLabel] setText:[NSString stringWithFormat:@"Comments (%lu)", _commentCount]];
-        }
-        [cell setDelegate:self];
-
-    } else if (indexPath.section == COMMENTS_SECTION) { // Comments
-        cell = (WMCommentTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"WMCommentTableViewCell" forIndexPath:indexPath];
-            [cell setComment:_comments[indexPath.row]];
-        
-    } else if (indexPath.section == COMMENTS_ADD_SECTION) { // Add comment
-        cell = (WMAddCommentTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"WMAddCommentTableViewCell" forIndexPath:indexPath];
+    } else { // comments
+        cell = [self setUpCell:self.tableView indexPath:indexPath];
     }
+
     return cell;
 }
 
@@ -245,10 +218,8 @@ static const int COMMENTS_HEADER_HEIGHT = 45;
             [self.pieChart setSliceDeselectedAtIndex:i];
         }
         [self.pieChart setSliceSelectedAtIndex:indexPath.row];
-    } else if (indexPath.section == COMMENT_HEADER_SECTION) {
-        [self showComments:NO];
-    } else if (indexPath.section == COMMENTS_ADD_SECTION) {
-        [self showComments:YES];
+    } else {
+        [self didSelectCommentRow:self.tableView indexPath:indexPath];
     }
 }
 
@@ -276,22 +247,31 @@ static const int COMMENTS_HEADER_HEIGHT = 45;
 {
     [self.pieChart reloadData];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.tableView.numberOfSections)] withRowAnimation:UITableViewRowAnimationFade];
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:COMMENTS_SECTION] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 - (void)handleRefresh
 {
-    [PFCloud callFunctionInBackground:@"currentPoll" withParameters:@{}
-                                block:^(NSDictionary *pollInfo, NSError *error) {
-        if (!error) {
-            self.poll = pollInfo[@"poll"][0];
-            [self.comments removeAllObjects];
-            [self.comments addObjectsFromArray:pollInfo[@"comments"]];
-            _commentCount = [pollInfo[@"count"] integerValue];
-            [self.refreshControl endRefreshing];
-            [self updateUI];
-            [self hasUserVoted];
-        }
+//    [PFCloud callFunctionInBackground:@"currentPoll" withParameters:@{}
+//                                block:^(NSDictionary *pollInfo, NSError *error) {
+//        if (!error) {
+//            self.poll = pollInfo[@"poll"][0];
+//            [self.comments removeAllObjects];
+//            [self.comments addObjectsFromArray:pollInfo[@"comments"]];
+//            _commentCount = [pollInfo[@"count"] integerValue];
+//            [self.refreshControl endRefreshing];
+//            [self updateUI];
+//            [self hasUserVoted];
+//        }
+//    }];
+    
+    [PFCloud callFunctionInBackground:@"currentPoll" withParameters:@{} cachePolicy:kPFCachePolicyNetworkElseCache block:^(NSDictionary *pollInfo, NSError *error) {
+        self.poll = pollInfo[@"poll"][0];
+        WMPointer *pointer = _poll.commentPointer;
+        [self setCommentParent:pointer];
+        [self fetchComments:self.tableView];
+        [self.refreshControl endRefreshing];
+        [self updateUI];
+        [self hasUserVoted];
     }];
 }
 
@@ -305,37 +285,6 @@ static const int COMMENTS_HEADER_HEIGHT = 45;
     }
 }
 
-/*
- * Comment Methods
- *
- */
-#pragma mark - Comment Methods
-
-- (void)showComments:(BOOL)showKeyboard
-{
-    if (_poll) {
-        WMCommentsViewController *commentsVC = [[WMCommentsViewController alloc] initWithParent:_poll.commentPointer];
-        [commentsVC setParent:_poll.commentPointer];
-        if (showKeyboard) {
-            [commentsVC.commentBar.textView becomeFirstResponder];
-            [commentsVC setShowKeyboardOnLoad:YES];
-        }
-        [self.navigationController pushViewController:commentsVC animated:YES];
-    }
-}
-
-- (NSMutableArray *)comments
-{
-    if (!_comments) _comments = [[NSMutableArray alloc] init];
-    return _comments;
-}
-
-- (void)viewAllPressed
-{
-    [self showComments:NO];
-}
-
-// End comment methods
 
 
 

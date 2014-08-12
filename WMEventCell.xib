@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -14,37 +14,65 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="9:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cK-z2-jg5">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="9:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cK-z2-jg5">
                         <rect key="frame" x="39" y="12" width="38" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="38" id="h23-ff-V23"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0P-YK-eMT">
-                        <rect key="frame" x="109" y="2" width="196" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0P-YK-eMT">
+                        <rect key="frame" x="104" y="2" width="206" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdO-bb-3cG">
-                        <rect key="frame" x="109" y="20" width="196" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdO-bb-3cG">
+                        <rect key="frame" x="104" y="20" width="206" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87j-Na-Ezq">
-                        <rect key="frame" x="78" y="16" width="34" height="14"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87j-Na-Ezq">
+                        <rect key="frame" x="79" y="16" width="34" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="bZU-pi-FDW"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="soccer" translatesAutoresizingMaskIntoConstraints="NO" id="Wd4-07-f6R">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Wd4-07-f6R">
                         <rect key="frame" x="10" y="12" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="gjy-iq-7gl"/>
+                        </constraints>
                     </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="J0P-YK-eMT" firstAttribute="trailing" secondItem="XdO-bb-3cG" secondAttribute="trailing" id="2vS-zS-iej"/>
+                    <constraint firstAttribute="trailing" secondItem="J0P-YK-eMT" secondAttribute="trailing" constant="10" id="6RI-gy-vDp"/>
+                    <constraint firstItem="J0P-YK-eMT" firstAttribute="top" secondItem="Zfh-Y2-ynV" secondAttribute="top" constant="2" id="BlE-6o-dU4"/>
+                    <constraint firstAttribute="bottom" secondItem="J0P-YK-eMT" secondAttribute="bottom" constant="21" id="DX6-8v-Rg9"/>
+                    <constraint firstItem="Wd4-07-f6R" firstAttribute="bottom" secondItem="3cK-z2-jg5" secondAttribute="bottom" id="IG8-JG-ohV"/>
+                    <constraint firstItem="Wd4-07-f6R" firstAttribute="top" secondItem="Zfh-Y2-ynV" secondAttribute="top" constant="12" id="JBE-gz-hqN"/>
+                    <constraint firstItem="Wd4-07-f6R" firstAttribute="centerY" secondItem="Zfh-Y2-ynV" secondAttribute="centerY" id="Nq5-dK-vIN"/>
+                    <constraint firstAttribute="bottom" secondItem="XdO-bb-3cG" secondAttribute="bottom" constant="3" id="O4v-XO-BLE"/>
+                    <constraint firstItem="XdO-bb-3cG" firstAttribute="leading" secondItem="3cK-z2-jg5" secondAttribute="trailing" constant="27" id="QU7-jX-Str"/>
+                    <constraint firstItem="87j-Na-Ezq" firstAttribute="baseline" secondItem="3cK-z2-jg5" secondAttribute="baseline" id="Tsy-BN-gp8"/>
+                    <constraint firstItem="87j-Na-Ezq" firstAttribute="top" secondItem="Zfh-Y2-ynV" secondAttribute="top" constant="16" id="akd-Gf-gHG"/>
+                    <constraint firstItem="Wd4-07-f6R" firstAttribute="top" secondItem="3cK-z2-jg5" secondAttribute="top" id="eSJ-On-372"/>
+                    <constraint firstItem="XdO-bb-3cG" firstAttribute="leading" secondItem="J0P-YK-eMT" secondAttribute="leading" id="iBI-uA-4ge"/>
+                    <constraint firstItem="XdO-bb-3cG" firstAttribute="top" secondItem="Zfh-Y2-ynV" secondAttribute="top" constant="20" symbolic="YES" id="iPg-bb-s8Q"/>
+                    <constraint firstItem="87j-Na-Ezq" firstAttribute="leading" secondItem="3cK-z2-jg5" secondAttribute="trailing" constant="2" id="lhS-9D-R4P"/>
+                    <constraint firstItem="3cK-z2-jg5" firstAttribute="leading" secondItem="Wd4-07-f6R" secondAttribute="trailing" constant="9" id="nJ1-9O-OK0"/>
+                    <constraint firstItem="Wd4-07-f6R" firstAttribute="leading" secondItem="Zfh-Y2-ynV" secondAttribute="leading" constant="10" id="rLq-We-Gol"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="icon" destination="Wd4-07-f6R" id="pDD-iF-quu"/>
@@ -55,7 +83,4 @@
             </connections>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="soccer" width="32" height="32"/>
-    </resources>
 </document>

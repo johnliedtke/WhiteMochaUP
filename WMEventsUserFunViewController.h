@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WMEventsUserFunViewController : UIViewController
+@interface WMEventsUserFunViewController : UIViewController <UITableViewDelegate>
 
 @end

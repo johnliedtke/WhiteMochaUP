@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WMEvent2.h"
 
 @interface WMEventCell : UITableViewCell
 {
     
 }
 
-
+@property (nonatomic, strong) WMEvent2 *event;
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

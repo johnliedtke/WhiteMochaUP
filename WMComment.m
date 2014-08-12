@@ -32,26 +32,26 @@
     return @"WMComment";
 }
 
-- (instancetype)initWithComment:(NSString *)comment parent:(PFObject *)parent
+- (instancetype)initWithComment:(NSString *)comment parent:(WMPointer *)parent
 {
     self = [WMComment object];
     
     if (self) {
         self.comment = comment;
-        //self.parent = parent;
+        self.parent = parent;
     }
     return self;
     
 }
 
-+ (void)addComment:(NSString *)comment parent:(PFObject *)parent
++ (void)addComment:(NSString *)comment parent:(WMPointer *)parent
 {
     WMComment *newComment = [[WMComment alloc] initWithComment:comment parent:parent];
     [newComment setUser:[PFUser currentUser]];
     [newComment saveInBackground];
 }
 
-+ (void)addComment:(NSString *)comment parent:(PFObject *)parent withBlock:(WMCommentAddedCompletionBlock)callback
++ (void)addComment:(NSString *)comment parent:(WMPointer *)parent withBlock:(WMCommentAddedCompletionBlock)callback
 {
     WMComment *newComment = [[WMComment alloc] initWithComment:comment parent:parent];
     [newComment setUser:[PFUser currentUser]];

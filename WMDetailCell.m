@@ -8,6 +8,7 @@
 
 #import "WMDetailCell.h"
 #import "UIColor+WMColors.h"
+#import "UIFont+FlatUI.h"
 
 @interface WMDetailCell ()
 @property (strong, nonatomic) IBOutlet UITextView *detailTextView;
@@ -16,6 +17,9 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *locationLabel;
 @property (strong, nonatomic) IBOutlet UILabel *sponsorLabel;
+
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *captionLabels;
+
 
 @end
 
@@ -42,7 +46,14 @@
     self.layer.borderColor = [UIColor WMBorderColor].CGColor;
     [_detailTextView sizeToFit];
     
-
+    for (UILabel *l in @[_whenLabel,_locationLabel,_sponsorLabel]) {
+        
+        [l setFont:[UIFont boldFlatFontOfSize:14.0]];
+    }
+    for (UILabel *l in _captionLabels) {
+        [l setFont:[UIFont flatFontOfSize:14.0]];
+    }
+    _detailTextView.font = [UIFont flatFontOfSize:14.0];
 
 }
 
